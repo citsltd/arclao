@@ -313,7 +313,7 @@ function Hero() {
         </div>
         <div className="relative">
           <div className="aspect-[16/10] rounded-2xl overflow-hidden ring-1 ring-white/15 shadow-2xl">
-            <img src={siteData.hero.image} alt="Hero visual" className="w-full h-full object-cover" />
+            <img src={Technological_Innovation} alt="Hero visual" className="w-full h-full object-cover" />
           </div>
         </div>
       </Container>
