@@ -19,6 +19,8 @@ import principlesIcon from "@assets/principles_1754916579666.png";
 import perseveranceIcon from "@assets/perservence_1754916579664.png";
 import permanenceIcon from "@assets/permanence_1754916579663.png";
 import partnershipIcon from "@assets/partnership_1754916579659.png";
+import innovationIcon from "@assets/innovation_1754916674198.png";
+import sustainableProgressIcon from "@assets/sustainable progress_1754916674196.png";
 
 // --- Brand system (edit freely) ---
 const brand = {
@@ -530,8 +532,12 @@ function About() {
         <div className="mt-12 sm:mt-16 text-center px-4">
           <div className="inline-flex flex-col sm:flex-row items-center gap-4 sm:gap-6 px-6 sm:px-8 py-6 bg-white rounded-3xl shadow-lg ring-1 ring-slate-200 max-w-2xl mx-auto">
             <div className="flex items-center gap-3">
-              <div className="w-10 sm:w-12 h-10 sm:h-12 rounded-xl bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center text-white text-base sm:text-lg">
-                🌟
+              <div className="w-10 sm:w-12 h-10 sm:h-12 rounded-xl bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center p-2">
+                <img 
+                  src={innovationIcon} 
+                  alt="Innovation" 
+                  className="w-full h-full object-contain filter brightness-0 invert"
+                />
               </div>
               <div className="text-center sm:text-left">
                 <div className="text-sm font-bold text-slate-900">Excellence Through Innovation</div>
@@ -540,8 +546,12 @@ function About() {
             </div>
             <div className="w-full sm:w-px h-px sm:h-12 bg-slate-200"></div>
             <div className="flex items-center gap-3">
-              <div className="w-10 sm:w-12 h-10 sm:h-12 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-white text-base sm:text-lg">
-                🚀
+              <div className="w-10 sm:w-12 h-10 sm:h-12 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center p-2">
+                <img 
+                  src={sustainableProgressIcon} 
+                  alt="Sustainable Progress" 
+                  className="w-full h-full object-contain filter brightness-0 invert"
+                />
               </div>
               <div className="text-center sm:text-left">
                 <div className="text-sm font-bold text-slate-900">Sustainable Progress</div>
