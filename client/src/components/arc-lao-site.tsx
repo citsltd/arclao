@@ -121,22 +121,19 @@ const siteData = {
       title: "Infrastructure Development",
       summary:
         "Established and debut into infrastructure development - building the foundation for Southeast Asia's growth.",
-      image:
-        "https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1400&h=900",
+      image: infrastructureImg,
     },
     {
       title: "Automotive Solutions",
       summary:
         "Foray into automotives with electric and non-electric vehicles, agricultural and construction machines.",
-      image:
-        "https://images.unsplash.com/photo-1562141961-4a1a6539d1d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1400&h=900",
+      image: automotiveImg,
     },
     {
       title: "IT Solutions",
       summary:
         "Entered into IT and related solutions including IoT, energy software, and comprehensive development services.",
-      image:
-        "https://images.unsplash.com/photo-1559526324-593bc073d938?ixlib=rb-4.0.3&auto=format&fit=crop&w=1400&h=900",
+      image: informationTechnologyImg,
     },
   ],
   history: [
