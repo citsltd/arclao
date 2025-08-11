@@ -548,25 +548,114 @@ function About() {
 
 function Overview() {
   return (
-    <section className="py-16 lg:py-20 bg-slate-50">
-      <Container>
-        <div className="grid gap-10 lg:grid-cols-2 items-center">
-          <div>
-            <h2 className="text-2xl sm:text-3xl font-semibold text-slate-900 mb-6">OVERVIEW</h2>
-            <p className="text-slate-600 leading-relaxed mb-6">
-              ARC LAO is a leader in next-generation technology and related services. We enable clients in many countries to navigate their success through INNOVATION. With over 10+ years of experience in managing various projects and workings of global enterprises, we expertly steer our clients through their progressive journey.
-            </p>
-            <p className="text-slate-600 leading-relaxed">
-              We do it by enabling our clients with a highly experienced team coupled with latest technologies. We also empower the business with agile digital at scale to deliver unprecedented levels of performance and customer delight. Our always-on learning agenda drives their continuous improvement through building and transferring skills, expertise, and ideas from our innovation ecosystem.
-            </p>
+    <section className="py-20 lg:py-32 bg-gradient-to-br from-white via-slate-50 to-indigo-50/30 relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute inset-0 bg-grid-slate-100/50 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))]" />
+      <div className="absolute top-20 -right-20 w-80 h-80 bg-gradient-to-bl from-indigo-100/40 to-transparent rounded-full blur-3xl" />
+      <div className="absolute bottom-20 -left-20 w-80 h-80 bg-gradient-to-tr from-cyan-100/40 to-transparent rounded-full blur-3xl" />
+      
+      <Container className="relative">
+        <div className="grid gap-16 lg:grid-cols-2 items-center">
+          {/* Content */}
+          <div className="space-y-8">
+            {/* Badge */}
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full border border-slate-200 text-sm font-medium text-slate-600 shadow-sm">
+              <span className="w-2 h-2 bg-indigo-500 rounded-full animate-pulse"></span>
+              Company Overview
+            </div>
+            
+            {/* Heading */}
+            <div className="space-y-6">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 leading-tight">
+                Leading <span className="bg-gradient-to-r from-indigo-600 via-blue-600 to-cyan-600 bg-clip-text text-transparent">Innovation</span> in Technology
+              </h2>
+              
+              {/* Key stats */}
+              <div className="flex flex-wrap gap-6 pt-2">
+                <div className="flex items-center gap-2">
+                  <div className="w-3 h-3 rounded-full bg-gradient-to-r from-green-500 to-emerald-500"></div>
+                  <span className="text-sm font-semibold text-slate-700">10+ Years Experience</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-3 h-3 rounded-full bg-gradient-to-r from-blue-500 to-indigo-500"></div>
+                  <span className="text-sm font-semibold text-slate-700">Global Enterprise Solutions</span>
+                </div>
+              </div>
+            </div>
+            
+            {/* Content paragraphs */}
+            <div className="space-y-6">
+              <div className="relative p-6 rounded-2xl bg-white/80 backdrop-blur-sm border border-white/60 shadow-lg">
+                <div className="absolute top-0 left-6 w-12 h-1 bg-gradient-to-r from-indigo-500 to-cyan-500 rounded-full"></div>
+                <p className="text-lg text-slate-700 leading-relaxed font-medium">
+                  ARC LAO is a leader in next-generation technology and related services. We enable clients in many countries to navigate their success through <span className="text-indigo-600 font-semibold">INNOVATION</span>. With over 10+ years of experience in managing various projects and workings of global enterprises, we expertly steer our clients through their progressive journey.
+                </p>
+              </div>
+              
+              <div className="relative p-6 rounded-2xl bg-gradient-to-br from-indigo-50/80 to-cyan-50/60 border border-indigo-100 shadow-sm">
+                <div className="absolute top-0 left-6 w-12 h-1 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full"></div>
+                <p className="text-slate-700 leading-relaxed">
+                  We do it by enabling our clients with a highly experienced team coupled with latest technologies. We also empower the business with agile digital at scale to deliver unprecedented levels of performance and customer delight. Our always-on learning agenda drives their continuous improvement through building and transferring skills, expertise, and ideas from our innovation ecosystem.
+                </p>
+              </div>
+            </div>
+            
+            {/* Key features */}
+            <div className="grid gap-4 sm:grid-cols-2 pt-4">
+              <div className="flex items-center gap-3 p-4 rounded-xl bg-white/60 border border-slate-200/60 shadow-sm hover:shadow-md transition-all duration-300">
+                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center text-white text-sm font-bold">
+                  🎯
+                </div>
+                <div>
+                  <div className="font-semibold text-slate-900 text-sm">Strategic Excellence</div>
+                  <div className="text-xs text-slate-600">Precision-driven solutions</div>
+                </div>
+              </div>
+              
+              <div className="flex items-center gap-3 p-4 rounded-xl bg-white/60 border border-slate-200/60 shadow-sm hover:shadow-md transition-all duration-300">
+                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-white text-sm font-bold">
+                  ⚡
+                </div>
+                <div>
+                  <div className="font-semibold text-slate-900 text-sm">Agile Innovation</div>
+                  <div className="text-xs text-slate-600">Digital transformation at scale</div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div className="relative">
-            <div className="aspect-[4/3] rounded-2xl overflow-hidden ring-1 ring-slate-200 shadow-lg">
-              <img 
-                src={Technological_Innovation} 
-                alt="Technology infrastructure and innovation" 
-                className="w-full h-full object-cover"
-              />
+          
+          {/* Enhanced Image Section */}
+          <div className="relative lg:pl-8">
+            {/* Floating decorative elements */}
+            <div className="absolute -top-6 -left-6 w-24 h-24 bg-gradient-to-br from-indigo-400/20 to-cyan-500/20 rounded-full blur-2xl animate-pulse"></div>
+            <div className="absolute -bottom-6 -right-6 w-20 h-20 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-full blur-2xl animate-pulse delay-1000"></div>
+            
+            {/* Main image container */}
+            <div className="relative">
+              <div className="aspect-[4/3] rounded-3xl overflow-hidden bg-gradient-to-br from-white/20 to-white/10 backdrop-blur-sm border border-white/30 shadow-2xl shadow-slate-900/10">
+                <img 
+                  src={Technological_Innovation} 
+                  alt="Technology infrastructure and innovation" 
+                  className="w-full h-full object-cover"
+                />
+                {/* Overlay gradient */}
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/10 via-transparent to-transparent"></div>
+              </div>
+              
+              {/* Floating info cards */}
+              <div className="absolute -bottom-4 -left-4 bg-white/90 backdrop-blur-md border border-white/50 rounded-2xl p-4 shadow-xl">
+                <div className="text-2xl font-bold text-indigo-600">30+</div>
+                <div className="text-xs text-slate-600 font-medium">Countries Served</div>
+              </div>
+              
+              <div className="absolute -top-4 -right-4 bg-white/90 backdrop-blur-md border border-white/50 rounded-2xl p-4 shadow-xl">
+                <div className="text-2xl font-bold text-cyan-600">∞</div>
+                <div className="text-xs text-slate-600 font-medium">Innovation</div>
+              </div>
+              
+              {/* Corner accent */}
+              <div className="absolute top-4 left-4 w-8 h-8 border-l-2 border-t-2 border-white/60 rounded-tl-lg"></div>
+              <div className="absolute bottom-4 right-4 w-8 h-8 border-r-2 border-b-2 border-white/60 rounded-br-lg"></div>
             </div>
           </div>
         </div>
