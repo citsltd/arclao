@@ -678,7 +678,7 @@ function Stats() {
       <Container className="px-4">
         <div className="grid gap-4 sm:gap-6 grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 bg-[#4b49e6]">
           {siteData.stats.map((s) => (
-            <div key={s.label} className="p-4 sm:p-6 rounded-xl sm:rounded-2xl ring-1 ring-white/15 bg-white/5 text-center">
+            <div key={s.label} className="p-4 sm:p-6 rounded-xl sm:rounded-2xl ring-1 ring-white/15 text-center text-[#ffffff] bg-[#4b49e6]">
               <div className="text-xl sm:text-2xl lg:text-3xl font-semibold">{s.value}</div>
               <div className="mt-1 text-xs sm:text-sm text-white/80">{s.label}</div>
             </div>
