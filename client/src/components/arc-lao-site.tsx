@@ -14,6 +14,7 @@ import automotiveImg from "../assets/automotive.jpg";
 import infrastructureImg from "../assets/infrastructure.jpg";
 
 import Technological_Innovation from "@assets/Technological Innovation.jpg";
+import Future_of_Technology from "@assets/Future of Technology_1754915928797.jpg";
 
 // --- Brand system (edit freely) ---
 const brand = {
@@ -589,8 +590,8 @@ function Overview() {
             <div className="relative">
               <div className="aspect-[4/3] rounded-3xl overflow-hidden ring-1 ring-slate-200/50 shadow-2xl shadow-slate-900/10 bg-white">
                 <img 
-                  src={Technological_Innovation} 
-                  alt="Technology infrastructure and innovation" 
+                  src={Future_of_Technology} 
+                  alt="Future of technology and digital transformation" 
                   className="w-full h-full object-cover"
                 />
                 {/* Image overlay for better contrast */}
