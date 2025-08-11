@@ -671,26 +671,119 @@ function Stats() {
 }
 
 function History() {
+  const milestoneIcons = ["🏗️", "🚗", "💻", "🌱", "🌏", "⚡", "🤖"];
+  
   return (
-    <section className="py-16 lg:py-20 bg-slate-50" id="history">
-      <Container>
-        <h2 className="text-2xl sm:text-3xl font-semibold text-slate-900 text-center mb-12">Brief History</h2>
-        <div className="max-w-4xl mx-auto">
-          <div className="relative">
-            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-px bg-slate-300"></div>
-            <div className="space-y-8">
+    <section className="py-16 sm:py-20 lg:py-32 bg-gradient-to-br from-white via-slate-50 to-indigo-50 relative overflow-hidden" id="history">
+      {/* Background decorations */}
+      <div className="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))]" />
+      <div className="absolute top-20 left-0 w-72 h-72 bg-gradient-to-br from-indigo-100/40 to-transparent rounded-full blur-3xl" />
+      <div className="absolute bottom-20 right-0 w-72 h-72 bg-gradient-to-tl from-blue-100/40 to-transparent rounded-full blur-3xl" />
+      
+      <Container className="relative px-4">
+        <div className="text-center mb-12 sm:mb-16">
+          <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 bg-white rounded-full border border-slate-200 text-xs sm:text-sm font-medium text-slate-600 mb-4 sm:mb-6">
+            <span className="w-2 h-2 bg-indigo-500 rounded-full animate-pulse"></span>
+            Our Journey
+          </div>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-6 sm:mb-8 px-2">
+            A Legacy of <span className="bg-gradient-to-r from-indigo-600 to-blue-600 bg-clip-text text-transparent">Innovation</span>
+          </h2>
+          <p className="text-base sm:text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed px-4">
+            From infrastructure pioneers to technology innovators, discover how ARC Lao has evolved to become a leader in multiple sectors across Southeast Asia.
+          </p>
+        </div>
+        
+        <div className="max-w-6xl mx-auto">
+          {/* Mobile Timeline */}
+          <div className="block lg:hidden space-y-6">
+            {siteData.history.map((milestone, index) => (
+              <div key={index} className="relative">
+                <div className="flex items-start gap-4 p-6 bg-white rounded-2xl shadow-sm ring-1 ring-slate-200 hover:shadow-lg transition-all duration-300">
+                  <div className="flex-shrink-0 w-14 h-14 rounded-xl bg-gradient-to-br from-indigo-500 to-blue-600 flex items-center justify-center text-white text-lg shadow-lg">
+                    {milestoneIcons[index] || "📈"}
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-center gap-3 mb-2">
+                      <span className="inline-flex items-center px-3 py-1 bg-gradient-to-r from-indigo-500 to-blue-500 text-white text-xs font-bold rounded-full">
+                        {milestone.year}
+                      </span>
+                      <div className="h-px bg-gradient-to-r from-indigo-200 to-transparent flex-1"></div>
+                    </div>
+                    <h3 className="font-semibold text-slate-900 text-sm leading-tight">
+                      {milestone.title}
+                    </h3>
+                  </div>
+                </div>
+                {index < siteData.history.length - 1 && (
+                  <div className="w-px h-4 bg-gradient-to-b from-indigo-200 to-transparent ml-7 mt-2"></div>
+                )}
+              </div>
+            ))}
+          </div>
+          
+          {/* Desktop Timeline */}
+          <div className="hidden lg:block relative">
+            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-indigo-500 via-blue-500 to-indigo-500 rounded-full"></div>
+            <div className="space-y-12">
               {siteData.history.map((milestone, index) => (
-                <div key={index} className={`flex items-center ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
+                <div key={index} className={`flex items-center ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'} group`}>
                   <div className={`w-5/12 ${index % 2 === 0 ? 'text-right pr-8' : 'text-left pl-8'}`}>
-                    <h3 className="font-medium text-slate-900">{milestone.title}</h3>
+                    <div className="p-6 bg-white rounded-2xl shadow-lg ring-1 ring-slate-200 group-hover:shadow-xl group-hover:shadow-indigo-500/10 transition-all duration-500 group-hover:-translate-y-2">
+                      <div className={`flex items-center gap-3 mb-4 ${index % 2 === 0 ? 'justify-end' : 'justify-start'}`}>
+                        <span className="inline-flex items-center px-3 py-1 bg-gradient-to-r from-indigo-500 to-blue-500 text-white text-sm font-bold rounded-full">
+                          {milestone.year}
+                        </span>
+                        <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-indigo-500 to-blue-600 flex items-center justify-center text-white text-lg shadow-lg group-hover:scale-110 transition-transform duration-300">
+                          {milestoneIcons[index] || "📈"}
+                        </div>
+                      </div>
+                      <h3 className="font-bold text-slate-900 mb-2 text-lg leading-tight">
+                        {milestone.title}
+                      </h3>
+                      <div className={`w-16 h-1 bg-gradient-to-r from-indigo-500 to-blue-500 rounded-full ${index % 2 === 0 ? 'ml-auto' : ''}`}></div>
+                    </div>
                   </div>
-                  <div className="w-16 h-16 bg-indigo-600 rounded-full flex items-center justify-center text-white font-bold text-sm relative z-10">
-                    {milestone.year}
+                  
+                  {/* Central node */}
+                  <div className="relative z-10">
+                    <div className="w-6 h-6 bg-white rounded-full border-4 border-indigo-500 shadow-lg group-hover:scale-125 group-hover:border-blue-500 transition-all duration-300">
+                      <div className="absolute inset-0 bg-gradient-to-br from-indigo-500 to-blue-500 rounded-full animate-pulse opacity-50"></div>
+                    </div>
                   </div>
+                  
                   <div className="w-5/12"></div>
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+        
+        {/* Summary stats */}
+        <div className="mt-16 sm:mt-20 grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+          <div className="text-center p-6 bg-white rounded-2xl shadow-sm ring-1 ring-slate-200 hover:shadow-lg transition-all duration-300">
+            <div className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-indigo-600 to-blue-600 bg-clip-text text-transparent mb-2">
+              10+
+            </div>
+            <div className="text-sm text-slate-600 font-medium">Years of Excellence</div>
+          </div>
+          <div className="text-center p-6 bg-white rounded-2xl shadow-sm ring-1 ring-slate-200 hover:shadow-lg transition-all duration-300">
+            <div className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-indigo-600 to-blue-600 bg-clip-text text-transparent mb-2">
+              7
+            </div>
+            <div className="text-sm text-slate-600 font-medium">Major Expansions</div>
+          </div>
+          <div className="text-center p-6 bg-white rounded-2xl shadow-sm ring-1 ring-slate-200 hover:shadow-lg transition-all duration-300">
+            <div className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-indigo-600 to-blue-600 bg-clip-text text-transparent mb-2">
+              6
+            </div>
+            <div className="text-sm text-slate-600 font-medium">Industry Sectors</div>
+          </div>
+          <div className="text-center p-6 bg-white rounded-2xl shadow-sm ring-1 ring-slate-200 hover:shadow-lg transition-all duration-300">
+            <div className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-indigo-600 to-blue-600 bg-clip-text text-transparent mb-2">
+              SEA
+            </div>
+            <div className="text-sm text-slate-600 font-medium">Regional Presence</div>
           </div>
         </div>
       </Container>
