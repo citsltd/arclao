@@ -322,25 +322,92 @@ function Hero() {
 }
 
 function About() {
+  const pillarIcons = ["🎯", "🚀", "🏛️", "🤝"];
+  
   return (
-    <section className="py-16 lg:py-20 bg-white" id="about">
-      <Container>
-        <div className="text-center mb-12">
-          <h2 className="text-2xl sm:text-3xl font-semibold text-slate-900 mb-4">About Company</h2>
-          <p className="text-slate-600 max-w-4xl mx-auto leading-relaxed">
-            ARC Lao Sole Company Ltd, a company which is founded upon strong pillars of Principals, Perseverance, Permanence and Partnership. ARC Lao strive to work for excellence. ARC Lao believes that combining people, technology and process is the way forward. ARC Lao empower sustainable progress for our clients and partners, the wider community and ourselves. It is our unique approach as business technologists that makes this possible.
-          </p>
+    <section className="py-20 lg:py-32 bg-gradient-to-br from-slate-50 via-white to-blue-50 relative overflow-hidden" id="about">
+      {/* Background decorations */}
+      <div className="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))]" />
+      <div className="absolute top-20 right-0 w-72 h-72 bg-gradient-to-bl from-blue-100/40 to-transparent rounded-full blur-3xl" />
+      <div className="absolute bottom-20 left-0 w-72 h-72 bg-gradient-to-tr from-indigo-100/40 to-transparent rounded-full blur-3xl" />
+      
+      <Container className="relative">
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full border border-slate-200 text-sm font-medium text-slate-600 mb-6">
+            <span className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></span>
+            About Our Company
+          </div>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-8">
+            Built on <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Strong Foundations</span>
+          </h2>
+          <div className="max-w-4xl mx-auto">
+            <p className="text-lg text-slate-600 leading-relaxed mb-6">
+              ARC Lao Sole Company Ltd is founded upon the four strong pillars of <strong>Principles, Perseverance, Permanence and Partnership</strong>. We strive for excellence by combining people, technology and process as our path forward.
+            </p>
+            <p className="text-base text-slate-600 leading-relaxed">
+              We empower sustainable progress for our clients, partners, and the wider community through our unique approach as business technologists.
+            </p>
+          </div>
         </div>
-        <div className="grid gap-10 lg:grid-cols-4">
-          {siteData.valueProps.map((v) => (
-            <div key={v.title} className="p-6 rounded-2xl ring-1 ring-slate-200 bg-white shadow-sm">
-              <div className="flex items-center gap-3">
-                <Icon name={v.icon} />
-                <h3 className="font-medium text-slate-900">{v.title}</h3>
+        
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          {siteData.valueProps.map((v, index) => (
+            <div 
+              key={v.title} 
+              className="group relative p-8 rounded-3xl bg-white shadow-sm ring-1 ring-slate-200 hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-500 hover:-translate-y-2"
+            >
+              {/* Decorative element */}
+              <div className="absolute top-0 left-8 w-16 h-1 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full"></div>
+              
+              {/* Icon and title */}
+              <div className="flex flex-col items-center text-center mb-6">
+                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-white text-2xl mb-4 group-hover:scale-110 transition-transform duration-300">
+                  {pillarIcons[index]}
+                </div>
+                <h3 className="text-xl font-bold text-slate-900 mb-2">{v.title}</h3>
               </div>
-              <p className="mt-3 text-sm text-slate-600">{v.body}</p>
+              
+              {/* Content */}
+              <div className="space-y-4">
+                <div className="w-8 h-0.5 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full mx-auto"></div>
+                <p className="text-sm text-slate-600 leading-relaxed text-center">
+                  {v.body}
+                </p>
+              </div>
+              
+              {/* Hover effect overlay */}
+              <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-blue-500/5 to-indigo-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              
+              {/* Floating dots decoration */}
+              <div className="absolute -top-2 -right-2 w-4 h-4 bg-gradient-to-br from-blue-400 to-indigo-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute -bottom-2 -left-2 w-3 h-3 bg-gradient-to-br from-indigo-400 to-blue-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100"></div>
             </div>
           ))}
+        </div>
+        
+        {/* Bottom highlight */}
+        <div className="mt-16 text-center">
+          <div className="inline-flex items-center gap-6 px-8 py-6 bg-white rounded-3xl shadow-lg ring-1 ring-slate-200">
+            <div className="flex items-center gap-3">
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center text-white text-lg">
+                🌟
+              </div>
+              <div className="text-left">
+                <div className="text-sm font-bold text-slate-900">Excellence Through Innovation</div>
+                <div className="text-xs text-slate-600">Combining people, technology & process</div>
+              </div>
+            </div>
+            <div className="w-px h-12 bg-slate-200"></div>
+            <div className="flex items-center gap-3">
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-white text-lg">
+                🚀
+              </div>
+              <div className="text-left">
+                <div className="text-sm font-bold text-slate-900">Sustainable Progress</div>
+                <div className="text-xs text-slate-600">For clients, partners & community</div>
+              </div>
+            </div>
+          </div>
         </div>
       </Container>
     </section>
