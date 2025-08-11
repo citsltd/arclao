@@ -455,7 +455,7 @@ function Success() {
         </div>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {siteData.successFactors.map((factor, index) => (
-            <div key={index} className="p-5 rounded-xl ring-1 ring-slate-200 bg-slate-50">
+            <div key={index} className="p-5 rounded-xl ring-1 ring-slate-200 bg-slate-50 pl-[30px] pr-[30px]">
               <p className="text-sm text-slate-700">{factor}</p>
             </div>
           ))}
