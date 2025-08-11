@@ -309,17 +309,8 @@ function Hero() {
             
             {/* Main headline */}
             <div className="space-y-6">
-              <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight">
-                <span className="block">Me To We With</span>
-                <span className="block bg-gradient-to-r from-cyan-400 via-blue-400 to-indigo-400 bg-clip-text text-transparent">
-                  ARC Lao
-                </span>
-                <span className="block text-2xl sm:text-3xl lg:text-4xl font-normal text-slate-300 mt-2">
-                  combined efforts On
-                </span>
-                <span className="block bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
-                  Technological Innovation
-                </span>
+              <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold leading-tight">
+                Me To We With <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-indigo-400 bg-clip-text text-transparent">ARC Lao</span> combined efforts On <span className="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">Technological Innovation</span>
               </h1>
               
               <p className="text-lg lg:text-xl text-slate-300 max-w-2xl leading-relaxed">
