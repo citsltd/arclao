@@ -561,9 +561,15 @@ function Success() {
         <div className="mt-16 text-center">
           <div className="inline-flex items-center gap-4 px-8 py-4 bg-white rounded-2xl shadow-sm ring-1 ring-slate-200">
             <div className="flex -space-x-2">
-              <div className="w-8 h-8 rounded-full bg-gradient-to-br from-indigo-500 to-purple-500"></div>
-              <div className="w-8 h-8 rounded-full bg-gradient-to-br from-cyan-500 to-blue-500"></div>
-              <div className="w-8 h-8 rounded-full bg-gradient-to-br from-green-500 to-emerald-500"></div>
+              <div className="w-8 h-8 rounded-full bg-gradient-to-br from-indigo-500 to-purple-500 flex items-center justify-center text-white text-xs font-medium">
+                👨‍💼
+              </div>
+              <div className="w-8 h-8 rounded-full bg-gradient-to-br from-cyan-500 to-blue-500 flex items-center justify-center text-white text-xs font-medium">
+                👩‍💻
+              </div>
+              <div className="w-8 h-8 rounded-full bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center text-white text-xs font-medium">
+                👨‍🔬
+              </div>
             </div>
             <div className="text-left">
               <div className="text-sm font-semibold text-slate-900">Ready to experience our approach?</div>
