@@ -13,7 +13,7 @@ import informationTechnologyImg from "../assets/information-technology.jpg";
 import automotiveImg from "../assets/automotive.jpg";
 import infrastructureImg from "../assets/infrastructure.jpg";
 
-import Technological_Innovation from "@assets/Technological Innovation.jpg";
+import technologicalInnovationImg from "../assets/technological-innovation.jpg";
 
 // --- Brand system (edit freely) ---
 const brand = {
@@ -313,7 +313,7 @@ function Hero() {
         </div>
         <div className="relative">
           <div className="aspect-[16/10] rounded-2xl overflow-hidden ring-1 ring-white/15 shadow-2xl">
-            <img src={Technological_Innovation} alt="Hero visual" className="w-full h-full object-cover" />
+            <img src={technologicalInnovationImg} alt="Technological Innovation" className="w-full h-full object-cover" />
           </div>
         </div>
       </Container>
@@ -364,7 +364,7 @@ function Overview() {
           <div className="relative">
             <div className="aspect-[4/3] rounded-2xl overflow-hidden ring-1 ring-slate-200 shadow-lg">
               <img 
-                src={Technological_Innovation} 
+                src={technologicalInnovationImg} 
                 alt="Technology infrastructure and innovation" 
                 className="w-full h-full object-cover"
               />
