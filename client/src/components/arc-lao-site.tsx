@@ -445,19 +445,67 @@ function History() {
 }
 
 function Success() {
+  const icons = ["🎯", "🌐", "⚡", "🤝", "💼", "🔍", "📊", "💡"];
+  
   return (
-    <section className="py-16 lg:py-20 bg-white">
-      <Container>
-        <div className="text-center mb-12">
-          <h2 className="text-2xl sm:text-3xl font-semibold text-slate-900 mb-4">How We Create SUCCESS?</h2>
-          <p className="text-slate-600">To help achieving sustainable and inclusive solutions through innovation.</p>
+    <section className="py-20 lg:py-32 bg-gradient-to-br from-indigo-50 via-white to-cyan-50 relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))]" />
+      <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-indigo-100/50 to-transparent rounded-full blur-3xl" />
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-cyan-100/50 to-transparent rounded-full blur-3xl" />
+      
+      <Container className="relative">
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full border border-slate-200 text-sm font-medium text-slate-600 mb-6">
+            <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+            Our Success Formula
+          </div>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
+            How We Create <span className="bg-gradient-to-r from-indigo-600 to-cyan-600 bg-clip-text text-transparent">SUCCESS</span>
+          </h2>
+          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+            Delivering sustainable and inclusive solutions through innovation, expertise, and strategic partnerships across Southeast Asia.
+          </p>
         </div>
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {siteData.successFactors.map((factor, index) => (
-            <div key={index} className="p-5 rounded-xl ring-1 ring-slate-200 bg-slate-50 pl-[30px] pr-[30px]">
-              <p className="text-sm text-slate-700">{factor}</p>
+            <div 
+              key={index} 
+              className="group relative p-6 rounded-2xl bg-white shadow-sm ring-1 ring-slate-200 hover:shadow-lg hover:shadow-indigo-500/10 transition-all duration-300 hover:-translate-y-1"
+            >
+              {/* Icon */}
+              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-indigo-500 to-cyan-500 flex items-center justify-center text-white text-xl mb-4 group-hover:scale-110 transition-transform duration-300">
+                {icons[index] || "💡"}
+              </div>
+              
+              {/* Content */}
+              <div className="space-y-3">
+                <div className="w-12 h-1 bg-gradient-to-r from-indigo-500 to-cyan-500 rounded-full"></div>
+                <p className="text-sm leading-relaxed text-slate-700 font-medium">
+                  {factor}
+                </p>
+              </div>
+              
+              {/* Hover effect */}
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-indigo-500/5 to-cyan-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </div>
           ))}
+        </div>
+        
+        {/* Bottom CTA */}
+        <div className="mt-16 text-center">
+          <div className="inline-flex items-center gap-4 px-8 py-4 bg-white rounded-2xl shadow-sm ring-1 ring-slate-200">
+            <div className="flex -space-x-2">
+              <div className="w-8 h-8 rounded-full bg-gradient-to-br from-indigo-500 to-purple-500"></div>
+              <div className="w-8 h-8 rounded-full bg-gradient-to-br from-cyan-500 to-blue-500"></div>
+              <div className="w-8 h-8 rounded-full bg-gradient-to-br from-green-500 to-emerald-500"></div>
+            </div>
+            <div className="text-left">
+              <div className="text-sm font-semibold text-slate-900">Ready to experience our approach?</div>
+              <div className="text-xs text-slate-600">Join 1,800+ satisfied clients across SEA</div>
+            </div>
+          </div>
         </div>
       </Container>
     </section>
