@@ -240,43 +240,107 @@ function Container({ children, className = "" }: { children: React.ReactNode; cl
 function Nav() {
   const [open, setOpen] = useState(false);
   return (
-    <header className="sticky top-0 z-40 backdrop-blur supports-[backdrop-filter]:bg-white/70 bg-white/90 border-b border-slate-200">
-      <Container className="flex items-center justify-between h-16">
-        <a href="#" className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-xl bg-gradient-to-r from-indigo-600 to-cyan-500" />
-          <span className="font-semibold tracking-tight">ARC Lao</span>
+    <header className="fixed top-0 w-full z-50 backdrop-blur-xl bg-white/80 supports-[backdrop-filter]:bg-white/80 border-b border-white/20 shadow-lg shadow-slate-900/5">
+      {/* Subtle gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-r from-indigo-50/50 via-white/50 to-cyan-50/50"></div>
+      
+      <Container className="relative flex items-center justify-between h-18 py-4">
+        {/* Logo */}
+        <a href="#" className="group flex items-center gap-3 transition-transform duration-300 hover:scale-105">
+          <div className="relative">
+            <div className="w-10 h-10 rounded-2xl bg-gradient-to-br from-indigo-600 via-blue-600 to-cyan-500 shadow-lg shadow-indigo-500/25" />
+            <div className="absolute inset-0 w-10 h-10 rounded-2xl bg-gradient-to-br from-indigo-400 via-blue-400 to-cyan-300 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+          </div>
+          <div className="flex flex-col">
+            <span className="font-bold text-lg tracking-tight bg-gradient-to-r from-slate-900 to-slate-700 bg-clip-text text-transparent">
+              ARC Lao
+            </span>
+            <span className="text-xs text-slate-500 font-medium tracking-wider">
+              INNOVATION
+            </span>
+          </div>
         </a>
-        <nav className="hidden md:flex items-center gap-6 text-sm">
-          {siteData.nav.map((n) => (
-            <a key={n.label} href={n.href} className="text-slate-700 hover:text-slate-900 transition">
-              {n.label}
-            </a>
-          ))}
-          <a href="tel:+8562076198200" className="inline-flex items-center rounded-xl px-3 py-2 bg-indigo-600 text-white hover:bg-indigo-700">
-            +856 20 7619 8200
+
+        {/* Desktop Navigation */}
+        <nav className="hidden lg:flex items-center gap-8">
+          <div className="flex items-center gap-1 bg-slate-50/80 rounded-2xl p-1 shadow-inner">
+            {siteData.nav.map((n, index) => (
+              <a 
+                key={n.label} 
+                href={n.href} 
+                className="relative px-4 py-2 text-sm font-medium text-slate-700 hover:text-slate-900 rounded-xl transition-all duration-300 hover:bg-white hover:shadow-sm group"
+              >
+                <span className="relative z-10">{n.label}</span>
+                <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-indigo-500/10 to-cyan-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </a>
+            ))}
+          </div>
+          
+          {/* CTA Button */}
+          <a 
+            href="tel:+8562076198200" 
+            className="group relative inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-indigo-600 via-blue-600 to-cyan-600 text-white font-semibold rounded-2xl shadow-lg shadow-indigo-500/25 hover:shadow-xl hover:shadow-indigo-500/30 transition-all duration-300 transform hover:scale-105"
+          >
+            <svg className="w-4 h-4 transition-transform group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+            </svg>
+            <span className="hidden sm:inline">+856 20 7619 8200</span>
+            <span className="sm:hidden">Call</span>
+            <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-indigo-500 via-blue-500 to-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           </a>
         </nav>
+
+        {/* Mobile Menu Button */}
         <button
           onClick={() => setOpen((v) => !v)}
-          className="md:hidden inline-flex items-center justify-center w-9 h-9 rounded-lg border border-slate-300"
+          className="lg:hidden inline-flex items-center justify-center w-10 h-10 rounded-2xl bg-slate-100/80 hover:bg-slate-200/80 border border-slate-200/50 transition-all duration-300 shadow-sm hover:shadow-md"
           aria-label="Toggle menu"
         >
-          <svg viewBox="0 0 24 24" className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="1.5">
-            <path d="M4 6h16M4 12h16M4 18h16" />
+          <svg 
+            viewBox="0 0 24 24" 
+            className={`w-5 h-5 transition-transform duration-300 ${open ? 'rotate-90' : 'rotate-0'}`} 
+            fill="none" 
+            stroke="currentColor" 
+            strokeWidth="2"
+          >
+            {open ? (
+              <path d="M6 18L18 6M6 6l12 12" />
+            ) : (
+              <path d="M4 6h16M4 12h16M4 18h16" />
+            )}
           </svg>
         </button>
       </Container>
+
+      {/* Mobile Menu */}
       {open && (
-        <div className="md:hidden border-t border-slate-200 bg-white">
-          <Container className="py-4 grid gap-3">
-            {siteData.nav.map((n) => (
-              <a key={n.label} href={n.href} className="text-slate-700 hover:text-slate-900">
-                {n.label}
-              </a>
-            ))}
-            <a href="tel:+8562076198200" className="inline-flex items-center rounded-xl px-3 py-2 bg-indigo-600 text-white w-max">
-              +856 20 7619 8200
-            </a>
+        <div className="lg:hidden border-t border-white/20 bg-white/95 backdrop-blur-xl shadow-xl">
+          <Container className="py-6">
+            <div className="grid gap-4">
+              {siteData.nav.map((n) => (
+                <a 
+                  key={n.label} 
+                  href={n.href} 
+                  className="flex items-center gap-3 px-4 py-3 text-slate-700 hover:text-slate-900 hover:bg-slate-50 rounded-xl transition-all duration-300 group"
+                  onClick={() => setOpen(false)}
+                >
+                  <div className="w-2 h-2 rounded-full bg-gradient-to-r from-indigo-500 to-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                  <span className="font-medium">{n.label}</span>
+                </a>
+              ))}
+              <div className="pt-4 mt-4 border-t border-slate-200">
+                <a 
+                  href="tel:+8562076198200" 
+                  className="flex items-center justify-center gap-2 w-full px-4 py-3 bg-gradient-to-r from-indigo-600 to-cyan-600 text-white font-semibold rounded-xl shadow-lg shadow-indigo-500/25 transition-transform hover:scale-105"
+                  onClick={() => setOpen(false)}
+                >
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                  +856 20 7619 8200
+                </a>
+              </div>
+            </div>
           </Container>
         </div>
       )}
