@@ -890,7 +890,36 @@ function History() {
 }
 
 function Success() {
-  const icons = ["🎯", "🌐", "⚡", "🤝", "💼", "🔍", "📊", "💡"];
+  const icons = [
+    <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
+      <circle cx="12" cy="12" r="3"/>
+      <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2" fill="none"/>
+    </svg>,
+    <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
+      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+    </svg>,
+    <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
+      <polygon points="13 2 3 14 12 14 11 22 21 10 12 10"/>
+    </svg>,
+    <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
+      <path d="M16 4c0-1.11.89-2 2-2s2 .89 2 2-.89 2-2 2-2-.89-2-2zm4 18v-6h2.5l-2.54-7.63A1.5 1.5 0 0 0 18.54 8H16c-.8 0-1.54.37-2 1l-3 4v7h2v7h3v-7h1zm-6.5-10.5c.83 0 1.5-.67 1.5-1.5s-.67-1.5-1.5-1.5-1.5.67-1.5 1.5.67 1.5 1.5 1.5z"/>
+    </svg>,
+    <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
+      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+    </svg>,
+    <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
+      <circle cx="11" cy="11" r="8" stroke="currentColor" strokeWidth="2" fill="none"/>
+      <path d="M21 21l-4.35-4.35"/>
+    </svg>,
+    <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
+      <path d="M3 3h18v4H3V3zm0 6h18v4H3V9zm0 6h18v4H3v-4z"/>
+    </svg>,
+    <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
+      <circle cx="9" cy="21" r="1"/>
+      <circle cx="20" cy="21" r="1"/>
+      <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+    </svg>
+  ];
   
   return (
     <section className="py-16 sm:py-20 lg:py-32 bg-gradient-to-br from-indigo-50 via-white to-cyan-50 relative overflow-hidden">
@@ -920,8 +949,8 @@ function Success() {
               className="group relative p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-white shadow-sm ring-1 ring-slate-200 hover:shadow-lg hover:shadow-indigo-500/10 transition-all duration-300 hover:-translate-y-1"
             >
               {/* Icon */}
-              <div className="w-12 sm:w-14 h-12 sm:h-14 rounded-xl bg-gradient-to-br from-indigo-500 to-cyan-500 flex items-center justify-center text-white text-lg sm:text-xl mb-3 sm:mb-4 group-hover:scale-110 transition-transform duration-300">
-                {icons[index] || "💡"}
+              <div className="w-12 sm:w-14 h-12 sm:h-14 rounded-xl bg-gradient-to-br from-indigo-500 to-cyan-500 flex items-center justify-center text-white mb-3 sm:mb-4 group-hover:scale-110 transition-transform duration-300">
+                {icons[index] || icons[7]}
               </div>
               
               {/* Content */}
