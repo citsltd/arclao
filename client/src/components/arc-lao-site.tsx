@@ -372,10 +372,10 @@ function Hero() {
       {/* Grid pattern overlay */}
       <div className="absolute inset-0 bg-grid-white/[0.05] [mask-image:linear-gradient(0deg,transparent,black,transparent)]"></div>
       
-      <Container className="relative z-10 py-20 lg:py-32">
+      <Container className="relative z-10 py-16 sm:py-20 lg:py-32 px-4">
         <div className="max-w-4xl mx-auto text-center">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 text-sm font-medium mb-8">
+          <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 text-xs sm:text-sm font-medium mb-6 sm:mb-8">
             <span className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></span>
             <span className="text-cyan-300 uppercase tracking-wider text-xs">
               {siteData.hero.kicker}
@@ -383,23 +383,23 @@ function Hero() {
           </div>
           
           {/* Main headline */}
-          <div className="space-y-6 mb-8">
-            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight">
+          <div className="space-y-4 sm:space-y-6 mb-6 sm:mb-8">
+            <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight px-2">
               Me To We With <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-indigo-400 bg-clip-text text-transparent">ARC Lao</span> combined efforts On <span className="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">Technological Innovation</span>
             </h1>
             
-            <p className="text-lg lg:text-xl text-slate-200 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-base sm:text-lg lg:text-xl text-slate-200 max-w-2xl mx-auto leading-relaxed px-4">
               {siteData.hero.subhead}
             </p>
           </div>
           
           {/* CTA Buttons */}
-          <div className="flex flex-wrap gap-4 justify-center mb-12">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-8 sm:mb-12 px-4">
             {siteData.hero.ctas.map((c, index) => (
               <a
                 key={c.label}
                 href={c.href}
-                className={`group inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 ${
+                className={`group inline-flex items-center justify-center gap-2 px-6 py-3 sm:py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 text-sm sm:text-base ${
                   c.variant === "ghost"
                     ? "border-2 border-white/30 text-white hover:border-white/60 hover:bg-white/10 backdrop-blur-sm"
                     : "bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg hover:shadow-cyan-500/25 hover:from-cyan-400 hover:to-blue-500"
@@ -420,26 +420,26 @@ function Hero() {
           </div>
           
           {/* Trust indicators and stats */}
-          <div className="flex flex-wrap items-center justify-center gap-8">
-            <div className="flex items-center gap-2">
+          <div className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 max-w-4xl mx-auto px-4">
+            <div className="flex items-center justify-center gap-2 col-span-1 xs:col-span-2 lg:col-span-1">
               <div className="flex -space-x-1">
-                <div className="w-6 h-6 rounded-full bg-gradient-to-br from-green-400 to-emerald-500 border-2 border-white/20"></div>
-                <div className="w-6 h-6 rounded-full bg-gradient-to-br from-blue-400 to-indigo-500 border-2 border-white/20"></div>
-                <div className="w-6 h-6 rounded-full bg-gradient-to-br from-purple-400 to-pink-500 border-2 border-white/20"></div>
+                <div className="w-5 sm:w-6 h-5 sm:h-6 rounded-full bg-gradient-to-br from-green-400 to-emerald-500 border-2 border-white/20"></div>
+                <div className="w-5 sm:w-6 h-5 sm:h-6 rounded-full bg-gradient-to-br from-blue-400 to-indigo-500 border-2 border-white/20"></div>
+                <div className="w-5 sm:w-6 h-5 sm:h-6 rounded-full bg-gradient-to-br from-purple-400 to-pink-500 border-2 border-white/20"></div>
               </div>
-              <div className="text-sm text-slate-200">
+              <div className="text-xs sm:text-sm text-slate-200 text-center lg:text-left">
                 <span className="font-semibold text-white">1,800+</span> satisfied clients
               </div>
             </div>
-            <div className="text-sm text-slate-200">
+            <div className="flex items-center justify-center text-xs sm:text-sm text-slate-200">
               <span className="font-semibold text-white">10+</span> years experience
             </div>
-            <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl px-4 py-2">
-              <div className="text-lg font-bold text-white">$110M+</div>
+            <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl px-3 sm:px-4 py-2 text-center">
+              <div className="text-base sm:text-lg font-bold text-white">$110M+</div>
               <div className="text-xs text-slate-200">Total Investment</div>
             </div>
-            <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl px-4 py-2">
-              <div className="text-lg font-bold text-white">30+</div>
+            <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl px-3 sm:px-4 py-2 text-center">
+              <div className="text-base sm:text-lg font-bold text-white">30+</div>
               <div className="text-xs text-slate-200">Projects</div>
             </div>
           </div>
@@ -460,47 +460,47 @@ function About() {
   const pillarIcons = ["🎯", "🚀", "🏛️", "🤝"];
   
   return (
-    <section className="py-20 lg:py-32 bg-gradient-to-br from-slate-50 via-white to-blue-50 relative overflow-hidden" id="about">
+    <section className="py-16 sm:py-20 lg:py-32 bg-gradient-to-br from-slate-50 via-white to-blue-50 relative overflow-hidden" id="about">
       {/* Background decorations */}
       <div className="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))]" />
-      <div className="absolute top-20 right-0 w-72 h-72 bg-gradient-to-bl from-blue-100/40 to-transparent rounded-full blur-3xl" />
-      <div className="absolute bottom-20 left-0 w-72 h-72 bg-gradient-to-tr from-indigo-100/40 to-transparent rounded-full blur-3xl" />
+      <div className="absolute top-20 right-0 w-48 sm:w-72 h-48 sm:h-72 bg-gradient-to-bl from-blue-100/40 to-transparent rounded-full blur-3xl" />
+      <div className="absolute bottom-20 left-0 w-48 sm:w-72 h-48 sm:h-72 bg-gradient-to-tr from-indigo-100/40 to-transparent rounded-full blur-3xl" />
       
-      <Container className="relative">
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full border border-slate-200 text-sm font-medium text-slate-600 mb-6">
+      <Container className="relative px-4">
+        <div className="text-center mb-12 sm:mb-16">
+          <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 bg-white rounded-full border border-slate-200 text-xs sm:text-sm font-medium text-slate-600 mb-4 sm:mb-6">
             <span className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></span>
             About Our Company
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-8">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-6 sm:mb-8 px-2">
             Built on <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Strong Foundations</span>
           </h2>
-          <div className="max-w-4xl mx-auto">
-            <p className="text-lg text-slate-600 leading-relaxed">
+          <div className="max-w-4xl mx-auto px-4">
+            <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
               ARC Lao Sole Company Ltd is founded upon the four strong pillars of <strong>Principles, Perseverance, Permanence and Partnership</strong>. We strive for excellence by combining people, technology and process as our path forward. We empower sustainable progress for our clients, partners, and the wider community through our unique approach as business technologists.
             </p>
           </div>
         </div>
         
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
           {siteData.valueProps.map((v, index) => (
             <div 
               key={v.title} 
-              className="group relative p-8 rounded-3xl bg-white shadow-sm ring-1 ring-slate-200 hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-500 hover:-translate-y-2"
+              className="group relative p-6 sm:p-8 rounded-3xl bg-white shadow-sm ring-1 ring-slate-200 hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-500 hover:-translate-y-2"
             >
               {/* Decorative element */}
-              <div className="absolute top-0 left-8 w-16 h-1 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full"></div>
+              <div className="absolute top-0 left-6 sm:left-8 w-12 sm:w-16 h-1 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full"></div>
               
               {/* Icon and title */}
-              <div className="flex flex-col items-center text-center mb-6">
-                <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-white text-2xl mb-4 group-hover:scale-110 transition-transform duration-300">
+              <div className="flex flex-col items-center text-center mb-4 sm:mb-6">
+                <div className="w-14 sm:w-16 h-14 sm:h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-white text-xl sm:text-2xl mb-3 sm:mb-4 group-hover:scale-110 transition-transform duration-300">
                   {pillarIcons[index]}
                 </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-2">{v.title}</h3>
+                <h3 className="text-lg sm:text-xl font-bold text-slate-900 mb-2">{v.title}</h3>
               </div>
               
               {/* Content */}
-              <div className="space-y-4">
+              <div className="space-y-3 sm:space-y-4">
                 <div className="w-8 h-0.5 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full mx-auto"></div>
                 <p className="text-sm text-slate-600 leading-relaxed text-center">
                   {v.body}
@@ -518,23 +518,23 @@ function About() {
         </div>
         
         {/* Bottom highlight */}
-        <div className="mt-16 text-center">
-          <div className="inline-flex items-center gap-6 px-8 py-6 bg-white rounded-3xl shadow-lg ring-1 ring-slate-200">
+        <div className="mt-12 sm:mt-16 text-center px-4">
+          <div className="inline-flex flex-col sm:flex-row items-center gap-4 sm:gap-6 px-6 sm:px-8 py-6 bg-white rounded-3xl shadow-lg ring-1 ring-slate-200 max-w-2xl mx-auto">
             <div className="flex items-center gap-3">
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center text-white text-lg">
+              <div className="w-10 sm:w-12 h-10 sm:h-12 rounded-xl bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center text-white text-base sm:text-lg">
                 🌟
               </div>
-              <div className="text-left">
+              <div className="text-center sm:text-left">
                 <div className="text-sm font-bold text-slate-900">Excellence Through Innovation</div>
                 <div className="text-xs text-slate-600">Combining people, technology & process</div>
               </div>
             </div>
-            <div className="w-px h-12 bg-slate-200"></div>
+            <div className="w-full sm:w-px h-px sm:h-12 bg-slate-200"></div>
             <div className="flex items-center gap-3">
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-white text-lg">
+              <div className="w-10 sm:w-12 h-10 sm:h-12 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-white text-base sm:text-lg">
                 🚀
               </div>
-              <div className="text-left">
+              <div className="text-center sm:text-left">
                 <div className="text-sm font-bold text-slate-900">Sustainable Progress</div>
                 <div className="text-xs text-slate-600">For clients, partners & community</div>
               </div>
@@ -577,20 +577,20 @@ function Overview() {
 
 function Services() {
   return (
-    <section className="py-16 lg:py-20 bg-white" id="services">
-      <Container>
-        <div className="text-center mb-12">
-          <h2 className="text-2xl sm:text-3xl font-semibold text-slate-900">Sector Of Expertise</h2>
+    <section className="py-12 sm:py-16 lg:py-20 bg-white" id="services">
+      <Container className="px-4">
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold text-slate-900 px-2">Sector Of Expertise</h2>
         </div>
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
           {siteData.services.map((s) => (
-            <article key={s.title} className="h-full group rounded-2xl overflow-hidden ring-1 ring-slate-200 bg-white hover:shadow-lg transition">
+            <article key={s.title} className="h-full group rounded-xl sm:rounded-2xl overflow-hidden ring-1 ring-slate-200 bg-white hover:shadow-lg transition">
               <div className="aspect-[16/10] overflow-hidden">
                 <img src={s.image} alt={s.title} className="w-full h-full object-cover group-hover:scale-105 transition duration-300" />
               </div>
-              <div className="p-6">
-                <h3 className="font-medium text-slate-900 mb-3">{s.title}</h3>
-                <p className="text-sm text-slate-600">{s.body}</p>
+              <div className="p-4 sm:p-6">
+                <h3 className="font-medium text-slate-900 mb-2 sm:mb-3 text-sm sm:text-base">{s.title}</h3>
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">{s.body}</p>
               </div>
             </article>
           ))}
@@ -602,14 +602,16 @@ function Services() {
 
 function Stats() {
   return (
-    <section className="py-14 bg-slate-900 text-white">
-      <Container className="grid gap-6 sm:grid-cols-2 lg:grid-cols-6">
-        {siteData.stats.map((s) => (
-          <div key={s.label} className="p-6 rounded-2xl ring-1 ring-white/15 bg-white/5 text-center">
-            <div className="text-3xl font-semibold">{s.value}</div>
-            <div className="mt-1 text-sm text-white/80">{s.label}</div>
-          </div>
-        ))}
+    <section className="py-10 sm:py-14 bg-slate-900 text-white">
+      <Container className="px-4">
+        <div className="grid gap-4 sm:gap-6 grid-cols-2 sm:grid-cols-3 lg:grid-cols-6">
+          {siteData.stats.map((s) => (
+            <div key={s.label} className="p-4 sm:p-6 rounded-xl sm:rounded-2xl ring-1 ring-white/15 bg-white/5 text-center">
+              <div className="text-xl sm:text-2xl lg:text-3xl font-semibold">{s.value}</div>
+              <div className="mt-1 text-xs sm:text-sm text-white/80">{s.label}</div>
+            </div>
+          ))}
+        </div>
       </Container>
     </section>
   );
@@ -647,66 +649,66 @@ function Success() {
   const icons = ["🎯", "🌐", "⚡", "🤝", "💼", "🔍", "📊", "💡"];
   
   return (
-    <section className="py-20 lg:py-32 bg-gradient-to-br from-indigo-50 via-white to-cyan-50 relative overflow-hidden">
+    <section className="py-16 sm:py-20 lg:py-32 bg-gradient-to-br from-indigo-50 via-white to-cyan-50 relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))]" />
-      <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-indigo-100/50 to-transparent rounded-full blur-3xl" />
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-cyan-100/50 to-transparent rounded-full blur-3xl" />
+      <div className="absolute top-0 right-0 w-64 sm:w-96 h-64 sm:h-96 bg-gradient-to-bl from-indigo-100/50 to-transparent rounded-full blur-3xl" />
+      <div className="absolute bottom-0 left-0 w-64 sm:w-96 h-64 sm:h-96 bg-gradient-to-tr from-cyan-100/50 to-transparent rounded-full blur-3xl" />
       
-      <Container className="relative">
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full border border-slate-200 text-sm font-medium text-slate-600 mb-6">
+      <Container className="relative px-4">
+        <div className="text-center mb-12 sm:mb-16">
+          <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 bg-white rounded-full border border-slate-200 text-xs sm:text-sm font-medium text-slate-600 mb-4 sm:mb-6">
             <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
             Our Success Formula
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-4 sm:mb-6 px-2">
             How We Create <span className="bg-gradient-to-r from-indigo-600 to-cyan-600 bg-clip-text text-transparent">SUCCESS</span>
           </h2>
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base lg:text-lg text-slate-600 max-w-2xl mx-auto px-4 leading-relaxed">
             Delivering sustainable and inclusive solutions through innovation, expertise, and strategic partnerships across Southeast Asia.
           </p>
         </div>
         
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
           {siteData.successFactors.map((factor, index) => (
             <div 
               key={index} 
-              className="group relative p-6 rounded-2xl bg-white shadow-sm ring-1 ring-slate-200 hover:shadow-lg hover:shadow-indigo-500/10 transition-all duration-300 hover:-translate-y-1"
+              className="group relative p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-white shadow-sm ring-1 ring-slate-200 hover:shadow-lg hover:shadow-indigo-500/10 transition-all duration-300 hover:-translate-y-1"
             >
               {/* Icon */}
-              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-indigo-500 to-cyan-500 flex items-center justify-center text-white text-xl mb-4 group-hover:scale-110 transition-transform duration-300">
+              <div className="w-12 sm:w-14 h-12 sm:h-14 rounded-xl bg-gradient-to-br from-indigo-500 to-cyan-500 flex items-center justify-center text-white text-lg sm:text-xl mb-3 sm:mb-4 group-hover:scale-110 transition-transform duration-300">
                 {icons[index] || "💡"}
               </div>
               
               {/* Content */}
-              <div className="space-y-3">
-                <div className="w-12 h-1 bg-gradient-to-r from-indigo-500 to-cyan-500 rounded-full"></div>
-                <p className="text-sm leading-relaxed text-slate-700 font-medium">
+              <div className="space-y-2 sm:space-y-3">
+                <div className="w-10 sm:w-12 h-1 bg-gradient-to-r from-indigo-500 to-cyan-500 rounded-full"></div>
+                <p className="text-xs sm:text-sm leading-relaxed text-slate-700 font-medium">
                   {factor}
                 </p>
               </div>
               
               {/* Hover effect */}
-              <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-indigo-500/5 to-cyan-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 rounded-xl sm:rounded-2xl bg-gradient-to-br from-indigo-500/5 to-cyan-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </div>
           ))}
         </div>
         
         {/* Bottom CTA */}
-        <div className="mt-16 text-center">
-          <div className="inline-flex items-center gap-4 px-8 py-4 bg-white rounded-2xl shadow-sm ring-1 ring-slate-200">
+        <div className="mt-12 sm:mt-16 text-center px-4">
+          <div className="inline-flex flex-col sm:flex-row items-center gap-3 sm:gap-4 px-6 sm:px-8 py-4 bg-white rounded-xl sm:rounded-2xl shadow-sm ring-1 ring-slate-200 max-w-md sm:max-w-none mx-auto">
             <div className="flex -space-x-2">
-              <div className="w-8 h-8 rounded-full bg-gradient-to-br from-indigo-500 to-purple-500 flex items-center justify-center text-white text-xs font-medium">
+              <div className="w-7 sm:w-8 h-7 sm:h-8 rounded-full bg-gradient-to-br from-indigo-500 to-purple-500 flex items-center justify-center text-white text-xs font-medium">
                 👨‍💼
               </div>
-              <div className="w-8 h-8 rounded-full bg-gradient-to-br from-cyan-500 to-blue-500 flex items-center justify-center text-white text-xs font-medium">
+              <div className="w-7 sm:w-8 h-7 sm:h-8 rounded-full bg-gradient-to-br from-cyan-500 to-blue-500 flex items-center justify-center text-white text-xs font-medium">
                 👩‍💻
               </div>
-              <div className="w-8 h-8 rounded-full bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center text-white text-xs font-medium">
+              <div className="w-7 sm:w-8 h-7 sm:h-8 rounded-full bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center text-white text-xs font-medium">
                 👨‍🔬
               </div>
             </div>
-            <div className="text-left">
+            <div className="text-center sm:text-left">
               <div className="text-sm font-semibold text-slate-900">Ready to experience our approach?</div>
               <div className="text-xs text-slate-600">Join 1,800+ satisfied clients across SEA</div>
             </div>
@@ -719,44 +721,44 @@ function Success() {
 
 function Projects() {
   return (
-    <section className="py-16 lg:py-20 bg-slate-50" id="projects">
-      <Container>
-        <div className="text-center mb-12">
-          <h2 className="text-2xl sm:text-3xl font-semibold text-slate-900 mb-4">Project Execution</h2>
-          <p className="text-slate-600 max-w-4xl mx-auto">
+    <section className="py-12 sm:py-16 lg:py-20 bg-slate-50" id="projects">
+      <Container className="px-4">
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold text-slate-900 mb-3 sm:mb-4 px-2">Project Execution</h2>
+          <p className="text-sm sm:text-base text-slate-600 max-w-4xl mx-auto leading-relaxed px-2">
             ARC Lao has consistently adhered to the "Prestige, Quality, Innovation, and Pragmatism" business philosophy, serving multiple sectors in the Southeast Asia region. The company has successfully completed over 30 turnkey projects, financed by public, private sectors, and development partners, resulting in a total investment exceeding $110 million.
           </p>
         </div>
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-4 sm:gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {siteData.projects.map((p) => (
-            <article key={p.title} className="group rounded-2xl overflow-hidden ring-1 ring-slate-200 bg-white hover:shadow-lg transition">
+            <article key={p.title} className="group rounded-xl sm:rounded-2xl overflow-hidden ring-1 ring-slate-200 bg-white hover:shadow-lg transition">
               <div className="aspect-[16/11] overflow-hidden">
                 <img src={p.image} alt={p.title} className="w-full h-full object-cover group-hover:scale-105 transition duration-300" />
               </div>
-              <div className="p-5">
-                <h3 className="font-medium text-slate-900">{p.title}</h3>
-                <p className="mt-1 text-sm text-slate-600">{p.summary}</p>
+              <div className="p-4 sm:p-5">
+                <h3 className="font-medium text-slate-900 text-sm sm:text-base mb-1 sm:mb-2">{p.title}</h3>
+                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">{p.summary}</p>
               </div>
             </article>
           ))}
         </div>
-        <div className="mt-12 bg-white rounded-2xl p-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div className="mt-8 sm:mt-12 bg-white rounded-xl sm:rounded-2xl p-6 sm:p-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 text-center">
             <div>
-              <div className="text-3xl font-semibold text-slate-900">30+</div>
-              <div className="text-slate-600">Turnkey Projects</div>
+              <div className="text-2xl sm:text-3xl font-semibold text-slate-900">30+</div>
+              <div className="text-xs sm:text-sm text-slate-600 mt-1">Turnkey Projects</div>
             </div>
             <div>
-              <div className="text-3xl font-semibold text-slate-900">$110M+</div>
-              <div className="text-slate-600">Total Investment</div>
+              <div className="text-2xl sm:text-3xl font-semibold text-slate-900">$110M+</div>
+              <div className="text-xs sm:text-sm text-slate-600 mt-1">Total Investment</div>
             </div>
             <div>
-              <div className="text-3xl font-semibold text-slate-900">100%</div>
-              <div className="text-slate-600">Quality Delivery</div>
+              <div className="text-2xl sm:text-3xl font-semibold text-slate-900">100%</div>
+              <div className="text-xs sm:text-sm text-slate-600 mt-1">Quality Delivery</div>
             </div>
             <div>
-              <div className="text-3xl font-semibold text-slate-900">SEA</div>
-              <div className="text-slate-600">Regional Coverage</div>
+              <div className="text-2xl sm:text-3xl font-semibold text-slate-900">SEA</div>
+              <div className="text-xs sm:text-sm text-slate-600 mt-1">Regional Coverage</div>
             </div>
           </div>
         </div>
