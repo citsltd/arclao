@@ -286,34 +286,41 @@ function Nav() {
 
 function Hero() {
   return (
-    <section className={`${brand.darkBg} text-white relative overflow-hidden`}>
+    <section className="text-white relative overflow-hidden min-h-[600px] lg:min-h-[700px]">
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <img 
+          src={technologicalInnovationImg} 
+          alt="Technological Innovation Background" 
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-slate-900/70" />
+      </div>
+      
+      {/* Gradient Overlay */}
       <div className={`absolute inset-0 bg-gradient-to-br ${brand.primary} opacity-20`} />
-      <Container className="relative py-20 lg:py-28 grid gap-10 lg:grid-cols-2 items-center">
-        <div>
+      
+      <Container className="relative py-20 lg:py-28 flex items-center min-h-[600px] lg:min-h-[700px]">
+        <div className="max-w-3xl">
           <p className="uppercase tracking-widest text-xs text-cyan-300">{siteData.hero.kicker}</p>
-          <h1 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight">
+          <h1 className="mt-3 text-3xl sm:text-4xl lg:text-6xl font-bold leading-tight">
             {siteData.hero.headline}
           </h1>
-          <p className="mt-4 text-slate-300 text-base lg:text-lg max-w-xl">{siteData.hero.subhead}</p>
-          <div className="mt-8 flex flex-wrap gap-3">
+          <p className="mt-6 text-slate-200 text-lg lg:text-xl max-w-2xl leading-relaxed">{siteData.hero.subhead}</p>
+          <div className="mt-10 flex flex-wrap gap-4">
             {siteData.hero.ctas.map((c) => (
               <a
                 key={c.label}
                 href={c.href}
-                className={`inline-flex items-center rounded-xl px-4 py-2 text-sm font-medium border transition ${
+                className={`inline-flex items-center rounded-xl px-6 py-3 text-base font-semibold border-2 transition-all duration-200 ${
                   c.variant === "ghost"
-                    ? "border-white/30 hover:border-white/50"
-                    : "bg-white text-slate-900 border-white hover:bg-slate-100"
+                    ? "border-white/50 hover:border-white hover:bg-white/10"
+                    : "bg-white text-slate-900 border-white hover:bg-slate-100 hover:scale-105"
                 }`}
               >
                 {c.label}
               </a>
             ))}
-          </div>
-        </div>
-        <div className="relative">
-          <div className="aspect-[16/10] rounded-2xl overflow-hidden ring-1 ring-white/15 shadow-2xl">
-            <img src={technologicalInnovationImg} alt="Technological Innovation" className="w-full h-full object-cover" />
           </div>
         </div>
       </Container>
