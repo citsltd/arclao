@@ -548,25 +548,127 @@ function About() {
 
 function Overview() {
   return (
-    <section className="py-16 lg:py-20 bg-slate-50">
-      <Container>
-        <div className="grid gap-10 lg:grid-cols-2 items-center">
-          <div>
-            <h2 className="text-2xl sm:text-3xl font-semibold text-slate-900 mb-6">OVERVIEW</h2>
-            <p className="text-slate-600 leading-relaxed mb-6">
-              ARC LAO is a leader in next-generation technology and related services. We enable clients in many countries to navigate their success through INNOVATION. With over 10+ years of experience in managing various projects and workings of global enterprises, we expertly steer our clients through their progressive journey.
-            </p>
-            <p className="text-slate-600 leading-relaxed">
-              We do it by enabling our clients with a highly experienced team coupled with latest technologies. We also empower the business with agile digital at scale to deliver unprecedented levels of performance and customer delight. Our always-on learning agenda drives their continuous improvement through building and transferring skills, expertise, and ideas from our innovation ecosystem.
-            </p>
+    <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-white via-slate-50 to-blue-50 relative overflow-hidden">
+      {/* Background decorations */}
+      <div className="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))]" />
+      <div className="absolute top-0 left-0 w-72 h-72 bg-gradient-to-br from-blue-100/30 to-transparent rounded-full blur-3xl" />
+      <div className="absolute bottom-0 right-0 w-72 h-72 bg-gradient-to-tl from-indigo-100/30 to-transparent rounded-full blur-3xl" />
+      
+      <Container className="relative px-4">
+        <div className="grid gap-12 lg:gap-16 lg:grid-cols-2 items-center">
+          <div className="order-2 lg:order-1">
+            {/* Badge */}
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full border border-slate-200 text-sm font-medium text-slate-600 mb-6">
+              <span className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></span>
+              Company Overview
+            </div>
+            
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-8">
+              Leading the Future of <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Technology</span>
+            </h2>
+            
+            <div className="space-y-6">
+              <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
+                ARC LAO is a leader in next-generation technology and related services. We enable clients in many countries to navigate their success through <strong className="text-slate-900">INNOVATION</strong>. With over 10+ years of experience in managing various projects and workings of global enterprises, we expertly steer our clients through their progressive journey.
+              </p>
+              
+              <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
+                We do it by enabling our clients with a highly experienced team coupled with latest technologies. We also empower the business with agile digital at scale to deliver unprecedented levels of performance and customer delight. Our always-on learning agenda drives their continuous improvement through building and transferring skills, expertise, and ideas from our innovation ecosystem.
+              </p>
+            </div>
+            
+            {/* Key features */}
+            <div className="mt-8 grid gap-4 sm:grid-cols-2">
+              <div className="flex items-start gap-3">
+                <div className="flex-shrink-0 w-6 h-6 mt-1 rounded-full bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center">
+                  <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-slate-900 mb-1">10+ Years Experience</h4>
+                  <p className="text-sm text-slate-600">Managing global enterprise projects</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start gap-3">
+                <div className="flex-shrink-0 w-6 h-6 mt-1 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center">
+                  <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-slate-900 mb-1">Latest Technologies</h4>
+                  <p className="text-sm text-slate-600">Cutting-edge digital solutions</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start gap-3">
+                <div className="flex-shrink-0 w-6 h-6 mt-1 rounded-full bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center">
+                  <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-slate-900 mb-1">Agile Digital Scale</h4>
+                  <p className="text-sm text-slate-600">Unprecedented performance levels</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start gap-3">
+                <div className="flex-shrink-0 w-6 h-6 mt-1 rounded-full bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center">
+                  <svg className="w-3 h-3 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                </div>
+                <div>
+                  <h4 className="font-semibold text-slate-900 mb-1">Innovation Ecosystem</h4>
+                  <p className="text-sm text-slate-600">Continuous learning and improvement</p>
+                </div>
+              </div>
+            </div>
           </div>
-          <div className="relative">
-            <div className="aspect-[4/3] rounded-2xl overflow-hidden ring-1 ring-slate-200 shadow-lg">
-              <img 
-                src={Technological_Innovation} 
-                alt="Technology infrastructure and innovation" 
-                className="w-full h-full object-cover"
-              />
+          
+          <div className="order-1 lg:order-2 relative">
+            {/* Decorative elements */}
+            <div className="absolute -top-4 -left-4 w-24 h-24 bg-gradient-to-br from-blue-400/20 to-indigo-500/20 rounded-full blur-xl"></div>
+            <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-gradient-to-tl from-cyan-400/20 to-blue-500/20 rounded-full blur-xl"></div>
+            
+            {/* Main image container */}
+            <div className="relative">
+              <div className="aspect-[4/3] rounded-3xl overflow-hidden ring-1 ring-slate-200/50 shadow-2xl shadow-slate-900/10 bg-white">
+                <img 
+                  src={Technological_Innovation} 
+                  alt="Technology infrastructure and innovation" 
+                  className="w-full h-full object-cover"
+                />
+                {/* Image overlay for better contrast */}
+                <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/10 via-transparent to-indigo-600/10"></div>
+              </div>
+              
+              {/* Floating stats card */}
+              <div className="absolute -bottom-6 -left-6 bg-white rounded-2xl p-6 shadow-xl ring-1 ring-slate-200 backdrop-blur-sm">
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center text-white font-bold">
+                    ✓
+                  </div>
+                  <div>
+                    <div className="text-2xl font-bold text-slate-900">1,800+</div>
+                    <div className="text-sm text-slate-600">Satisfied Clients</div>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Floating innovation badge */}
+              <div className="absolute -top-6 -right-6 bg-gradient-to-r from-indigo-600 to-cyan-600 rounded-2xl p-4 shadow-xl text-white">
+                <div className="flex items-center gap-2">
+                  <span className="text-2xl">🚀</span>
+                  <div>
+                    <div className="font-bold text-sm">Innovation</div>
+                    <div className="text-xs opacity-90">Leading Edge</div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
