@@ -15,6 +15,10 @@ import infrastructureImg from "../assets/infrastructure.jpg";
 
 import Technological_Innovation from "@assets/Technological Innovation.jpg";
 import Future_of_Technology from "@assets/Future of Technology_1754915928797.jpg";
+import principlesIcon from "@assets/principles_1754916579666.png";
+import perseveranceIcon from "@assets/perservence_1754916579664.png";
+import permanenceIcon from "@assets/permanence_1754916579663.png";
+import partnershipIcon from "@assets/partnership_1754916579659.png";
 
 // --- Brand system (edit freely) ---
 const brand = {
@@ -458,7 +462,7 @@ function Hero() {
 }
 
 function About() {
-  const pillarIcons = ["🎯", "🚀", "🏛️", "🤝"];
+  const pillarIcons = [principlesIcon, perseveranceIcon, permanenceIcon, partnershipIcon];
   
   return (
     <section className="py-16 sm:py-20 lg:py-32 bg-gradient-to-br from-slate-50 via-white to-blue-50 relative overflow-hidden" id="about">
@@ -494,8 +498,12 @@ function About() {
               
               {/* Icon and title */}
               <div className="flex flex-col items-center text-center mb-4 sm:mb-6">
-                <div className="w-14 sm:w-16 h-14 sm:h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-white text-xl sm:text-2xl mb-3 sm:mb-4 group-hover:scale-110 transition-transform duration-300">
-                  {pillarIcons[index]}
+                <div className="w-14 sm:w-16 h-14 sm:h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center mb-3 sm:mb-4 group-hover:scale-110 transition-transform duration-300 p-3">
+                  <img 
+                    src={pillarIcons[index]} 
+                    alt={v.title} 
+                    className="w-full h-full object-contain filter brightness-0 invert"
+                  />
                 </div>
                 <h3 className="text-lg sm:text-xl font-bold text-slate-900 mb-2">{v.title}</h3>
               </div>
