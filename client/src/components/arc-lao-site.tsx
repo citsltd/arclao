@@ -286,34 +286,127 @@ function Nav() {
 
 function Hero() {
   return (
-    <section className={`${brand.darkBg} text-white relative overflow-hidden`}>
-      <div className={`absolute inset-0 bg-gradient-to-br ${brand.primary} opacity-20`} />
-      <Container className="relative py-20 lg:py-28 grid gap-10 lg:grid-cols-2 items-center">
-        <div>
-          <p className="uppercase tracking-widest text-xs text-cyan-300">{siteData.hero.kicker}</p>
-          <h1 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight">
-            {siteData.hero.headline}
-          </h1>
-          <p className="mt-4 text-slate-300 text-base lg:text-lg max-w-xl">{siteData.hero.subhead}</p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            {siteData.hero.ctas.map((c) => (
-              <a
-                key={c.label}
-                href={c.href}
-                className={`inline-flex items-center rounded-xl px-4 py-2 text-sm font-medium border transition ${
-                  c.variant === "ghost"
-                    ? "border-white/30 hover:border-white/50"
-                    : "bg-white text-slate-900 border-white hover:bg-slate-100"
-                }`}
-              >
-                {c.label}
-              </a>
-            ))}
+    <section className="relative min-h-screen flex items-center bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900 text-white overflow-hidden">
+      {/* Animated background elements */}
+      <div className="absolute inset-0 bg-gradient-to-br from-indigo-600/20 via-cyan-500/10 to-transparent"></div>
+      <div className="absolute top-1/4 -right-20 w-96 h-96 bg-gradient-to-bl from-cyan-400/20 to-transparent rounded-full blur-3xl animate-pulse"></div>
+      <div className="absolute bottom-1/4 -left-20 w-96 h-96 bg-gradient-to-tr from-indigo-400/20 to-transparent rounded-full blur-3xl animate-pulse delay-1000"></div>
+      
+      {/* Grid pattern overlay */}
+      <div className="absolute inset-0 bg-grid-white/[0.05] [mask-image:linear-gradient(0deg,transparent,black,transparent)]"></div>
+      
+      <Container className="relative z-10 py-20 lg:py-32">
+        <div className="grid gap-12 lg:grid-cols-2 items-center">
+          {/* Content */}
+          <div className="space-y-8">
+            {/* Badge */}
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 text-sm font-medium">
+              <span className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></span>
+              <span className="text-cyan-300 uppercase tracking-wider text-xs">
+                {siteData.hero.kicker}
+              </span>
+            </div>
+            
+            {/* Main headline */}
+            <div className="space-y-6">
+              <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight">
+                <span className="block">Me To We With</span>
+                <span className="block bg-gradient-to-r from-cyan-400 via-blue-400 to-indigo-400 bg-clip-text text-transparent">
+                  ARC Lao
+                </span>
+                <span className="block text-2xl sm:text-3xl lg:text-4xl font-normal text-slate-300 mt-2">
+                  combined efforts On
+                </span>
+                <span className="block bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">
+                  Technological Innovation
+                </span>
+              </h1>
+              
+              <p className="text-lg lg:text-xl text-slate-300 max-w-2xl leading-relaxed">
+                {siteData.hero.subhead}
+              </p>
+            </div>
+            
+            {/* CTA Buttons */}
+            <div className="flex flex-wrap gap-4">
+              {siteData.hero.ctas.map((c, index) => (
+                <a
+                  key={c.label}
+                  href={c.href}
+                  className={`group inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 ${
+                    c.variant === "ghost"
+                      ? "border-2 border-white/30 text-white hover:border-white/60 hover:bg-white/10 backdrop-blur-sm"
+                      : "bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg hover:shadow-cyan-500/25 hover:from-cyan-400 hover:to-blue-500"
+                  }`}
+                >
+                  <span>{c.label}</span>
+                  {index === 0 ? (
+                    <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  ) : (
+                    <svg className="w-4 h-4 transform group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m0 0l4-4m-4 4l4 4" />
+                    </svg>
+                  )}
+                </a>
+              ))}
+            </div>
+            
+            {/* Trust indicators */}
+            <div className="flex items-center gap-8 pt-4">
+              <div className="flex items-center gap-2">
+                <div className="flex -space-x-1">
+                  <div className="w-6 h-6 rounded-full bg-gradient-to-br from-green-400 to-emerald-500 border-2 border-white/20"></div>
+                  <div className="w-6 h-6 rounded-full bg-gradient-to-br from-blue-400 to-indigo-500 border-2 border-white/20"></div>
+                  <div className="w-6 h-6 rounded-full bg-gradient-to-br from-purple-400 to-pink-500 border-2 border-white/20"></div>
+                </div>
+                <div className="text-sm text-slate-300">
+                  <span className="font-semibold text-white">1,800+</span> satisfied clients
+                </div>
+              </div>
+              <div className="text-sm text-slate-300">
+                <span className="font-semibold text-white">10+</span> years experience
+              </div>
+            </div>
+          </div>
+          
+          {/* Hero image */}
+          <div className="relative lg:pl-8">
+            {/* Floating elements */}
+            <div className="absolute -top-4 -left-4 w-20 h-20 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-full blur-xl animate-bounce"></div>
+            <div className="absolute -bottom-4 -right-4 w-16 h-16 bg-gradient-to-br from-emerald-400/20 to-cyan-500/20 rounded-full blur-xl animate-bounce delay-500"></div>
+            
+            {/* Main image container */}
+            <div className="relative">
+              <div className="aspect-[4/3] rounded-3xl overflow-hidden bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/20 shadow-2xl">
+                <img 
+                  src={Technological_Innovation} 
+                  alt="Technological Innovation and Infrastructure Development" 
+                  className="w-full h-full object-cover"
+                />
+                {/* Overlay gradient */}
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/20 via-transparent to-transparent"></div>
+              </div>
+              
+              {/* Floating stats cards */}
+              <div className="absolute -bottom-6 -left-6 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-4 shadow-xl">
+                <div className="text-2xl font-bold text-white">$110M+</div>
+                <div className="text-xs text-slate-300">Total Investment</div>
+              </div>
+              
+              <div className="absolute -top-6 -right-6 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-4 shadow-xl">
+                <div className="text-2xl font-bold text-white">30+</div>
+                <div className="text-xs text-slate-300">Projects</div>
+              </div>
+            </div>
           </div>
         </div>
-        <div className="relative">
-          <div className="aspect-[16/10] rounded-2xl overflow-hidden ring-1 ring-white/15 shadow-2xl">
-            <img src={Technological_Innovation} alt="Hero visual" className="w-full h-full object-cover" />
+        
+        {/* Scroll indicator */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+          <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
+            <div className="w-1 h-3 bg-white/60 rounded-full mt-2 animate-pulse"></div>
           </div>
         </div>
       </Container>
