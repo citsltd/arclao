@@ -883,44 +883,126 @@ function Success() {
 
 function Projects() {
   return (
-    <section className="py-12 sm:py-16 lg:py-20 bg-slate-50" id="projects">
-      <Container className="px-4">
-        <div className="text-center mb-8 sm:mb-12">
-          <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold text-slate-900 mb-3 sm:mb-4 px-2">Project Execution</h2>
-          <p className="text-sm sm:text-base text-slate-600 max-w-4xl mx-auto leading-relaxed px-2">
+    <section className="py-16 sm:py-20 lg:py-32 bg-gradient-to-br from-slate-50 via-white to-indigo-50 relative overflow-hidden" id="projects">
+      {/* Background decorations */}
+      <div className="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))]" />
+      <div className="absolute top-0 left-0 w-72 h-72 bg-gradient-to-br from-blue-100/30 to-transparent rounded-full blur-3xl" />
+      <div className="absolute bottom-0 right-0 w-72 h-72 bg-gradient-to-tl from-indigo-100/30 to-transparent rounded-full blur-3xl" />
+      
+      <Container className="relative px-4">
+        <div className="text-center mb-12 sm:mb-16">
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 bg-white rounded-full border border-slate-200 text-xs sm:text-sm font-medium text-slate-600 mb-4 sm:mb-6">
+            <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+            Our Portfolio
+          </div>
+          
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-6 sm:mb-8 px-2">
+            Project <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Execution</span>
+          </h2>
+          <p className="text-base sm:text-lg text-slate-600 max-w-4xl mx-auto leading-relaxed px-4">
             ARC Lao has consistently adhered to the "Prestige, Quality, Innovation, and Pragmatism" business philosophy, serving multiple sectors in the Southeast Asia region. The company has successfully completed over 30 turnkey projects, financed by public, private sectors, and development partners, resulting in a total investment exceeding $110 million.
           </p>
         </div>
-        <div className="grid gap-4 sm:gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-          {siteData.projects.map((p) => (
-            <article key={p.title} className="group rounded-xl sm:rounded-2xl overflow-hidden ring-1 ring-slate-200 bg-white hover:shadow-lg transition">
-              <div className="aspect-[16/11] overflow-hidden">
-                <img src={p.image} alt={p.title} className="w-full h-full object-cover group-hover:scale-105 transition duration-300" />
+        
+        <div className="grid gap-6 sm:gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mb-12 sm:mb-16">
+          {siteData.projects.map((p, index) => (
+            <article key={p.title} className="group relative rounded-2xl sm:rounded-3xl overflow-hidden bg-white shadow-sm ring-1 ring-slate-200 hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-500 hover:-translate-y-2">
+              {/* Decorative top accent */}
+              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 to-indigo-500"></div>
+              
+              <div className="aspect-[16/11] overflow-hidden relative">
+                <img src={p.image} alt={p.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                {/* Image overlay for better contrast */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+                
+                {/* Project number badge */}
+                <div className="absolute top-4 right-4 w-10 h-10 rounded-xl bg-white/90 backdrop-blur-sm flex items-center justify-center text-sm font-bold text-slate-900 group-hover:scale-110 transition-transform duration-300">
+                  {String(index + 1).padStart(2, '0')}
+                </div>
               </div>
-              <div className="p-4 sm:p-5">
-                <h3 className="font-medium text-slate-900 text-sm sm:text-base mb-1 sm:mb-2">{p.title}</h3>
-                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">{p.summary}</p>
+              
+              <div className="p-6 sm:p-8">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-8 h-1 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full"></div>
+                  <div className="text-xs text-slate-500 font-medium uppercase tracking-wider">Project</div>
+                </div>
+                
+                <h3 className="font-bold text-slate-900 text-lg sm:text-xl mb-3 leading-tight group-hover:text-blue-600 transition-colors duration-300">
+                  {p.title}
+                </h3>
+                <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
+                  {p.summary}
+                </p>
               </div>
+              
+              {/* Hover effect overlay */}
+              <div className="absolute inset-0 rounded-2xl sm:rounded-3xl bg-gradient-to-br from-blue-500/5 to-indigo-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              
+              {/* Floating decorative elements */}
+              <div className="absolute -top-2 -right-2 w-4 h-4 bg-gradient-to-br from-blue-400 to-indigo-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute -bottom-2 -left-2 w-3 h-3 bg-gradient-to-br from-indigo-400 to-blue-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100"></div>
             </article>
           ))}
         </div>
-        <div className="mt-8 sm:mt-12 bg-white rounded-xl sm:rounded-2xl p-6 sm:p-8">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 text-center">
-            <div>
-              <div className="text-2xl sm:text-3xl font-semibold text-slate-900">30+</div>
-              <div className="text-xs sm:text-sm text-slate-600 mt-1">Turnkey Projects</div>
+        
+        {/* Enhanced statistics section */}
+        <div className="relative">
+          {/* Background decoration for stats */}
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-3xl transform -skew-y-1"></div>
+          
+          <div className="relative bg-white rounded-3xl p-8 sm:p-12 shadow-xl ring-1 ring-slate-200">
+            <div className="text-center mb-8">
+              <h3 className="text-xl sm:text-2xl font-bold text-slate-900 mb-2">
+                Our <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Track Record</span>
+              </h3>
+              <p className="text-slate-600">Delivering excellence across Southeast Asia</p>
             </div>
-            <div>
-              <div className="text-2xl sm:text-3xl font-semibold text-slate-900">$110M+</div>
-              <div className="text-xs sm:text-sm text-slate-600 mt-1">Total Investment</div>
-            </div>
-            <div>
-              <div className="text-2xl sm:text-3xl font-semibold text-slate-900">100%</div>
-              <div className="text-xs sm:text-sm text-slate-600 mt-1">Quality Delivery</div>
-            </div>
-            <div>
-              <div className="text-2xl sm:text-3xl font-semibold text-slate-900">SEA</div>
-              <div className="text-xs sm:text-sm text-slate-600 mt-1">Regional Coverage</div>
+            
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+              <div className="text-center group">
+                <div className="relative">
+                  <div className="text-3xl sm:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent mb-2 group-hover:scale-110 transition-transform duration-300">
+                    30+
+                  </div>
+                  <div className="absolute -top-1 -right-1 w-3 h-3 bg-gradient-to-br from-green-400 to-emerald-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+                <div className="text-sm sm:text-base text-slate-600 font-medium">Turnkey Projects</div>
+                <div className="w-12 h-1 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full mx-auto mt-2"></div>
+              </div>
+              
+              <div className="text-center group">
+                <div className="relative">
+                  <div className="text-3xl sm:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent mb-2 group-hover:scale-110 transition-transform duration-300">
+                    $110M+
+                  </div>
+                  <div className="absolute -top-1 -right-1 w-3 h-3 bg-gradient-to-br from-blue-400 to-indigo-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+                <div className="text-sm sm:text-base text-slate-600 font-medium">Total Investment</div>
+                <div className="w-12 h-1 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full mx-auto mt-2"></div>
+              </div>
+              
+              <div className="text-center group">
+                <div className="relative">
+                  <div className="text-3xl sm:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent mb-2 group-hover:scale-110 transition-transform duration-300">
+                    100%
+                  </div>
+                  <div className="absolute -top-1 -right-1 w-3 h-3 bg-gradient-to-br from-purple-400 to-pink-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+                <div className="text-sm sm:text-base text-slate-600 font-medium">Quality Delivery</div>
+                <div className="w-12 h-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mx-auto mt-2"></div>
+              </div>
+              
+              <div className="text-center group">
+                <div className="relative">
+                  <div className="text-3xl sm:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent mb-2 group-hover:scale-110 transition-transform duration-300">
+                    SEA
+                  </div>
+                  <div className="absolute -top-1 -right-1 w-3 h-3 bg-gradient-to-br from-cyan-400 to-blue-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+                <div className="text-sm sm:text-base text-slate-600 font-medium">Regional Coverage</div>
+                <div className="w-12 h-1 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full mx-auto mt-2"></div>
+              </div>
             </div>
           </div>
         </div>
