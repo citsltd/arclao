@@ -110,22 +110,16 @@ const siteData = {
       title: "Infrastructure Development",
       summary:
         "Established and debut into infrastructure development - building the foundation for Southeast Asia's growth.",
-      image:
-        "https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1400&h=900",
     },
     {
       title: "Automotive Solutions",
       summary:
         "Foray into automotives with electric and non-electric vehicles, agricultural and construction machines.",
-      image:
-        "https://images.unsplash.com/photo-1562141961-4a1a6539d1d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1400&h=900",
     },
     {
       title: "IT Solutions",
       summary:
         "Entered into IT and related solutions including IoT, energy software, and comprehensive development services.",
-      image:
-        "https://images.unsplash.com/photo-1559526324-593bc073d938?ixlib=rb-4.0.3&auto=format&fit=crop&w=1400&h=900",
     },
   ],
   history: [
@@ -461,14 +455,9 @@ function Projects() {
         </div>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {siteData.projects.map((p) => (
-            <article key={p.title} className="group rounded-2xl overflow-hidden ring-1 ring-slate-200 bg-white hover:shadow-lg transition">
-              <div className="aspect-[16/11] overflow-hidden">
-                <img src={p.image} alt={p.title} className="w-full h-full object-cover group-hover:scale-105 transition duration-300" />
-              </div>
-              <div className="p-5">
-                <h3 className="font-medium text-slate-900">{p.title}</h3>
-                <p className="mt-1 text-sm text-slate-600">{p.summary}</p>
-              </div>
+            <article key={p.title} className="p-6 rounded-2xl ring-1 ring-slate-200 bg-white hover:shadow-lg transition">
+              <h3 className="font-medium text-slate-900 mb-3">{p.title}</h3>
+              <p className="text-sm text-slate-600">{p.summary}</p>
             </article>
           ))}
         </div>
