@@ -341,11 +341,8 @@ function About() {
             Built on <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Strong Foundations</span>
           </h2>
           <div className="max-w-4xl mx-auto">
-            <p className="text-lg text-slate-600 leading-relaxed mb-6">
-              ARC Lao Sole Company Ltd is founded upon the four strong pillars of <strong>Principles, Perseverance, Permanence and Partnership</strong>. We strive for excellence by combining people, technology and process as our path forward.
-            </p>
-            <p className="text-base text-slate-600 leading-relaxed">
-              We empower sustainable progress for our clients, partners, and the wider community through our unique approach as business technologists.
+            <p className="text-lg text-slate-600 leading-relaxed">
+              ARC Lao Sole Company Ltd is founded upon the four strong pillars of <strong>Principles, Perseverance, Permanence and Partnership</strong>. We strive for excellence by combining people, technology and process as our path forward. We empower sustainable progress for our clients, partners, and the wider community through our unique approach as business technologists.
             </p>
           </div>
         </div>
