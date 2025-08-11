@@ -7,6 +7,11 @@
 // 4) Ship! This is production‑ready markup with accessible structure and clean Tailwind classes.
 
 import React, { useState } from "react";
+import evInfrastructureImg from "../assets/ev-infrastructure.jpg";
+import defenseImg from "../assets/defense.jpg";
+import informationTechnologyImg from "../assets/information-technology.jpg";
+import automotiveImg from "../assets/automotive.jpg";
+import infrastructureImg from "../assets/infrastructure.jpg";
 
 // --- Brand system (edit freely) ---
 const brand = {
@@ -69,19 +74,19 @@ const siteData = {
       title: "EV Infrastructure",
       body:
         "Lithium Ion Battery, Charging Stations, EV Testing Equipments.",
-      image: "https://images.unsplash.com/photo-1593941707882-a5bac6861d75?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
+      image: evInfrastructureImg,
     },
     {
       title: "Defence",
       body:
         "Demining Equipments, Metal Detectors, Body Armor, EOD/IED Equipments.",
-      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
+      image: defenseImg,
     },
     {
       title: "Information Technology",
       body:
         "Internet Of Thing, Energy Software, Software Development & Testing.",
-      image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
+      image: informationTechnologyImg,
     },
     {
       title: "Energy",
@@ -93,13 +98,13 @@ const siteData = {
       title: "Automotive",
       body:
         "Electric & Non-electric Motorbikes, Agricultural & Construction Machines.",
-      image: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
+      image: automotiveImg,
     },
     {
       title: "Infrastructure",
       body:
         "Feasibility & Consultancy, Roads & Bridges, Buildings & Factories.",
-      image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
+      image: infrastructureImg,
     },
   ],
   sectors: ["EV Infrastructure", "Defence", "Information Technology", "Energy", "Automotive", "Infrastructure"],
