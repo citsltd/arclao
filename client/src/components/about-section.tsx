@@ -1,61 +1,47 @@
 export default function AboutSection() {
+  const pillars = [
+    {
+      title: "PRINCIPLES",
+      description: "Integrity, honesty, and ethics supported by strong leadership and uncompromising business standards.",
+      icon: "fas fa-shield-alt"
+    },
+    {
+      title: "PERSEVERANCE", 
+      description: "We offer comprehensive skill, competence, and experience which may lead to growth, profitability, and mutual success for everyone involved.",
+      icon: "fas fa-mountain"
+    },
+    {
+      title: "PERMANENCE",
+      description: "More than two decades of tenure, stability and a client-centric approach under the core management.",
+      icon: "fas fa-anchor"
+    },
+    {
+      title: "PARTNERSHIPS",
+      description: "Meaningful relationships among advisors, investors, & RMR leadership, collectively sharing responsibilities to achieve goals.",
+      icon: "fas fa-handshake"
+    }
+  ];
+
   return (
     <section id="about" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-20">
-          <h2 className="text-4xl font-bold text-arc-dark mb-6">
-            Comprehensive Training and Consulting<br />
-            Solutions Tailored to Your Needs
-          </h2>
-          <p className="text-lg text-arc-gray max-w-3xl mx-auto">
-            With a focus on individuals and teams, we are committed to delivering customized strategies, empowering your
-            workforce, and guiding your business to sustainable growth and excellence.
+          <h2 className="text-4xl font-bold text-arc-dark mb-6">About Company</h2>
+          <p className="text-lg text-arc-gray max-w-4xl mx-auto leading-relaxed">
+            ARC Lao Sole Company Ltd, a company which is founded upon strong pillars of Principals, Perseverance, Permanence and Partnership. ARC Lao strive to work for excellence. ARC Lao believes that combining people, technology and process is the way forward. ARC Lao empower sustainable progress for our clients and partners, the wider community and ourselves. It is our unique approach as business technologists that makes this possible.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-20">
-          <div>
-            <h3 className="text-2xl font-bold text-arc-dark mb-8">Our Approach to Leadership Development</h3>
-            <p className="text-arc-gray mb-4">
-              FranCoY is the world's most trusted provider of leadership
-              development solutions that unleash the full potential of leaders and their
-              teams.
-            </p>
-            <p className="text-arc-gray mb-8">
-              Our unique approach to leadership development combines powerful
-              content based on decades of research and development, expert
-              facilitation, and online reinforcement tools to ensure new behaviors
-              are applied on the job.
-            </p>
-            <ul className="space-y-3">
-              <li className="flex items-start">
-                <i className="fas fa-check text-arc-blue mr-3 mt-1"></i>
-                <span className="text-arc-gray">Build their character and competence</span>
-              </li>
-              <li className="flex items-start">
-                <i className="fas fa-check text-arc-blue mr-3 mt-1"></i>
-                <span className="text-arc-gray">See their purpose and connect it with key business goals</span>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="text-2xl font-bold text-arc-dark mb-8">Leadership development expands a leader's impact.</h3>
-            <p className="text-arc-gray mb-4">
-              As leaders adopt and internalize principles of individual
-              effectiveness, they:
-            </p>
-            <ul className="space-y-3 mb-8">
-              <li className="flex items-start">
-                <i className="fas fa-check text-arc-blue mr-3 mt-1"></i>
-                <span className="text-arc-gray">Build their character and competence</span>
-              </li>
-              <li className="flex items-start">
-                <i className="fas fa-check text-arc-blue mr-3 mt-1"></i>
-                <span className="text-arc-gray">See their purpose and connect it with key business goals</span>
-              </li>
-            </ul>
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {pillars.map((pillar, index) => (
+            <div key={index} className="bg-arc-light-gray rounded-lg p-8">
+              <div className="w-12 h-12 bg-arc-blue rounded-lg flex items-center justify-center mb-6">
+                <i className={`${pillar.icon} text-white text-lg`}></i>
+              </div>
+              <h3 className="text-lg font-bold text-arc-dark mb-4">{pillar.title}</h3>
+              <p className="text-arc-gray text-sm leading-relaxed">{pillar.description}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

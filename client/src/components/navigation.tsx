@@ -35,29 +35,23 @@ export default function Navigation() {
           
           <div className="hidden md:flex items-center space-x-8">
             <button onClick={() => scrollToSection('home')} className="text-arc-gray hover:text-arc-dark transition-colors text-sm">
-              Solution
+              HOME
             </button>
             <button onClick={() => scrollToSection('about')} className="text-arc-gray hover:text-arc-dark transition-colors text-sm">
-              Courses
+              ABOUT US
             </button>
             <button onClick={() => scrollToSection('services')} className="text-arc-gray hover:text-arc-dark transition-colors text-sm">
-              Consultant
+              PRODUCTS & SERVICES
             </button>
             <button onClick={() => scrollToSection('projects')} className="text-arc-gray hover:text-arc-dark transition-colors text-sm">
-              Resources
+              PROJECTS
             </button>
             <button onClick={() => scrollToSection('contact')} className="text-arc-gray hover:text-arc-dark transition-colors text-sm">
-              Events
+              CONTACT US
             </button>
-            <button onClick={() => scrollToSection('about')} className="text-arc-gray hover:text-arc-dark transition-colors text-sm">
-              About us
-            </button>
-            <button className="bg-arc-blue text-white px-5 py-2.5 rounded text-sm hover:opacity-90 transition-opacity">
-              Log in
-            </button>
-            <button className="border border-arc-blue text-arc-blue px-5 py-2.5 rounded text-sm hover:bg-arc-blue hover:text-white transition-colors">
-              Register
-            </button>
+            <a href="tel:+8562076198200" className="bg-arc-blue text-white px-5 py-2.5 rounded text-sm hover:opacity-90 transition-opacity">
+              +856 20 7619 8200
+            </a>
           </div>
 
           <Button 
