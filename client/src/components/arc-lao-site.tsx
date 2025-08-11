@@ -516,50 +516,160 @@ function Contact() {
     e.preventDefault();
     setSent(true);
   };
+  
+  const contactItems = [
+    {
+      icon: "📍",
+      label: "Address",
+      value: siteData.contact.address,
+      link: null
+    },
+    {
+      icon: "📞",
+      label: "Phone",
+      value: siteData.contact.phone,
+      link: `tel:${siteData.contact.phone}`
+    },
+    {
+      icon: "✉️",
+      label: "Email",
+      value: siteData.contact.email,
+      link: `mailto:${siteData.contact.email}`
+    }
+  ];
+
   return (
-    <section className="py-16 lg:py-20 bg-white" id="contact">
-      <Container>
-        <div className="grid gap-8 lg:grid-cols-2">
-          <div>
-            <h2 className="text-2xl sm:text-3xl font-semibold text-slate-900">Let's build together</h2>
-            <p className="mt-2 text-slate-600">Tell us about your project, timeline, and budget. We'll get back within 1–2 business days.</p>
-            <ul className="mt-6 space-y-2 text-sm text-slate-700">
-              <li><strong>Address:</strong> {siteData.contact.address}</li>
-              <li><strong>Phone:</strong> <a href={`tel:${siteData.contact.phone}`} className="underline">{siteData.contact.phone}</a></li>
-              <li>
-                <strong>Email:</strong> <a className="underline" href={`mailto:${siteData.contact.email}`}>{siteData.contact.email}</a>
-              </li>
-            </ul>
-            <div className="mt-6 aspect-[16/10] rounded-xl overflow-hidden ring-1 ring-slate-200 bg-white">
+    <section className="py-20 lg:py-32 bg-gradient-to-br from-slate-50 via-white to-slate-100 relative overflow-hidden" id="contact">
+      {/* Background decoration */}
+      <div className="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))]" />
+      
+      <Container className="relative">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-6">
+            Let's build the future together
+          </h2>
+          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+            Ready to transform your vision into reality? Tell us about your project and we'll get back to you within 24 hours.
+          </p>
+        </div>
+
+        <div className="grid gap-12 lg:grid-cols-2 items-start">
+          {/* Contact Information */}
+          <div className="space-y-8">
+            <div className="grid gap-6">
+              {contactItems.map((item, index) => (
+                <div key={index} className="flex items-start gap-4 p-6 rounded-2xl bg-white shadow-sm ring-1 ring-slate-200 hover:shadow-md transition-all duration-300">
+                  <div className="flex-shrink-0 w-12 h-12 bg-gradient-to-br from-indigo-500 to-cyan-500 rounded-xl flex items-center justify-center text-white text-lg">
+                    {item.icon}
+                  </div>
+                  <div className="min-w-0 flex-1">
+                    <h3 className="font-semibold text-slate-900 mb-1">{item.label}</h3>
+                    {item.link ? (
+                      <a href={item.link} className="text-slate-600 hover:text-indigo-600 transition-colors break-words">
+                        {item.value}
+                      </a>
+                    ) : (
+                      <p className="text-slate-600 break-words">{item.value}</p>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Map */}
+            <div className="aspect-[16/10] rounded-2xl overflow-hidden shadow-lg ring-1 ring-slate-200">
               <iframe
-                title="Map"
+                title="ARC Lao Location"
                 src={siteData.contact.mapEmbed}
                 className="w-full h-full"
                 loading="lazy"
               />
             </div>
           </div>
-          <form onSubmit={onSubmit} className="p-6 rounded-2xl bg-slate-50 ring-1 ring-slate-200 grid gap-4">
-            <div className="grid gap-1">
-              <label htmlFor="name" className="text-sm text-slate-700">Your name</label>
-              <input id="name" name="name" required className="h-11 px-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-cyan-500" />
-            </div>
-            <div className="grid gap-1">
-              <label htmlFor="email" className="text-sm text-slate-700">Email</label>
-              <input id="email" name="email" type="email" required className="h-11 px-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-cyan-500" />
-            </div>
-            <div className="grid gap-1">
-              <label htmlFor="subject" className="text-sm text-slate-700">Subject</label>
-              <input id="subject" name="subject" className="h-11 px-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-cyan-500" />
-            </div>
-            <div className="grid gap-1">
-              <label htmlFor="message" className="text-sm text-slate-700">Message</label>
-              <textarea id="message" name="message" rows={5} className="p-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-cyan-500" />
-            </div>
-            <button type="submit" className="h-11 rounded-xl bg-gradient-to-r from-indigo-600 via-sky-600 to-cyan-500 text-white font-medium">
-              {sent ? "Thanks! We'll be in touch." : "Send message"}
-            </button>
-          </form>
+
+          {/* Contact Form */}
+          <div className="lg:pl-8">
+            <form onSubmit={onSubmit} className="p-8 rounded-3xl bg-white shadow-xl ring-1 ring-slate-200 space-y-6">
+              <div className="space-y-6">
+                <div className="grid gap-6 sm:grid-cols-2">
+                  <div className="space-y-2">
+                    <label htmlFor="name" className="text-sm font-medium text-slate-700">
+                      Full Name *
+                    </label>
+                    <input 
+                      id="name" 
+                      name="name" 
+                      required 
+                      className="w-full h-12 px-4 rounded-xl border border-slate-300 bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all duration-200"
+                      placeholder="John Doe"
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <label htmlFor="email" className="text-sm font-medium text-slate-700">
+                      Email Address *
+                    </label>
+                    <input 
+                      id="email" 
+                      name="email" 
+                      type="email" 
+                      required 
+                      className="w-full h-12 px-4 rounded-xl border border-slate-300 bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all duration-200"
+                      placeholder="john@company.com"
+                    />
+                  </div>
+                </div>
+                
+                <div className="space-y-2">
+                  <label htmlFor="subject" className="text-sm font-medium text-slate-700">
+                    Subject
+                  </label>
+                  <input 
+                    id="subject" 
+                    name="subject" 
+                    className="w-full h-12 px-4 rounded-xl border border-slate-300 bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all duration-200"
+                    placeholder="Project inquiry"
+                  />
+                </div>
+                
+                <div className="space-y-2">
+                  <label htmlFor="message" className="text-sm font-medium text-slate-700">
+                    Message *
+                  </label>
+                  <textarea 
+                    id="message" 
+                    name="message" 
+                    rows={5} 
+                    required
+                    className="w-full p-4 rounded-xl border border-slate-300 bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition-all duration-200 resize-none"
+                    placeholder="Tell us about your project..."
+                  />
+                </div>
+              </div>
+              
+              <button 
+                type="submit" 
+                className="w-full h-12 rounded-xl bg-gradient-to-r from-indigo-600 via-sky-600 to-cyan-500 text-white font-semibold hover:from-indigo-700 hover:via-sky-700 hover:to-cyan-600 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition-all duration-200 transform hover:scale-[1.02] active:scale-[0.98]"
+              >
+                {sent ? (
+                  <span className="flex items-center justify-center gap-2">
+                    <span>✓</span>
+                    Message sent successfully!
+                  </span>
+                ) : (
+                  <span className="flex items-center justify-center gap-2">
+                    <span>Send Message</span>
+                    <span>→</span>
+                  </span>
+                )}
+              </button>
+              
+              {sent && (
+                <div className="text-center text-sm text-slate-600 bg-green-50 p-3 rounded-lg border border-green-200">
+                  Thank you for your message! We'll get back to you within 24 hours.
+                </div>
+              )}
+            </form>
+          </div>
         </div>
       </Container>
     </section>
