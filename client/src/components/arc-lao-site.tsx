@@ -69,31 +69,37 @@ const siteData = {
       title: "EV Infrastructure",
       body:
         "Lithium Ion Battery, Charging Stations, EV Testing Equipments.",
+      image: "https://images.unsplash.com/photo-1593941707882-a5bac6861d75?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
     },
     {
       title: "Defence",
       body:
         "Demining Equipments, Metal Detectors, Body Armor, EOD/IED Equipments.",
+      image: "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
     },
     {
       title: "Information Technology",
       body:
         "Internet Of Thing, Energy Software, Software Development & Testing.",
+      image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
     },
     {
       title: "Energy",
       body:
         "Hydrogen Fuel Cell, Energy From Waste, Solar Energy.",
+      image: "https://images.unsplash.com/photo-1466611653911-95081537e5b7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
     },
     {
       title: "Automotive",
       body:
         "Electric & Non-electric Motorbikes, Agricultural & Construction Machines.",
+      image: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
     },
     {
       title: "Infrastructure",
       body:
         "Feasibility & Consultancy, Roads & Bridges, Buildings & Factories.",
+      image: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
     },
   ],
   sectors: ["EV Infrastructure", "Defence", "Information Technology", "Energy", "Automotive", "Infrastructure"],
@@ -375,9 +381,14 @@ function Services() {
         </div>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {siteData.services.map((s) => (
-            <article key={s.title} className="h-full p-6 rounded-2xl bg-slate-50 ring-1 ring-slate-200 hover:shadow-md transition">
-              <h3 className="font-medium text-slate-900 mb-3">{s.title}</h3>
-              <p className="text-sm text-slate-600">{s.body}</p>
+            <article key={s.title} className="h-full group rounded-2xl overflow-hidden ring-1 ring-slate-200 bg-white hover:shadow-lg transition">
+              <div className="aspect-[16/10] overflow-hidden">
+                <img src={s.image} alt={s.title} className="w-full h-full object-cover group-hover:scale-105 transition duration-300" />
+              </div>
+              <div className="p-6">
+                <h3 className="font-medium text-slate-900 mb-3">{s.title}</h3>
+                <p className="text-sm text-slate-600">{s.body}</p>
+              </div>
             </article>
           ))}
         </div>
