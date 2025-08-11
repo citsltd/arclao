@@ -756,7 +756,7 @@ function Services() {
 
 function Stats() {
   return (
-    <section className="py-10 sm:py-14 text-white bg-[#4a4ae6]">
+    <section className="py-10 sm:py-14 text-white bg-[#f4f7fc]">
       <Container className="px-4">
         <div className="grid gap-4 sm:gap-6 grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 bg-[#00000000]">
           {siteData.stats.map((s) => (
