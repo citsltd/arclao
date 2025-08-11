@@ -1,117 +1,63 @@
 export default function HistorySection() {
-  const milestones = [
+  const workflowSteps = [
     {
-      year: "2013",
-      title: "ESTABLISHED AND DEBUT INTO INFRASTRUCTURE DEVELOPMENT",
-      image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250",
-      alt: "Infrastructure development and construction",
-      position: "left"
+      title: "Participants",
+      subtitle: "Sales & Business Development",
+      description: "Our Sales & Business Development training programs are designed for individuals and teams that want to enhance their sales capabilities, strengthen client relationships, and drive sustainable business growth. Perfect for sales professionals at all levels.",
+      icon: "fas fa-users"
     },
     {
-      year: "2015",
-      title: "FORAY INTO AUTOMOTIVES",
-      image: "https://images.unsplash.com/photo-1562141961-4a1a6539d1d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250",
-      alt: "Automotive industry and vehicle manufacturing",
-      position: "right"
+      title: "Participants",
+      subtitle: "Leadership & Sales Management",
+      description: "Our Leadership & Sales Management Programs are designed to transform managers into inspirational leaders who can drive sales performance, build high-performing teams, and achieve exceptional results. Ideal for current and aspiring sales leaders looking to elevate their leadership capabilities.",
+      icon: "fas fa-user-tie"
     },
     {
-      year: "2018",
-      title: "ENTERED INTO IT AND RELATED SOLUTIONS",
-      image: "https://images.unsplash.com/photo-1559526324-593bc073d938?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250",
-      alt: "IT solutions and modern office environment",
-      position: "left"
+      title: "Participants",
+      subtitle: "Compliance and Regulatory Training",
+      description: "Our Compliance and Regulatory Training ensures your organization meets industry standards and legal requirements. We provide comprehensive training on relevant regulations, best practices, and ethical standards, helping you maintain compliance while fostering a culture of integrity.",
+      icon: "fas fa-shield-alt"
     },
     {
-      year: "2020",
-      title: "ENTERED INTO RENEWABLES",
-      image: "https://images.unsplash.com/photo-1466611653911-95081537e5b7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250",
-      alt: "Renewable energy wind turbines and solar panels",
-      position: "right"
-    },
-    {
-      year: "2020",
-      title: "EXPANDED INTO ASEAN AND OTHER REGIONS",
-      position: "left",
-      noImage: true
-    },
-    {
-      year: "2021",
-      title: "ENTERED INTO ENERGY SECTOR",
-      position: "right",
-      noImage: true
-    },
-    {
-      year: "2022",
-      title: "ENTERED INTO AI & EVS",
-      position: "left",
-      noImage: true
+      title: "Participants",
+      subtitle: "Change Management Workshop",
+      description: "Our Change Management Workshops equip leaders and teams with the tools and strategies needed to navigate organizational transformation successfully. Learn how to lead change initiatives, overcome resistance, and create a culture that embraces continuous improvement and innovation.",
+      icon: "fas fa-sync-alt"
     }
   ];
 
-  const getColorByYear = (year: string) => {
-    const colors = {
-      "2013": "bg-arc-blue",
-      "2015": "bg-arc-light-blue", 
-      "2018": "bg-arc-accent",
-      "2020": "bg-green-500",
-      "2021": "bg-red-500",
-      "2022": "bg-orange-500"
-    };
-    return colors[year as keyof typeof colors] || "bg-arc-blue";
-  };
-
   return (
-    <section className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="py-24 bg-arc-light-gray">
+      <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-arc-blue mb-6">Brief History</h2>
-          <div className="w-24 h-1 bg-arc-accent mx-auto"></div>
+          <h2 className="text-4xl font-bold text-arc-dark mb-6">
+            Programs to Elevate Your Workforce
+          </h2>
+          <p className="text-lg text-arc-gray max-w-3xl mx-auto">
+            Our comprehensive training programs are tailored to address the unique challenges and opportunities facing your organization.
+          </p>
         </div>
 
-        <div className="relative">
-          <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-arc-accent"></div>
-          
-          <div className="space-y-16">
-            {milestones.map((milestone, index) => (
-              <div key={index} className="flex items-center justify-between">
-                {milestone.position === "left" ? (
-                  <>
-                    <div className="w-5/12 text-right pr-8">
-                      {!milestone.noImage && (
-                        <img 
-                          src={milestone.image} 
-                          alt={milestone.alt}
-                          className="rounded-lg shadow-lg ml-auto mb-4 w-80 h-48 object-cover"
-                        />
-                      )}
-                      <h3 className="text-xl font-semibold text-arc-blue mb-2">{milestone.title}</h3>
-                    </div>
-                    <div className={`w-16 h-16 ${getColorByYear(milestone.year)} rounded-full flex items-center justify-center text-white font-bold text-lg relative z-10`}>
-                      {milestone.year}
-                    </div>
-                    <div className="w-5/12"></div>
-                  </>
-                ) : (
-                  <>
-                    <div className="w-5/12"></div>
-                    <div className={`w-16 h-16 ${getColorByYear(milestone.year)} rounded-full flex items-center justify-center text-white font-bold text-lg relative z-10`}>
-                      {milestone.year}
-                    </div>
-                    <div className="w-5/12 text-left pl-8">
-                      <h3 className="text-xl font-semibold text-arc-blue mb-4">{milestone.title}</h3>
-                      {!milestone.noImage && (
-                        <img 
-                          src={milestone.image} 
-                          alt={milestone.alt}
-                          className="rounded-lg shadow-lg w-80 h-48 object-cover"
-                        />
-                      )}
-                    </div>
-                  </>
-                )}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {workflowSteps.map((step, index) => (
+            <div key={index} className="bg-white rounded-lg p-8">
+              <div className="flex items-start space-x-4">
+                <div className="w-12 h-12 bg-arc-light-gray rounded-lg flex items-center justify-center flex-shrink-0">
+                  <i className={`${step.icon} text-arc-blue text-lg`}></i>
+                </div>
+                <div className="flex-1">
+                  <p className="text-sm text-arc-gray mb-2">{step.title}</p>
+                  <h3 className="text-xl font-bold text-arc-dark mb-4">{step.subtitle}</h3>
+                  <p className="text-arc-gray text-sm leading-relaxed">
+                    {step.description}
+                  </p>
+                  <button className="mt-4 text-arc-blue font-medium text-sm flex items-center hover:opacity-80 transition-opacity">
+                    Learn more <i className="fas fa-arrow-right ml-2"></i>
+                  </button>
+                </div>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

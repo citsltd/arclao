@@ -1,68 +1,84 @@
 export default function ExpertiseSection() {
-  const sectors = [
+  const programs = [
     {
-      title: "EV Infrastructure",
-      description: "Lithium Ion Battery, Charging Stations, EV Testing Equipments.",
-      image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250",
-      alt: "Electric vehicle charging station"
+      icon: "fas fa-user-tie",
+      title: "Sales Training",
+      available: true
     },
     {
-      title: "Defence",
-      description: "Demining Equipments, Metal Detectors, Body Armor, EOD/IED Equipments.",
-      image: "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250",
-      alt: "Defense and security equipment"
+      icon: "fas fa-users",
+      title: "Private Training On-Site",
+      available: true
     },
     {
-      title: "Information Technology",
-      description: "Internet Of Thing, Energy Software, Software Development & Testing.",
-      image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250",
-      alt: "Information technology server infrastructure"
+      icon: "fas fa-graduation-cap",
+      title: "Leadership Training",
+      available: true
     },
     {
-      title: "Energy",
-      description: "Hydrogen Fuel Cell, Energy From Waste, Solar Energy.",
-      image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250",
-      alt: "Renewable energy solar panels"
+      icon: "fas fa-chart-line",
+      title: "Customer Service Training",
+      available: true
     },
     {
-      title: "Automotive",
-      description: "Electric & Non-electric Motorbikes, Agricultural & Construction Machines.",
-      image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250",
-      alt: "Automotive manufacturing and machinery"
-    },
-    {
-      title: "Infrastructure",
-      description: "Feasibility & Consultancy, Roads & Bridges, Buildings & Factories.",
-      image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=250",
-      alt: "Construction and infrastructure development"
+      icon: "fas fa-building",
+      title: "Corporate Training",
+      available: true
     }
   ];
 
   return (
-    <section id="services" className="py-20 bg-arc-light-gray">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-arc-blue mb-6">Sector Of Expertise</h2>
-          <div className="w-24 h-1 bg-arc-accent mx-auto"></div>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {sectors.map((sector, index) => (
-            <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 hover-lift">
-              <img 
-                src={sector.image} 
-                alt={sector.alt}
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-arc-blue mb-3">{sector.title}</h3>
-                <p className="text-arc-gray mb-4">{sector.description}</p>
-                <button className="text-arc-blue hover:text-arc-light-blue font-medium transition-colors">
-                  Learn More <i className="fas fa-arrow-right ml-2"></i>
-                </button>
-              </div>
+    <section id="services" className="py-24 bg-white">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+          <div>
+            <h2 className="text-4xl font-bold text-arc-dark mb-8">
+              Professional Development<br />
+              Programs
+            </h2>
+            <p className="text-arc-gray mb-8">
+              Our comprehensive training programs are designed to elevate your workforce and optimize business performance.
+            </p>
+            
+            <div className="space-y-4">
+              {programs.map((program, index) => (
+                <div key={index} className="flex items-center justify-between py-4 border-b border-gray-100">
+                  <div className="flex items-center space-x-4">
+                    <i className={`${program.icon} text-arc-gray text-lg`}></i>
+                    <span className="text-arc-dark font-medium">{program.title}</span>
+                  </div>
+                  <i className="fas fa-circle text-green-500 text-xs"></i>
+                </div>
+              ))}
             </div>
-          ))}
+
+            <button className="mt-8 text-arc-blue font-medium flex items-center hover:opacity-80 transition-opacity">
+              Learn more <i className="fas fa-arrow-right ml-2"></i>
+            </button>
+          </div>
+
+          <div className="bg-arc-light-gray rounded-lg p-12">
+            <h3 className="text-2xl font-bold text-arc-dark mb-8">Sales Training</h3>
+            <p className="text-arc-gray mb-6">
+              Our sales training program empowers your sales team with proven techniques,
+              strategies, and skills to excel in the competitive market. Through interactive
+              workshops and real-world scenarios, participants learn to build meaningful
+              client relationships, overcome objections, and consistently exceed targets.
+            </p>
+            <p className="text-arc-gray mb-8">
+              Our expert training methodology means confidence, strategic thinking and a
+              customer-centric approach, enabling your sales team to drive revenue and
+              contribute to sustainable business growth.
+            </p>
+            <div className="flex items-center space-x-6">
+              <button className="bg-arc-blue text-white px-6 py-3 rounded hover:opacity-90 transition-opacity">
+                Learn more
+              </button>
+              <button className="text-arc-blue font-medium hover:opacity-80 transition-opacity">
+                Learn more
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </section>

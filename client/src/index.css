@@ -30,13 +30,12 @@
   --chart-5: hsl(27, 87%, 67%);
   --radius: 0.5rem;
   
-  /* ARC Lao Brand Colors */
-  --arc-blue: hsl(224, 76%, 48%);
-  --arc-light-blue: hsl(217, 91%, 60%);
-  --arc-accent: hsl(213, 93%, 67%);
-  --arc-dark: hsl(210, 25%, 7.8431%);
-  --arc-gray: hsl(210, 7%, 56%);
-  --arc-light-gray: hsl(210, 17%, 95%);
+  /* Minimal Corporate Brand Colors */
+  --arc-blue: hsl(213, 94%, 55%);
+  --arc-dark: hsl(0, 0%, 15%);
+  --arc-gray: hsl(0, 0%, 45%);
+  --arc-light-gray: hsl(0, 0%, 98%);
+  --arc-border: hsl(0, 0%, 93%);
   
   --font-inter: 'Inter', sans-serif;
 }
@@ -100,14 +99,6 @@
     background-color: var(--arc-blue);
   }
   
-  .bg-arc-light-blue {
-    background-color: var(--arc-light-blue);
-  }
-  
-  .bg-arc-accent {
-    background-color: var(--arc-accent);
-  }
-  
   .bg-arc-light-gray {
     background-color: var(--arc-light-gray);
   }
@@ -116,12 +107,12 @@
     border-color: var(--arc-blue);
   }
   
-  .font-inter {
-    font-family: var(--font-inter);
+  .border-arc-border {
+    border-color: var(--arc-border);
   }
   
-  .gradient-hero {
-    background: linear-gradient(135deg, var(--arc-blue), var(--arc-light-blue));
+  .font-inter {
+    font-family: var(--font-inter);
   }
   
   .text-shadow {

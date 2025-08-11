@@ -7,7 +7,7 @@ export default function Navigation() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      setIsScrolled(window.scrollY > 10);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -23,41 +23,47 @@ export default function Navigation() {
   };
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 bg-white z-50 transition-all duration-300 ${isScrolled ? 'shadow-lg' : 'shadow-md'}`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-arc-blue rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">A</span>
+    <nav className={`fixed top-0 left-0 right-0 bg-white z-50 transition-all duration-300 ${isScrolled ? 'shadow-sm border-b border-gray-100' : ''}`}>
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="flex items-center justify-between h-20">
+          <div className="flex items-center space-x-2">
+            <div className="w-8 h-8 bg-arc-blue rounded flex items-center justify-center">
+              <span className="text-white font-bold text-sm">A</span>
             </div>
-            <span className="font-semibold text-xl text-arc-blue">ARC Lao</span>
+            <span className="font-medium text-lg text-arc-dark">ARC Lao</span>
           </div>
           
           <div className="hidden md:flex items-center space-x-8">
-            <button onClick={() => scrollToSection('home')} className="text-arc-gray hover:text-arc-blue transition-colors">
-              HOME
+            <button onClick={() => scrollToSection('home')} className="text-arc-gray hover:text-arc-dark transition-colors text-sm">
+              Solution
             </button>
-            <button onClick={() => scrollToSection('about')} className="text-arc-gray hover:text-arc-blue transition-colors">
-              ABOUT US
+            <button onClick={() => scrollToSection('about')} className="text-arc-gray hover:text-arc-dark transition-colors text-sm">
+              Courses
             </button>
-            <button onClick={() => scrollToSection('services')} className="text-arc-gray hover:text-arc-blue transition-colors">
-              SERVICES
+            <button onClick={() => scrollToSection('services')} className="text-arc-gray hover:text-arc-dark transition-colors text-sm">
+              Consultant
             </button>
-            <button onClick={() => scrollToSection('projects')} className="text-arc-gray hover:text-arc-blue transition-colors">
-              PROJECTS
+            <button onClick={() => scrollToSection('projects')} className="text-arc-gray hover:text-arc-dark transition-colors text-sm">
+              Resources
             </button>
-            <button onClick={() => scrollToSection('contact')} className="text-arc-gray hover:text-arc-blue transition-colors">
-              CONTACT US
+            <button onClick={() => scrollToSection('contact')} className="text-arc-gray hover:text-arc-dark transition-colors text-sm">
+              Events
             </button>
-            <a href="tel:+8562076198200" className="bg-arc-blue text-white px-4 py-2 rounded-lg hover:bg-arc-light-blue transition-colors">
-              <i className="fas fa-phone mr-2"></i>+856 20 7619 8200
-            </a>
+            <button onClick={() => scrollToSection('about')} className="text-arc-gray hover:text-arc-dark transition-colors text-sm">
+              About us
+            </button>
+            <button className="bg-arc-blue text-white px-5 py-2.5 rounded text-sm hover:opacity-90 transition-opacity">
+              Log in
+            </button>
+            <button className="border border-arc-blue text-arc-blue px-5 py-2.5 rounded text-sm hover:bg-arc-blue hover:text-white transition-colors">
+              Register
+            </button>
           </div>
 
           <Button 
             variant="ghost" 
             size="sm"
-            className="md:hidden text-arc-blue"
+            className="md:hidden text-arc-dark"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             <i className="fas fa-bars text-xl"></i>
@@ -67,26 +73,29 @@ export default function Navigation() {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden bg-white shadow-lg">
-          <div className="px-2 pt-2 pb-3 space-y-1">
-            <button onClick={() => scrollToSection('home')} className="block w-full text-left px-3 py-2 text-arc-gray hover:text-arc-blue">
-              HOME
+        <div className="md:hidden bg-white border-t border-gray-100">
+          <div className="px-4 pt-2 pb-3 space-y-1">
+            <button onClick={() => scrollToSection('home')} className="block w-full text-left px-3 py-2 text-arc-gray hover:text-arc-dark text-sm">
+              Solution
             </button>
-            <button onClick={() => scrollToSection('about')} className="block w-full text-left px-3 py-2 text-arc-gray hover:text-arc-blue">
-              ABOUT US
+            <button onClick={() => scrollToSection('about')} className="block w-full text-left px-3 py-2 text-arc-gray hover:text-arc-dark text-sm">
+              Courses
             </button>
-            <button onClick={() => scrollToSection('services')} className="block w-full text-left px-3 py-2 text-arc-gray hover:text-arc-blue">
-              SERVICES
+            <button onClick={() => scrollToSection('services')} className="block w-full text-left px-3 py-2 text-arc-gray hover:text-arc-dark text-sm">
+              Consultant
             </button>
-            <button onClick={() => scrollToSection('projects')} className="block w-full text-left px-3 py-2 text-arc-gray hover:text-arc-blue">
-              PROJECTS
+            <button onClick={() => scrollToSection('projects')} className="block w-full text-left px-3 py-2 text-arc-gray hover:text-arc-dark text-sm">
+              Resources
             </button>
-            <button onClick={() => scrollToSection('contact')} className="block w-full text-left px-3 py-2 text-arc-gray hover:text-arc-blue">
-              CONTACT US
+            <button onClick={() => scrollToSection('contact')} className="block w-full text-left px-3 py-2 text-arc-gray hover:text-arc-dark text-sm">
+              Events
             </button>
-            <a href="tel:+8562076198200" className="block px-3 py-2 bg-arc-blue text-white rounded-lg mx-3 text-center">
-              <i className="fas fa-phone mr-2"></i>+856 20 7619 8200
-            </a>
+            <button className="block w-full text-left px-3 py-2 bg-arc-blue text-white rounded text-sm mt-4">
+              Log in
+            </button>
+            <button className="block w-full text-left px-3 py-2 border border-arc-blue text-arc-blue rounded text-sm">
+              Register
+            </button>
           </div>
         </div>
       )}

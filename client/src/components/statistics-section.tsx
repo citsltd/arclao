@@ -1,71 +1,68 @@
-import { useIntersectionObserver } from '@/hooks/use-intersection-observer';
-import { useCounterAnimation } from '@/hooks/use-counter-animation';
-
 export default function StatisticsSection() {
-  const { ref, isIntersecting } = useIntersectionObserver({ threshold: 0.3 });
-  
-  const years = useCounterAnimation({ target: 10, triggered: isIntersecting });
-  const revenue = useCounterAnimation({ target: 5, triggered: isIntersecting });
-  const repeatBusiness = useCounterAnimation({ target: 85, triggered: isIntersecting });
-  const employees = useCounterAnimation({ target: 100, triggered: isIntersecting });
-  const customers = useCounterAnimation({ target: 1800, triggered: isIntersecting });
-  const countries = useCounterAnimation({ target: 3, triggered: isIntersecting });
-
   return (
-    <section className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+    <section className="py-24 bg-arc-light-gray">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
           <div>
-            <h2 className="text-3xl md:text-4xl font-bold text-arc-blue mb-6">OVERVIEW</h2>
-            <div className="w-24 h-1 bg-arc-accent mb-8"></div>
-            <p className="text-lg text-arc-gray leading-relaxed mb-8">
-              ARC LAO is a leader in next-generation technology and related services. We enable clients in many countries to navigate their success through INNOVATION. With over 10+ years of experience in managing various projects and workings of global enterprises, we expertly steer our clients through their progressive journey.
+            <h2 className="text-3xl font-bold text-arc-dark mb-4">
+              Our Approach to Leadership<br />
+              Development
+            </h2>
+            <p className="text-sm text-arc-gray uppercase tracking-wide mb-8">
+              OUR SERVICES HELPED THEM SECURE THE INVESTMENT OF A POSITIVE AT LEAST ONE CASE
             </p>
-            <p className="text-lg text-arc-gray leading-relaxed">
-              We do it by enabling our clients with a highly experienced team coupled with latest technologies. We also empower the business with agile digital at scale to deliver unprecedented levels of performance and customer delight.
+            
+            <p className="text-arc-gray mb-6">
+              Our unique approach to leadership development combines powerful content
+              based on decades of research and development, expert facilitation, and
+              online reinforcement tools to ensure new behaviors are applied on the job.
             </p>
-          </div>
-          
-          <div className="relative">
-            <img 
-              src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
-              alt="Technology infrastructure and innovation" 
-              className="rounded-xl shadow-2xl w-full h-auto"
-            />
-          </div>
-        </div>
+            
+            <p className="text-arc-gray mb-8">
+              Our services help clients develop their leaders and teams to achieve
+              exceptional results. We work with organizations of all sizes and industries.
+            </p>
 
-        <div className="mt-20" ref={ref}>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
-            <div className="text-center bg-arc-light-gray rounded-xl p-6">
-              <div className="text-4xl font-bold text-arc-blue mb-2">{years}</div>
-              <div className="text-arc-gray font-medium">Years Of Experience</div>
-            </div>
+            <button className="text-arc-blue font-medium flex items-center hover:opacity-80 transition-opacity">
+              See more <i className="fas fa-arrow-right ml-2"></i>
+            </button>
+          </div>
+
+          <div>
+            <h2 className="text-3xl font-bold text-arc-dark mb-4">
+              Leadership development expands a<br />
+              leader's impact.
+            </h2>
+            <p className="text-sm text-arc-gray uppercase tracking-wide mb-8">
+              WE FOUND THAT MORE THAN SEVERAL SUCCESSFUL PROJECTS
+            </p>
             
-            <div className="text-center bg-arc-light-gray rounded-xl p-6">
-              <div className="text-4xl font-bold text-arc-blue mb-2">${revenue}M</div>
-              <div className="text-arc-gray font-medium">Annual Turn Over</div>
-            </div>
+            <p className="text-arc-gray mb-6">
+              As leaders adopt and internalize principles of individual effectiveness, they:
+            </p>
             
-            <div className="text-center bg-arc-light-gray rounded-xl p-6">
-              <div className="text-4xl font-bold text-arc-blue mb-2">{repeatBusiness}%</div>
-              <div className="text-arc-gray font-medium">Repeat Business</div>
-            </div>
-            
-            <div className="text-center bg-arc-light-gray rounded-xl p-6">
-              <div className="text-4xl font-bold text-arc-blue mb-2">{employees}+</div>
-              <div className="text-arc-gray font-medium">Employees Strength</div>
-            </div>
-            
-            <div className="text-center bg-arc-light-gray rounded-xl p-6">
-              <div className="text-4xl font-bold text-arc-blue mb-2">{customers}+</div>
-              <div className="text-arc-gray font-medium">Happy Customers</div>
-            </div>
-            
-            <div className="text-center bg-arc-light-gray rounded-xl p-6">
-              <div className="text-4xl font-bold text-arc-blue mb-2">{countries}+</div>
-              <div className="text-arc-gray font-medium">Countries We Work In</div>
-            </div>
+            <ul className="space-y-4 mb-8">
+              <li className="flex items-start">
+                <span className="text-arc-blue mr-3">•</span>
+                <span className="text-arc-gray">Build their character and competence</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-arc-blue mr-3">•</span>
+                <span className="text-arc-gray">See their purpose and connect it with two business goals</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-arc-blue mr-3">•</span>
+                <span className="text-arc-gray">Develop trust and respect in every relationship</span>
+              </li>
+              <li className="flex items-start">
+                <span className="text-arc-blue mr-3">•</span>
+                <span className="text-arc-gray">Change team dynamics resulting in high levels of synergism and creativity</span>
+              </li>
+            </ul>
+
+            <button className="text-arc-blue font-medium flex items-center hover:opacity-80 transition-opacity">
+              Learn more <i className="fas fa-arrow-right ml-2"></i>
+            </button>
           </div>
         </div>
       </div>

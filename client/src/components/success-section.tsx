@@ -1,67 +1,63 @@
 export default function SuccessSection() {
-  const successFactors = [
-    {
-      icon: "fas fa-gem",
-      text: "Boutique-style service with market presence and resources of a major global firm.",
-      color: "bg-arc-blue"
-    },
-    {
-      icon: "fas fa-users",
-      text: "Extensive knowledge of the leadership talent pool across the region.",
-      color: "bg-arc-light-blue"
-    },
-    {
-      icon: "fas fa-rocket",
-      text: "Pro-active approach.",
-      color: "bg-arc-accent"
-    },
-    {
-      icon: "fas fa-handshake",
-      text: "Strong Coordination with stake holders for future opportunities.",
-      color: "bg-green-500"
-    },
-    {
-      icon: "fas fa-heart",
-      text: "Strong approach for building and maintaining client relationship.",
-      color: "bg-purple-500"
-    },
-    {
-      icon: "fas fa-search",
-      text: "Customized research for each assignment.",
-      color: "bg-red-500"
-    },
-    {
-      icon: "fas fa-cogs",
-      text: "Tailored Solutions for client requirements.",
-      color: "bg-yellow-500"
-    },
-    {
-      icon: "fas fa-star",
-      text: "Utmost focus on quality deliverables.",
-      color: "bg-indigo-500"
-    }
+  const services = [
+    { icon: "fas fa-bullseye", title: "Quotient" },
+    { icon: "fas fa-chart-pie", title: "Sisyphus" },
+    { icon: "fas fa-clock", title: "Hourglass" },
+    { icon: "fas fa-box", title: "Capsule" },
+    { icon: "fas fa-calendar-check", title: "Schedule" }
   ];
 
   return (
-    <section className="py-20 bg-arc-light-gray">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-arc-blue mb-6">How We Create SUCCESS?</h2>
-          <div className="w-24 h-1 bg-arc-accent mx-auto mb-8"></div>
-          <p className="text-xl text-arc-gray max-w-3xl mx-auto">
-            To help achieving sustainable and inclusive solutions through innovation.
+    <section className="py-20 bg-white">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="flex flex-wrap items-center justify-center gap-16 mb-16">
+          {services.map((service, index) => (
+            <div key={index} className="flex items-center space-x-3 text-arc-gray">
+              <i className={`${service.icon} text-lg`}></i>
+              <span className="font-medium">{service.title}</span>
+            </div>
+          ))}
+        </div>
+
+        <div className="text-center mb-20">
+          <h2 className="text-4xl font-bold text-arc-dark mb-6">
+            Comprehensive Training and Consulting<br />
+            Solutions Tailored to Your Needs
+          </h2>
+          <p className="text-lg text-arc-gray max-w-3xl mx-auto">
+            With a focus on individuals and teams, we are committed to delivering customized strategies, empowering your
+            workforce, and guiding your business to sustainable growth and excellence.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {successFactors.map((factor, index) => (
-            <div key={index} className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow hover-lift">
-              <div className={`w-12 h-12 ${factor.color} rounded-lg flex items-center justify-center mb-4`}>
-                <i className={`${factor.icon} text-white`}></i>
-              </div>
-              <p className="text-arc-gray">{factor.text}</p>
+        <div className="bg-arc-light-gray rounded-lg p-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h3 className="text-3xl font-bold text-arc-dark mb-8">
+                Our Approach to Leadership<br />
+                Development
+              </h3>
+              <p className="text-arc-gray mb-6">
+                FrankcCroxy is the world's most trusted provider of leadership
+                development solutions that unleash the full potential of leaders and their
+                teams.
+              </p>
+              <p className="text-arc-gray mb-8">
+                Our unique approach to leadership development combines powerful
+                content based on decades of research and development, expert
+                facilitation, and online reinforcement tools to ensure new behaviors
+                are applied on the job.
+              </p>
             </div>
-          ))}
+            
+            <div>
+              <img 
+                src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=400" 
+                alt="Team collaboration"
+                className="rounded-lg w-full h-auto"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </section>
