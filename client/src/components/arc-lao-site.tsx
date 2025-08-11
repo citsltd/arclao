@@ -13,7 +13,7 @@ import informationTechnologyImg from "../assets/information-technology.jpg";
 import automotiveImg from "../assets/automotive.jpg";
 import infrastructureImg from "../assets/infrastructure.jpg";
 
-import technologicalInnovationImg from "../assets/technological-innovation.jpg";
+import Technological_Innovation from "@assets/Technological Innovation.jpg";
 
 // --- Brand system (edit freely) ---
 const brand = {
@@ -286,41 +286,34 @@ function Nav() {
 
 function Hero() {
   return (
-    <section className="text-white relative overflow-hidden min-h-[600px] lg:min-h-[700px]">
-      {/* Background Image */}
-      <div className="absolute inset-0">
-        <img 
-          src={technologicalInnovationImg} 
-          alt="Technological Innovation Background" 
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-slate-900/70" />
-      </div>
-      
-      {/* Gradient Overlay */}
+    <section className={`${brand.darkBg} text-white relative overflow-hidden`}>
       <div className={`absolute inset-0 bg-gradient-to-br ${brand.primary} opacity-20`} />
-      
-      <Container className="relative py-20 lg:py-28 flex items-center min-h-[600px] lg:min-h-[700px]">
-        <div className="max-w-3xl">
+      <Container className="relative py-20 lg:py-28 grid gap-10 lg:grid-cols-2 items-center">
+        <div>
           <p className="uppercase tracking-widest text-xs text-cyan-300">{siteData.hero.kicker}</p>
-          <h1 className="mt-3 text-3xl sm:text-4xl lg:text-6xl font-bold leading-tight">
+          <h1 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-semibold leading-tight">
             {siteData.hero.headline}
           </h1>
-          <p className="mt-6 text-slate-200 text-lg lg:text-xl max-w-2xl leading-relaxed">{siteData.hero.subhead}</p>
-          <div className="mt-10 flex flex-wrap gap-4">
+          <p className="mt-4 text-slate-300 text-base lg:text-lg max-w-xl">{siteData.hero.subhead}</p>
+          <div className="mt-8 flex flex-wrap gap-3">
             {siteData.hero.ctas.map((c) => (
               <a
                 key={c.label}
                 href={c.href}
-                className={`inline-flex items-center rounded-xl px-6 py-3 text-base font-semibold border-2 transition-all duration-200 ${
+                className={`inline-flex items-center rounded-xl px-4 py-2 text-sm font-medium border transition ${
                   c.variant === "ghost"
-                    ? "border-white/50 hover:border-white hover:bg-white/10"
-                    : "bg-white text-slate-900 border-white hover:bg-slate-100 hover:scale-105"
+                    ? "border-white/30 hover:border-white/50"
+                    : "bg-white text-slate-900 border-white hover:bg-slate-100"
                 }`}
               >
                 {c.label}
               </a>
             ))}
+          </div>
+        </div>
+        <div className="relative">
+          <div className="aspect-[16/10] rounded-2xl overflow-hidden ring-1 ring-white/15 shadow-2xl">
+            <img src={Technological_Innovation} alt="Hero visual" className="w-full h-full object-cover" />
           </div>
         </div>
       </Container>
@@ -371,7 +364,7 @@ function Overview() {
           <div className="relative">
             <div className="aspect-[4/3] rounded-2xl overflow-hidden ring-1 ring-slate-200 shadow-lg">
               <img 
-                src={technologicalInnovationImg} 
+                src={Technological_Innovation} 
                 alt="Technology infrastructure and innovation" 
                 className="w-full h-full object-cover"
               />
