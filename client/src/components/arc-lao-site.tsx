@@ -649,23 +649,105 @@ function Overview() {
 
 function Services() {
   return (
-    <section className="py-12 sm:py-16 lg:py-20 bg-white" id="services">
-      <Container className="px-4">
-        <div className="text-center mb-8 sm:mb-12">
-          <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold text-slate-900 px-2">Sector Of Expertise</h2>
+    <section className="py-16 sm:py-20 lg:py-32 bg-gradient-to-br from-white via-slate-50 to-blue-50 relative overflow-hidden" id="services">
+      {/* Background decorations */}
+      <div className="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))]" />
+      <div className="absolute top-0 right-0 w-72 h-72 bg-gradient-to-bl from-blue-100/30 to-transparent rounded-full blur-3xl" />
+      <div className="absolute bottom-0 left-0 w-72 h-72 bg-gradient-to-tr from-indigo-100/30 to-transparent rounded-full blur-3xl" />
+      
+      <Container className="relative px-4">
+        <div className="text-center mb-12 sm:mb-16">
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 bg-white rounded-full border border-slate-200 text-xs sm:text-sm font-medium text-slate-600 mb-4 sm:mb-6">
+            <span className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></span>
+            Our Expertise
+          </div>
+          
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-6 sm:mb-8 px-2">
+            Sectors Of <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Expertise</span>
+          </h2>
+          <p className="text-base sm:text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed px-4">
+            Leading technological innovation across multiple industry sectors with comprehensive solutions and expertise.
+          </p>
         </div>
-        <div className="grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-          {siteData.services.map((s) => (
-            <article key={s.title} className="h-full group rounded-xl sm:rounded-2xl overflow-hidden ring-1 ring-slate-200 bg-white hover:shadow-lg transition">
-              <div className="aspect-[16/10] overflow-hidden">
-                <img src={s.image} alt={s.title} className="w-full h-full object-cover group-hover:scale-105 transition duration-300" />
+        
+        <div className="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+          {siteData.services.map((s, index) => (
+            <article key={s.title} className="group relative h-full rounded-2xl sm:rounded-3xl overflow-hidden bg-white shadow-sm ring-1 ring-slate-200 hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-500 hover:-translate-y-2">
+              {/* Decorative top accent */}
+              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 to-indigo-500"></div>
+              
+              <div className="aspect-[16/10] overflow-hidden relative">
+                <img src={s.image} alt={s.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                {/* Image overlay for better contrast */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/20 to-transparent"></div>
+                
+                {/* Sector number badge */}
+                <div className="absolute top-4 left-4 w-10 h-10 rounded-xl bg-white/90 backdrop-blur-sm flex items-center justify-center text-sm font-bold text-slate-900 group-hover:scale-110 transition-transform duration-300">
+                  {String(index + 1).padStart(2, '0')}
+                </div>
+                
+                {/* Category badge */}
+                <div className="absolute bottom-4 left-4 px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-xs font-medium text-slate-900">
+                  Sector
+                </div>
               </div>
-              <div className="p-4 sm:p-6">
-                <h3 className="font-medium text-slate-900 mb-2 sm:mb-3 text-sm sm:text-base">{s.title}</h3>
-                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">{s.body}</p>
+              
+              <div className="p-6 sm:p-8">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-8 h-1 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full"></div>
+                  <div className="text-xs text-slate-500 font-medium uppercase tracking-wider">Expertise</div>
+                </div>
+                
+                <h3 className="font-bold text-slate-900 text-lg sm:text-xl mb-3 leading-tight group-hover:text-blue-600 transition-colors duration-300">
+                  {s.title}
+                </h3>
+                <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
+                  {s.body}
+                </p>
+                
+                {/* Skills list indicator */}
+                <div className="mt-4 pt-4 border-t border-slate-100">
+                  <div className="flex items-center gap-2">
+                    <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                    <span className="text-xs text-slate-500 font-medium">Industry Leader</span>
+                  </div>
+                </div>
               </div>
+              
+              {/* Hover effect overlay */}
+              <div className="absolute inset-0 rounded-2xl sm:rounded-3xl bg-gradient-to-br from-blue-500/5 to-indigo-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              
+              {/* Floating decorative elements */}
+              <div className="absolute -top-2 -right-2 w-4 h-4 bg-gradient-to-br from-blue-400 to-indigo-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute -bottom-2 -left-2 w-3 h-3 bg-gradient-to-br from-indigo-400 to-blue-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100"></div>
             </article>
           ))}
+        </div>
+        
+        {/* Bottom highlight section */}
+        <div className="mt-12 sm:mt-16">
+          <div className="bg-white rounded-3xl p-6 sm:p-8 shadow-lg ring-1 ring-slate-200">
+            <div className="text-center">
+              <h3 className="text-lg sm:text-xl font-bold text-slate-900 mb-2">
+                Comprehensive <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Solutions</span>
+              </h3>
+              <p className="text-slate-600 mb-6">
+                From concept to completion, we deliver end-to-end solutions across all sectors
+              </p>
+              
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6">
+                {['Innovation', 'Quality', 'Expertise', 'Support', 'Scale', 'Results'].map((item, index) => (
+                  <div key={item} className="text-center group">
+                    <div className="w-12 h-12 mx-auto rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-white text-sm font-bold mb-2 group-hover:scale-110 transition-transform duration-300">
+                      ✓
+                    </div>
+                    <div className="text-xs sm:text-sm text-slate-600 font-medium">{item}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </Container>
     </section>
