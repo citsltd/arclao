@@ -286,7 +286,20 @@ function Nav() {
 
 function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-900 text-white overflow-hidden">
+    <section className="relative min-h-screen flex items-center text-white overflow-hidden">
+      {/* Background image */}
+      <div className="absolute inset-0">
+        <img 
+          src={Technological_Innovation} 
+          alt="Technological Innovation Background" 
+          className="w-full h-full object-cover"
+        />
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-slate-900/70"></div>
+        {/* Gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/60 via-indigo-900/40 to-slate-900/60"></div>
+      </div>
+      
       {/* Animated background elements */}
       <div className="absolute inset-0 bg-gradient-to-br from-indigo-600/20 via-cyan-500/10 to-transparent"></div>
       <div className="absolute top-1/4 -right-20 w-96 h-96 bg-gradient-to-bl from-cyan-400/20 to-transparent rounded-full blur-3xl animate-pulse"></div>
@@ -296,100 +309,74 @@ function Hero() {
       <div className="absolute inset-0 bg-grid-white/[0.05] [mask-image:linear-gradient(0deg,transparent,black,transparent)]"></div>
       
       <Container className="relative z-10 py-20 lg:py-32">
-        <div className="grid gap-12 lg:grid-cols-2 items-center">
-          {/* Content */}
-          <div className="space-y-8">
-            {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 text-sm font-medium">
-              <span className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></span>
-              <span className="text-cyan-300 uppercase tracking-wider text-xs">
-                {siteData.hero.kicker}
-              </span>
-            </div>
-            
-            {/* Main headline */}
-            <div className="space-y-6">
-              <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold leading-tight">
-                Me To We With <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-indigo-400 bg-clip-text text-transparent">ARC Lao</span> combined efforts On <span className="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">Technological Innovation</span>
-              </h1>
-              
-              <p className="text-lg lg:text-xl text-slate-300 max-w-2xl leading-relaxed">
-                {siteData.hero.subhead}
-              </p>
-            </div>
-            
-            {/* CTA Buttons */}
-            <div className="flex flex-wrap gap-4">
-              {siteData.hero.ctas.map((c, index) => (
-                <a
-                  key={c.label}
-                  href={c.href}
-                  className={`group inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 ${
-                    c.variant === "ghost"
-                      ? "border-2 border-white/30 text-white hover:border-white/60 hover:bg-white/10 backdrop-blur-sm"
-                      : "bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg hover:shadow-cyan-500/25 hover:from-cyan-400 hover:to-blue-500"
-                  }`}
-                >
-                  <span>{c.label}</span>
-                  {index === 0 ? (
-                    <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                    </svg>
-                  ) : (
-                    <svg className="w-4 h-4 transform group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m0 0l4-4m-4 4l4 4" />
-                    </svg>
-                  )}
-                </a>
-              ))}
-            </div>
-            
-            {/* Trust indicators */}
-            <div className="flex items-center gap-8 pt-4">
-              <div className="flex items-center gap-2">
-                <div className="flex -space-x-1">
-                  <div className="w-6 h-6 rounded-full bg-gradient-to-br from-green-400 to-emerald-500 border-2 border-white/20"></div>
-                  <div className="w-6 h-6 rounded-full bg-gradient-to-br from-blue-400 to-indigo-500 border-2 border-white/20"></div>
-                  <div className="w-6 h-6 rounded-full bg-gradient-to-br from-purple-400 to-pink-500 border-2 border-white/20"></div>
-                </div>
-                <div className="text-sm text-slate-300">
-                  <span className="font-semibold text-white">1,800+</span> satisfied clients
-                </div>
-              </div>
-              <div className="text-sm text-slate-300">
-                <span className="font-semibold text-white">10+</span> years experience
-              </div>
-            </div>
+        <div className="max-w-4xl mx-auto text-center">
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 text-sm font-medium mb-8">
+            <span className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></span>
+            <span className="text-cyan-300 uppercase tracking-wider text-xs">
+              {siteData.hero.kicker}
+            </span>
           </div>
           
-          {/* Hero image */}
-          <div className="relative lg:pl-8">
-            {/* Floating elements */}
-            <div className="absolute -top-4 -left-4 w-20 h-20 bg-gradient-to-br from-cyan-400/20 to-blue-500/20 rounded-full blur-xl animate-bounce"></div>
-            <div className="absolute -bottom-4 -right-4 w-16 h-16 bg-gradient-to-br from-emerald-400/20 to-cyan-500/20 rounded-full blur-xl animate-bounce delay-500"></div>
+          {/* Main headline */}
+          <div className="space-y-6 mb-8">
+            <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight">
+              Me To We With <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-indigo-400 bg-clip-text text-transparent">ARC Lao</span> combined efforts On <span className="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">Technological Innovation</span>
+            </h1>
             
-            {/* Main image container */}
-            <div className="relative">
-              <div className="aspect-[4/3] rounded-3xl overflow-hidden bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border border-white/20 shadow-2xl">
-                <img 
-                  src={Technological_Innovation} 
-                  alt="Technological Innovation and Infrastructure Development" 
-                  className="w-full h-full object-cover"
-                />
-                {/* Overlay gradient */}
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/20 via-transparent to-transparent"></div>
+            <p className="text-lg lg:text-xl text-slate-200 max-w-2xl mx-auto leading-relaxed">
+              {siteData.hero.subhead}
+            </p>
+          </div>
+          
+          {/* CTA Buttons */}
+          <div className="flex flex-wrap gap-4 justify-center mb-12">
+            {siteData.hero.ctas.map((c, index) => (
+              <a
+                key={c.label}
+                href={c.href}
+                className={`group inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 ${
+                  c.variant === "ghost"
+                    ? "border-2 border-white/30 text-white hover:border-white/60 hover:bg-white/10 backdrop-blur-sm"
+                    : "bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg hover:shadow-cyan-500/25 hover:from-cyan-400 hover:to-blue-500"
+                }`}
+              >
+                <span>{c.label}</span>
+                {index === 0 ? (
+                  <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                ) : (
+                  <svg className="w-4 h-4 transform group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m0 0l4-4m-4 4l4 4" />
+                  </svg>
+                )}
+              </a>
+            ))}
+          </div>
+          
+          {/* Trust indicators and stats */}
+          <div className="flex flex-wrap items-center justify-center gap-8">
+            <div className="flex items-center gap-2">
+              <div className="flex -space-x-1">
+                <div className="w-6 h-6 rounded-full bg-gradient-to-br from-green-400 to-emerald-500 border-2 border-white/20"></div>
+                <div className="w-6 h-6 rounded-full bg-gradient-to-br from-blue-400 to-indigo-500 border-2 border-white/20"></div>
+                <div className="w-6 h-6 rounded-full bg-gradient-to-br from-purple-400 to-pink-500 border-2 border-white/20"></div>
               </div>
-              
-              {/* Floating stats cards */}
-              <div className="absolute -bottom-6 -left-6 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-4 shadow-xl">
-                <div className="text-2xl font-bold text-white">$110M+</div>
-                <div className="text-xs text-slate-300">Total Investment</div>
+              <div className="text-sm text-slate-200">
+                <span className="font-semibold text-white">1,800+</span> satisfied clients
               </div>
-              
-              <div className="absolute -top-6 -right-6 bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-4 shadow-xl">
-                <div className="text-2xl font-bold text-white">30+</div>
-                <div className="text-xs text-slate-300">Projects</div>
-              </div>
+            </div>
+            <div className="text-sm text-slate-200">
+              <span className="font-semibold text-white">10+</span> years experience
+            </div>
+            <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl px-4 py-2">
+              <div className="text-lg font-bold text-white">$110M+</div>
+              <div className="text-xs text-slate-200">Total Investment</div>
+            </div>
+            <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl px-4 py-2">
+              <div className="text-lg font-bold text-white">30+</div>
+              <div className="text-xs text-slate-200">Projects</div>
             </div>
           </div>
         </div>
