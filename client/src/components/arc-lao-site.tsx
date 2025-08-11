@@ -13,6 +13,8 @@ import informationTechnologyImg from "../assets/information-technology.jpg";
 import automotiveImg from "../assets/automotive.jpg";
 import infrastructureImg from "../assets/infrastructure.jpg";
 
+import Technological_Innovation from "@assets/Technological Innovation.jpg";
+
 // --- Brand system (edit freely) ---
 const brand = {
   name: "ARC Lao Sole Company Ltd",
@@ -362,7 +364,7 @@ function Overview() {
           <div className="relative">
             <div className="aspect-[4/3] rounded-2xl overflow-hidden ring-1 ring-slate-200 shadow-lg">
               <img 
-                src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" 
+                src={Technological_Innovation} 
                 alt="Technology infrastructure and innovation" 
                 className="w-full h-full object-cover"
               />
