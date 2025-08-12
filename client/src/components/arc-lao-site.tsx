@@ -989,14 +989,26 @@ function Success() {
         <div className="mt-12 sm:mt-16 text-center px-4">
           <div className="inline-flex flex-col sm:flex-row items-center gap-3 sm:gap-4 px-6 sm:px-8 py-4 bg-white rounded-xl sm:rounded-2xl shadow-sm ring-1 ring-slate-200 max-w-md sm:max-w-none mx-auto">
             <div className="flex -space-x-2">
-              <div className="w-7 sm:w-8 h-7 sm:h-8 rounded-full bg-gradient-to-br from-indigo-500 to-purple-500 flex items-center justify-center text-white text-xs font-medium">
-                👨‍💼
+              <div className="w-7 sm:w-8 h-7 sm:h-8 rounded-full border-2 border-white overflow-hidden shadow-sm">
+                <img 
+                  src={oldManPortrait} 
+                  alt="Team member" 
+                  className="w-full h-full object-cover"
+                />
               </div>
-              <div className="w-7 sm:w-8 h-7 sm:h-8 rounded-full bg-gradient-to-br from-cyan-500 to-blue-500 flex items-center justify-center text-white text-xs font-medium">
-                👩‍💻
+              <div className="w-7 sm:w-8 h-7 sm:h-8 rounded-full border-2 border-white overflow-hidden shadow-sm">
+                <img 
+                  src={womanPortrait} 
+                  alt="Team member" 
+                  className="w-full h-full object-cover"
+                />
               </div>
-              <div className="w-7 sm:w-8 h-7 sm:h-8 rounded-full bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center text-white text-xs font-medium">
-                👨‍🔬
+              <div className="w-7 sm:w-8 h-7 sm:h-8 rounded-full border-2 border-white overflow-hidden shadow-sm">
+                <img 
+                  src={manPortrait} 
+                  alt="Team member" 
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
             <div className="text-center sm:text-left">
