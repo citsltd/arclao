@@ -1296,161 +1296,103 @@ function Contact() {
 
 function Footer() {
   return (
-    <footer className="relative bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden">
-      {/* Ultra-modern background effects */}
-      <div className="absolute inset-0">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-br from-blue-500/20 via-indigo-500/15 to-cyan-500/10 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-gradient-to-tl from-purple-500/15 via-indigo-500/10 to-blue-500/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.05),transparent_70%)]"></div>
-      </div>
-      
-      {/* Floating geometric shapes */}
-      <div className="absolute top-20 left-10 w-3 h-3 bg-gradient-to-br from-blue-400 to-cyan-400 rounded-full opacity-60 animate-ping"></div>
-      <div className="absolute top-40 right-20 w-2 h-2 bg-gradient-to-br from-indigo-400 to-purple-400 rounded-full opacity-40 animate-pulse"></div>
-      <div className="absolute bottom-32 left-20 w-4 h-4 bg-gradient-to-br from-cyan-400 to-blue-400 rotate-45 opacity-30 animate-bounce"></div>
+    <footer className="bg-slate-900 text-white relative overflow-hidden">
+      {/* Background decorations */}
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"></div>
+      <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-blue-600/10 to-transparent rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-indigo-600/10 to-transparent rounded-full blur-3xl"></div>
       
       <Container className="relative">
-        <div className="py-20 lg:py-24">
-          {/* Main content grid */}
-          <div className="grid gap-12 lg:gap-16 grid-cols-1 lg:grid-cols-12">
-            
-            {/* Brand section - spans more columns */}
-            <div className="lg:col-span-5 space-y-8">
-              <div className="space-y-6">
-                <div className="group">
-                  <h3 className="text-3xl lg:text-4xl font-bold mb-2 tracking-tight">
-                    <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-indigo-400 bg-clip-text text-transparent group-hover:from-cyan-400 group-hover:via-blue-400 group-hover:to-purple-400 transition-all duration-500">
-                      ARC LAO
-                    </span>
-                  </h3>
-                  <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full group-hover:w-32 transition-all duration-300"></div>
-                </div>
-                
-                <p className="text-slate-300 text-lg leading-relaxed max-w-lg">
-                  Pioneering the future of technology across Southeast Asia through innovative solutions in infrastructure, defense, and digital transformation.
+        {/* Main footer content */}
+        <div className="py-16 lg:py-20">
+          <div className="grid gap-8 lg:gap-12 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+            {/* Company info */}
+            <div className="lg:col-span-2 space-y-6">
+              <div>
+                <h3 className="text-xl sm:text-2xl font-bold mb-4">
+                  <span className="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">ARC LAO</span>
+                </h3>
+                <p className="text-slate-300 leading-relaxed max-w-md">
+                  Leading technological innovation across Southeast Asia with expertise in infrastructure, defense, IT, energy, automotive, and sustainable development solutions.
                 </p>
               </div>
               
-              {/* Modern contact cards */}
-              <div className="space-y-4">
-                <div className="group flex items-center gap-4 p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 hover:border-blue-400/30 transition-all duration-300">
-                  <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
+              {/* Contact info */}
+              <div className="space-y-3">
+                <div className="flex items-center gap-3">
+                  <div className="w-5 h-5 text-blue-400">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
                       <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
                       <circle cx="12" cy="9" r="2.5"/>
                     </svg>
                   </div>
-                  <div>
-                    <div className="text-xs text-slate-400 uppercase tracking-wider font-medium">Address</div>
-                    <div className="text-slate-200 font-medium">{siteData.contact.address}</div>
-                  </div>
+                  <span className="text-slate-300 text-sm">{siteData.contact.address}</span>
                 </div>
-                
-                <div className="group flex items-center gap-4 p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 hover:border-blue-400/30 transition-all duration-300">
-                  <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
+                <div className="flex items-center gap-3">
+                  <div className="w-5 h-5 text-blue-400">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
                       <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
                     </svg>
                   </div>
-                  <div>
-                    <div className="text-xs text-slate-400 uppercase tracking-wider font-medium">Phone</div>
-                    <a href={`tel:${siteData.contact.phone}`} className="text-slate-200 font-medium hover:text-white transition-colors">
-                      {siteData.contact.phone}
-                    </a>
-                  </div>
+                  <a href={`tel:${siteData.contact.phone}`} className="text-slate-300 hover:text-white transition-colors text-sm">
+                    {siteData.contact.phone}
+                  </a>
                 </div>
-                
-                <div className="group flex items-center gap-4 p-4 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 hover:border-blue-400/30 transition-all duration-300">
-                  <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                    <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
+                <div className="flex items-center gap-3">
+                  <div className="w-5 h-5 text-blue-400">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
                       <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
                     </svg>
                   </div>
-                  <div>
-                    <div className="text-xs text-slate-400 uppercase tracking-wider font-medium">Email</div>
-                    <a href={`mailto:${siteData.contact.email}`} className="text-slate-200 font-medium hover:text-white transition-colors">
-                      {siteData.contact.email}
-                    </a>
-                  </div>
+                  <a href={`mailto:${siteData.contact.email}`} className="text-slate-300 hover:text-white transition-colors text-sm">
+                    {siteData.contact.email}
+                  </a>
                 </div>
               </div>
             </div>
             
-            {/* Navigation sections */}
-            <div className="lg:col-span-7 grid gap-8 sm:gap-12 grid-cols-1 sm:grid-cols-2">
-              
-              {/* Company links */}
-              <div className="space-y-6">
-                <h4 className="text-lg font-bold text-white relative">
-                  Company
-                  <div className="absolute -bottom-2 left-0 w-8 h-0.5 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full"></div>
-                </h4>
-                <nav className="space-y-3">
-                  {[
-                    { label: "About Us", href: "#about" },
-                    { label: "Our Services", href: "#services" },
-                    { label: "Portfolio", href: "#projects" },
-                    { label: "Our Journey", href: "#history" },
-                    { label: "Contact", href: "#contact" }
-                  ].map((link) => (
-                    <a 
-                      key={link.label}
-                      href={link.href} 
-                      className="group flex items-center gap-2 text-slate-300 hover:text-white transition-all duration-300"
-                    >
-                      <div className="w-1 h-1 rounded-full bg-slate-500 group-hover:bg-blue-400 group-hover:w-2 transition-all duration-300"></div>
-                      <span className="group-hover:translate-x-1 transition-transform duration-300">{link.label}</span>
-                    </a>
-                  ))}
-                </nav>
-              </div>
-              
-              {/* Expertise */}
-              <div className="space-y-6">
-                <h4 className="text-lg font-bold text-white relative">
-                  Expertise
-                  <div className="absolute -bottom-2 left-0 w-8 h-0.5 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full"></div>
-                </h4>
-                <nav className="space-y-3">
-                  {[
-                    "EV Infrastructure",
-                    "Defense Systems", 
-                    "Information Technology",
-                    "Energy Solutions",
-                    "Automotive",
-                    "Infrastructure"
-                  ].map((item) => (
-                    <div key={item} className="group flex items-center gap-2 text-slate-300">
-                      <div className="w-1 h-1 rounded-full bg-slate-500 group-hover:bg-indigo-400 transition-colors duration-300"></div>
-                      <span className="group-hover:text-white transition-colors duration-300">{item}</span>
-                    </div>
-                  ))}
-                </nav>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        {/* Ultra-modern bottom section */}
-        <div className="relative">
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent h-px"></div>
-          <div className="py-8 flex flex-col lg:flex-row items-center justify-between gap-6">
-            <div className="text-slate-400 text-sm">
-              {siteData.footer.legal}
+            {/* Quick links */}
+            <div className="space-y-6">
+              <h4 className="text-lg font-semibold text-white">Company</h4>
+              <nav className="space-y-3">
+                <a href="#about" className="block text-slate-300 hover:text-white transition-colors text-sm">About Us</a>
+                <a href="#services" className="block text-slate-300 hover:text-white transition-colors text-sm">Our Services</a>
+                <a href="#projects" className="block text-slate-300 hover:text-white transition-colors text-sm">Projects</a>
+                <a href="#history" className="block text-slate-300 hover:text-white transition-colors text-sm">Our History</a>
+                <a href="#contact" className="block text-slate-300 hover:text-white transition-colors text-sm">Contact</a>
+              </nav>
             </div>
             
-            <div className="flex items-center gap-8">
-              {siteData.footer.links.map((link) => (
-                <a 
-                  key={link.label}
-                  href={link.href} 
-                  className="relative text-slate-400 hover:text-white text-sm transition-colors duration-300 group"
-                >
-                  {link.label}
-                  <div className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full group-hover:w-full transition-all duration-300"></div>
+            {/* Sectors */}
+            <div className="space-y-6">
+              <h4 className="text-lg font-semibold text-white">Expertise</h4>
+              <nav className="space-y-3">
+                <span className="block text-slate-300 text-sm">EV Infrastructure</span>
+                <span className="block text-slate-300 text-sm">Defense Systems</span>
+                <span className="block text-slate-300 text-sm">Information Technology</span>
+                <span className="block text-slate-300 text-sm">Energy Solutions</span>
+                <span className="block text-slate-300 text-sm">Automotive</span>
+                <span className="block text-slate-300 text-sm">Infrastructure</span>
+              </nav>
+            </div>
+          </div>
+          
+          
+        </div>
+        
+        {/* Bottom bar */}
+        <div className="py-6 border-t border-slate-700">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div className="text-sm text-slate-400">
+              {siteData.footer.legal}
+            </div>
+            <nav className="flex items-center gap-6 text-sm">
+              {siteData.footer.links.map((l) => (
+                <a key={l.label} href={l.href} className="text-slate-400 hover:text-white transition-colors">
+                  {l.label}
                 </a>
               ))}
-            </div>
+            </nav>
           </div>
         </div>
       </Container>
