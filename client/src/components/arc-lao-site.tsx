@@ -24,6 +24,7 @@ import sustainableProgressIcon from "@assets/sustainable progress_1754916674196.
 import oldManPortrait from "@assets/Old Man_1754976401606.jpg";
 import womanPortrait from "@assets/Woman_1754976401621.jpg";
 import manPortrait from "@assets/Man_1754976401623.jpg";
+import arcLaoLogo from "@assets/arclaoslogo_1754990674040.png";
 
 // --- Brand system (edit freely) ---
 const brand = {
@@ -257,18 +258,11 @@ function Nav() {
       <Container className="relative flex items-center justify-between h-18 py-4">
         {/* Logo */}
         <a href="#" className="group flex items-center gap-3 transition-transform duration-300 hover:scale-105">
-          <div className="relative">
-            <div className="w-10 h-10 rounded-2xl bg-gradient-to-br from-indigo-600 via-blue-600 to-cyan-500 shadow-lg shadow-indigo-500/25" />
-            <div className="absolute inset-0 w-10 h-10 rounded-2xl bg-gradient-to-br from-indigo-400 via-blue-400 to-cyan-300 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-          </div>
-          <div className="flex flex-col">
-            <span className="font-bold text-lg tracking-tight bg-gradient-to-r from-slate-900 to-slate-700 bg-clip-text text-transparent">
-              ARC Lao
-            </span>
-            <span className="text-xs text-slate-500 font-medium tracking-wider">
-              INNOVATION
-            </span>
-          </div>
+          <img 
+            src={arcLaoLogo} 
+            alt="ARC LAO" 
+            className="h-12 w-auto transition-transform duration-300 group-hover:scale-105"
+          />
         </a>
 
         {/* Desktop Navigation */}
@@ -289,9 +283,9 @@ function Nav() {
           {/* CTA Button */}
           <a 
             href="tel:+8562076198200" 
-            className="group relative inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-indigo-600 via-blue-600 to-cyan-600 text-white font-semibold rounded-2xl shadow-lg shadow-indigo-500/25 hover:shadow-xl hover:shadow-indigo-500/30 transition-all duration-300 transform hover:scale-105 overflow-hidden"
+            className="group relative inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-red-600 via-blue-600 to-blue-700 text-white font-semibold rounded-2xl shadow-lg shadow-red-500/25 hover:shadow-xl hover:shadow-red-500/30 transition-all duration-300 transform hover:scale-105 overflow-hidden"
           >
-            <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-indigo-500 via-blue-500 to-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
+            <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-red-500 via-blue-500 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
             <svg className="w-4 h-4 transition-transform group-hover:scale-110 relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
             </svg>
@@ -392,7 +386,7 @@ function Hero() {
           {/* Main headline */}
           <div className="space-y-4 sm:space-y-6 mb-6 sm:mb-8">
             <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight px-2 pl-[0px] pr-[0px]">
-              Me To We With <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-indigo-400 bg-clip-text text-transparent">ARC Lao</span> combined efforts On <span className="bg-gradient-to-r from-emerald-400 to-cyan-400 bg-clip-text text-transparent">Technological Innovation</span>
+              Me To We With <span className="bg-gradient-to-r from-red-400 via-blue-400 to-blue-500 bg-clip-text text-transparent">ARC Lao</span> combined efforts On <span className="bg-gradient-to-r from-blue-400 to-red-400 bg-clip-text text-transparent">Technological Innovation</span>
             </h1>
             
             <p className="text-base sm:text-lg lg:text-xl text-slate-200 max-w-2xl mx-auto leading-relaxed px-4">
@@ -409,7 +403,7 @@ function Hero() {
                 className={`group inline-flex items-center justify-center gap-2 px-6 py-3 sm:py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 text-sm sm:text-base ${
                   c.variant === "ghost"
                     ? "border-2 border-white/30 text-white hover:border-white/60 hover:bg-white/10 backdrop-blur-sm"
-                    : "bg-gradient-to-r from-cyan-500 to-blue-600 text-white shadow-lg hover:shadow-cyan-500/25 hover:from-cyan-400 hover:to-blue-500"
+                    : "bg-gradient-to-r from-red-500 to-blue-600 text-white shadow-lg hover:shadow-red-500/25 hover:from-red-400 hover:to-blue-500"
                 }`}
               >
                 <span>{c.label}</span>
@@ -498,7 +492,7 @@ function About() {
             About Our Company
           </div>
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-6 sm:mb-8 px-2">
-            Built on <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Strong Foundations</span>
+            Built on <span className="bg-gradient-to-r from-red-600 to-blue-600 bg-clip-text text-transparent">Strong Foundations</span>
           </h2>
           <div className="max-w-4xl mx-auto px-4">
             <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
@@ -514,7 +508,7 @@ function About() {
               className="group relative p-6 sm:p-8 rounded-3xl bg-white shadow-sm ring-1 ring-slate-200 hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-500 hover:-translate-y-2"
             >
               {/* Decorative element */}
-              <div className="absolute top-0 left-6 sm:left-8 w-12 sm:w-16 h-1 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full"></div>
+              <div className="absolute top-0 left-6 sm:left-8 w-12 sm:w-16 h-1 bg-gradient-to-r from-red-500 to-blue-500 rounded-full"></div>
               
               {/* Icon and title */}
               <div className="flex flex-col items-center text-center mb-4 sm:mb-6">
@@ -1309,9 +1303,16 @@ function Footer() {
             {/* Company info */}
             <div className="lg:col-span-2 space-y-6">
               <div>
-                <h3 className="text-xl sm:text-2xl font-bold mb-4">
-                  <span className="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">ARC LAO</span>
-                </h3>
+                <img 
+                  src={arcLaoLogo} 
+                  alt="ARC LAO" 
+                  className="h-10 w-auto mb-4"
+                />
+                <div className="hidden">
+                  <h3 className="text-xl sm:text-2xl font-bold mb-4">
+                    <span className="bg-gradient-to-r from-red-400 to-blue-400 bg-clip-text text-transparent">ARC LAO</span>
+                  </h3>
+                </div>
                 <p className="text-slate-300 leading-relaxed max-w-md">
                   Leading technological innovation across Southeast Asia with expertise in infrastructure, defense, IT, energy, automotive, and sustainable development solutions.
                 </p>
