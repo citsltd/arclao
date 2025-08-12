@@ -742,31 +742,7 @@ function Services() {
             </article>
           ))}
         </div>
-        
-        {/* Bottom highlight section */}
-        <div className="mt-12 sm:mt-16">
-          <div className="bg-white rounded-3xl p-6 sm:p-8 shadow-lg ring-1 ring-slate-200">
-            <div className="text-center">
-              <h3 className="text-lg sm:text-xl font-bold text-slate-900 mb-2">
-                Comprehensive <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Solutions</span>
-              </h3>
-              <p className="text-slate-600 mb-6">
-                From concept to completion, we deliver end-to-end solutions across all sectors
-              </p>
-              
-              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6">
-                {['Innovation', 'Quality', 'Expertise', 'Support', 'Scale', 'Results'].map((item, index) => (
-                  <div key={item} className="text-center group">
-                    <div className="w-12 h-12 mx-auto rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-white text-sm font-bold mb-2 group-hover:scale-110 transition-transform duration-300">
-                      ✓
-                    </div>
-                    <div className="text-xs sm:text-sm text-slate-600 font-medium">{item}</div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
+
       </Container>
     </section>
   );
