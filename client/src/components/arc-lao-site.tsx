@@ -21,6 +21,9 @@ import permanenceIcon from "@assets/permanence_1754916579663.png";
 import partnershipIcon from "@assets/partnership_1754916579659.png";
 import innovationIcon from "@assets/innovation_1754916674198.png";
 import sustainableProgressIcon from "@assets/sustainable progress_1754916674196.png";
+import oldManPortrait from "@assets/Old Man_1754976401606.jpg";
+import womanPortrait from "@assets/Woman_1754976401621.jpg";
+import manPortrait from "@assets/Man_1754976401623.jpg";
 
 // --- Brand system (edit freely) ---
 const brand = {
@@ -427,9 +430,27 @@ function Hero() {
           <div className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 max-w-4xl mx-auto px-4">
             <div className="flex items-center justify-center gap-2 col-span-1 xs:col-span-2 lg:col-span-1">
               <div className="flex -space-x-1">
-                <div className="w-5 sm:w-6 h-5 sm:h-6 rounded-full bg-gradient-to-br from-green-400 to-emerald-500 border-2 border-white/20"></div>
-                <div className="w-5 sm:w-6 h-5 sm:h-6 rounded-full bg-gradient-to-br from-blue-400 to-indigo-500 border-2 border-white/20"></div>
-                <div className="w-5 sm:w-6 h-5 sm:h-6 rounded-full bg-gradient-to-br from-purple-400 to-pink-500 border-2 border-white/20"></div>
+                <div className="w-5 sm:w-6 h-5 sm:h-6 rounded-full border-2 border-white/20 overflow-hidden">
+                  <img 
+                    src={oldManPortrait} 
+                    alt="Satisfied client" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="w-5 sm:w-6 h-5 sm:h-6 rounded-full border-2 border-white/20 overflow-hidden">
+                  <img 
+                    src={womanPortrait} 
+                    alt="Satisfied client" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="w-5 sm:w-6 h-5 sm:h-6 rounded-full border-2 border-white/20 overflow-hidden">
+                  <img 
+                    src={manPortrait} 
+                    alt="Satisfied client" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
               </div>
               <div className="text-xs sm:text-sm text-slate-200 text-center lg:text-left">
                 <span className="font-semibold text-white">1,800+</span> satisfied clients
