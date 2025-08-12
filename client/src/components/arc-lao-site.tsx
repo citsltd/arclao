@@ -1377,27 +1377,7 @@ function Footer() {
             </div>
           </div>
           
-          {/* Statistics */}
-          <div className="mt-12 pt-8 border-t border-slate-700">
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
-              <div>
-                <div className="text-2xl font-bold text-white mb-1">1,800+</div>
-                <div className="text-sm text-slate-400">Satisfied Clients</div>
-              </div>
-              <div>
-                <div className="text-2xl font-bold text-white mb-1">30+</div>
-                <div className="text-sm text-slate-400">Projects Completed</div>
-              </div>
-              <div>
-                <div className="text-2xl font-bold text-white mb-1">$110M+</div>
-                <div className="text-sm text-slate-400">Total Investment</div>
-              </div>
-              <div>
-                <div className="text-2xl font-bold text-white mb-1">10+</div>
-                <div className="text-sm text-slate-400">Years Experience</div>
-              </div>
-            </div>
-          </div>
+          
         </div>
         
         {/* Bottom bar */}
