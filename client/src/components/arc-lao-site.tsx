@@ -1296,14 +1296,125 @@ function Contact() {
 
 function Footer() {
   return (
-    <footer className="py-10 bg-slate-900 text-white">
-      <Container className="flex flex-col sm:flex-row items-center justify-between gap-4">
-        <div className="text-sm text-slate-400">{siteData.footer.legal}</div>
-        <nav className="flex items-center gap-4 text-sm">
-          {siteData.footer.links.map((l) => (
-            <a key={l.label} href={l.href} className="text-slate-400 hover:text-white">{l.label}</a>
-          ))}
-        </nav>
+    <footer className="bg-slate-900 text-white relative overflow-hidden">
+      {/* Background decorations */}
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"></div>
+      <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-blue-600/10 to-transparent rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-indigo-600/10 to-transparent rounded-full blur-3xl"></div>
+      
+      <Container className="relative">
+        {/* Main footer content */}
+        <div className="py-16 lg:py-20">
+          <div className="grid gap-8 lg:gap-12 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+            {/* Company info */}
+            <div className="lg:col-span-2 space-y-6">
+              <div>
+                <h3 className="text-xl sm:text-2xl font-bold mb-4">
+                  <span className="bg-gradient-to-r from-blue-400 to-indigo-400 bg-clip-text text-transparent">ARC LAO</span>
+                </h3>
+                <p className="text-slate-300 leading-relaxed max-w-md">
+                  Leading technological innovation across Southeast Asia with expertise in infrastructure, defense, IT, energy, automotive, and sustainable development solutions.
+                </p>
+              </div>
+              
+              {/* Contact info */}
+              <div className="space-y-3">
+                <div className="flex items-center gap-3">
+                  <div className="w-5 h-5 text-blue-400">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                      <circle cx="12" cy="9" r="2.5"/>
+                    </svg>
+                  </div>
+                  <span className="text-slate-300 text-sm">{siteData.contact.address}</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-5 h-5 text-blue-400">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                    </svg>
+                  </div>
+                  <a href={`tel:${siteData.contact.phone}`} className="text-slate-300 hover:text-white transition-colors text-sm">
+                    {siteData.contact.phone}
+                  </a>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-5 h-5 text-blue-400">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                    </svg>
+                  </div>
+                  <a href={`mailto:${siteData.contact.email}`} className="text-slate-300 hover:text-white transition-colors text-sm">
+                    {siteData.contact.email}
+                  </a>
+                </div>
+              </div>
+            </div>
+            
+            {/* Quick links */}
+            <div className="space-y-6">
+              <h4 className="text-lg font-semibold text-white">Company</h4>
+              <nav className="space-y-3">
+                <a href="#about" className="block text-slate-300 hover:text-white transition-colors text-sm">About Us</a>
+                <a href="#services" className="block text-slate-300 hover:text-white transition-colors text-sm">Our Services</a>
+                <a href="#projects" className="block text-slate-300 hover:text-white transition-colors text-sm">Projects</a>
+                <a href="#history" className="block text-slate-300 hover:text-white transition-colors text-sm">Our History</a>
+                <a href="#contact" className="block text-slate-300 hover:text-white transition-colors text-sm">Contact</a>
+              </nav>
+            </div>
+            
+            {/* Sectors */}
+            <div className="space-y-6">
+              <h4 className="text-lg font-semibold text-white">Expertise</h4>
+              <nav className="space-y-3">
+                <span className="block text-slate-300 text-sm">EV Infrastructure</span>
+                <span className="block text-slate-300 text-sm">Defense Systems</span>
+                <span className="block text-slate-300 text-sm">Information Technology</span>
+                <span className="block text-slate-300 text-sm">Energy Solutions</span>
+                <span className="block text-slate-300 text-sm">Automotive</span>
+                <span className="block text-slate-300 text-sm">Infrastructure</span>
+              </nav>
+            </div>
+          </div>
+          
+          {/* Statistics */}
+          <div className="mt-12 pt-8 border-t border-slate-700">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+              <div>
+                <div className="text-2xl font-bold text-white mb-1">1,800+</div>
+                <div className="text-sm text-slate-400">Satisfied Clients</div>
+              </div>
+              <div>
+                <div className="text-2xl font-bold text-white mb-1">30+</div>
+                <div className="text-sm text-slate-400">Projects Completed</div>
+              </div>
+              <div>
+                <div className="text-2xl font-bold text-white mb-1">$110M+</div>
+                <div className="text-sm text-slate-400">Total Investment</div>
+              </div>
+              <div>
+                <div className="text-2xl font-bold text-white mb-1">10+</div>
+                <div className="text-sm text-slate-400">Years Experience</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        {/* Bottom bar */}
+        <div className="py-6 border-t border-slate-700">
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div className="text-sm text-slate-400">
+              {siteData.footer.legal}
+            </div>
+            <nav className="flex items-center gap-6 text-sm">
+              {siteData.footer.links.map((l) => (
+                <a key={l.label} href={l.href} className="text-slate-400 hover:text-white transition-colors">
+                  {l.label}
+                </a>
+              ))}
+            </nav>
+          </div>
+        </div>
       </Container>
     </footer>
   );
