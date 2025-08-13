@@ -559,20 +559,7 @@ function Clients() {
             </div>
           </div>
           
-          {/* Bottom Row - Humanitarian & NGOs */}
-          <div className="bg-[#00227c] p-8 rounded-2xl shadow-sm mb-8">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
-              <div className="flex items-center justify-center h-16 bg-white rounded-lg p-4">
-                <img src={magLogo} alt="Mines Advisory Group" className="max-h-full max-w-full object-contain" />
-              </div>
-              <div className="flex items-center justify-center h-16 bg-white rounded-lg p-4">
-                <img src={norwegianPeoplesAidLogo} alt="Norwegian People's Aid" className="max-h-full max-w-full object-contain" />
-              </div>
-              <div className="flex items-center justify-center h-16 bg-white rounded-lg p-4">
-                <img src={saveTheChildrenLogo} alt="Save the Children" className="max-h-full max-w-full object-contain" />
-              </div>
-            </div>
-          </div>
+          
           
           {/* Mining Companies Section */}
           <div className="bg-[#00227c] p-8 rounded-2xl shadow-sm">
