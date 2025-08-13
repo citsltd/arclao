@@ -164,7 +164,7 @@ function Hero() {
       <div className="absolute bottom-1/4 -left-20 w-96 h-96 bg-gradient-to-tr from-[#00227c]/20 to-transparent rounded-full blur-3xl animate-pulse delay-1000"></div>
       <div className="absolute inset-0 bg-grid-white/[0.05] [mask-image:linear-gradient(0deg,transparent,black,transparent)]"></div>
       <Container className="relative z-10 py-16 sm:py-20 lg:py-32 px-4">
-        <div className="max-w-4xl mx-auto text-center pt-[25px] pb-[25px]">
+        <div className="max-w-4xl mx-auto text-center pt-[50px] pb-[25px]">
           <div className="space-y-4 sm:space-y-6 mb-8 sm:mb-12">
             <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight px-2">
               <span className="block text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-2 text-white/90">Your Trusted Partner for</span>
