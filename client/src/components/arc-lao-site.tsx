@@ -52,7 +52,6 @@ function Nav() {
     { label: "Our Services", href: "#services" },
     { label: "Our Partners", href: "#partners" },
     { label: "Our Clients", href: "#clients" },
-    { label: "Contact Us", href: "#contact" },
   ];
 
   return (
@@ -919,147 +918,7 @@ function Clients() {
   );
 }
 
-function Contact() {
-  return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-slate-50 via-white to-indigo-50/30 relative overflow-hidden" id="contact">
-      
-      
-      
-      
-      <Container className="relative px-4">
-        {/* Enhanced Header */}
-        <div className="text-center mb-20">
-          <div className="relative inline-block mb-8">
-            <div className="absolute inset-0 bg-[#00227c]/10 rounded-full blur-xl"></div>
-            <div className="relative inline-flex items-center gap-3 px-6 py-3 bg-white/80 backdrop-blur-sm text-[#00227c] rounded-full text-sm font-semibold uppercase tracking-wide border border-[#00227c]/20 shadow-lg">
-              <div className="w-2 h-2 bg-[#00227c] rounded-full animate-pulse"></div>
-              Contact Us
-              <div className="w-2 h-2 bg-[#00227c] rounded-full animate-pulse delay-500"></div>
-            </div>
-          </div>
-          
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 mb-6 leading-tight">
-            Get In <span className="text-transparent bg-gradient-to-r from-[#00227c] to-indigo-600 bg-clip-text">Touch</span>
-          </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-[#00227c] to-indigo-500 mx-auto mb-6 rounded-full"></div>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-            Ready to start your next project? Contact us today and let's discuss how we can help you achieve your goals with innovative solutions.
-          </p>
-        </div>
-        
-        <div className="max-w-4xl mx-auto">
-          {/* Contact Information */}
-          <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold text-slate-900 mb-8">Contact Information</h3>
-            
-            <div className="grid gap-8 md:grid-cols-3">
-              {/* Address */}
-              <div className="text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-[#00227c] rounded-full mb-4">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
-                </div>
-                <h4 className="text-xl font-semibold text-slate-900 mb-2">Office Address</h4>
-                <p className="text-slate-600">
-                  Ban Phonexay District, Sysetha<br />
-                  Vientiane, Lao PDR
-                </p>
-              </div>
-              
-              {/* Email */}
-              <div className="text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-[#00227c] rounded-full mb-4">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                  </svg>
-                </div>
-                <h4 className="text-xl font-semibold text-slate-900 mb-2">Email Address</h4>
-                <a href="mailto:info@arclao.com" className="text-[#00227c] hover:text-[#001a63] font-medium text-lg">
-                  info@arclao.com
-                </a>
-              </div>
-              
-              {/* Phone */}
-              <div className="text-center">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-[#00227c] rounded-full mb-4">
-                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                  </svg>
-                </div>
-                <h4 className="text-xl font-semibold text-slate-900 mb-2">Phone Number</h4>
-                <a href="tel:+8562052629292" className="text-[#00227c] hover:text-[#001a63] font-medium text-lg">
-                  +856-20-5262 9292
-                </a>
-              </div>
-            </div>
-          </div>
-          
-          
-        </div>
-        
-        {/* Enhanced Call to Action */}
-        <div className="mt-20 text-center">
-          <div className="relative">
-            <div className="absolute -inset-6 bg-gradient-to-r from-[#00227c]/10 via-indigo-500/10 to-[#00227c]/10 rounded-3xl blur-2xl"></div>
-            <div className="relative bg-gradient-to-br from-white via-indigo-50/30 to-white border-2 border-[#00227c]/20 rounded-3xl p-12 shadow-2xl">
-              <div className="max-w-4xl mx-auto">
-                <div className="flex justify-center mb-6">
-                  <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#00227c]/10 text-[#00227c] rounded-full text-sm font-semibold uppercase tracking-wide">
-                    <div className="w-2 h-2 bg-[#00227c] rounded-full animate-pulse"></div>
-                    Get Started Today
-                  </div>
-                </div>
-                
-                <h3 className="text-4xl lg:text-5xl font-bold text-slate-900 mb-6 leading-tight">
-                  Ready to Transform Your 
-                  <span className="text-transparent bg-gradient-to-r from-[#00227c] to-indigo-600 bg-clip-text"> Vision</span>?
-                </h3>
-                
-                <p className="text-xl text-slate-600 mb-10 max-w-3xl mx-auto leading-relaxed">
-                  Join the growing number of organizations that trust ARC Lao for their technology and infrastructure needs. 
-                  Let's discuss how we can help you achieve your goals with innovative solutions.
-                </p>
-                
-                <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-                  <a 
-                    href="tel:+8562052629292"
-                    className="group relative inline-flex items-center gap-3 bg-gradient-to-r from-[#00227c] to-indigo-600 text-white font-bold px-10 py-5 rounded-2xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-[#00227c]/30 overflow-hidden"
-                  >
-                    <span className="relative z-10 flex items-center gap-3">
-                      <svg className="w-6 h-6 transition-transform group-hover:rotate-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                      </svg>
-                      Call Now: +856-20-5262 9292
-                    </span>
-                    <div className="absolute inset-0 bg-gradient-to-r from-indigo-600 to-[#00227c] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  </a>
-                  
-                  <a 
-                    href="mailto:info@arclao.com"
-                    className="group inline-flex items-center gap-3 bg-white text-slate-700 font-semibold px-10 py-5 rounded-2xl border-2 border-slate-200 hover:border-[#00227c] transition-all duration-300 hover:shadow-lg"
-                  >
-                    <svg className="w-6 h-6 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
-                    Send Email
-                  </a>
-                </div>
-                
-                <div className="mt-8 text-center">
-                  <p className="text-sm text-slate-500">
-                    🏆 Trusted by leading organizations across Southeast Asia
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </Container>
-    </section>
-  );
-}
+
 
 function Footer() {
   return (
@@ -1091,7 +950,6 @@ function Footer() {
               <nav className="space-y-3">
                 <a href="#about" className="block text-slate-400 hover:text-white transition-colors text-sm">About Us</a>
                 <a href="#services" className="block text-slate-400 hover:text-white transition-colors text-sm">Our Sectors</a>
-                <a href="#contact" className="block text-slate-400 hover:text-white transition-colors text-sm">Contact</a>
               </nav>
             </div>
             
@@ -1195,7 +1053,6 @@ export default function CorporateSite() {
       <VisionMission />
       <Partners />
       <Clients />
-      <Contact />
       <Footer />
     </main>
   );
