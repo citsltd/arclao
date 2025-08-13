@@ -684,69 +684,163 @@ function Partners() {
       tagline: "Searching with Excellence",
       description: "Pioneering Spirit since 1965",
       website: "www.vallon.de",
-      category: "Demining Equipment"
+      category: "Demining Equipment",
+      gradient: "from-red-500 to-orange-600",
+      bgGradient: "from-red-50 to-orange-50",
+      established: "1965"
     },
     {
       name: "Jarvis Consulting",
       tagline: "IT Services",
       description: "Development Ops, Cloud services, AI & Machine learning. Innovating the landscape with data & tech oriented humanistic solutions!",
       website: "www.jarvis.consulting",
-      category: "Information Technology"
+      category: "Information Technology",
+      gradient: "from-blue-500 to-indigo-600",
+      bgGradient: "from-blue-50 to-indigo-50",
+      established: "2020"
     },
     {
       name: "TVS Motor Company",
       tagline: "Transforming quality of life through mobility solutions",
       description: "TVS Motor Company - One of the largest 2-wheeler companies in the world.",
       website: "www.tvsmotor.com",
-      category: "Motorbikes"
+      category: "Motorbikes",
+      gradient: "from-purple-500 to-violet-600",
+      bgGradient: "from-purple-50 to-violet-50",
+      established: "1978"
     },
     {
       name: "BCS Two Wheel Tractors",
       tagline: "Agriculture Machinery Excellence",
       description: "A complete range of reversible and multifunctional two-wheel tractors for professionally preparing the soil, greens maintenance and snow removal.",
       website: "www.bcsagri.com/en",
-      category: "Agriculture Machinery"
+      category: "Agriculture Machinery",
+      gradient: "from-green-500 to-emerald-600",
+      bgGradient: "from-green-50 to-emerald-50",
+      established: "1943"
     },
     {
       name: "Mahindra & Mahindra",
       tagline: "Agriculture Machines & Equipments", 
       description: "Mahindra Tractors offers a wide range of tractor models in India, with power options ranging from 15 HP to 74 HP. All Mahindra Tractors are designed to perform various agricultural tasks, catering to the diverse needs of farmers and landowners",
       website: "www.mahindratractor.com",
-      category: "Agriculture Machinery"
+      category: "Agriculture Machinery",
+      gradient: "from-amber-500 to-yellow-600",
+      bgGradient: "from-amber-50 to-yellow-50",
+      established: "1945"
     }
   ];
 
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-white relative overflow-hidden">
+    <section className="py-16 sm:py-20 lg:py-24 bg-slate-50 relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-white to-indigo-50/30"></div>
+      <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-[#00227c]/5 to-transparent rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-indigo-500/5 to-transparent rounded-full blur-3xl"></div>
+      
       <Container className="relative px-4">
         <div className="text-center mb-16">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#00227c]/10 text-[#00227c] rounded-full text-sm font-semibold uppercase tracking-wide mb-6">
+            Strategic Partnerships
+          </div>
           <h2 className="text-4xl sm:text-5xl font-bold text-slate-900 mb-4">
             Our <span className="text-[#00227c]">Partners</span>
           </h2>
-          <p className="text-lg text-slate-600">Trusted partnerships with global industry leaders</p>
+          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+            Building strong relationships with global industry leaders to deliver exceptional solutions and services
+          </p>
         </div>
         
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {partners.map((partner) => (
-            <div key={partner.name} className="bg-slate-50 rounded-2xl p-8 hover:shadow-lg transition-all duration-300">
-              <div className="mb-4">
-                <span className="inline-block px-3 py-1 bg-[#00227c] text-white text-xs font-medium rounded-full mb-3">
-                  {partner.category}
-                </span>
-                <h3 className="text-xl font-bold text-slate-900 mb-2">{partner.name}</h3>
-                <h4 className="text-lg font-semibold text-[#00227c] mb-3">{partner.tagline}</h4>
+          {partners.map((partner, index) => (
+            <div key={partner.name} className="group relative">
+              <div className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-slate-100/50">
+                {/* Header with Category and Year */}
+                <div className="flex items-center justify-between mb-6">
+                  <div className={`px-3 py-1 bg-gradient-to-r ${partner.bgGradient} border border-slate-200/50 rounded-full`}>
+                    <span className={`text-xs font-semibold bg-gradient-to-r ${partner.gradient} bg-clip-text text-transparent uppercase tracking-wide`}>
+                      {partner.category}
+                    </span>
+                  </div>
+                  <div className="text-xs text-slate-500 font-medium">
+                    Est. {partner.established}
+                  </div>
+                </div>
+                
+                {/* Partner Icon */}
+                <div className="mb-6">
+                  <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${partner.gradient} p-0.5 shadow-lg mx-auto`}>
+                    <div className="w-full h-full bg-white rounded-[14px] flex items-center justify-center">
+                      <div className={`w-8 h-8 bg-gradient-to-br ${partner.gradient} rounded-lg flex items-center justify-center`}>
+                        <span className="text-white text-sm font-bold">
+                          {partner.name.charAt(0)}
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Content */}
+                <div className="text-center space-y-4">
+                  <h3 className="text-xl font-bold text-slate-900 group-hover:text-[#00227c] transition-colors duration-300">
+                    {partner.name}
+                  </h3>
+                  <h4 className={`text-sm font-semibold bg-gradient-to-r ${partner.gradient} bg-clip-text text-transparent`}>
+                    {partner.tagline}
+                  </h4>
+                  <p className="text-slate-600 leading-relaxed text-sm">
+                    {partner.description}
+                  </p>
+                </div>
+                
+                {/* Website Link */}
+                <div className="mt-6 pt-6 border-t border-slate-100">
+                  <a 
+                    href={`https://${partner.website}`} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className={`group/link inline-flex items-center gap-2 text-sm font-medium bg-gradient-to-r ${partner.gradient} bg-clip-text text-transparent hover:gap-3 transition-all duration-300`}
+                  >
+                    <span>Visit Website</span>
+                    <svg className="w-4 h-4 transition-transform group-hover/link:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </a>
+                </div>
+                
+                {/* Floating Elements */}
+                <div className="absolute -top-2 -right-2 w-4 h-4 bg-white rounded-full shadow-lg flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+                  <div className={`w-2 h-2 bg-gradient-to-br ${partner.gradient} rounded-full`}></div>
+                </div>
               </div>
-              <p className="text-slate-600 leading-relaxed mb-4">{partner.description}</p>
-              <a 
-                href={`https://${partner.website}`} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-[#00227c] hover:text-[#001a63] font-medium text-sm transition-colors"
-              >
-                {partner.website} →
-              </a>
+              
+              {/* Partner Number */}
+              <div className="absolute -top-3 -left-3 w-8 h-8 bg-[#00227c] rounded-full flex items-center justify-center shadow-lg">
+                <span className="text-white text-xs font-bold">{(index + 1).toString().padStart(2, '0')}</span>
+              </div>
             </div>
           ))}
+        </div>
+        
+        {/* Partnership Stats */}
+        <div className="mt-16 pt-16 border-t border-slate-200/50">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div className="space-y-2">
+              <div className="text-3xl font-bold text-[#00227c]">5+</div>
+              <div className="text-sm text-slate-600 font-medium">Global Partners</div>
+            </div>
+            <div className="space-y-2">
+              <div className="text-3xl font-bold text-emerald-600">4</div>
+              <div className="text-sm text-slate-600 font-medium">Industry Sectors</div>
+            </div>
+            <div className="space-y-2">
+              <div className="text-3xl font-bold text-violet-600">25+</div>
+              <div className="text-sm text-slate-600 font-medium">Countries Reached</div>
+            </div>
+            <div className="space-y-2">
+              <div className="text-3xl font-bold text-amber-600">50+</div>
+              <div className="text-sm text-slate-600 font-medium">Years Combined Experience</div>
+            </div>
+          </div>
         </div>
       </Container>
     </section>
