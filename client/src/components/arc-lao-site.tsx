@@ -283,9 +283,9 @@ function Nav() {
           {/* CTA Button */}
           <a 
             href="tel:+8562076198200" 
-            className="group relative inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-red-600 via-blue-600 to-blue-700 text-white font-semibold rounded-2xl shadow-lg shadow-red-500/25 hover:shadow-xl hover:shadow-red-500/30 transition-all duration-300 transform hover:scale-105 overflow-hidden"
+            className="group relative inline-flex items-center gap-2 px-6 py-3 bg-[#00227c] text-white font-semibold rounded-2xl shadow-lg shadow-[#00227c]/25 hover:shadow-xl hover:shadow-[#00227c]/30 transition-all duration-300 transform hover:scale-105 overflow-hidden"
           >
-            <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-red-500 via-blue-500 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
+            <div className="absolute inset-0 rounded-2xl bg-[#001a63] opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
             <svg className="w-4 h-4 transition-transform group-hover:scale-110 relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
             </svg>
@@ -335,7 +335,7 @@ function Nav() {
               <div className="pt-4 mt-4 border-t border-slate-200">
                 <a 
                   href="tel:+8562076198200" 
-                  className="flex items-center justify-center gap-2 w-full px-4 py-3 bg-gradient-to-r from-red-600 to-blue-600 text-white font-semibold rounded-xl shadow-lg shadow-red-500/25 transition-transform hover:scale-105"
+                  className="flex items-center justify-center gap-2 w-full px-4 py-3 bg-[#00227c] text-white font-semibold rounded-xl shadow-lg shadow-[#00227c]/25 transition-transform hover:scale-105 hover:bg-[#001a63]"
                   onClick={() => setOpen(false)}
                 >
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -386,7 +386,7 @@ function Hero() {
           {/* Main headline */}
           <div className="space-y-4 sm:space-y-6 mb-6 sm:mb-8">
             <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight px-2 pl-[0px] pr-[0px]">
-              Me To We With <span className="bg-gradient-to-r from-red-400 via-blue-400 to-blue-500 bg-clip-text text-transparent">ARC Lao</span> combined efforts On <span className="bg-gradient-to-r from-blue-400 to-red-400 bg-clip-text text-transparent">Technological Innovation</span>
+              Me To We With <span className="text-[#00227c]">ARC Lao</span> combined efforts On <span className="text-[#00227c]">Technological Innovation</span>
             </h1>
             
             <p className="text-base sm:text-lg lg:text-xl text-slate-200 max-w-2xl mx-auto leading-relaxed px-4">
@@ -403,7 +403,7 @@ function Hero() {
                 className={`group inline-flex items-center justify-center gap-2 px-6 py-3 sm:py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 text-sm sm:text-base ${
                   c.variant === "ghost"
                     ? "border-2 border-white/30 text-white hover:border-white/60 hover:bg-white/10 backdrop-blur-sm"
-                    : "bg-gradient-to-r from-red-500 to-blue-600 text-white shadow-lg hover:shadow-red-500/25 hover:from-red-400 hover:to-blue-500"
+                    : "bg-[#00227c] text-white shadow-lg hover:shadow-[#00227c]/25 hover:bg-[#001a63]"
                 }`}
               >
                 <span>{c.label}</span>
@@ -492,7 +492,7 @@ function About() {
             About Our Company
           </div>
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-6 sm:mb-8 px-2">
-            Built on <span className="bg-gradient-to-r from-red-600 to-blue-600 bg-clip-text text-transparent">Strong Foundations</span>
+            Built on <span className="text-[#00227c]">Strong Foundations</span>
           </h2>
           <div className="max-w-4xl mx-auto px-4">
             <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
@@ -508,11 +508,11 @@ function About() {
               className="group relative p-6 sm:p-8 rounded-3xl bg-white shadow-sm ring-1 ring-slate-200 hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-500 hover:-translate-y-2"
             >
               {/* Decorative element */}
-              <div className="absolute top-0 left-6 sm:left-8 w-12 sm:w-16 h-1 bg-gradient-to-r from-red-500 to-blue-500 rounded-full"></div>
+              <div className="absolute top-0 left-6 sm:left-8 w-12 sm:w-16 h-1 bg-[#00227c] rounded-full"></div>
               
               {/* Icon and title */}
               <div className="flex flex-col items-center text-center mb-4 sm:mb-6">
-                <div className="w-14 sm:w-16 h-14 sm:h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center mb-3 sm:mb-4 group-hover:scale-110 transition-transform duration-300 p-3">
+                <div className="w-14 sm:w-16 h-14 sm:h-16 rounded-2xl bg-[#00227c] flex items-center justify-center mb-3 sm:mb-4 group-hover:scale-110 transition-transform duration-300 p-3">
                   <img 
                     src={pillarIcons[index]} 
                     alt={v.title} 
@@ -1293,8 +1293,8 @@ function Footer() {
     <footer className="bg-slate-900 text-white relative overflow-hidden">
       {/* Background decorations */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"></div>
-      <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-red-600/10 to-transparent rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-blue-600/10 to-transparent rounded-full blur-3xl"></div>
+      <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-[#00227c]/10 to-transparent rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-[#00227c]/10 to-transparent rounded-full blur-3xl"></div>
       
       <Container className="relative">
         {/* Main footer content */}
@@ -1417,19 +1417,19 @@ function Footer() {
           <div className="mt-16 pt-8 border-t border-slate-700">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               <div className="text-center">
-                <div className="text-3xl font-bold text-blue-400 mb-2">10+</div>
+                <div className="text-3xl font-bold text-[#00227c] mb-2">10+</div>
                 <div className="text-slate-400 text-sm">Years Experience</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-red-500 mb-2">30+</div>
+                <div className="text-3xl font-bold text-[#00227c] mb-2">30+</div>
                 <div className="text-slate-400 text-sm">Projects Completed</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-blue-500 mb-2">100+</div>
+                <div className="text-3xl font-bold text-[#00227c] mb-2">100+</div>
                 <div className="text-slate-400 text-sm">Team Members</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-blue-400 mb-2">3+</div>
+                <div className="text-3xl font-bold text-[#00227c] mb-2">3+</div>
                 <div className="text-slate-400 text-sm">Countries Served</div>
               </div>
             </div>
