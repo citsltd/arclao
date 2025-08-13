@@ -524,60 +524,69 @@ function About() {
     <section className="py-16 sm:py-20 lg:py-32 bg-[#00227c] text-white relative overflow-hidden" id="about">
       {/* Background decorations */}
       <div className="absolute inset-0 bg-gradient-to-br from-[#00227c] via-[#001a5c] to-[#00227c]"></div>
-      <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-white/5 to-transparent rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-white/5 to-transparent rounded-full blur-3xl"></div>
       
       <Container className="relative px-4">
         <div className="grid gap-12 lg:gap-16 lg:grid-cols-2 items-center">
           {/* Left side - World map image */}
           <div className="order-2 lg:order-1 relative">
-            {/* Orange header section */}
-            <div className="absolute -top-8 -left-8 w-64 h-16 bg-gradient-to-r from-orange-500 to-orange-400 rounded-lg flex items-center justify-center mb-8 z-10">
-              <img 
-                src={arcLaoLogo} 
-                alt="ARC LAO" 
-                className="h-8 w-auto filter brightness-0"
-              />
-            </div>
-            
-            {/* World map container */}
-            <div className="relative bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl p-8 shadow-2xl border border-white/10">
-              <div className="aspect-[4/3] rounded-xl overflow-hidden relative">
-                <img 
-                  src={Future_of_Technology} 
-                  alt="Global business network" 
-                  className="w-full h-full object-cover opacity-90"
-                />
-                {/* Overlay for world map effect */}
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-600/30 via-transparent to-indigo-600/30"></div>
+            {/* World map container - matching the PDF design exactly */}
+            <div className="relative bg-[#00227c] rounded-none overflow-hidden shadow-none border-0 p-0">
+              <div className="aspect-[4/3] overflow-hidden relative bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900">
+                {/* World map silhouette background */}
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800"></div>
                 
-                {/* Connection dots overlay */}
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="grid grid-cols-3 gap-8 opacity-80">
-                    {[...Array(9)].map((_, i) => (
-                      <div key={i} className="w-2 h-2 bg-orange-400 rounded-full animate-pulse" style={{animationDelay: `${i * 0.2}s`}}></div>
+                {/* Connection lines overlay - simulating global network */}
+                <div className="absolute inset-0">
+                  {/* Horizontal connection lines */}
+                  <div className="absolute top-1/3 left-1/4 right-1/4 h-px bg-gradient-to-r from-transparent via-blue-300/50 to-transparent"></div>
+                  <div className="absolute top-1/2 left-1/3 right-1/3 h-px bg-gradient-to-r from-transparent via-blue-300/50 to-transparent"></div>
+                  <div className="absolute top-2/3 left-1/4 right-1/4 h-px bg-gradient-to-r from-transparent via-blue-300/50 to-transparent"></div>
+                  
+                  {/* Vertical connection lines */}
+                  <div className="absolute left-1/3 top-1/4 bottom-1/4 w-px bg-gradient-to-b from-transparent via-blue-300/50 to-transparent"></div>
+                  <div className="absolute left-1/2 top-1/3 bottom-1/3 w-px bg-gradient-to-b from-transparent via-blue-300/50 to-transparent"></div>
+                  <div className="absolute left-2/3 top-1/4 bottom-1/4 w-px bg-gradient-to-b from-transparent via-blue-300/50 to-transparent"></div>
+                  
+                  {/* Connection nodes */}
+                  <div className="absolute top-1/3 left-1/3 w-2 h-2 bg-blue-300 rounded-full animate-pulse"></div>
+                  <div className="absolute top-1/2 left-1/2 w-2 h-2 bg-blue-300 rounded-full animate-pulse" style={{animationDelay: '0.2s'}}></div>
+                  <div className="absolute top-2/3 left-2/3 w-2 h-2 bg-blue-300 rounded-full animate-pulse" style={{animationDelay: '0.4s'}}></div>
+                  <div className="absolute top-1/4 left-2/3 w-2 h-2 bg-blue-300 rounded-full animate-pulse" style={{animationDelay: '0.6s'}}></div>
+                  <div className="absolute top-3/4 left-1/3 w-2 h-2 bg-blue-300 rounded-full animate-pulse" style={{animationDelay: '0.8s'}}></div>
+                </div>
+                
+                {/* Business silhouettes at bottom - exactly like PDF */}
+                <div className="absolute bottom-0 left-0 right-0 flex justify-center items-end h-1/3">
+                  {/* Business people silhouettes */}
+                  <div className="flex items-end gap-1 opacity-90">
+                    {[...Array(12)].map((_, i) => (
+                      <div 
+                        key={i} 
+                        className="bg-black/80" 
+                        style={{
+                          width: `${Math.random() * 8 + 4}px`,
+                          height: `${Math.random() * 40 + 30}px`,
+                          clipPath: i % 3 === 0 ? 'polygon(50% 0%, 0% 100%, 100% 100%)' : 'none'
+                        }}
+                      ></div>
                     ))}
+                  </div>
+                  
+                  {/* Central handshake silhouette */}
+                  <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 w-16 h-12 opacity-90">
+                    <svg viewBox="0 0 64 48" fill="none" className="w-full h-full">
+                      <path d="M20 24c0 0 8-4 12 0 4-4 12 0 12 0" stroke="black" strokeWidth="2" fill="black" opacity="0.8"/>
+                      <circle cx="20" cy="24" r="8" fill="black" opacity="0.8"/>
+                      <circle cx="44" cy="24" r="8" fill="black" opacity="0.8"/>
+                    </svg>
                   </div>
                 </div>
               </div>
-              
-              {/* Silhouettes at bottom */}
-              <div className="absolute bottom-4 left-4 right-4 flex justify-center">
-                <div className="flex items-end gap-2 opacity-70">
-                  {[...Array(8)].map((_, i) => (
-                    <div key={i} className="w-3 bg-slate-600 rounded-t" style={{height: `${Math.random() * 20 + 20}px`}}></div>
-                  ))}
-                </div>
-              </div>
             </div>
-            
-            
           </div>
           
           {/* Right side - Content */}
           <div className="order-1 lg:order-2">
-            
-            
             {/* Our Profile badge */}
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-orange-500 text-white rounded-full text-sm font-medium mb-6 uppercase tracking-wider">
               Our Profile
@@ -586,11 +595,11 @@ function About() {
             {/* Main heading */}
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-8 leading-tight">
               Welcome To<br />
-              <span className="text-orange-300">ARC LAO</span>
+              <span className="text-[#00227c] bg-white px-2 py-1 rounded">ARC LAO</span>
             </h2>
             
             {/* Content paragraphs */}
-            <div className="space-y-6 text-slate-200 leading-relaxed">
+            <div className="space-y-6 text-white leading-relaxed">
               <p className="text-base sm:text-lg">
                 We are an international trading company with over 16 years of dedicated operation in Laos. Throughout our extensive history, we have established a strong presence across diverse business sectors, including demining equipment, information technology, automotive, hospitality, energy, and farming equipment. Our commitment to quality and excellence has enabled us to build lasting relationships with clients and partners worldwide.
               </p>
@@ -599,8 +608,6 @@ function About() {
                 Driven by innovation and a customer-centric approach, we strive to deliver reliable solutions that meet the evolving needs of our clients in various industries.
               </p>
             </div>
-            
-            
           </div>
         </div>
       </Container>
