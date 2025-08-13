@@ -564,12 +564,7 @@ function About() {
               </p>
             </div>
             
-            {/* Page indicator */}
-            <div className="mt-8 flex justify-end">
-              <div className="bg-white/10 backdrop-blur-sm px-4 py-2 rounded-lg">
-                <span className="text-white/80 text-sm font-medium">PAGE 02</span>
-              </div>
-            </div>
+            
           </div>
         </div>
       </Container>
