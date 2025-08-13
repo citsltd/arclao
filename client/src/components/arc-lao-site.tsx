@@ -15,8 +15,6 @@ import infrastructureImg from "../assets/infrastructure.jpg";
 
 import Technological_Innovation from "@assets/Technological Innovation.jpg";
 import Future_of_Technology from "@assets/Future of Technology_1754915928797.jpg";
-import HeroImage from "@assets/image_1755067102162.png";
-import SolutionsImage from "@assets/image_1755067434817.png";
 import principlesIcon from "@assets/principles_1754916579666.png";
 import perseveranceIcon from "@assets/perservence_1754916579664.png";
 import permanenceIcon from "@assets/permanence_1754916579663.png";
@@ -36,23 +34,24 @@ const brand = {
   lightBg: "bg-white",
 };
 
-// --- Site content (based on official company profile PDF) ---
+// --- Site content (swap placeholders with real text/images) ---
 const siteData = {
   hero: {
-    kicker: "Dedicated to Delivering Excellence",
-    headline: "Welcome To ARC LAO",
+    kicker: "Me To We With ARC Lao combined efforts On",
+    headline: "Technological Innovation",
     subhead:
-      "We are an international trading company with over 16 years of dedicated operation in Laos. Throughout our extensive history, we have established a strong presence across diverse business sectors, including demining equipment, information technology, automotive, hospitality, energy, and farming equipment.",
+      "Awareness & Education, Conscious Use Of Natural Resources, Agriculture - Leading technological innovation and infrastructure development across Southeast Asia.",
     ctas: [
       { label: "Get in touch", href: "#contact" },
-      { label: "Our services", href: "#services", variant: "ghost" },
+      { label: "Our projects", href: "#projects", variant: "ghost" },
     ],
-    image: Future_of_Technology,
+    image:
+      "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&h=900", // Technology infrastructure
   },
   nav: [
     { label: "About Us", href: "#about" },
     { label: "Products & Services", href: "#services" },
-    { label: "Our Clients", href: "#clients" },
+    { label: "Sectors", href: "#sectors" },
     { label: "Projects", href: "#projects" },
     { label: "History", href: "#history" },
     { label: "Contact Us", href: "#contact" },
@@ -85,45 +84,45 @@ const siteData = {
   ],
   services: [
     {
-      title: "Demining Equipment",
+      title: "EV Infrastructure",
       body:
-        "Country distributor for De-Mining equipment from Germany. We are a national distributor for all types of demining equipment used in humanitarian efforts.",
+        "Lithium Ion Battery, Charging Stations, EV Testing Equipments.",
+      image: evInfrastructureImg,
+    },
+    {
+      title: "Defence",
+      body:
+        "Demining Equipments, Metal Detectors, Body Armor, EOD/IED Equipments.",
       image: defenseImg,
     },
     {
       title: "Information Technology",
       body:
-        "Expertise in Development Ops, Cloud services, AI & Machine learning.",
+        "Internet Of Thing, Energy Software, Software Development & Testing.",
       image: informationTechnologyImg,
     },
     {
-      title: "Agriculture Machinery - BCS Two Wheel Tractors",
+      title: "Energy",
       body:
-        "BCS is an Italian-based business group with over 40 years of expertise in two-wheel tractors. They offer a wide range of reversible and multifunctional two-wheel tractors suitable for professional soil preparation, greens maintenance, and snow removal.",
+        "Hydrogen Fuel Cell, Energy From Waste, Solar Energy.",
+      image: "https://images.unsplash.com/photo-1466611653911-95081537e5b7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
+    },
+    {
+      title: "Automotive",
+      body:
+        "Electric & Non-electric Motorbikes, Agricultural & Construction Machines.",
       image: automotiveImg,
     },
     {
-      title: "Agriculture Machinery - Mahindra Tractors",
+      title: "Infrastructure",
       body:
-        "Mahindra Tractors, part of Mahindra & Mahindra, is an Indian agricultural machinery manufacturer. It became the world's top-selling tractor brand in 2010, mainly serving India, with growing markets in North America and Australia.",
-      image: automotiveImg,
-    },
-    {
-      title: "Motorbikes - TVS Motors",
-      body:
-        "TVS Motor Company, headquartered in Chennai, India, is a major multinational motorcycle manufacturer, ranking third in India by revenue, with annual sales of three million units.",
-      image: automotiveImg,
-    },
-    {
-      title: "Project Consultancy",
-      body:
-        "We provide project consultancy focuses on aligning projects with overall business goals and long-term strategies which involves Technical Consulting, Management Consulting, Financial Consulting, Environmental and Sustainability Consulting & Risk Management.",
+        "Feasibility & Consultancy, Roads & Bridges, Buildings & Factories.",
       image: infrastructureImg,
     },
   ],
   sectors: ["EV Infrastructure", "Defence", "Information Technology", "Energy", "Automotive", "Infrastructure"],
   stats: [
-    { label: "Years Of Experience", value: "16+" },
+    { label: "Years Of Experience", value: "10+" },
     { label: "Annual Turn Over", value: "$5M" },
     { label: "Repeat Business", value: "85%" },
     { label: "Employees Strength", value: "100+" },
@@ -190,55 +189,10 @@ const siteData = {
     "Tailored Solutions for client requirements.",
     "Utmost focus on quality deliverables.",
   ],
-  clients: [
-    {
-      name: "VALLON",
-      description: "Searching with Excellence - Pioneering Spirit since 1965",
-      logo: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=100",
-      website: "www.vallon.de",
-      category: "Demining Equipment"
-    },
-    {
-      name: "Jarvis Consulting",
-      description: "Innovating the landscape with data & tech oriented humanistic solutions",
-      logo: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=100",
-      website: "www.jarvis.consulting",
-      category: "IT Services"
-    },
-    {
-      name: "TVS Motor Company",
-      description: "Transforming quality of life through mobility solutions",
-      logo: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=100",
-      website: "www.tvsmotor.com",
-      category: "Automotive"
-    },
-    {
-      name: "BCS Agriculture",
-      description: "Complete range of reversible and multifunctional two-wheel tractors",
-      logo: "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=100",
-      website: "www.bcsagri.com/en",
-      category: "Agriculture"
-    },
-    {
-      name: "Mahindra & Mahindra",
-      description: "Agriculture Machines & Equipment - Wide range of tractor models",
-      logo: "https://images.unsplash.com/photo-1527847263472-aa5338d178b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=100",
-      website: "www.mahindratractor.com",
-      category: "Agriculture"
-    },
-    {
-      name: "Mining Companies",
-      description: "Various mining operations and infrastructure development projects",
-      logo: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=100",
-      website: "#",
-      category: "Mining"
-    }
-  ],
   contact: {
-    address: "Ban Phonexay District Sysetha, Vientiane, Lao PDR",
-    phone: "+856-20-5262 9292",
+    address: "BAN PHONETHAN, SAYSETHA, VIENTIANE, LAO PDR",
+    phone: "+856 20 7619 8200",
     email: "info@arclao.com",
-    website: "www.arclao.com",
     mapEmbed:
       "https://www.openstreetmap.org/export/embed.html?bbox=102.6%2C17.9%2C103.1%2C18.2&layer=mapnik&marker=17.966%2C102.6",
   },
@@ -328,14 +282,14 @@ function Nav() {
           
           {/* CTA Button */}
           <a 
-            href="tel:+85620526292929" 
+            href="tel:+8562076198200" 
             className="group relative inline-flex items-center gap-2 px-6 py-3 bg-[#00227c] text-white font-semibold rounded-2xl shadow-lg shadow-[#00227c]/25 hover:shadow-xl hover:shadow-[#00227c]/30 transition-all duration-300 transform hover:scale-105 overflow-hidden"
           >
             <div className="absolute inset-0 rounded-2xl bg-[#001a63] opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
             <svg className="w-4 h-4 transition-transform group-hover:scale-110 relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
             </svg>
-            <span className="hidden sm:inline relative z-10">+856-20-5262 9292</span>
+            <span className="hidden sm:inline relative z-10">+856 20 7619 8200</span>
             <span className="sm:hidden relative z-10">Call</span>
           </a>
         </nav>
@@ -400,183 +354,120 @@ function Nav() {
 
 function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-slate-50 via-white to-blue-50">
-      {/* Animated background elements */}
+    <section className="relative min-h-screen flex items-center text-white overflow-hidden">
+      {/* Background image */}
       <div className="absolute inset-0">
-        {/* Geometric shapes */}
-        <div className="absolute top-20 right-20 w-64 h-64 bg-[#00227c]/5 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-20 left-20 w-96 h-96 bg-orange-500/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
-        
-        {/* Grid pattern */}
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(0,34,124,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(0,34,124,0.02)_1px,transparent_1px)] bg-[size:40px_40px]"></div>
-        
-        {/* Floating tech elements */}
-        <div className="absolute top-1/4 left-1/4 w-3 h-3 bg-[#00227c] rounded-full animate-ping opacity-20"></div>
-        <div className="absolute top-3/4 right-1/3 w-2 h-2 bg-orange-500 rounded-full animate-ping opacity-30 delay-500"></div>
-        <div className="absolute top-1/2 right-1/4 w-4 h-4 bg-[#00227c] rounded-full animate-ping opacity-15 delay-1000"></div>
+        <img 
+          src={Technological_Innovation} 
+          alt="Technological Innovation Background" 
+          className="w-full h-full object-cover"
+        />
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-slate-900/70"></div>
+        {/* Gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/60 via-indigo-900/40 to-slate-900/60"></div>
       </div>
-
-      <Container className="relative z-10 py-16 sm:py-20 lg:py-32">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Left side - Content */}
-          <div className="space-y-8">
-            {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#00227c] to-blue-600 text-white rounded-full text-sm font-medium shadow-lg">
-              <span className="w-2 h-2 bg-white rounded-full animate-pulse"></span>
-              <span className="uppercase tracking-wider">Technology Innovation Leader</span>
-            </div>
-            
-            {/* Main headline */}
-            <div className="space-y-6">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
-                <span className="bg-gradient-to-r from-[#00227c] via-blue-600 to-[#00227c] bg-clip-text text-transparent">
-                  Pioneering
-                </span>
-                <br />
-                <span className="text-slate-900">Southeast Asia's</span>
-                <br />
-                <span className="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">
-                  Tech Future
-                </span>
-              </h1>
-              
-              <p className="text-lg sm:text-xl text-slate-600 max-w-2xl leading-relaxed">
-                ARC Lao combines 16+ years of excellence with cutting-edge innovation across demining, IT, automotive, and infrastructure sectors. We're not just building solutions – we're shaping tomorrow's technology landscape.
-              </p>
-            </div>
-            
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4">
-              <a
-                href="#solutions"
-                className="group inline-flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-[#00227c] to-blue-600 text-white rounded-2xl font-semibold text-lg shadow-2xl hover:shadow-[#00227c]/25 transition-all duration-300 transform hover:scale-105 hover:-translate-y-1"
-              >
-                <span>Explore Solutions</span>
-                <svg className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </a>
-              
-              <a
-                href="#contact"
-                className="group inline-flex items-center justify-center gap-3 px-8 py-4 border-2 border-[#00227c] text-[#00227c] rounded-2xl font-semibold text-lg hover:bg-[#00227c] hover:text-white transition-all duration-300 transform hover:scale-105"
-              >
-                <span>Get Started</span>
-                <svg className="w-5 h-5 transform group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                </svg>
-              </a>
-            </div>
-            
-            {/* Trust indicators with modern design */}
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 pt-8">
-              <div className="text-center p-4 bg-white/60 backdrop-blur-sm rounded-2xl border border-white/20 shadow-lg">
-                <div className="text-3xl font-bold bg-gradient-to-r from-[#00227c] to-blue-600 bg-clip-text text-transparent mb-2">16+</div>
-                <div className="text-sm text-slate-600 font-medium">Years Excellence</div>
-              </div>
-              <div className="text-center p-4 bg-white/60 backdrop-blur-sm rounded-2xl border border-white/20 shadow-lg">
-                <div className="text-3xl font-bold bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent mb-2">1.8K+</div>
-                <div className="text-sm text-slate-600 font-medium">Global Clients</div>
-              </div>
-              <div className="text-center p-4 bg-white/60 backdrop-blur-sm rounded-2xl border border-white/20 shadow-lg">
-                <div className="text-3xl font-bold bg-gradient-to-r from-[#00227c] to-blue-600 bg-clip-text text-transparent mb-2">$110M+</div>
-                <div className="text-sm text-slate-600 font-medium">Investment</div>
-              </div>
-              <div className="text-center p-4 bg-white/60 backdrop-blur-sm rounded-2xl border border-white/20 shadow-lg">
-                <div className="text-3xl font-bold bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent mb-2">30+</div>
-                <div className="text-sm text-slate-600 font-medium">Active Projects</div>
-              </div>
-            </div>
+      {/* Animated background elements */}
+      <div className="absolute inset-0 bg-gradient-to-br from-indigo-600/20 via-cyan-500/10 to-transparent"></div>
+      <div className="absolute top-1/4 -right-20 w-96 h-96 bg-gradient-to-bl from-cyan-400/20 to-transparent rounded-full blur-3xl animate-pulse"></div>
+      <div className="absolute bottom-1/4 -left-20 w-96 h-96 bg-gradient-to-tr from-indigo-400/20 to-transparent rounded-full blur-3xl animate-pulse delay-1000"></div>
+      {/* Grid pattern overlay */}
+      <div className="absolute inset-0 bg-grid-white/[0.05] [mask-image:linear-gradient(0deg,transparent,black,transparent)]"></div>
+      <Container className="relative z-10 py-16 sm:py-20 lg:py-32 px-4">
+        <div className="max-w-4xl mx-auto text-center pt-[25px] pb-[25px]">
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 text-xs sm:text-sm font-medium mb-6 sm:mb-8">
+            <span className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></span>
+            <span className="text-cyan-300 uppercase tracking-wider text-xs">
+              {siteData.hero.kicker}
+            </span>
           </div>
           
-          {/* Right side - Modern tech visualization */}
-          <div className="relative lg:pl-8">
-            {/* Main tech hub visualization */}
-            <div className="relative w-full max-w-lg mx-auto">
-              {/* Central tech core */}
-              <div className="relative z-10 bg-gradient-to-br from-[#00227c] via-blue-600 to-[#00227c] rounded-3xl p-8 shadow-2xl">
-                <div className="text-center text-white space-y-4">
-                  <div className="w-16 h-16 mx-auto bg-white/20 rounded-2xl flex items-center justify-center backdrop-blur-sm">
-                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
-                  </div>
-                  <h3 className="text-xl font-bold">Innovation Hub</h3>
-                  <p className="text-blue-100 text-sm">Connecting Southeast Asia's Future</p>
-                </div>
-              </div>
-              
-              {/* Floating tech cards */}
-              <div className="absolute -top-6 -right-6 bg-white rounded-2xl p-4 shadow-xl border border-orange-100 transform rotate-6 hover:rotate-0 transition-transform duration-500">
-                <div className="w-12 h-12 bg-orange-500 rounded-xl flex items-center justify-center">
-                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+          {/* Main headline */}
+          <div className="space-y-4 sm:space-y-6 mb-6 sm:mb-8">
+            <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight px-2 pl-[0px] pr-[0px]">
+              Me To We With <span className="text-[#00227c]">ARC Lao</span> combined efforts On <span className="text-[#00227c]">Technological Innovation</span>
+            </h1>
+            
+            <p className="text-base sm:text-lg lg:text-xl text-slate-200 max-w-2xl mx-auto leading-relaxed px-4">
+              {siteData.hero.subhead}
+            </p>
+          </div>
+          
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-8 sm:mb-12 px-4">
+            {siteData.hero.ctas.map((c, index) => (
+              <a
+                key={c.label}
+                href={c.href}
+                className={`group inline-flex items-center justify-center gap-2 px-6 py-3 sm:py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 text-sm sm:text-base ${
+                  c.variant === "ghost"
+                    ? "border-2 border-white/30 text-white hover:border-white/60 hover:bg-white/10 backdrop-blur-sm"
+                    : "bg-[#00227c] text-white shadow-lg hover:shadow-[#00227c]/25 hover:bg-[#001a63]"
+                }`}
+              >
+                <span>{c.label}</span>
+                {index === 0 ? (
+                  <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
-                </div>
-                <div className="mt-2 text-xs font-semibold text-slate-700">AI & ML</div>
-              </div>
-              
-              <div className="absolute -bottom-4 -left-6 bg-white rounded-2xl p-4 shadow-xl border border-blue-100 transform -rotate-6 hover:rotate-0 transition-transform duration-500">
-                <div className="w-12 h-12 bg-[#00227c] rounded-xl flex items-center justify-center">
-                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m0 0l4-4m-4 4l4 4m10-4a8 8 0 11-16 0 8 8 0 0116 0z" />
+                ) : (
+                  <svg className="w-4 h-4 transform group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m0 0l4-4m-4 4l4 4" />
                   </svg>
-                </div>
-                <div className="mt-2 text-xs font-semibold text-slate-700">Infrastructure</div>
-              </div>
-              
-              <div className="absolute top-1/2 -right-8 bg-white rounded-2xl p-4 shadow-xl border border-green-100 transform translate-y-1/2 hover:scale-110 transition-transform duration-500">
-                <div className="w-12 h-12 bg-green-500 rounded-xl flex items-center justify-center">
-                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                  </svg>
-                </div>
-                <div className="mt-2 text-xs font-semibold text-slate-700">Defense</div>
-              </div>
-              
-              {/* Connection lines */}
-              <div className="absolute inset-0 pointer-events-none">
-                <svg className="w-full h-full opacity-20">
-                  <defs>
-                    <linearGradient id="line-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" stopColor="#00227c" />
-                      <stop offset="100%" stopColor="#f97316" />
-                    </linearGradient>
-                  </defs>
-                  <path
-                    d="M50,50 Q80,20 120,40 Q150,60 180,30"
-                    stroke="url(#line-gradient)"
-                    strokeWidth="2"
-                    fill="none"
-                    className="animate-pulse"
+                )}
+              </a>
+            ))}
+          </div>
+          
+          {/* Trust indicators and stats */}
+          <div className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 max-w-4xl mx-auto px-4">
+            <div className="flex items-center justify-center gap-2 col-span-1 xs:col-span-2 lg:col-span-1">
+              <div className="flex -space-x-1">
+                <div className="w-5 sm:w-6 h-5 sm:h-6 rounded-full border-2 border-white/20 overflow-hidden">
+                  <img 
+                    src={oldManPortrait} 
+                    alt="Satisfied client" 
+                    className="w-full h-full object-cover"
                   />
-                  <path
-                    d="M50,50 Q20,80 60,120 Q100,140 140,120"
-                    stroke="url(#line-gradient)"
-                    strokeWidth="2"
-                    fill="none"
-                    className="animate-pulse"
-                    style={{ animationDelay: '1s' }}
+                </div>
+                <div className="w-5 sm:w-6 h-5 sm:h-6 rounded-full border-2 border-white/20 overflow-hidden">
+                  <img 
+                    src={womanPortrait} 
+                    alt="Satisfied client" 
+                    className="w-full h-full object-cover"
                   />
-                </svg>
+                </div>
+                <div className="w-5 sm:w-6 h-5 sm:h-6 rounded-full border-2 border-white/20 overflow-hidden">
+                  <img 
+                    src={manPortrait} 
+                    alt="Satisfied client" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
               </div>
-              
-              {/* Pulsing rings */}
-              <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                <div className="w-96 h-96 border border-[#00227c]/10 rounded-full animate-ping"></div>
-                <div className="absolute w-80 h-80 border border-orange-500/10 rounded-full animate-ping" style={{ animationDelay: '1s' }}></div>
+              <div className="text-xs sm:text-sm text-slate-200 text-center lg:text-left">
+                <span className="font-semibold text-white">1,800+</span> satisfied clients
               </div>
+            </div>
+            <div className="flex items-center justify-center text-xs sm:text-sm text-slate-200">
+              <span className="font-semibold text-white">10+</span> years experience
+            </div>
+            <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl px-3 sm:px-4 py-2 text-center">
+              <div className="text-base sm:text-lg font-bold text-white">$110M+</div>
+              <div className="text-xs text-slate-200">Total Investment</div>
+            </div>
+            <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl px-3 sm:px-4 py-2 text-center">
+              <div className="text-base sm:text-lg font-bold text-white">30+</div>
+              <div className="text-xs text-slate-200">Projects</div>
             </div>
           </div>
         </div>
         
-        {/* Modern scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
-          <div className="flex flex-col items-center gap-2 text-slate-400 animate-bounce">
-            <span className="text-xs font-medium uppercase tracking-wider">Discover More</span>
-            <div className="w-6 h-10 border-2 border-slate-300 rounded-full flex justify-center">
-              <div className="w-1 h-3 bg-slate-400 rounded-full mt-2 animate-pulse"></div>
-            </div>
+        {/* Scroll indicator */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+          <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
+            <div className="w-1 h-3 bg-white/60 rounded-full mt-2 animate-pulse"></div>
           </div>
         </div>
       </Container>
@@ -584,195 +475,104 @@ function Hero() {
   );
 }
 
-function Solutions() {
-  const solutionDomains = [
-    {
-      title: "Demining Equipments",
-      description: "Metal detectors and a range of other equipment for demining"
-    },
-    {
-      title: "Agriculture Machinery", 
-      description: "Country distributor for BCS-Italy and Mahindra & Mahindra, specializing in agricultural machinery"
-    },
-    {
-      title: "Information Technology",
-      description: "Expertise in DevOps, cloud services, AI, and machine learning"
-    },
-    {
-      title: "Automotive",
-      description: "Country distributor for TVS Motors"
-    }
-  ];
-
-  return (
-    <section className="py-0 relative overflow-hidden">
-      <div className="grid lg:grid-cols-2 min-h-screen">
-        {/* Left side - Content */}
-        <div className="bg-white flex items-center p-8 lg:p-16 text-slate-900">
-          <div className="w-full">
-            {/* Main headline */}
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#00227c] mb-12 leading-tight">
-              We Provide The<br />
-              Best Solution in below domains
-            </h2>
-            
-            {/* Solutions list */}
-            <div className="space-y-8">
-              {solutionDomains.map((domain, index) => (
-                <div key={domain.title} className="flex items-start gap-4">
-                  {/* Orange checkmark */}
-                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-orange-500 flex items-center justify-center mt-1">
-                    <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
-                  
-                  {/* Content */}
-                  <div className="flex-1">
-                    <h3 className="text-lg font-bold text-[#00227c] mb-2">
-                      {domain.title}
-                    </h3>
-                    <p className="text-gray-600 text-base leading-relaxed">
-                      {domain.description}
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-        
-        {/* Right side - Images collage */}
-        <div className="bg-[#00227c] relative overflow-hidden flex items-center justify-center p-8 lg:p-16">
-          {/* Image grid layout */}
-          <div className="relative w-full max-w-lg">
-            <div className="grid grid-cols-2 gap-4 h-full">
-              {/* Top left - Demining */}
-              <div className="aspect-square rounded-2xl overflow-hidden shadow-xl">
-                <img 
-                  src={defenseImg} 
-                  alt="Demining Equipment" 
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              
-              {/* Top right - Two stacked images */}
-              <div className="space-y-4">
-                <div className="aspect-square rounded-2xl overflow-hidden shadow-xl">
-                  <img 
-                    src={automotiveImg} 
-                    alt="Agriculture Machinery" 
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="aspect-square rounded-2xl overflow-hidden shadow-xl">
-                  <img 
-                    src={informationTechnologyImg} 
-                    alt="Information Technology" 
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </div>
-              
-              {/* Bottom left - Agriculture tractor (larger) */}
-              <div className="col-span-1 aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
-                <img 
-                  src={automotiveImg} 
-                  alt="Agriculture Tractor" 
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              
-              {/* Bottom right - TVS Motorcycles */}
-              <div className="aspect-square rounded-2xl overflow-hidden shadow-xl">
-                <img 
-                  src={automotiveImg} 
-                  alt="TVS Motorcycles" 
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            </div>
-            
-            {/* Curved design element */}
-            <div className="absolute -top-8 -right-8 w-32 h-32 bg-white rounded-full opacity-10"></div>
-            <div className="absolute -bottom-8 -left-8 w-24 h-24 bg-white rounded-full opacity-10"></div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
 function About() {
+  const pillarIcons = [principlesIcon, perseveranceIcon, permanenceIcon, partnershipIcon];
+  
   return (
-    <section className="py-0 relative overflow-hidden" id="about">
-      <div className="grid lg:grid-cols-2 min-h-screen">
-        {/* Left side - World map with dark blue background */}
-        <div className="bg-[#00227c] relative overflow-hidden flex items-center justify-center p-8 lg:p-16">
-          {/* World map container */}
-          <div className="relative w-full max-w-md aspect-square">
-            {/* World map background with blue gradient */}
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-400 via-blue-500 to-blue-600 rounded-lg overflow-hidden">
-              {/* World map silhouette overlay */}
-              <div className="absolute inset-0 opacity-80">
-                {/* Continents as simple shapes */}
-                <div className="absolute top-1/4 left-1/4 w-8 h-6 bg-blue-800 rounded-sm opacity-60"></div>
-                <div className="absolute top-1/3 right-1/3 w-10 h-8 bg-blue-800 rounded-sm opacity-60"></div>
-                <div className="absolute bottom-1/3 left-1/3 w-6 h-10 bg-blue-800 rounded-sm opacity-60"></div>
-                <div className="absolute top-2/5 right-1/4 w-12 h-6 bg-blue-800 rounded-sm opacity-60"></div>
-              </div>
-              
-              {/* Connection lines */}
-              <div className="absolute inset-0">
-                {/* Horizontal dotted lines */}
-                <div className="absolute top-1/3 left-0 right-0 h-px border-t-2 border-dotted border-white/60"></div>
-                <div className="absolute top-1/2 left-0 right-0 h-px border-t-2 border-dotted border-white/60"></div>
-                <div className="absolute top-2/3 left-0 right-0 h-px border-t-2 border-dotted border-white/60"></div>
-                
-                {/* Vertical dotted lines */}
-                <div className="absolute left-1/3 top-0 bottom-0 w-px border-l-2 border-dotted border-white/60"></div>
-                <div className="absolute left-1/2 top-0 bottom-0 w-px border-l-2 border-dotted border-white/60"></div>
-                <div className="absolute left-2/3 top-0 bottom-0 w-px border-l-2 border-dotted border-white/60"></div>
-                
-                {/* Connection points */}
-                <div className="absolute top-1/3 left-1/3 w-2 h-2 bg-white rounded-full animate-pulse"></div>
-                <div className="absolute top-1/2 left-1/2 w-2 h-2 bg-white rounded-full animate-pulse"></div>
-                <div className="absolute top-2/3 left-2/3 w-2 h-2 bg-white rounded-full animate-pulse"></div>
-                <div className="absolute top-1/4 right-1/4 w-2 h-2 bg-white rounded-full animate-pulse"></div>
-              </div>
-              
-              
-            </div>
+    <section className="py-16 sm:py-20 lg:py-32 bg-gradient-to-br from-slate-50 via-white to-blue-50 relative overflow-hidden" id="about">
+      {/* Background decorations */}
+      <div className="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))]" />
+      <div className="absolute top-20 right-0 w-48 sm:w-72 h-48 sm:h-72 bg-gradient-to-bl from-blue-100/40 to-transparent rounded-full blur-3xl" />
+      <div className="absolute bottom-20 left-0 w-48 sm:w-72 h-48 sm:h-72 bg-gradient-to-tr from-indigo-100/40 to-transparent rounded-full blur-3xl" />
+      
+      <Container className="relative px-4">
+        <div className="text-center mb-12 sm:mb-16">
+          <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 bg-white rounded-full border border-slate-200 text-xs sm:text-sm font-medium text-slate-600 mb-4 sm:mb-6">
+            <span className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></span>
+            About Our Company
+          </div>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-6 sm:mb-8 px-2">
+            Built on <span className="text-[#00227c]">Strong Foundations</span>
+          </h2>
+          <div className="max-w-4xl mx-auto px-4">
+            <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
+              ARC Lao Sole Company Ltd is founded upon the four strong pillars of <strong>Principles, Perseverance, Permanence and Partnership</strong>. We strive for excellence by combining people, technology and process as our path forward. We empower sustainable progress for our clients, partners, and the wider community through our unique approach as business technologists.
+            </p>
           </div>
         </div>
         
-        {/* Right side - Content with white background */}
-        <div className="bg-white flex items-center p-8 lg:p-16">
-          <div className="w-full">
-            {/* Our Profile badge */}
-            <div className="inline-flex items-center px-4 py-2 bg-orange-500 text-white rounded-full text-sm font-medium mb-6 uppercase tracking-wider">
-              OUR PROFILE
-            </div>
-            
-            {/* Main heading */}
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#00227c] mb-8 leading-tight">
-              Welcome To<br />
-              ARC LAO
-            </h2>
-            
-            {/* Content paragraphs */}
-            <div className="space-y-6 text-gray-600 leading-relaxed">
-              <p className="text-base sm:text-lg">
-                We are an international trading company with over 16 years of dedicated operation in Laos. Throughout our extensive history, we have established a strong presence across diverse business sectors, including demining equipment, information technology, automotive, hospitality, energy, and farming equipment. Our commitment to quality and excellence has enabled us to build lasting relationships with clients and partners worldwide.
-              </p>
+        <div className="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+          {siteData.valueProps.map((v, index) => (
+            <div 
+              key={v.title} 
+              className="group relative p-6 sm:p-8 rounded-3xl bg-white shadow-sm ring-1 ring-slate-200 hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-500 hover:-translate-y-2"
+            >
+              {/* Decorative element */}
+              <div className="absolute top-0 left-6 sm:left-8 w-12 sm:w-16 h-1 bg-[#00227c] rounded-full"></div>
               
-              <p className="text-base sm:text-lg">
-                Driven by innovation and a customer-centric approach, we strive to deliver reliable solutions that meet the evolving needs of our clients in various industries.
-              </p>
+              {/* Icon and title */}
+              <div className="flex flex-col items-center text-center mb-4 sm:mb-6">
+                <div className="w-14 sm:w-16 h-14 sm:h-16 rounded-2xl bg-[#00227c] flex items-center justify-center mb-3 sm:mb-4 group-hover:scale-110 transition-transform duration-300 p-3">
+                  <img 
+                    src={pillarIcons[index]} 
+                    alt={v.title} 
+                    className="w-full h-full object-contain filter brightness-0 invert"
+                  />
+                </div>
+                <h3 className="text-lg sm:text-xl font-bold text-slate-900 mb-2">{v.title}</h3>
+              </div>
+              
+              {/* Content */}
+              <div className="space-y-3 sm:space-y-4">
+                <div className="w-8 h-0.5 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full mx-auto"></div>
+                <p className="text-sm text-slate-600 leading-relaxed text-center">
+                  {v.body}
+                </p>
+              </div>
+              
+              {/* Hover effect overlay */}
+              <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-blue-500/5 to-indigo-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              
+              {/* Floating dots decoration */}
+              <div className="absolute -top-2 -right-2 w-4 h-4 bg-gradient-to-br from-blue-400 to-indigo-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute -bottom-2 -left-2 w-3 h-3 bg-gradient-to-br from-indigo-400 to-blue-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100"></div>
+            </div>
+          ))}
+        </div>
+        
+        {/* Bottom highlight */}
+        <div className="mt-12 sm:mt-16 text-center px-4">
+          <div className="inline-flex flex-col sm:flex-row items-center gap-4 sm:gap-6 px-6 sm:px-8 py-6 bg-white rounded-3xl shadow-lg ring-1 ring-slate-200 max-w-2xl mx-auto">
+            <div className="flex items-center gap-3">
+              <div className="w-10 sm:w-12 h-10 sm:h-12 rounded-xl bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center p-2">
+                <img 
+                  src={innovationIcon} 
+                  alt="Innovation" 
+                  className="w-full h-full object-contain filter brightness-0 invert"
+                />
+              </div>
+              <div className="text-center sm:text-left">
+                <div className="text-sm font-bold text-slate-900">Excellence Through Innovation</div>
+                <div className="text-xs text-slate-600">Combining people, technology & process</div>
+              </div>
+            </div>
+            <div className="w-full sm:w-px h-px sm:h-12 bg-slate-200"></div>
+            <div className="flex items-center gap-3">
+              <div className="w-10 sm:w-12 h-10 sm:h-12 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center p-2">
+                <img 
+                  src={sustainableProgressIcon} 
+                  alt="Sustainable Progress" 
+                  className="w-full h-full object-contain filter brightness-0 invert"
+                />
+              </div>
+              <div className="text-center sm:text-left">
+                <div className="text-sm font-bold text-slate-900">Sustainable Progress</div>
+                <div className="text-xs text-slate-600">For clients, partners & community</div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
+      </Container>
     </section>
   );
 }
@@ -789,22 +589,22 @@ function Overview() {
         <div className="grid gap-12 lg:gap-16 lg:grid-cols-2 items-center">
           <div className="order-2 lg:order-1">
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full border border-[#00227c] text-sm font-medium text-[#00227c] mb-6">
-              <span className="w-2 h-2 bg-[#00227c] rounded-full animate-pulse"></span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full border border-slate-200 text-sm font-medium text-slate-600 mb-6">
+              <span className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></span>
               Company Overview
             </div>
             
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-8">
-              Leading the Future of <span className="text-[#00227c]">Technology</span>
+              Leading the Future of <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Technology</span>
             </h2>
             
             <div className="space-y-6">
               <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
-                ARC LAO is committed to delivering excellence across all our endeavors. Our mission is to be a globally recognized leader, inspiring trust and setting the standard for quality and innovation. With over 16+ years of experience, we have established strong relationships with clients and partners worldwide.
+                ARC LAO is a leader in next-generation technology and related services. We enable clients in many countries to navigate their success through <strong className="text-slate-900">INNOVATION</strong>. With over 10+ years of experience in managing various projects and workings of global enterprises, we expertly steer our clients through their progressive journey.
               </p>
               
               <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
-                We prioritize our clients' needs with a customer-centric approach, ensuring tailored services that drive success. Our proven track record of excellence spans over 16 years, consistently delivering innovative solutions and exceeding client expectations with reliability and transparency.
+                We do it by enabling our clients with a highly experienced team coupled with latest technologies. We also empower the business with agile digital at scale to deliver unprecedented levels of performance and customer delight. Our always-on learning agenda drives their continuous improvement through building and transferring skills, expertise, and ideas from our innovation ecosystem.
               </p>
             </div>
             
@@ -831,7 +631,7 @@ function Overview() {
               {/* Floating stats card */}
               <div className="absolute -bottom-6 -left-6 bg-white rounded-2xl p-6 shadow-xl ring-1 ring-slate-200 backdrop-blur-sm">
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-[#00227c] flex items-center justify-center text-white font-bold">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center text-white font-bold">
                     ✓
                   </div>
                   <div>
@@ -842,7 +642,7 @@ function Overview() {
               </div>
               
               {/* Floating innovation badge */}
-              <div className="absolute -top-6 -right-6 bg-[#00227c] rounded-2xl p-4 shadow-xl text-white">
+              <div className="absolute -top-6 -right-6 bg-gradient-to-r from-indigo-600 to-cyan-600 rounded-2xl p-4 shadow-xl text-white">
                 <div className="flex items-center gap-2">
                   <span className="text-2xl">🚀</span>
                   <div>
@@ -870,13 +670,13 @@ function Services() {
       <Container className="relative px-4">
         <div className="text-center mb-12 sm:mb-16">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 bg-white rounded-full border border-[#00227c] text-xs sm:text-sm font-medium text-[#00227c] mb-4 sm:mb-6">
-            <span className="w-2 h-2 bg-[#00227c] rounded-full animate-pulse"></span>
+          <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 bg-white rounded-full border border-slate-200 text-xs sm:text-sm font-medium text-slate-600 mb-4 sm:mb-6">
+            <span className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></span>
             Our Expertise
           </div>
           
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-6 sm:mb-8 px-2">
-            Sectors Of <span className="text-[#00227c]">Expertise</span>
+            Sectors Of <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Expertise</span>
           </h2>
           <p className="text-base sm:text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed px-4">
             Leading technological innovation across multiple industry sectors with comprehensive solutions and expertise.
@@ -885,9 +685,9 @@ function Services() {
         
         <div className="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
           {siteData.services.map((s, index) => (
-            <article key={s.title} className="group relative h-full rounded-2xl sm:rounded-3xl overflow-hidden bg-white shadow-sm ring-1 ring-[#00227c]/20 hover:shadow-xl hover:shadow-[#00227c]/10 transition-all duration-500 hover:-translate-y-2">
+            <article key={s.title} className="group relative h-full rounded-2xl sm:rounded-3xl overflow-hidden bg-white shadow-sm ring-1 ring-slate-200 hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-500 hover:-translate-y-2">
               {/* Decorative top accent */}
-              <div className="absolute top-0 left-0 right-0 h-1 bg-[#00227c]"></div>
+              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 to-indigo-500"></div>
               
               <div className="aspect-[16/10] overflow-hidden relative">
                 <img src={s.image} alt={s.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
@@ -907,7 +707,7 @@ function Services() {
               
               <div className="p-6 sm:p-8">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-8 h-1 bg-[#00227c] rounded-full"></div>
+                  <div className="w-8 h-1 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full"></div>
                   <div className="text-xs text-slate-500 font-medium uppercase tracking-wider">Expertise</div>
                 </div>
                 
@@ -942,7 +742,22 @@ function Services() {
   );
 }
 
-
+function Stats() {
+  return (
+    <section className="py-10 sm:py-14 text-white bg-[#f4f7fc]">
+      <Container className="px-4">
+        <div className="grid gap-4 sm:gap-6 grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 bg-[#00000000]">
+          {siteData.stats.map((s) => (
+            <div key={s.label} className="p-4 sm:p-6 rounded-xl sm:rounded-2xl ring-1 ring-white/15 text-center text-[#ffffff] bg-[#4b49e6]">
+              <div className="text-xl sm:text-2xl lg:text-3xl font-semibold">{s.value}</div>
+              <div className="mt-1 text-xs sm:text-sm text-white/80">{s.label}</div>
+            </div>
+          ))}
+        </div>
+      </Container>
+    </section>
+  );
+}
 
 function History() {
   const milestoneIcons = ["🏗️", "🚗", "💻", "🌱", "🌏", "⚡", "🤖"];
@@ -957,7 +772,7 @@ function History() {
       <Container className="relative px-4">
         <div className="text-center mb-12 sm:mb-16">
           <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 bg-white rounded-full border border-slate-200 text-xs sm:text-sm font-medium text-slate-600 mb-4 sm:mb-6">
-            <span className="w-2 h-2 bg-[#00227c] rounded-full animate-pulse"></span>
+            <span className="w-2 h-2 bg-indigo-500 rounded-full animate-pulse"></span>
             Our Journey
           </div>
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-6 sm:mb-8 px-2">
@@ -1170,105 +985,6 @@ function Success() {
               <div className="text-sm font-semibold text-slate-900">Ready to experience our approach?</div>
               <div className="text-xs text-slate-600">Join 1,800+ satisfied clients across SEA</div>
             </div>
-          </div>
-        </div>
-      </Container>
-    </section>
-  );
-}
-
-function Clients() {
-  return (
-    <section className="py-16 sm:py-20 lg:py-32 bg-gradient-to-br from-white via-slate-50 to-blue-50 relative overflow-hidden" id="clients">
-      {/* Background decorations */}
-      <div className="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))]" />
-      <div className="absolute top-0 right-0 w-72 h-72 bg-gradient-to-bl from-blue-100/30 to-transparent rounded-full blur-3xl" />
-      <div className="absolute bottom-0 left-0 w-72 h-72 bg-gradient-to-tr from-indigo-100/30 to-transparent rounded-full blur-3xl" />
-      
-      <Container className="relative px-4">
-        <div className="text-center mb-12 sm:mb-16">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 bg-white rounded-full border border-[#00227c] text-xs sm:text-sm font-medium text-[#00227c] mb-4 sm:mb-6">
-            <span className="w-2 h-2 bg-[#00227c] rounded-full animate-pulse"></span>
-            Our Clients
-          </div>
-          
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-6 sm:mb-8 px-2">
-            Trusted <span className="text-[#00227c]">Partners</span>
-          </h2>
-          <p className="text-base sm:text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed px-4">
-            We proudly serve leading global companies across multiple industries, delivering exceptional solutions that drive success and innovation.
-          </p>
-        </div>
-        
-        <div className="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-          {siteData.clients.map((client, index) => (
-            <article key={client.name} className="group relative rounded-2xl sm:rounded-3xl overflow-hidden bg-white shadow-sm ring-1 ring-[#00227c]/20 hover:shadow-xl hover:shadow-[#00227c]/10 transition-all duration-500 hover:-translate-y-2">
-              {/* Decorative top accent */}
-              <div className="absolute top-0 left-0 right-0 h-1 bg-[#00227c]"></div>
-              
-              <div className="p-6 sm:p-8">
-                {/* Logo placeholder area */}
-                <div className="aspect-[3/1] rounded-xl bg-gradient-to-br from-slate-50 to-slate-100 mb-6 flex items-center justify-center relative overflow-hidden">
-                  <img 
-                    src={client.logo} 
-                    alt={`${client.name} logo`} 
-                    className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-300"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-br from-[#00227c]/5 to-transparent"></div>
-                </div>
-                
-                {/* Category badge */}
-                <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#00227c]/10 text-[#00227c] rounded-full text-xs font-medium mb-4">
-                  <span className="w-1.5 h-1.5 bg-[#00227c] rounded-full"></span>
-                  {client.category}
-                </div>
-                
-                {/* Company name */}
-                <h3 className="font-bold text-slate-900 text-lg sm:text-xl mb-3 leading-tight group-hover:text-[#00227c] transition-colors duration-300">
-                  {client.name}
-                </h3>
-                
-                {/* Description */}
-                <p className="text-sm sm:text-base text-slate-600 leading-relaxed mb-4">
-                  {client.description}
-                </p>
-                
-                {/* Website link */}
-                <div className="flex items-center gap-2 text-xs text-slate-500">
-                  <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                  </svg>
-                  <span>{client.website}</span>
-                </div>
-              </div>
-              
-              {/* Hover effect overlay */}
-              <div className="absolute inset-0 rounded-2xl sm:rounded-3xl bg-gradient-to-br from-[#00227c]/5 to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              
-              {/* Floating decorative elements */}
-              <div className="absolute -top-2 -right-2 w-4 h-4 bg-gradient-to-br from-[#00227c] to-blue-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              <div className="absolute -bottom-2 -left-2 w-3 h-3 bg-gradient-to-br from-blue-400 to-[#00227c] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100"></div>
-            </article>
-          ))}
-        </div>
-        
-        {/* Bottom CTA section */}
-        <div className="mt-12 sm:mt-16 text-center">
-          <div className="bg-white rounded-2xl p-8 shadow-sm ring-1 ring-slate-200 max-w-2xl mx-auto">
-            <h3 className="text-xl font-bold text-slate-900 mb-3">Ready to Join Our Success Stories?</h3>
-            <p className="text-slate-600 mb-6">
-              Partner with ARC Lao and experience the quality and excellence that our clients trust worldwide.
-            </p>
-            <a 
-              href="#contact" 
-              className="inline-flex items-center gap-2 px-6 py-3 bg-[#00227c] text-white font-semibold rounded-xl hover:bg-[#001a63] transition-colors duration-300"
-            >
-              Get In Touch
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </a>
           </div>
         </div>
       </Container>
@@ -1681,8 +1397,8 @@ function Footer() {
                       <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
                     </svg>
                   </div>
-                  <a href="tel:+85620526292929" className="text-slate-400 hover:text-white transition-colors text-sm">
-                    +856-20-5262 9292
+                  <a href="tel:+8562076198200" className="text-slate-400 hover:text-white transition-colors text-sm">
+                    +856 20 7619 8200
                   </a>
                 </div>
                 <div className="flex items-center gap-3">
@@ -1701,7 +1417,7 @@ function Footer() {
           <div className="mt-16 pt-8 border-t border-slate-700">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               <div className="text-center">
-                <div className="text-3xl font-bold text-[#00227c] mb-2">16+</div>
+                <div className="text-3xl font-bold text-[#00227c] mb-2">10+</div>
                 <div className="text-slate-400 text-sm">Years Experience</div>
               </div>
               <div className="text-center">
@@ -1743,13 +1459,12 @@ export default function CorporateSite() {
     <main className="min-h-screen text-slate-900">
       <Nav />
       <Hero />
-      <Solutions />
       <About />
       <Overview />
       <Services />
+      <Stats />
       <History />
       <Success />
-      <Clients />
       <Projects />
       <Contact />
       <Footer />
