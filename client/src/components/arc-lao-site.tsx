@@ -29,21 +29,21 @@ import arcLaoLogo from "@assets/arclaoslogo_1754990674040.png";
 // --- Brand system (edit freely) ---
 const brand = {
   name: "ARC Lao Sole Company Ltd",
-  primary: "from-blue-600 via-blue-700 to-blue-800",
-  darkBg: "bg-blue-900",
+  primary: "from-indigo-600 via-sky-600 to-cyan-500",
+  darkBg: "bg-slate-950",
   lightBg: "bg-white",
 };
 
 // --- Site content (swap placeholders with real text/images) ---
 const siteData = {
   hero: {
-    kicker: "Dedicated to Delivering Excellence",
-    headline: "ARC LAO",
+    kicker: "Me To We With ARC Lao combined efforts On",
+    headline: "Technological Innovation",
     subhead:
-      "We are an international trading company with over 16 years of dedicated operation in Laos. We have established a strong presence across diverse business sectors, including demining equipment, information technology, automotive, hospitality, energy, and farming equipment.",
+      "Awareness & Education, Conscious Use Of Natural Resources, Agriculture - Leading technological innovation and infrastructure development across Southeast Asia.",
     ctas: [
       { label: "Get in touch", href: "#contact" },
-      { label: "Our services", href: "#services", variant: "ghost" },
+      { label: "Our projects", href: "#projects", variant: "ghost" },
     ],
     image:
       "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&h=900", // Technology infrastructure
@@ -58,70 +58,76 @@ const siteData = {
   ],
   valueProps: [
     {
-      title: "CUSTOMER-CENTRIC APPROACH",
+      title: "PRINCIPLES",
       body:
-        "We prioritize our clients' needs, ensuring tailored services that drive success.",
+        "Integrity, honesty, and ethics supported by strong leadership and uncompromising business standards.",
       icon: "globe",
     },
     {
-      title: "PROVEN TRACK RECORD OF EXCELLENCE",
+      title: "PERSEVERANCE",
       body:
-        "Over 16 years of delivering innovative solutions and exceeding client expectations.",
+        "We offer comprehensive skill, competence, and experience which may lead to growth, profitability, and mutual success for everyone involved.",
       icon: "stack",
     },
     {
-      title: "RELIABLE AND CONSISTENT",
+      title: "PERMANENCE",
       body:
-        "Consistently delivering on promises with a focus on transparency and integrity.",
+        "More than two decades of tenure, stability and a client-centric approach under the core management.",
       icon: "leaf",
     },
     {
-      title: "QUALITY PRODUCTS AND SERVICES",
+      title: "PARTNERSHIPS",
       body:
-        "At ARC Lao, we are dedicated to providing quality products and services with a customer-centric approach.",
+        "Meaningful relationships among advisors, investors, & RMR leadership, collectively sharing responsibilities to achieve goals.",
       icon: "stack",
     },
   ],
   services: [
     {
-      title: "Demining Equipments",
+      title: "EV Infrastructure",
       body:
-        "Country Distributor for De-Mining Equipments from Germany. We are a national distributor for all types of demining equipment used in humanitarian efforts.",
-      image: defenseImg,
+        "Lithium Ion Battery, Charging Stations, EV Testing Equipments.",
+      image: evInfrastructureImg,
     },
     {
-      title: "Agriculture Machinery",
+      title: "Defence",
       body:
-        "Country distributor for BCS-Italy and Mahindra & Mahindra, specializing in agricultural machinery including two-wheel tractors and farming equipment.",
-      image: automotiveImg,
+        "Demining Equipments, Metal Detectors, Body Armor, EOD/IED Equipments.",
+      image: defenseImg,
     },
     {
       title: "Information Technology",
       body:
-        "Expertise in DevOps, cloud services, AI, and machine learning. Development Ops, Cloud services, AI & Machine learning solutions.",
+        "Internet Of Thing, Energy Software, Software Development & Testing.",
       image: informationTechnologyImg,
     },
     {
-      title: "Motorbikes",
+      title: "Energy",
       body:
-        "Country distributor for TVS Motors. TVS Motor Company is a major multinational motorcycle manufacturer ranking third in India by revenue.",
+        "Hydrogen Fuel Cell, Energy From Waste, Solar Energy.",
+      image: "https://images.unsplash.com/photo-1466611653911-95081537e5b7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
+    },
+    {
+      title: "Automotive",
+      body:
+        "Electric & Non-electric Motorbikes, Agricultural & Construction Machines.",
       image: automotiveImg,
     },
     {
-      title: "Project Consultancy",
+      title: "Infrastructure",
       body:
-        "We provide project consultancy focusing on aligning projects with overall business goals and long-term strategies including Technical, Management, Financial, Environmental and Risk Management consulting.",
+        "Feasibility & Consultancy, Roads & Bridges, Buildings & Factories.",
       image: infrastructureImg,
     },
   ],
   sectors: ["EV Infrastructure", "Defence", "Information Technology", "Energy", "Automotive", "Infrastructure"],
   stats: [
-    { label: "Years Of Experience", value: "16+" },
-    { label: "Proven Track Record", value: "Excellence" },
-    { label: "Customer-Centric", value: "Approach" },
-    { label: "Reliable and", value: "Consistent" },
-    { label: "International", value: "Trading" },
-    { label: "Diverse", value: "Sectors" },
+    { label: "Years Of Experience", value: "10+" },
+    { label: "Annual Turn Over", value: "$5M" },
+    { label: "Repeat Business", value: "85%" },
+    { label: "Employees Strength", value: "100+" },
+    { label: "Happy Customers", value: "1800+" },
+    { label: "Countries We Have Worked In", value: "3+" },
   ],
   projects: [
     {
@@ -173,15 +179,6 @@ const siteData = {
       title: "ENTERED INTO AI & EVS",
     },
   ],
-  visionMission: {
-    vision: "To be a globally recognized leader committed to delivering excellence in all our endeavors, inspiring trust and setting the standard for quality and innovation.",
-    missionPoints: [
-      "Become a leader recognized for excellence",
-      "Inspire trust among customers, partners, and stakeholders",
-      "Deliver outstanding products and services that meet the highest standards",
-      "Prioritize customer satisfaction in every interaction"
-    ]
-  },
   successFactors: [
     "Boutique-style service with market presence and resources of a major global firm.",
     "Extensive knowledge of the leadership talent pool across the region.",
@@ -193,8 +190,8 @@ const siteData = {
     "Utmost focus on quality deliverables.",
   ],
   contact: {
-    address: "Ban Phonexay District Sysetha, Vientiane, Lao PDR",
-    phone: "+856-20-5262 9292",
+    address: "BAN PHONETHAN, SAYSETHA, VIENTIANE, LAO PDR",
+    phone: "+856 20 7619 8200",
     email: "info@arclao.com",
     mapEmbed:
       "https://www.openstreetmap.org/export/embed.html?bbox=102.6%2C17.9%2C103.1%2C18.2&layer=mapnik&marker=17.966%2C102.6",
@@ -357,83 +354,123 @@ function Nav() {
 
 function Hero() {
   return (
-    <section className="relative min-h-screen flex items-stretch overflow-hidden">
-      {/* Split Layout Container */}
-      <div className="w-full h-screen flex">
-        {/* Left Side - Blue Background */}
-        <div className="w-1/2 bg-blue-800 flex flex-col justify-center items-start px-8 lg:px-16 text-white relative">
-          {/* Logo in Orange Box */}
-          <div className="mb-8">
-            <div className="bg-orange-400 px-6 py-3 rounded-lg inline-block">
-              <img 
-                src={arcLaoLogo} 
-                alt="ARC LAO" 
-                className="h-8 w-auto"
-              />
-            </div>
+    <section className="relative min-h-screen flex items-center text-white overflow-hidden">
+      {/* Background image */}
+      <div className="absolute inset-0">
+        <img 
+          src={Technological_Innovation} 
+          alt="Technological Innovation Background" 
+          className="w-full h-full object-cover"
+        />
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-slate-900/70"></div>
+        {/* Gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/60 via-indigo-900/40 to-slate-900/60"></div>
+      </div>
+      {/* Animated background elements */}
+      <div className="absolute inset-0 bg-gradient-to-br from-indigo-600/20 via-cyan-500/10 to-transparent"></div>
+      <div className="absolute top-1/4 -right-20 w-96 h-96 bg-gradient-to-bl from-cyan-400/20 to-transparent rounded-full blur-3xl animate-pulse"></div>
+      <div className="absolute bottom-1/4 -left-20 w-96 h-96 bg-gradient-to-tr from-indigo-400/20 to-transparent rounded-full blur-3xl animate-pulse delay-1000"></div>
+      {/* Grid pattern overlay */}
+      <div className="absolute inset-0 bg-grid-white/[0.05] [mask-image:linear-gradient(0deg,transparent,black,transparent)]"></div>
+      <Container className="relative z-10 py-16 sm:py-20 lg:py-32 px-4">
+        <div className="max-w-4xl mx-auto text-center pt-[25px] pb-[25px]">
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 text-xs sm:text-sm font-medium mb-6 sm:mb-8">
+            <span className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></span>
+            <span className="text-cyan-300 uppercase tracking-wider text-xs">
+              {siteData.hero.kicker}
+            </span>
           </div>
           
-          {/* Hero Image */}
-          <div className="w-full max-w-md">
-            <img 
-              src={Technological_Innovation} 
-              alt="Global Business Network" 
-              className="w-full h-auto rounded-lg shadow-lg"
-            />
+          {/* Main headline */}
+          <div className="space-y-4 sm:space-y-6 mb-6 sm:mb-8">
+            <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight px-2 pl-[0px] pr-[0px]">
+              Me To We With <span className="bg-gradient-to-r from-red-400 via-blue-400 to-blue-500 bg-clip-text text-transparent">ARC Lao</span> combined efforts On <span className="bg-gradient-to-r from-blue-400 to-red-400 bg-clip-text text-transparent">Technological Innovation</span>
+            </h1>
+            
+            <p className="text-base sm:text-lg lg:text-xl text-slate-200 max-w-2xl mx-auto leading-relaxed px-4">
+              {siteData.hero.subhead}
+            </p>
+          </div>
+          
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-8 sm:mb-12 px-4">
+            {siteData.hero.ctas.map((c, index) => (
+              <a
+                key={c.label}
+                href={c.href}
+                className={`group inline-flex items-center justify-center gap-2 px-6 py-3 sm:py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 text-sm sm:text-base ${
+                  c.variant === "ghost"
+                    ? "border-2 border-white/30 text-white hover:border-white/60 hover:bg-white/10 backdrop-blur-sm"
+                    : "bg-gradient-to-r from-red-500 to-blue-600 text-white shadow-lg hover:shadow-red-500/25 hover:from-red-400 hover:to-blue-500"
+                }`}
+              >
+                <span>{c.label}</span>
+                {index === 0 ? (
+                  <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                ) : (
+                  <svg className="w-4 h-4 transform group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m0 0l4-4m-4 4l4 4" />
+                  </svg>
+                )}
+              </a>
+            ))}
+          </div>
+          
+          {/* Trust indicators and stats */}
+          <div className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 max-w-4xl mx-auto px-4">
+            <div className="flex items-center justify-center gap-2 col-span-1 xs:col-span-2 lg:col-span-1">
+              <div className="flex -space-x-1">
+                <div className="w-5 sm:w-6 h-5 sm:h-6 rounded-full border-2 border-white/20 overflow-hidden">
+                  <img 
+                    src={oldManPortrait} 
+                    alt="Satisfied client" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="w-5 sm:w-6 h-5 sm:h-6 rounded-full border-2 border-white/20 overflow-hidden">
+                  <img 
+                    src={womanPortrait} 
+                    alt="Satisfied client" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="w-5 sm:w-6 h-5 sm:h-6 rounded-full border-2 border-white/20 overflow-hidden">
+                  <img 
+                    src={manPortrait} 
+                    alt="Satisfied client" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+              <div className="text-xs sm:text-sm text-slate-200 text-center lg:text-left">
+                <span className="font-semibold text-white">1,800+</span> satisfied clients
+              </div>
+            </div>
+            <div className="flex items-center justify-center text-xs sm:text-sm text-slate-200">
+              <span className="font-semibold text-white">10+</span> years experience
+            </div>
+            <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl px-3 sm:px-4 py-2 text-center">
+              <div className="text-base sm:text-lg font-bold text-white">$110M+</div>
+              <div className="text-xs text-slate-200">Total Investment</div>
+            </div>
+            <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl px-3 sm:px-4 py-2 text-center">
+              <div className="text-base sm:text-lg font-bold text-white">30+</div>
+              <div className="text-xs text-slate-200">Projects</div>
+            </div>
           </div>
         </div>
         
-        {/* Right Side - White Background */}
-        <div className="w-1/2 bg-white flex flex-col justify-center px-8 lg:px-16 relative">
-          {/* Website URL */}
-          <div className="absolute top-8 right-8">
-            <span className="text-blue-600 text-sm font-medium">www.arclao.com</span>
-          </div>
-          
-          {/* Tagline */}
-          <div className="text-center mb-12">
-            <h2 className="text-blue-700 text-xl font-semibold italic">
-              "Dedicated to Delivering Excellence"
-            </h2>
-          </div>
-          
-          {/* Section Label */}
-          <div className="mb-4">
-            <span className="text-orange-400 text-sm font-bold uppercase tracking-wide">OUR PROFILE</span>
-          </div>
-          
-          {/* Main Heading */}
-          <h1 className="text-4xl lg:text-5xl font-bold text-blue-800 mb-8 leading-tight">
-            Welcome To<br />
-            ARC LAO
-          </h1>
-          
-          {/* Description */}
-          <div className="space-y-4 text-gray-600 leading-relaxed mb-8">
-            <p>
-              We are an international trading company with over 16 years of 
-              dedicated operation in Laos. Throughout our extensive 
-              history, we have established a strong presence across diverse 
-              business sectors, including demining equipment, information 
-              technology, automotive, hospitality, energy, and farming 
-              equipment. Our commitment to quality and excellence has 
-              enabled us to build lasting relationships with clients and 
-              partners worldwide.
-            </p>
-            
-            <p>
-              Driven by innovation and a customer-centric approach, we 
-              strive to deliver reliable solutions that meet the evolving 
-              needs of our clients in various industries.
-            </p>
-          </div>
-          
-          {/* Page Number */}
-          <div className="absolute bottom-8 right-8">
-            <span className="text-gray-400 text-sm font-medium">PAGE 02</span>
+        {/* Scroll indicator */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+          <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
+            <div className="w-1 h-3 bg-white/60 rounded-full mt-2 animate-pulse"></div>
           </div>
         </div>
-      </div>
+      </Container>
     </section>
   );
 }
@@ -442,87 +479,95 @@ function About() {
   const pillarIcons = [principlesIcon, perseveranceIcon, permanenceIcon, partnershipIcon];
   
   return (
-    <section className="py-20 bg-white relative" id="about">
-      <Container className="relative px-8">
-        {/* Header Section */}
-        <div className="text-center mb-16">
-          <div className="mb-6">
-            <span className="text-orange-400 text-sm font-bold uppercase tracking-wide">ABOUT ARC LAO</span>
+    <section className="py-16 sm:py-20 lg:py-32 bg-gradient-to-br from-slate-50 via-white to-blue-50 relative overflow-hidden" id="about">
+      {/* Background decorations */}
+      <div className="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))]" />
+      <div className="absolute top-20 right-0 w-48 sm:w-72 h-48 sm:h-72 bg-gradient-to-bl from-blue-100/40 to-transparent rounded-full blur-3xl" />
+      <div className="absolute bottom-20 left-0 w-48 sm:w-72 h-48 sm:h-72 bg-gradient-to-tr from-indigo-100/40 to-transparent rounded-full blur-3xl" />
+      
+      <Container className="relative px-4">
+        <div className="text-center mb-12 sm:mb-16">
+          <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 bg-white rounded-full border border-slate-200 text-xs sm:text-sm font-medium text-slate-600 mb-4 sm:mb-6">
+            <span className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></span>
+            About Our Company
           </div>
-          
-          <h2 className="text-4xl lg:text-5xl font-bold text-blue-800 mb-8 leading-tight">
-            Built on Strong<br />
-            Foundations
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-6 sm:mb-8 px-2">
+            Built on <span className="bg-gradient-to-r from-red-600 to-blue-600 bg-clip-text text-transparent">Strong Foundations</span>
           </h2>
-          
-          <div className="max-w-4xl mx-auto">
-            <p className="text-gray-600 text-lg leading-relaxed">
-              ARC Lao Sole Company Ltd is founded upon the four strong pillars of{' '}
-              <span className="font-semibold text-blue-700">Principles, Perseverance, Permanence and Partnership</span>.{' '}
-              We strive for excellence by combining people, technology and process as our path forward. 
-              We empower sustainable progress for our clients, partners, and the wider community through 
-              our unique approach as business technologists.
+          <div className="max-w-4xl mx-auto px-4">
+            <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
+              ARC Lao Sole Company Ltd is founded upon the four strong pillars of <strong>Principles, Perseverance, Permanence and Partnership</strong>. We strive for excellence by combining people, technology and process as our path forward. We empower sustainable progress for our clients, partners, and the wider community through our unique approach as business technologists.
             </p>
           </div>
         </div>
         
-        {/* Four Pillars Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <div className="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
           {siteData.valueProps.map((v, index) => (
             <div 
               key={v.title} 
-              className="text-center group"
+              className="group relative p-6 sm:p-8 rounded-3xl bg-white shadow-sm ring-1 ring-slate-200 hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-500 hover:-translate-y-2"
             >
-              {/* Icon */}
-              <div className="w-20 h-20 mx-auto mb-6 rounded-2xl bg-blue-700 flex items-center justify-center group-hover:bg-blue-800 transition-colors duration-300">
-                <img 
-                  src={pillarIcons[index]} 
-                  alt={v.title} 
-                  className="w-10 h-10 object-contain filter brightness-0 invert"
-                />
+              {/* Decorative element */}
+              <div className="absolute top-0 left-6 sm:left-8 w-12 sm:w-16 h-1 bg-gradient-to-r from-red-500 to-blue-500 rounded-full"></div>
+              
+              {/* Icon and title */}
+              <div className="flex flex-col items-center text-center mb-4 sm:mb-6">
+                <div className="w-14 sm:w-16 h-14 sm:h-16 rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center mb-3 sm:mb-4 group-hover:scale-110 transition-transform duration-300 p-3">
+                  <img 
+                    src={pillarIcons[index]} 
+                    alt={v.title} 
+                    className="w-full h-full object-contain filter brightness-0 invert"
+                  />
+                </div>
+                <h3 className="text-lg sm:text-xl font-bold text-slate-900 mb-2">{v.title}</h3>
               </div>
               
-              {/* Title */}
-              <h3 className="text-xl font-bold text-blue-800 mb-4">{v.title}</h3>
+              {/* Content */}
+              <div className="space-y-3 sm:space-y-4">
+                <div className="w-8 h-0.5 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full mx-auto"></div>
+                <p className="text-sm text-slate-600 leading-relaxed text-center">
+                  {v.body}
+                </p>
+              </div>
               
-              {/* Description */}
-              <p className="text-gray-600 text-sm leading-relaxed">
-                {v.body}
-              </p>
+              {/* Hover effect overlay */}
+              <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-blue-500/5 to-indigo-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              
+              {/* Floating dots decoration */}
+              <div className="absolute -top-2 -right-2 w-4 h-4 bg-gradient-to-br from-blue-400 to-indigo-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute -bottom-2 -left-2 w-3 h-3 bg-gradient-to-br from-indigo-400 to-blue-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100"></div>
             </div>
           ))}
         </div>
         
-        {/* Bottom Innovation Highlight */}
-        <div className="text-center bg-blue-50 rounded-2xl p-8">
-          <div className="flex flex-col md:flex-row items-center justify-center gap-8">
-            <div className="flex items-center gap-4">
-              <div className="w-16 h-16 rounded-xl bg-blue-700 flex items-center justify-center">
+        {/* Bottom highlight */}
+        <div className="mt-12 sm:mt-16 text-center px-4">
+          <div className="inline-flex flex-col sm:flex-row items-center gap-4 sm:gap-6 px-6 sm:px-8 py-6 bg-white rounded-3xl shadow-lg ring-1 ring-slate-200 max-w-2xl mx-auto">
+            <div className="flex items-center gap-3">
+              <div className="w-10 sm:w-12 h-10 sm:h-12 rounded-xl bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center p-2">
                 <img 
                   src={innovationIcon} 
                   alt="Innovation" 
-                  className="w-8 h-8 object-contain filter brightness-0 invert"
+                  className="w-full h-full object-contain filter brightness-0 invert"
                 />
               </div>
-              <div className="text-left">
-                <div className="text-lg font-bold text-blue-800">Excellence Through Innovation</div>
-                <div className="text-sm text-gray-600">Combining people, technology & process</div>
+              <div className="text-center sm:text-left">
+                <div className="text-sm font-bold text-slate-900">Excellence Through Innovation</div>
+                <div className="text-xs text-slate-600">Combining people, technology & process</div>
               </div>
             </div>
-            
-            <div className="w-px h-16 bg-gray-300 hidden md:block"></div>
-            
-            <div className="flex items-center gap-4">
-              <div className="w-16 h-16 rounded-xl bg-blue-700 flex items-center justify-center">
+            <div className="w-full sm:w-px h-px sm:h-12 bg-slate-200"></div>
+            <div className="flex items-center gap-3">
+              <div className="w-10 sm:w-12 h-10 sm:h-12 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center p-2">
                 <img 
                   src={sustainableProgressIcon} 
                   alt="Sustainable Progress" 
-                  className="w-8 h-8 object-contain filter brightness-0 invert"
+                  className="w-full h-full object-contain filter brightness-0 invert"
                 />
               </div>
-              <div className="text-left">
-                <div className="text-lg font-bold text-blue-800">Sustainable Progress</div>
-                <div className="text-sm text-gray-600">For clients, partners & community</div>
+              <div className="text-center sm:text-left">
+                <div className="text-sm font-bold text-slate-900">Sustainable Progress</div>
+                <div className="text-xs text-slate-600">For clients, partners & community</div>
               </div>
             </div>
           </div>
@@ -532,59 +577,82 @@ function About() {
   );
 }
 
-function SolutionsDomains() {
+function Overview() {
   return (
-    <section className="py-20 bg-blue-50 relative" id="solutions">
-      <Container className="relative px-8">
-        {/* Header Section */}
-        <div className="text-center mb-16">
-          <div className="mb-6">
-            <span className="text-orange-400 text-sm font-bold uppercase tracking-wide">SOLUTIONS DOMAINS</span>
-          </div>
-          
-          <h2 className="text-4xl lg:text-5xl font-bold text-blue-800 mb-8 leading-tight">
-            Our Expertise<br />
-            Across Industries
-          </h2>
-          
-          <div className="max-w-4xl mx-auto">
-            <p className="text-gray-600 text-lg leading-relaxed">
-              Leading technological innovation across multiple industry sectors with comprehensive solutions and expertise. 
-              We deliver cutting-edge solutions across diverse business domains.
-            </p>
-          </div>
-        </div>
-        
-        {/* Solutions Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {siteData.services.map((service, index) => (
-            <div 
-              key={service.title} 
-              className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 text-center group hover:scale-105 transform transition-transform"
-            >
-              {/* Service Image */}
-              <div className="mb-6">
-                <img 
-                  src={service.image} 
-                  alt={service.title} 
-                  className="w-full h-48 object-cover rounded-lg"
-                />
-              </div>
-              
-              {/* Service Title */}
-              <h3 className="text-xl font-bold text-blue-800 mb-4">{service.title}</h3>
-              
-              {/* Service Description */}
-              <p className="text-gray-600 text-sm leading-relaxed">
-                {service.body}
+    <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-white via-slate-50 to-blue-50 relative overflow-hidden">
+      {/* Background decorations */}
+      <div className="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))]" />
+      <div className="absolute top-0 left-0 w-72 h-72 bg-gradient-to-br from-blue-100/30 to-transparent rounded-full blur-3xl" />
+      <div className="absolute bottom-0 right-0 w-72 h-72 bg-gradient-to-tl from-indigo-100/30 to-transparent rounded-full blur-3xl" />
+      
+      <Container className="relative px-4">
+        <div className="grid gap-12 lg:gap-16 lg:grid-cols-2 items-center">
+          <div className="order-2 lg:order-1">
+            {/* Badge */}
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full border border-slate-200 text-sm font-medium text-slate-600 mb-6">
+              <span className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></span>
+              Company Overview
+            </div>
+            
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-8">
+              Leading the Future of <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Technology</span>
+            </h2>
+            
+            <div className="space-y-6">
+              <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
+                ARC LAO is a leader in next-generation technology and related services. We enable clients in many countries to navigate their success through <strong className="text-slate-900">INNOVATION</strong>. With over 10+ years of experience in managing various projects and workings of global enterprises, we expertly steer our clients through their progressive journey.
               </p>
               
-              {/* Decorative Element */}
-              <div className="mt-6 pt-6 border-t border-gray-200">
-                <div className="w-8 h-1 bg-orange-400 mx-auto rounded-full"></div>
+              <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
+                We do it by enabling our clients with a highly experienced team coupled with latest technologies. We also empower the business with agile digital at scale to deliver unprecedented levels of performance and customer delight. Our always-on learning agenda drives their continuous improvement through building and transferring skills, expertise, and ideas from our innovation ecosystem.
+              </p>
+            </div>
+            
+            
+          </div>
+          
+          <div className="order-1 lg:order-2 relative">
+            {/* Decorative elements */}
+            <div className="absolute -top-4 -left-4 w-24 h-24 bg-gradient-to-br from-blue-400/20 to-indigo-500/20 rounded-full blur-xl"></div>
+            <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-gradient-to-tl from-cyan-400/20 to-blue-500/20 rounded-full blur-xl"></div>
+            
+            {/* Main image container */}
+            <div className="relative">
+              <div className="aspect-[4/3] rounded-3xl overflow-hidden ring-1 ring-slate-200/50 shadow-2xl shadow-slate-900/10 bg-white">
+                <img 
+                  src={Future_of_Technology} 
+                  alt="Future of technology and digital transformation" 
+                  className="w-full h-full object-cover"
+                />
+                {/* Image overlay for better contrast */}
+                <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/10 via-transparent to-indigo-600/10"></div>
+              </div>
+              
+              {/* Floating stats card */}
+              <div className="absolute -bottom-6 -left-6 bg-white rounded-2xl p-6 shadow-xl ring-1 ring-slate-200 backdrop-blur-sm">
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center text-white font-bold">
+                    ✓
+                  </div>
+                  <div>
+                    <div className="text-2xl font-bold text-slate-900">1,800+</div>
+                    <div className="text-sm text-slate-600">Satisfied Clients</div>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Floating innovation badge */}
+              <div className="absolute -top-6 -right-6 bg-gradient-to-r from-indigo-600 to-cyan-600 rounded-2xl p-4 shadow-xl text-white">
+                <div className="flex items-center gap-2">
+                  <span className="text-2xl">🚀</span>
+                  <div>
+                    <div className="font-bold text-sm">Innovation</div>
+                    <div className="text-xs opacity-90">Leading Edge</div>
+                  </div>
+                </div>
               </div>
             </div>
-          ))}
+          </div>
         </div>
       </Container>
     </section>
@@ -1220,66 +1288,6 @@ function Contact() {
   );
 }
 
-function VisionMission() {
-  return (
-    <section className="py-16 lg:py-24 bg-gradient-to-br from-slate-50 via-white to-slate-50 relative overflow-hidden">
-      {/* Background decorations */}
-      <div className="absolute inset-0 bg-gradient-to-br from-red-50/30 via-blue-50/20 to-transparent"></div>
-      <div className="absolute top-1/4 -right-20 w-96 h-96 bg-gradient-to-bl from-red-400/10 to-transparent rounded-full blur-3xl"></div>
-      <div className="absolute bottom-1/4 -left-20 w-96 h-96 bg-gradient-to-tr from-blue-400/10 to-transparent rounded-full blur-3xl"></div>
-      
-      <Container className="relative">
-        <div className="text-center mb-12 sm:mb-16">
-          <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 bg-white rounded-full border border-slate-200 text-xs sm:text-sm font-medium text-slate-600 mb-4 sm:mb-6">
-            <span className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
-            Our Company Vision & Mission
-          </div>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-6 sm:mb-8 px-2">
-            Our <span className="bg-gradient-to-r from-red-600 to-blue-600 bg-clip-text text-transparent">Vision & Mission</span>
-          </h2>
-        </div>
-        
-        <div className="max-w-6xl mx-auto">
-          {/* Vision */}
-          <div className="mb-16">
-            <div className="bg-white rounded-3xl p-8 lg:p-12 shadow-lg shadow-slate-900/5 border border-slate-200/80">
-              <div className="text-center">
-                <h3 className="text-xl sm:text-2xl font-bold text-slate-900 mb-6">Our Vision</h3>
-                <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-4xl mx-auto">
-                  {siteData.visionMission.vision}
-                </p>
-              </div>
-            </div>
-          </div>
-          
-          {/* Mission Points */}
-          <div className="grid gap-6 md:gap-8 grid-cols-1 md:grid-cols-2">
-            {siteData.visionMission.missionPoints.map((point, index) => (
-              <div 
-                key={index}
-                className="group relative p-6 sm:p-8 rounded-3xl bg-white shadow-sm ring-1 ring-slate-200 hover:shadow-xl hover:shadow-red-500/10 transition-all duration-500 hover:-translate-y-2"
-              >
-                {/* Decorative element */}
-                <div className="absolute top-0 left-6 sm:left-8 w-12 sm:w-16 h-1 bg-gradient-to-r from-red-500 to-blue-500 rounded-full"></div>
-                
-                {/* Content */}
-                <div className="flex items-start gap-4">
-                  <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-red-500 to-blue-600 flex items-center justify-center flex-shrink-0 mt-1">
-                    <span className="text-white font-bold text-sm">{index + 1}</span>
-                  </div>
-                  <div>
-                    <p className="text-slate-700 leading-relaxed">{point}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </Container>
-    </section>
-  );
-}
-
 function Footer() {
   return (
     <footer className="bg-slate-900 text-white relative overflow-hidden">
@@ -1389,8 +1397,8 @@ function Footer() {
                       <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
                     </svg>
                   </div>
-                  <a href="tel:+85620526299292" className="text-slate-400 hover:text-white transition-colors text-sm">
-                    +856-20-5262 9292
+                  <a href="tel:+8562076198200" className="text-slate-400 hover:text-white transition-colors text-sm">
+                    +856 20 7619 8200
                   </a>
                 </div>
                 <div className="flex items-center gap-3">
@@ -1452,8 +1460,7 @@ export default function CorporateSite() {
       <Nav />
       <Hero />
       <About />
-      <SolutionsDomains />
-      <VisionMission />
+      <Overview />
       <Services />
       <Stats />
       <History />
