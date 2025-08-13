@@ -37,13 +37,13 @@ const brand = {
 // --- Site content (swap placeholders with real text/images) ---
 const siteData = {
   hero: {
-    kicker: "Me To We With ARC Lao combined efforts On",
-    headline: "Technological Innovation",
+    kicker: "Dedicated to Delivering Excellence",
+    headline: "ARC LAO",
     subhead:
-      "Awareness & Education, Conscious Use Of Natural Resources, Agriculture - Leading technological innovation and infrastructure development across Southeast Asia.",
+      "We are an international trading company with over 16 years of dedicated operation in Laos. We have established a strong presence across diverse business sectors, including demining equipment, information technology, automotive, hospitality, energy, and farming equipment.",
     ctas: [
       { label: "Get in touch", href: "#contact" },
-      { label: "Our projects", href: "#projects", variant: "ghost" },
+      { label: "Our services", href: "#services", variant: "ghost" },
     ],
     image:
       "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&h=900", // Technology infrastructure
@@ -58,76 +58,70 @@ const siteData = {
   ],
   valueProps: [
     {
-      title: "PRINCIPLES",
+      title: "CUSTOMER-CENTRIC APPROACH",
       body:
-        "Integrity, honesty, and ethics supported by strong leadership and uncompromising business standards.",
+        "We prioritize our clients' needs, ensuring tailored services that drive success.",
       icon: "globe",
     },
     {
-      title: "PERSEVERANCE",
+      title: "PROVEN TRACK RECORD OF EXCELLENCE",
       body:
-        "We offer comprehensive skill, competence, and experience which may lead to growth, profitability, and mutual success for everyone involved.",
+        "Over 16 years of delivering innovative solutions and exceeding client expectations.",
       icon: "stack",
     },
     {
-      title: "PERMANENCE",
+      title: "RELIABLE AND CONSISTENT",
       body:
-        "More than two decades of tenure, stability and a client-centric approach under the core management.",
+        "Consistently delivering on promises with a focus on transparency and integrity.",
       icon: "leaf",
     },
     {
-      title: "PARTNERSHIPS",
+      title: "QUALITY PRODUCTS AND SERVICES",
       body:
-        "Meaningful relationships among advisors, investors, & RMR leadership, collectively sharing responsibilities to achieve goals.",
+        "At ARC Lao, we are dedicated to providing quality products and services with a customer-centric approach.",
       icon: "stack",
     },
   ],
   services: [
     {
-      title: "EV Infrastructure",
+      title: "Demining Equipments",
       body:
-        "Lithium Ion Battery, Charging Stations, EV Testing Equipments.",
-      image: evInfrastructureImg,
+        "Country Distributor for De-Mining Equipments from Germany. We are a national distributor for all types of demining equipment used in humanitarian efforts.",
+      image: defenseImg,
     },
     {
-      title: "Defence",
+      title: "Agriculture Machinery",
       body:
-        "Demining Equipments, Metal Detectors, Body Armor, EOD/IED Equipments.",
-      image: defenseImg,
+        "Country distributor for BCS-Italy and Mahindra & Mahindra, specializing in agricultural machinery including two-wheel tractors and farming equipment.",
+      image: automotiveImg,
     },
     {
       title: "Information Technology",
       body:
-        "Internet Of Thing, Energy Software, Software Development & Testing.",
+        "Expertise in DevOps, cloud services, AI, and machine learning. Development Ops, Cloud services, AI & Machine learning solutions.",
       image: informationTechnologyImg,
     },
     {
-      title: "Energy",
+      title: "Motorbikes",
       body:
-        "Hydrogen Fuel Cell, Energy From Waste, Solar Energy.",
-      image: "https://images.unsplash.com/photo-1466611653911-95081537e5b7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
-    },
-    {
-      title: "Automotive",
-      body:
-        "Electric & Non-electric Motorbikes, Agricultural & Construction Machines.",
+        "Country distributor for TVS Motors. TVS Motor Company is a major multinational motorcycle manufacturer ranking third in India by revenue.",
       image: automotiveImg,
     },
     {
-      title: "Infrastructure",
+      title: "Project Consultancy",
       body:
-        "Feasibility & Consultancy, Roads & Bridges, Buildings & Factories.",
+        "We provide project consultancy focusing on aligning projects with overall business goals and long-term strategies including Technical, Management, Financial, Environmental and Risk Management consulting.",
       image: infrastructureImg,
     },
   ],
   sectors: ["EV Infrastructure", "Defence", "Information Technology", "Energy", "Automotive", "Infrastructure"],
   stats: [
-    { label: "Years Of Experience", value: "10+" },
-    { label: "Annual Turn Over", value: "$5M" },
-    { label: "Repeat Business", value: "85%" },
-    { label: "Employees Strength", value: "100+" },
-    { label: "Happy Customers", value: "1800+" },
-    { label: "Countries We Have Worked In", value: "3+" },
+    { label: "Years Of Experience", value: "16+" },
+    { label: "Proven Track Record", value: "Excellence" },
+    { label: "Customer-Centric", value: "Approach" },
+    { label: "Reliable and", value: "Consistent" },
+    { label: "International", value: "Trading" },
+    { label: "Diverse", value: "Sectors" },
   ],
   projects: [
     {
@@ -179,6 +173,15 @@ const siteData = {
       title: "ENTERED INTO AI & EVS",
     },
   ],
+  visionMission: {
+    vision: "To be a globally recognized leader committed to delivering excellence in all our endeavors, inspiring trust and setting the standard for quality and innovation.",
+    missionPoints: [
+      "Become a leader recognized for excellence",
+      "Inspire trust among customers, partners, and stakeholders",
+      "Deliver outstanding products and services that meet the highest standards",
+      "Prioritize customer satisfaction in every interaction"
+    ]
+  },
   successFactors: [
     "Boutique-style service with market presence and resources of a major global firm.",
     "Extensive knowledge of the leadership talent pool across the region.",
@@ -190,8 +193,8 @@ const siteData = {
     "Utmost focus on quality deliverables.",
   ],
   contact: {
-    address: "BAN PHONETHAN, SAYSETHA, VIENTIANE, LAO PDR",
-    phone: "+856 20 7619 8200",
+    address: "Ban Phonexay District Sysetha, Vientiane, Lao PDR",
+    phone: "+856-20-5262 9292",
     email: "info@arclao.com",
     mapEmbed:
       "https://www.openstreetmap.org/export/embed.html?bbox=102.6%2C17.9%2C103.1%2C18.2&layer=mapnik&marker=17.966%2C102.6",
@@ -386,7 +389,7 @@ function Hero() {
           {/* Main headline */}
           <div className="space-y-4 sm:space-y-6 mb-6 sm:mb-8">
             <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight px-2 pl-[0px] pr-[0px]">
-              Me To We With <span className="bg-gradient-to-r from-red-400 via-blue-400 to-blue-500 bg-clip-text text-transparent">ARC Lao</span> combined efforts On <span className="bg-gradient-to-r from-blue-400 to-red-400 bg-clip-text text-transparent">Technological Innovation</span>
+              Welcome To <span className="bg-gradient-to-r from-red-400 via-blue-400 to-blue-500 bg-clip-text text-transparent">ARC LAO</span>
             </h1>
             
             <p className="text-base sm:text-lg lg:text-xl text-slate-200 max-w-2xl mx-auto leading-relaxed px-4">
@@ -1288,6 +1291,66 @@ function Contact() {
   );
 }
 
+function VisionMission() {
+  return (
+    <section className="py-16 lg:py-24 bg-gradient-to-br from-slate-50 via-white to-slate-50 relative overflow-hidden">
+      {/* Background decorations */}
+      <div className="absolute inset-0 bg-gradient-to-br from-red-50/30 via-blue-50/20 to-transparent"></div>
+      <div className="absolute top-1/4 -right-20 w-96 h-96 bg-gradient-to-bl from-red-400/10 to-transparent rounded-full blur-3xl"></div>
+      <div className="absolute bottom-1/4 -left-20 w-96 h-96 bg-gradient-to-tr from-blue-400/10 to-transparent rounded-full blur-3xl"></div>
+      
+      <Container className="relative">
+        <div className="text-center mb-12 sm:mb-16">
+          <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 bg-white rounded-full border border-slate-200 text-xs sm:text-sm font-medium text-slate-600 mb-4 sm:mb-6">
+            <span className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
+            Our Company Vision & Mission
+          </div>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-6 sm:mb-8 px-2">
+            Our <span className="bg-gradient-to-r from-red-600 to-blue-600 bg-clip-text text-transparent">Vision & Mission</span>
+          </h2>
+        </div>
+        
+        <div className="max-w-6xl mx-auto">
+          {/* Vision */}
+          <div className="mb-16">
+            <div className="bg-white rounded-3xl p-8 lg:p-12 shadow-lg shadow-slate-900/5 border border-slate-200/80">
+              <div className="text-center">
+                <h3 className="text-xl sm:text-2xl font-bold text-slate-900 mb-6">Our Vision</h3>
+                <p className="text-base sm:text-lg text-slate-600 leading-relaxed max-w-4xl mx-auto">
+                  {siteData.visionMission.vision}
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          {/* Mission Points */}
+          <div className="grid gap-6 md:gap-8 grid-cols-1 md:grid-cols-2">
+            {siteData.visionMission.missionPoints.map((point, index) => (
+              <div 
+                key={index}
+                className="group relative p-6 sm:p-8 rounded-3xl bg-white shadow-sm ring-1 ring-slate-200 hover:shadow-xl hover:shadow-red-500/10 transition-all duration-500 hover:-translate-y-2"
+              >
+                {/* Decorative element */}
+                <div className="absolute top-0 left-6 sm:left-8 w-12 sm:w-16 h-1 bg-gradient-to-r from-red-500 to-blue-500 rounded-full"></div>
+                
+                {/* Content */}
+                <div className="flex items-start gap-4">
+                  <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-red-500 to-blue-600 flex items-center justify-center flex-shrink-0 mt-1">
+                    <span className="text-white font-bold text-sm">{index + 1}</span>
+                  </div>
+                  <div>
+                    <p className="text-slate-700 leading-relaxed">{point}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </Container>
+    </section>
+  );
+}
+
 function Footer() {
   return (
     <footer className="bg-slate-900 text-white relative overflow-hidden">
@@ -1397,8 +1460,8 @@ function Footer() {
                       <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
                     </svg>
                   </div>
-                  <a href="tel:+8562076198200" className="text-slate-400 hover:text-white transition-colors text-sm">
-                    +856 20 7619 8200
+                  <a href="tel:+85620526299292" className="text-slate-400 hover:text-white transition-colors text-sm">
+                    +856-20-5262 9292
                   </a>
                 </div>
                 <div className="flex items-center gap-3">
@@ -1460,6 +1523,7 @@ export default function CorporateSite() {
       <Nav />
       <Hero />
       <About />
+      <VisionMission />
       <Overview />
       <Services />
       <Stats />
