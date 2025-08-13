@@ -792,7 +792,7 @@ function Partners() {
                       <img 
                         src={partner.logo} 
                         alt={`${partner.name} logo`} 
-                        className="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
+                        className="w-full h-full object-contain transition-all duration-300"
                       />
                     ) : (
                       <div className="w-12 h-12 bg-slate-50 rounded-lg border border-slate-100 flex items-center justify-center">
