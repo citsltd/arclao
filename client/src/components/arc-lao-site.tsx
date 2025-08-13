@@ -4,6 +4,12 @@ import Technological_Innovation from "@assets/Technological Innovation.jpg";
 import Future_of_Technology from "@assets/Future of Technology_1754915928797.jpg";
 import arcLaoLogo from "@assets/arclaoslogo_1754990674040.png";
 
+// Solution/Service Images
+import DefenseImage from "@assets/Defense_1754906822327.jpg";
+import AgricultureImage from "@assets/Electric & Non-electric Motorbikes_1754906822323.jpg";
+import ITImage from "@assets/Information Technology_1754906822325.jpg";
+import InfrastructureImage from "@assets/Infrastructure_1754906822315.jpg";
+
 // Client logos
 import panAustLogo from "@assets/logoHeader_1755069792950.webp";
 import seponLogo from "@assets/sepon-transparent-background_1755069792955.png";
@@ -270,43 +276,88 @@ function Solutions() {
     {
       title: "Demining Equipments",
       description: "Metal detectors and a range of other equipment for demining",
-      icon: "🛡️"
+      image: DefenseImage,
+      gradient: "from-red-500/10 to-orange-500/10"
     },
     {
       title: "Agriculture Machinery",
       description: "Country distributor for BCS-Italy and Mahindra & Mahindra, specializing in agricultural machinery.",
-      icon: "🚜"
+      image: AgricultureImage,
+      gradient: "from-green-500/10 to-emerald-500/10"
     },
     {
       title: "Information Technology",
       description: "Expertise in DevOps, cloud services, AI, and machine learning.",
-      icon: "💻"
+      image: ITImage,
+      gradient: "from-blue-500/10 to-indigo-500/10"
     },
     {
       title: "Automotive",
       description: "Country distributor for TVS Motors",
-      icon: "🏍️"
+      image: InfrastructureImage,
+      gradient: "from-purple-500/10 to-violet-500/10"
     }
   ];
 
   return (
     <section className="py-16 sm:py-20 lg:py-24 bg-slate-50 relative overflow-hidden" id="services">
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-white to-slate-50"></div>
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-br from-[#00227c]/5 to-transparent rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-gradient-to-tl from-indigo-500/5 to-transparent rounded-full blur-3xl"></div>
+      
       <Container className="relative px-4">
-        <div className="text-center mb-12">
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#00227c]/10 text-[#00227c] rounded-full text-sm font-semibold uppercase tracking-wide mb-6">
+            Our Solutions
+          </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
             We Provide The <span className="text-[#00227c]">Best Solution</span>
           </h2>
-          <p className="text-lg text-slate-600">in below domains</p>
+          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+            Comprehensive expertise across multiple domains to drive innovation and excellence
+          </p>
         </div>
         
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-          {solutions.map((solution) => (
-            <div key={solution.title} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 group">
-              <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">
-                {solution.icon}
+          {solutions.map((solution, index) => (
+            <div key={solution.title} className="group relative bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
+              {/* Image Container */}
+              <div className="relative h-48 overflow-hidden">
+                <img 
+                  src={solution.image} 
+                  alt={solution.title} 
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className={`absolute inset-0 bg-gradient-to-t ${solution.gradient} opacity-60`}></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+                
+                {/* Number Badge */}
+                <div className="absolute top-4 left-4">
+                  <div className="w-8 h-8 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center">
+                    <span className="text-sm font-bold text-[#00227c]">{index + 1}</span>
+                  </div>
+                </div>
               </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-3">{solution.title}</h3>
-              <p className="text-slate-600 leading-relaxed">{solution.description}</p>
+              
+              {/* Content */}
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-[#00227c] transition-colors duration-300">
+                  {solution.title}
+                </h3>
+                <p className="text-slate-600 leading-relaxed text-sm">
+                  {solution.description}
+                </p>
+                
+                {/* Learn More Link */}
+                <div className="mt-4 pt-4 border-t border-slate-100">
+                  <span className="inline-flex items-center gap-2 text-[#00227c] font-medium text-sm group-hover:gap-3 transition-all duration-300">
+                    Learn More
+                    <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  </span>
+                </div>
+              </div>
             </div>
           ))}
         </div>
