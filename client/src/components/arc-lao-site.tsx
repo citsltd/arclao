@@ -147,9 +147,17 @@ function Hero() {
         <div className="max-w-4xl mx-auto text-center pt-[25px] pb-[25px]">
           <div className="space-y-4 sm:space-y-6 mb-8 sm:mb-12">
             <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-tight px-2">
-              <span className="block text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl mb-2">Welcome To</span>
-              <span className="text-[#00227c]">ARC LAO</span>
+              <span className="block text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl mb-2 text-white/90">Your Trusted Partner for</span>
+              <span className="text-[#00227c] block mb-2">Global Innovation</span>
+              <span className="block text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-medium text-white/80 mt-4">
+                Connecting Southeast Asia to the World
+              </span>
             </h1>
+            
+            <p className="text-base sm:text-lg lg:text-xl text-white/75 max-w-3xl mx-auto mt-6 leading-relaxed px-4">
+              With 16+ years of excellence across demining, agriculture, technology, and automotive sectors, 
+              we deliver innovative solutions that drive sustainable progress in Laos and beyond.
+            </p>
           </div>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center px-4">
