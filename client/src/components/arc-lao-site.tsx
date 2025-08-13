@@ -752,8 +752,8 @@ function Partners() {
         
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {partners.map((partner, index) => (
-            <div key={partner.name} className="group relative">
-              <div className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-slate-100/50">
+            <div key={partner.name} className="group relative h-full">
+              <div className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-slate-100/50 h-full flex flex-col">
                 {/* Header with Category and Year */}
                 <div className="flex items-center justify-between mb-6">
                   <div className={`px-3 py-1 bg-gradient-to-r ${partner.bgGradient} border border-slate-200/50 rounded-full`}>
@@ -780,7 +780,7 @@ function Partners() {
                 </div>
                 
                 {/* Content */}
-                <div className="text-center space-y-4">
+                <div className="text-center space-y-4 flex-1">
                   <h3 className="text-xl font-bold text-slate-900 group-hover:text-[#00227c] transition-colors duration-300">
                     {partner.name}
                   </h3>
@@ -793,7 +793,7 @@ function Partners() {
                 </div>
                 
                 {/* Website Link */}
-                <div className="mt-6 pt-6 border-t border-slate-100">
+                <div className="mt-auto pt-6 border-t border-slate-100">
                   <a 
                     href={`https://${partner.website}`} 
                     target="_blank" 
