@@ -184,35 +184,91 @@ function Hero() {
 
 function About() {
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-white relative overflow-hidden" id="about">
+    <section className="py-20 sm:py-24 lg:py-32 bg-gradient-to-br from-slate-50 via-white to-slate-50 relative overflow-hidden" id="about">
+      {/* Background Elements */}
+      <div className="absolute top-20 -right-40 w-80 h-80 bg-gradient-to-l from-[#00227c]/5 to-transparent rounded-full blur-3xl"></div>
+      <div className="absolute bottom-20 -left-40 w-80 h-80 bg-gradient-to-r from-[#00227c]/5 to-transparent rounded-full blur-3xl"></div>
+      
       <Container className="relative px-4">
-        <div className="grid gap-12 lg:gap-16 lg:grid-cols-2 items-center">
-          <div className="order-2 lg:order-1">
-            <div className="text-4xl font-bold text-[#00227c] mb-2">Welcome To</div>
-            <h2 className="text-5xl sm:text-6xl font-bold text-slate-900 mb-8">ARC LAO</h2>
+        <div className="grid gap-16 lg:gap-20 lg:grid-cols-2 items-center">
+          <div className="order-2 lg:order-1 space-y-8">
+            {/* Header */}
+            <div className="space-y-4">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#00227c]/10 rounded-full">
+                <div className="w-2 h-2 bg-[#00227c] rounded-full"></div>
+                <span className="text-[#00227c] font-semibold text-sm uppercase tracking-wide">About Us</span>
+              </div>
+              <div className="space-y-2">
+                <h3 className="text-2xl sm:text-3xl font-bold text-[#00227c]">Welcome To</h3>
+                <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 leading-tight">
+                  ARC <span className="text-[#00227c]">LAO</span>
+                </h2>
+              </div>
+            </div>
             
+            {/* Content */}
             <div className="space-y-6">
-              <p className="text-lg text-slate-600 leading-relaxed">
-                We are an international trading company with over <strong>16 years</strong> of dedicated operation in Laos. Throughout our extensive history, we have established a strong presence across diverse business sectors, including demining equipment, information technology, automotive, hospitality, energy, and farming equipment.
-              </p>
+              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-slate-200/50 shadow-lg">
+                <p className="text-lg text-slate-700 leading-relaxed">
+                  We are an international trading company with over <span className="font-bold text-[#00227c]">16 years</span> of dedicated operation in Laos. Throughout our extensive history, we have established a strong presence across diverse business sectors, including demining equipment, information technology, automotive, hospitality, energy, and farming equipment.
+                </p>
+              </div>
               
-              <p className="text-lg text-slate-600 leading-relaxed">
-                Our commitment to quality and excellence has enabled us to build lasting relationships with clients and partners worldwide.
-              </p>
-              
-              <p className="text-lg text-slate-600 leading-relaxed">
-                Driven by innovation and a customer-centric approach, we strive to deliver reliable solutions that meet the evolving needs of our clients in various industries.
-              </p>
+              <div className="grid gap-4 sm:grid-cols-2">
+                <div className="bg-white/60 backdrop-blur-sm rounded-xl p-5 border border-slate-200/30">
+                  <p className="text-slate-700 leading-relaxed">
+                    Our commitment to quality and excellence has enabled us to build lasting relationships with clients and partners worldwide.
+                  </p>
+                </div>
+                
+                <div className="bg-white/60 backdrop-blur-sm rounded-xl p-5 border border-slate-200/30">
+                  <p className="text-slate-700 leading-relaxed">
+                    Driven by innovation and a customer-centric approach, we strive to deliver reliable solutions that meet the evolving needs of our clients in various industries.
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            {/* Stats */}
+            <div className="flex flex-wrap gap-6 pt-4">
+              <div className="text-center">
+                <div className="text-3xl font-bold text-[#00227c] mb-1">16+</div>
+                <div className="text-sm text-slate-600 font-medium">Years Experience</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-[#00227c] mb-1">50+</div>
+                <div className="text-sm text-slate-600 font-medium">Projects Completed</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-[#00227c] mb-1">5+</div>
+                <div className="text-sm text-slate-600 font-medium">Industries Served</div>
+              </div>
             </div>
           </div>
           
           <div className="order-1 lg:order-2 relative">
-            <div className="aspect-[4/3] rounded-3xl overflow-hidden ring-1 ring-slate-200/50 shadow-2xl shadow-slate-900/10 bg-white">
-              <img 
-                src={Future_of_Technology} 
-                alt="ARC LAO operations" 
-                className="w-full h-full object-cover"
-              />
+            {/* Image Container */}
+            <div className="relative">
+              <div className="absolute -inset-4 bg-gradient-to-r from-[#00227c]/20 to-transparent rounded-3xl blur-xl"></div>
+              <div className="relative aspect-[4/3] rounded-3xl overflow-hidden bg-white shadow-2xl shadow-slate-900/25 ring-1 ring-slate-200/50">
+                <img 
+                  src={Future_of_Technology} 
+                  alt="ARC LAO operations" 
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/20 via-transparent to-transparent"></div>
+              </div>
+              
+              {/* Floating Elements */}
+              <div className="absolute -top-6 -right-6 w-12 h-12 bg-[#00227c] rounded-2xl flex items-center justify-center shadow-lg">
+                <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              
+              <div className="absolute -bottom-6 -left-6 w-16 h-16 bg-white rounded-2xl flex items-center justify-center shadow-lg border border-slate-200">
+                <div className="text-2xl">🏢</div>
+              </div>
             </div>
           </div>
         </div>
