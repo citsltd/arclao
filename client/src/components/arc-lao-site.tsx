@@ -1153,7 +1153,7 @@ function Footer() {
                 <img 
                   src={arcLaoLogo} 
                   alt="ARC LAO" 
-                  className="h-12 w-auto mb-4"
+                  className="h-12 w-auto mb-4 brightness-0 invert"
                 />
                 <p className="text-slate-400 text-sm leading-relaxed">
                   Leading Technology Solutions Provider
@@ -1237,7 +1237,7 @@ function Footer() {
                 <div className="text-slate-400 text-sm">Team Members</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-[#00227c] mb-2">5+</div>
+                <div className="text-3xl font-bold mb-2 text-[#ffffff]">5+</div>
                 <div className="text-slate-400 text-sm">Countries Served</div>
               </div>
             </div>
