@@ -905,27 +905,7 @@ function Clients() {
           </div>
         </div>
         
-        {/* Client Stats */}
-        <div className="mt-16 pt-16 border-t border-slate-200/50">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div className="space-y-2">
-              <div className="text-3xl font-bold text-[#00227c]">25+</div>
-              <div className="text-sm text-slate-600 font-medium">Global Clients</div>
-            </div>
-            <div className="space-y-2">
-              <div className="text-3xl font-bold text-emerald-600">100%</div>
-              <div className="text-sm text-slate-600 font-medium">Client Satisfaction</div>
-            </div>
-            <div className="space-y-2">
-              <div className="text-3xl font-bold text-violet-600">15+</div>
-              <div className="text-sm text-slate-600 font-medium">Countries Served</div>
-            </div>
-            <div className="space-y-2">
-              <div className="text-3xl font-bold text-amber-600">5+</div>
-              <div className="text-sm text-slate-600 font-medium">Industry Sectors</div>
-            </div>
-          </div>
-        </div>
+        
       </Container>
     </section>
   );
