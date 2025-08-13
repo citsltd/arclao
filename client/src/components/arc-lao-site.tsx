@@ -527,10 +527,7 @@ function About() {
               </div>
             </div>
             
-            {/* Website indicator */}
-            <div className="absolute -bottom-4 -right-4 bg-white text-slate-600 px-4 py-2 rounded-lg shadow-lg text-sm font-medium">
-              www.arclao.com
-            </div>
+            
           </div>
           
           {/* Right side - Content */}
