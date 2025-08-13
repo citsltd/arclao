@@ -953,100 +953,54 @@ function Contact() {
             <div className="relative">
               <div className="absolute -inset-4 bg-gradient-to-r from-[#00227c]/5 to-indigo-500/5 rounded-3xl blur-xl"></div>
               <div className="relative bg-white/70 backdrop-blur-sm rounded-3xl p-8 border border-white/50 shadow-xl">
-                <div className="text-center mb-8">
-                  <h3 className="text-3xl font-bold text-slate-900 mb-3">Contact Information</h3>
-                  <div className="w-16 h-1 bg-gradient-to-r from-[#00227c] to-indigo-500 mx-auto rounded-full"></div>
+                <div className="text-center mb-6">
+                  <h3 className="text-2xl font-bold text-slate-900 mb-2">Contact Information</h3>
                 </div>
                 
-                <div className="space-y-8">
+                <div className="space-y-6">
                   {/* Address */}
-                  <div className="group flex items-start gap-6 p-4 rounded-2xl hover:bg-white/80 transition-all duration-300 hover:shadow-lg">
-                    <div className="relative">
-                      <div className="absolute inset-0 bg-gradient-to-br from-[#00227c] to-indigo-600 rounded-2xl blur-sm opacity-20 group-hover:opacity-30 transition-opacity"></div>
-                      <div className="relative w-16 h-16 bg-gradient-to-br from-[#00227c] to-indigo-600 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg">
-                        <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                        </svg>
-                      </div>
+                  <div className="group flex items-center gap-4 p-3 rounded-xl hover:bg-white/80 transition-all duration-300">
+                    <div className="relative w-12 h-12 bg-gradient-to-br from-[#00227c] to-indigo-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-md">
+                      <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                      </svg>
                     </div>
                     <div className="flex-1">
-                      <h4 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-[#00227c] transition-colors">Office Address</h4>
-                      <p className="text-slate-600 leading-relaxed text-lg">
-                        Ban Phonexay District<br />
-                        Sysetha, Vientiane, Lao PDR
+                      <h4 className="font-semibold text-slate-900 mb-1">Office Address</h4>
+                      <p className="text-slate-600 text-sm">
+                        Ban Phonexay District, Sysetha, Vientiane, Lao PDR
                       </p>
                     </div>
                   </div>
                   
                   {/* Email */}
-                  <div className="group flex items-start gap-6 p-4 rounded-2xl hover:bg-white/80 transition-all duration-300 hover:shadow-lg">
-                    <div className="relative">
-                      <div className="absolute inset-0 bg-gradient-to-br from-[#00227c] to-indigo-600 rounded-2xl blur-sm opacity-20 group-hover:opacity-30 transition-opacity"></div>
-                      <div className="relative w-16 h-16 bg-gradient-to-br from-[#00227c] to-indigo-600 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg">
-                        <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                        </svg>
-                      </div>
+                  <div className="group flex items-center gap-4 p-3 rounded-xl hover:bg-white/80 transition-all duration-300">
+                    <div className="relative w-12 h-12 bg-gradient-to-br from-[#00227c] to-indigo-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-md">
+                      <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                      </svg>
                     </div>
                     <div className="flex-1">
-                      <h4 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-[#00227c] transition-colors">Email Address</h4>
-                      <a href="mailto:info@arclao.com" className="text-slate-600 hover:text-[#00227c] transition-colors text-lg font-medium inline-flex items-center gap-2 group">
+                      <h4 className="font-semibold text-slate-900 mb-1">Email Address</h4>
+                      <a href="mailto:info@arclao.com" className="text-slate-600 hover:text-[#00227c] transition-colors text-sm font-medium">
                         info@arclao.com
-                        <svg className="w-5 h-5 transform transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                        </svg>
                       </a>
                     </div>
                   </div>
                   
                   {/* Phone */}
-                  <div className="group flex items-start gap-6 p-4 rounded-2xl hover:bg-white/80 transition-all duration-300 hover:shadow-lg">
-                    <div className="relative">
-                      <div className="absolute inset-0 bg-gradient-to-br from-[#00227c] to-indigo-600 rounded-2xl blur-sm opacity-20 group-hover:opacity-30 transition-opacity"></div>
-                      <div className="relative w-16 h-16 bg-gradient-to-br from-[#00227c] to-indigo-600 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg">
-                        <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                        </svg>
-                      </div>
+                  <div className="group flex items-center gap-4 p-3 rounded-xl hover:bg-white/80 transition-all duration-300">
+                    <div className="relative w-12 h-12 bg-gradient-to-br from-[#00227c] to-indigo-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow-md">
+                      <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                      </svg>
                     </div>
                     <div className="flex-1">
-                      <h4 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-[#00227c] transition-colors">Phone Number</h4>
-                      <a href="tel:+8562052629292" className="text-slate-600 hover:text-[#00227c] transition-colors text-lg font-medium inline-flex items-center gap-2 group">
+                      <h4 className="font-semibold text-slate-900 mb-1">Phone Number</h4>
+                      <a href="tel:+8562052629292" className="text-slate-600 hover:text-[#00227c] transition-colors text-sm font-medium">
                         +856-20-5262 9292
-                        <svg className="w-5 h-5 transform transition-transform group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                        </svg>
                       </a>
-                    </div>
-                  </div>
-                  
-                  {/* Business Hours */}
-                  <div className="group flex items-start gap-6 p-4 rounded-2xl hover:bg-white/80 transition-all duration-300 hover:shadow-lg">
-                    <div className="relative">
-                      <div className="absolute inset-0 bg-gradient-to-br from-[#00227c] to-indigo-600 rounded-2xl blur-sm opacity-20 group-hover:opacity-30 transition-opacity"></div>
-                      <div className="relative w-16 h-16 bg-gradient-to-br from-[#00227c] to-indigo-600 rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg">
-                        <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                      </div>
-                    </div>
-                    <div className="flex-1">
-                      <h4 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-[#00227c] transition-colors">Business Hours</h4>
-                      <div className="text-slate-600 leading-relaxed text-lg space-y-1">
-                        <div className="flex justify-between items-center">
-                          <span>Monday - Friday:</span>
-                          <span className="font-medium">8:00 AM - 5:00 PM</span>
-                        </div>
-                        <div className="flex justify-between items-center">
-                          <span>Saturday:</span>
-                          <span className="font-medium">8:00 AM - 12:00 PM</span>
-                        </div>
-                        <div className="flex justify-between items-center">
-                          <span>Sunday:</span>
-                          <span className="font-medium text-red-500">Closed</span>
-                        </div>
-                      </div>
                     </div>
                   </div>
                 </div>
