@@ -557,33 +557,7 @@ function About() {
                 <div className="absolute top-1/4 right-1/4 w-2 h-2 bg-white rounded-full animate-pulse"></div>
               </div>
               
-              {/* Business silhouettes at bottom */}
-              <div className="absolute bottom-0 left-0 right-0 h-16 flex items-end justify-center">
-                {/* Group of business people silhouettes */}
-                <div className="flex items-end gap-1">
-                  {[30, 25, 35, 28, 32, 24, 38, 30, 26, 34, 29, 31].map((height, i) => (
-                    <div 
-                      key={i} 
-                      className="bg-black/90 rounded-t-sm" 
-                      style={{
-                        width: '3px',
-                        height: `${height}px`,
-                      }}
-                    ></div>
-                  ))}
-                </div>
-                
-                {/* Central handshake silhouette */}
-                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
-                  <div className="relative w-12 h-8">
-                    {/* Two people shaking hands silhouette */}
-                    <div className="absolute left-0 bottom-0 w-4 h-6 bg-black/90 rounded-t-sm"></div>
-                    <div className="absolute right-0 bottom-0 w-4 h-6 bg-black/90 rounded-t-sm"></div>
-                    {/* Handshake connection */}
-                    <div className="absolute top-2 left-1/2 transform -translate-x-1/2 w-4 h-2 bg-black/90 rounded"></div>
-                  </div>
-                </div>
-              </div>
+              
             </div>
           </div>
         </div>
