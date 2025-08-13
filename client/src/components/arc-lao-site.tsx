@@ -537,10 +537,10 @@ function Clients() {
           <p className="text-lg text-slate-600">Trusted by leading organizations worldwide</p>
         </div>
         
-        <div className="max-w-6xl mx-auto">
-          {/* Top Row - Development Organizations */}
-          <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 mb-8">
-            <div className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center">
+        <div className="max-w-7xl mx-auto">
+          {/* All Client Logos Grid */}
+          <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
+            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-11 gap-6 lg:gap-8 items-center">
               <div className="flex items-center justify-center h-16">
                 <img src={unLogo} alt="United Nations" className="max-h-full max-w-full object-contain" />
               </div>
@@ -556,12 +556,26 @@ function Clients() {
               <div className="flex items-center justify-center h-16">
                 <img src={tetraTechLogo} alt="Tetra Tech" className="max-h-full max-w-full object-contain" />
               </div>
+              <div className="flex items-center justify-center h-16">
+                <img src={magLogo} alt="Mines Advisory Group" className="max-h-full max-w-full object-contain" />
+              </div>
+              <div className="flex items-center justify-center h-16">
+                <img src={norwegianPeoplesAidLogo} alt="Norwegian People's Aid" className="max-h-full max-w-full object-contain" />
+              </div>
+              <div className="flex items-center justify-center h-16">
+                <img src={saveTheChildrenLogo} alt="Save the Children" className="max-h-full max-w-full object-contain" />
+              </div>
+              <div className="flex items-center justify-center h-16">
+                <img src={seponLogo} alt="Chifeng Gold - Sepon" className="max-h-full max-w-full object-contain" />
+              </div>
+              <div className="flex items-center justify-center h-16">
+                <img src={panAustLogo} alt="PanAust" className="max-h-full max-w-full object-contain" />
+              </div>
+              <div className="flex items-center justify-center h-16">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/SDS_Mining_logo.svg/1200px-SDS_Mining_logo.svg.png" alt="SDS Mining" className="max-h-full max-w-full object-contain" />
+              </div>
             </div>
           </div>
-          
-          
-          
-          
         </div>
       </Container>
     </section>
