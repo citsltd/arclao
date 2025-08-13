@@ -45,9 +45,10 @@ function Nav() {
   const [open, setOpen] = useState(false);
   
   const navItems = [
-    { label: "About Us", href: "#about" },
-    { label: "Products & Services", href: "#services" },
-    { label: "Contact Us", href: "#contact" },
+    { label: "About", href: "#about" },
+    { label: "Our Services", href: "#services" },
+    { label: "Why Choose Us", href: "#why-choose" },
+    { label: "Contact", href: "#contact" },
   ];
 
   return (
@@ -399,7 +400,7 @@ function WhyChoose() {
   ];
 
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-white relative overflow-hidden">
+    <section className="py-16 sm:py-20 lg:py-24 bg-white relative overflow-hidden" id="why-choose">
       <div className="absolute inset-0 bg-gradient-to-br from-slate-50/50 via-white to-indigo-50/30"></div>
       <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-[#00227c]/5 to-transparent rounded-full blur-3xl"></div>
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-indigo-500/5 to-transparent rounded-full blur-3xl"></div>
