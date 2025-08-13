@@ -319,6 +319,226 @@ function WhyChoose() {
   );
 }
 
+function DetailedServices() {
+  const services = [
+    {
+      title: "Demining Equipments",
+      subtitle: "Country Distributor for De-Mining Equipments from Germany",
+      description: "We are a national distributor for all types of demining equipment used in humanitarian efforts.",
+      icon: "🛡️"
+    },
+    {
+      title: "Information Technology", 
+      subtitle: "Expertise in Development Ops, Cloud services, AI & Machine learning",
+      description: "Innovating the landscape with data & tech oriented humanistic solutions!",
+      icon: "💻"
+    },
+    {
+      title: "Agriculture Machinery - BCS Two Wheel Tractors",
+      subtitle: "BCS Two Wheel Tractors",
+      description: "BCS is an Italian-based business group with over 40 years of expertise in two-wheel tractors. They offer a wide range of reversible and multifunctional two-wheel tractors suitable for professional soil preparation, greens maintenance, and snow removal.",
+      icon: "🚜"
+    },
+    {
+      title: "Agriculture Machinery - Mahindra Tractors", 
+      subtitle: "Mahindra Tractors",
+      description: "Mahindra Tractors, part of Mahindra & Mahindra, is an Indian agricultural machinery manufacturer. It became the world's top-selling tractor brand in 2010, mainly serving India, with growing markets in North America and Australia.",
+      icon: "🚜"
+    },
+    {
+      title: "Motorbikes - TVS Motors",
+      subtitle: "TVS Motors",
+      description: "TVS Motor Company, headquartered in Chennai, India, is a major multinational motorcycle manufacturer, ranking third in India by revenue, with annual sales of three million units.",
+      icon: "🏍️"
+    },
+    {
+      title: "Project Consultancy",
+      subtitle: "Comprehensive Business Solutions",
+      description: "We provide project consultancy focuses on aligning projects with overall business goals and long-term strategies which involves Technical Consulting, Management Consulting, Financial Consulting, Environmental and Sustainability Consulting & Risk Management",
+      icon: "📋"
+    }
+  ];
+
+  return (
+    <section className="py-16 sm:py-20 lg:py-24 bg-white relative overflow-hidden">
+      <Container className="relative px-4">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl sm:text-5xl font-bold text-slate-900 mb-4">
+            Our <span className="text-[#00227c]">Services</span>
+          </h2>
+          <p className="text-lg text-slate-600">Comprehensive solutions across multiple industries</p>
+        </div>
+        
+        <div className="grid gap-8 lg:gap-12">
+          {services.map((service, index) => (
+            <div key={service.title} className={`grid gap-8 lg:gap-12 lg:grid-cols-2 items-center ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
+              <div className={index % 2 === 1 ? 'order-2 lg:order-1' : 'order-2 lg:order-2'}>
+                <div className="text-4xl mb-4">{service.icon}</div>
+                <h3 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-2">{service.title}</h3>
+                <h4 className="text-lg font-semibold text-[#00227c] mb-4">{service.subtitle}</h4>
+                <p className="text-slate-600 leading-relaxed">{service.description}</p>
+              </div>
+              <div className={index % 2 === 1 ? 'order-1 lg:order-2' : 'order-1 lg:order-1'}>
+                <div className="aspect-[4/3] rounded-2xl overflow-hidden bg-slate-100 shadow-lg">
+                  <img 
+                    src={Future_of_Technology} 
+                    alt={service.title} 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </Container>
+    </section>
+  );
+}
+
+function VisionMission() {
+  return (
+    <section className="py-16 sm:py-20 lg:py-24 bg-slate-50 relative overflow-hidden">
+      <Container className="relative px-4">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl sm:text-5xl font-bold text-slate-900 mb-4">
+            Our Company <span className="text-[#00227c]">Vision & Mission</span>
+          </h2>
+          <p className="text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed">
+            To be a globally recognized leader committed to delivering excellence in all our endeavors, inspiring trust and setting the standard for quality and innovation.
+          </p>
+        </div>
+        
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4 max-w-6xl mx-auto">
+          <div className="bg-white rounded-2xl p-8 shadow-lg text-center">
+            <div className="w-16 h-16 bg-[#00227c] rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">1</div>
+            <h3 className="text-lg font-bold text-slate-900 mb-2">Become a leader</h3>
+            <p className="text-slate-600">recognized for excellence</p>
+          </div>
+          
+          <div className="bg-white rounded-2xl p-8 shadow-lg text-center">
+            <div className="w-16 h-16 bg-[#00227c] rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">2</div>
+            <h3 className="text-lg font-bold text-slate-900 mb-2">Inspire trust among</h3>
+            <p className="text-slate-600">customers, partners, and stakeholders</p>
+          </div>
+          
+          <div className="bg-white rounded-2xl p-8 shadow-lg text-center">
+            <div className="w-16 h-16 bg-[#00227c] rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">3</div>
+            <h3 className="text-lg font-bold text-slate-900 mb-2">Deliver outstanding</h3>
+            <p className="text-slate-600">products and services that meet the highest standards</p>
+          </div>
+          
+          <div className="bg-white rounded-2xl p-8 shadow-lg text-center">
+            <div className="w-16 h-16 bg-[#00227c] rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">4</div>
+            <h3 className="text-lg font-bold text-slate-900 mb-2">Prioritize customer</h3>
+            <p className="text-slate-600">satisfaction in every interaction</p>
+          </div>
+        </div>
+      </Container>
+    </section>
+  );
+}
+
+function Partners() {
+  const partners = [
+    {
+      name: "Vallon",
+      tagline: "Searching with Excellence",
+      description: "Pioneering Spirit since 1965",
+      website: "www.vallon.de",
+      category: "Demining Equipment"
+    },
+    {
+      name: "Jarvis Consulting",
+      tagline: "IT Services",
+      description: "Development Ops, Cloud services, AI & Machine learning. Innovating the landscape with data & tech oriented humanistic solutions!",
+      website: "www.jarvis.consulting",
+      category: "Information Technology"
+    },
+    {
+      name: "TVS Motor Company",
+      tagline: "Transforming quality of life through mobility solutions",
+      description: "TVS Motor Company - One of the largest 2-wheeler companies in the world.",
+      website: "www.tvsmotor.com",
+      category: "Motorbikes"
+    },
+    {
+      name: "BCS Two Wheel Tractors",
+      tagline: "Agriculture Machinery Excellence",
+      description: "A complete range of reversible and multifunctional two-wheel tractors for professionally preparing the soil, greens maintenance and snow removal.",
+      website: "www.bcsagri.com/en",
+      category: "Agriculture Machinery"
+    },
+    {
+      name: "Mahindra & Mahindra",
+      tagline: "Agriculture Machines & Equipments", 
+      description: "Mahindra Tractors offers a wide range of tractor models in India, with power options ranging from 15 HP to 74 HP. All Mahindra Tractors are designed to perform various agricultural tasks, catering to the diverse needs of farmers and landowners",
+      website: "www.mahindratractor.com",
+      category: "Agriculture Machinery"
+    }
+  ];
+
+  return (
+    <section className="py-16 sm:py-20 lg:py-24 bg-white relative overflow-hidden">
+      <Container className="relative px-4">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl sm:text-5xl font-bold text-slate-900 mb-4">
+            Our <span className="text-[#00227c]">Partners</span>
+          </h2>
+          <p className="text-lg text-slate-600">Trusted partnerships with global industry leaders</p>
+        </div>
+        
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {partners.map((partner) => (
+            <div key={partner.name} className="bg-slate-50 rounded-2xl p-8 hover:shadow-lg transition-all duration-300">
+              <div className="mb-4">
+                <span className="inline-block px-3 py-1 bg-[#00227c] text-white text-xs font-medium rounded-full mb-3">
+                  {partner.category}
+                </span>
+                <h3 className="text-xl font-bold text-slate-900 mb-2">{partner.name}</h3>
+                <h4 className="text-lg font-semibold text-[#00227c] mb-3">{partner.tagline}</h4>
+              </div>
+              <p className="text-slate-600 leading-relaxed mb-4">{partner.description}</p>
+              <a 
+                href={`https://${partner.website}`} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-[#00227c] hover:text-[#001a63] font-medium text-sm transition-colors"
+              >
+                {partner.website} →
+              </a>
+            </div>
+          ))}
+        </div>
+      </Container>
+    </section>
+  );
+}
+
+function Clients() {
+  return (
+    <section className="py-16 sm:py-20 lg:py-24 bg-slate-50 relative overflow-hidden">
+      <Container className="relative px-4">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl sm:text-5xl font-bold text-slate-900 mb-4">
+            Our <span className="text-[#00227c]">Clients</span>
+          </h2>
+          <p className="text-lg text-slate-600">Serving diverse industries with excellence</p>
+        </div>
+        
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-white rounded-3xl p-12 shadow-lg text-center">
+            <div className="w-24 h-24 bg-[#00227c] rounded-full flex items-center justify-center text-white text-4xl font-bold mx-auto mb-6">⛏️</div>
+            <h3 className="text-3xl font-bold text-slate-900 mb-4">MINING COMPANIES</h3>
+            <p className="text-lg text-slate-600 leading-relaxed">
+              We proudly serve mining companies across the region, providing specialized equipment and technical solutions that meet the demanding requirements of the mining industry.
+            </p>
+          </div>
+        </div>
+      </Container>
+    </section>
+  );
+}
+
 function Footer() {
   return (
     <footer className="bg-slate-900 text-white relative overflow-hidden">
@@ -450,6 +670,10 @@ export default function CorporateSite() {
       <About />
       <Solutions />
       <WhyChoose />
+      <DetailedServices />
+      <VisionMission />
+      <Partners />
+      <Clients />
       <Footer />
     </main>
   );
