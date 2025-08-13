@@ -29,6 +29,13 @@ import mahindraLogo from "@assets/Mahindra & Mahindra_1755074225217.png";
 import tvsMotorLogo from "@assets/TVS Motor Company_1755074225219.png";
 import vallonLogo from "@assets/Vallon_1755074225223.png";
 
+// New Service Images
+import MotorbikesImage from "@assets/Motorbikes - TVS Motors_1755075726828.jpg";
+import MahindraTractorsImage from "@assets/Agriculture Machinery - Mahindra Tractors_1755075726835.jpg";
+import BCSTwoWheelTractorsImage from "@assets/Agriculture Machinery - BCS Two Wheel Tractors_1755075726841.jpg";
+import DeminingEquipmentsImage from "@assets/Demining Equipments_1755075726842.jpg";
+import ProjectConsultancyImage from "@assets/Project Consultancy_1755075726843.jpg";
+
 // --- Components ---
 function Container({ children, className = "" }: { children: React.ReactNode; className?: string }) {
   return <div className={`mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 ${className}`}>{children}</div>;
@@ -498,7 +505,7 @@ function DetailedServices() {
       title: "Demining Equipments",
       subtitle: "Country Distributor for De-Mining Equipments from Germany",
       description: "We are a national distributor for all types of demining equipment used in humanitarian efforts.",
-      image: DefenseImage,
+      image: DeminingEquipmentsImage,
       gradient: "from-red-500 to-orange-600",
       bgGradient: "from-red-50 to-orange-50"
     },
@@ -514,7 +521,7 @@ function DetailedServices() {
       title: "Agriculture Machinery - BCS Two Wheel Tractors",
       subtitle: "BCS Two Wheel Tractors",
       description: "BCS is an Italian-based business group with over 40 years of expertise in two-wheel tractors. They offer a wide range of reversible and multifunctional two-wheel tractors suitable for professional soil preparation, greens maintenance, and snow removal.",
-      image: AgricultureImage,
+      image: BCSTwoWheelTractorsImage,
       gradient: "from-green-500 to-emerald-600",
       bgGradient: "from-green-50 to-emerald-50"
     },
@@ -522,7 +529,7 @@ function DetailedServices() {
       title: "Agriculture Machinery - Mahindra Tractors", 
       subtitle: "Mahindra Tractors",
       description: "Mahindra Tractors, part of Mahindra & Mahindra, is an Indian agricultural machinery manufacturer. It became the world's top-selling tractor brand in 2010, mainly serving India, with growing markets in North America and Australia.",
-      image: AgricultureImage,
+      image: MahindraTractorsImage,
       gradient: "from-amber-500 to-yellow-600",
       bgGradient: "from-amber-50 to-yellow-50"
     },
@@ -530,7 +537,7 @@ function DetailedServices() {
       title: "Motorbikes - TVS Motors",
       subtitle: "TVS Motors",
       description: "TVS Motor Company, headquartered in Chennai, India, is a major multinational motorcycle manufacturer, ranking third in India by revenue, with annual sales of three million units.",
-      image: InfrastructureImage,
+      image: MotorbikesImage,
       gradient: "from-purple-500 to-violet-600",
       bgGradient: "from-purple-50 to-violet-50"
     },
@@ -538,7 +545,7 @@ function DetailedServices() {
       title: "Project Consultancy",
       subtitle: "Comprehensive Business Solutions",
       description: "We provide project consultancy focuses on aligning projects with overall business goals and long-term strategies which involves Technical Consulting, Management Consulting, Financial Consulting, Environmental and Sustainability Consulting & Risk Management",
-      image: Future_of_Technology,
+      image: ProjectConsultancyImage,
       gradient: "from-teal-500 to-cyan-600",
       bgGradient: "from-teal-50 to-cyan-50"
     }
