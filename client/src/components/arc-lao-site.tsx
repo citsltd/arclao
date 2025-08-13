@@ -16,6 +16,7 @@ import infrastructureImg from "../assets/infrastructure.jpg";
 import Technological_Innovation from "@assets/Technological Innovation.jpg";
 import Future_of_Technology from "@assets/Future of Technology_1754915928797.jpg";
 import HeroImage from "@assets/image_1755067102162.png";
+import SolutionsImage from "@assets/image_1755067434817.png";
 import principlesIcon from "@assets/principles_1754916579666.png";
 import perseveranceIcon from "@assets/perservence_1754916579664.png";
 import permanenceIcon from "@assets/permanence_1754916579663.png";
@@ -536,6 +537,125 @@ function Hero() {
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
         <div className="w-6 h-10 border-2 border-[#00227c]/30 rounded-full flex justify-center">
           <div className="w-1 h-3 bg-[#00227c]/60 rounded-full mt-2 animate-pulse"></div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function Solutions() {
+  const solutionDomains = [
+    {
+      title: "Demining Equipments",
+      description: "Metal detectors and a range of other equipment for demining"
+    },
+    {
+      title: "Agriculture Machinery", 
+      description: "Country distributor for BCS-Italy and Mahindra & Mahindra, specializing in agricultural machinery"
+    },
+    {
+      title: "Information Technology",
+      description: "Expertise in DevOps, cloud services, AI, and machine learning"
+    },
+    {
+      title: "Automotive",
+      description: "Country distributor for TVS Motors"
+    }
+  ];
+
+  return (
+    <section className="py-0 relative overflow-hidden">
+      <div className="grid lg:grid-cols-2 min-h-screen">
+        {/* Left side - Content */}
+        <div className="bg-white flex items-center p-8 lg:p-16 text-slate-900">
+          <div className="w-full">
+            {/* Main headline */}
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#00227c] mb-12 leading-tight">
+              We Provide The<br />
+              Best Solution in below domains
+            </h2>
+            
+            {/* Solutions list */}
+            <div className="space-y-8">
+              {solutionDomains.map((domain, index) => (
+                <div key={domain.title} className="flex items-start gap-4">
+                  {/* Orange checkmark */}
+                  <div className="flex-shrink-0 w-6 h-6 rounded-full bg-orange-500 flex items-center justify-center mt-1">
+                    <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  
+                  {/* Content */}
+                  <div className="flex-1">
+                    <h3 className="text-lg font-bold text-[#00227c] mb-2">
+                      {domain.title}
+                    </h3>
+                    <p className="text-gray-600 text-base leading-relaxed">
+                      {domain.description}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+        
+        {/* Right side - Images collage */}
+        <div className="bg-[#00227c] relative overflow-hidden flex items-center justify-center p-8 lg:p-16">
+          {/* Image grid layout */}
+          <div className="relative w-full max-w-lg">
+            <div className="grid grid-cols-2 gap-4 h-full">
+              {/* Top left - Demining */}
+              <div className="aspect-square rounded-2xl overflow-hidden shadow-xl">
+                <img 
+                  src={defenseImg} 
+                  alt="Demining Equipment" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              
+              {/* Top right - Two stacked images */}
+              <div className="space-y-4">
+                <div className="aspect-square rounded-2xl overflow-hidden shadow-xl">
+                  <img 
+                    src={automotiveImg} 
+                    alt="Agriculture Machinery" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="aspect-square rounded-2xl overflow-hidden shadow-xl">
+                  <img 
+                    src={informationTechnologyImg} 
+                    alt="Information Technology" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
+              
+              {/* Bottom left - Agriculture tractor (larger) */}
+              <div className="col-span-1 aspect-[4/3] rounded-2xl overflow-hidden shadow-xl">
+                <img 
+                  src={automotiveImg} 
+                  alt="Agriculture Tractor" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              
+              {/* Bottom right - TVS Motorcycles */}
+              <div className="aspect-square rounded-2xl overflow-hidden shadow-xl">
+                <img 
+                  src={automotiveImg} 
+                  alt="TVS Motorcycles" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+            
+            {/* Curved design element */}
+            <div className="absolute -top-8 -right-8 w-32 h-32 bg-white rounded-full opacity-10"></div>
+            <div className="absolute -bottom-8 -left-8 w-24 h-24 bg-white rounded-full opacity-10"></div>
+          </div>
         </div>
       </div>
     </section>
@@ -1582,6 +1702,7 @@ export default function CorporateSite() {
     <main className="min-h-screen text-slate-900">
       <Nav />
       <Hero />
+      <Solutions />
       <About />
       <Overview />
       <Services />
