@@ -844,57 +844,85 @@ function Partners() {
 function Clients() {
   return (
     <section className="py-16 sm:py-20 lg:py-24 bg-white relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-50/30 via-white to-indigo-50/20"></div>
+      <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-[#00227c]/3 to-transparent rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-indigo-500/3 to-transparent rounded-full blur-3xl"></div>
+      
       <Container className="relative px-4">
         <div className="text-center mb-16">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#00227c]/10 text-[#00227c] rounded-full text-sm font-semibold uppercase tracking-wide mb-6">
+            Our Clients
+          </div>
           <h2 className="text-4xl sm:text-5xl font-bold text-slate-900 mb-4">
             Our <span className="text-[#00227c]">Clients</span>
           </h2>
-          <p className="text-lg text-slate-600">Trusted by leading organizations worldwide</p>
+          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+            Trusted by leading organizations worldwide to deliver exceptional results across multiple sectors
+          </p>
         </div>
         
-        <div className="max-w-full mx-auto overflow-x-auto">
-          {/* Top Row - Main Logos */}
-          <div className="bg-white py-8 px-4 rounded-2xl shadow-sm border border-slate-100 mb-8">
-            <div className="flex items-center justify-center gap-8 lg:gap-12 xl:gap-16 min-w-max px-4">
-              <div className="flex items-center justify-center h-16 w-20 flex-shrink-0">
-                <img src={unLogo} alt="United Nations" className="max-h-full max-w-full object-contain" />
-              </div>
-              <div className="flex items-center justify-center h-16 w-20 flex-shrink-0">
-                <img src={uxoLaoLogo} alt="UXO LAO" className="max-h-full max-w-full object-contain" />
-              </div>
-              <div className="flex items-center justify-center h-16 w-20 flex-shrink-0">
-                <img src={adbLogo} alt="Asian Development Bank" className="max-h-full max-w-full object-contain" />
-              </div>
-              <div className="flex items-center justify-center h-16 w-28 flex-shrink-0">
-                <img src={worldBankLogo} alt="The World Bank" className="max-h-full max-w-full object-contain" />
-              </div>
-              <div className="flex items-center justify-center h-16 w-24 flex-shrink-0">
-                <img src={tetraTechLogo} alt="Tetra Tech" className="max-h-full max-w-full object-contain" />
-              </div>
+        {/* Client Logos Grid */}
+        <div className="max-w-6xl mx-auto">
+          {/* Main Client Logos */}
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 md:gap-12 lg:gap-16 items-center justify-items-center mb-12">
+            <div className="flex items-center justify-center opacity-70 hover:opacity-100 transition-opacity duration-300">
+              <img src={unLogo} alt="United Nations" className="h-12 md:h-16 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300" />
+            </div>
+            <div className="flex items-center justify-center opacity-70 hover:opacity-100 transition-opacity duration-300">
+              <img src={uxoLaoLogo} alt="UXO LAO" className="h-12 md:h-16 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300" />
+            </div>
+            <div className="flex items-center justify-center opacity-70 hover:opacity-100 transition-opacity duration-300">
+              <img src={adbLogo} alt="Asian Development Bank" className="h-12 md:h-16 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300" />
+            </div>
+            <div className="flex items-center justify-center opacity-70 hover:opacity-100 transition-opacity duration-300">
+              <img src={worldBankLogo} alt="The World Bank" className="h-12 md:h-16 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300" />
+            </div>
+            <div className="flex items-center justify-center opacity-70 hover:opacity-100 transition-opacity duration-300">
+              <img src={tetraTechLogo} alt="Tetra Tech" className="h-12 md:h-16 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300" />
             </div>
           </div>
           
-          {/* Bottom Row - Additional Logos */}
-          <div className="bg-[#00227c] py-8 px-4 rounded-2xl shadow-sm">
-            <div className="flex items-center justify-center gap-8 lg:gap-12 xl:gap-16 min-w-max px-4">
-              <div className="flex items-center justify-center h-16 w-20 bg-white rounded-lg p-2 flex-shrink-0">
-                <img src={magLogo} alt="Mines Advisory Group" className="max-h-full max-w-full object-contain" />
-              </div>
-              <div className="flex items-center justify-center h-16 w-20 bg-white rounded-lg p-2 flex-shrink-0">
-                <img src={norwegianPeoplesAidLogo} alt="Norwegian People's Aid" className="max-h-full max-w-full object-contain" />
-              </div>
-              <div className="flex items-center justify-center h-16 w-20 bg-white rounded-lg p-2 flex-shrink-0">
-                <img src={saveTheChildrenLogo} alt="Save the Children" className="max-h-full max-w-full object-contain" />
-              </div>
-              <div className="flex items-center justify-center h-16 w-20 bg-white rounded-lg p-2 flex-shrink-0">
-                <img src={seponLogo} alt="Chifeng Gold - Sepon" className="max-h-full max-w-full object-contain" />
-              </div>
-              <div className="flex items-center justify-center h-16 w-20 bg-white rounded-lg p-2 flex-shrink-0">
-                <img src={panAustLogo} alt="PanAust" className="max-h-full max-w-full object-contain" />
-              </div>
-              <div className="flex items-center justify-center h-16 w-20 bg-white rounded-lg p-2 flex-shrink-0">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/SDS_Mining_logo.svg/1200px-SDS_Mining_logo.svg.png" alt="SDS Mining" className="max-h-full max-w-full object-contain" />
-              </div>
+          {/* Additional Client Logos */}
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 md:gap-8 lg:gap-12 items-center justify-items-center">
+            <div className="flex items-center justify-center opacity-70 hover:opacity-100 transition-opacity duration-300">
+              <img src={magLogo} alt="Mines Advisory Group" className="h-10 md:h-12 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300" />
+            </div>
+            <div className="flex items-center justify-center opacity-70 hover:opacity-100 transition-opacity duration-300">
+              <img src={norwegianPeoplesAidLogo} alt="Norwegian People's Aid" className="h-10 md:h-12 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300" />
+            </div>
+            <div className="flex items-center justify-center opacity-70 hover:opacity-100 transition-opacity duration-300">
+              <img src={saveTheChildrenLogo} alt="Save the Children" className="h-10 md:h-12 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300" />
+            </div>
+            <div className="flex items-center justify-center opacity-70 hover:opacity-100 transition-opacity duration-300">
+              <img src={seponLogo} alt="Chifeng Gold - Sepon" className="h-10 md:h-12 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300" />
+            </div>
+            <div className="flex items-center justify-center opacity-70 hover:opacity-100 transition-opacity duration-300">
+              <img src={panAustLogo} alt="PanAust" className="h-10 md:h-12 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300" />
+            </div>
+            <div className="flex items-center justify-center opacity-70 hover:opacity-100 transition-opacity duration-300">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/SDS_Mining_logo.svg/1200px-SDS_Mining_logo.svg.png" alt="SDS Mining" className="h-10 md:h-12 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300" />
+            </div>
+          </div>
+        </div>
+        
+        {/* Client Stats */}
+        <div className="mt-16 pt-16 border-t border-slate-200/50">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div className="space-y-2">
+              <div className="text-3xl font-bold text-[#00227c]">25+</div>
+              <div className="text-sm text-slate-600 font-medium">Global Clients</div>
+            </div>
+            <div className="space-y-2">
+              <div className="text-3xl font-bold text-emerald-600">100%</div>
+              <div className="text-sm text-slate-600 font-medium">Client Satisfaction</div>
+            </div>
+            <div className="space-y-2">
+              <div className="text-3xl font-bold text-violet-600">15+</div>
+              <div className="text-sm text-slate-600 font-medium">Countries Served</div>
+            </div>
+            <div className="space-y-2">
+              <div className="text-3xl font-bold text-amber-600">5+</div>
+              <div className="text-sm text-slate-600 font-medium">Industry Sectors</div>
             </div>
           </div>
         </div>
