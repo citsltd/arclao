@@ -15,6 +15,7 @@ import adbLogo from "@assets/Asian_Development_Bank_logo.svg_1755069792960.png";
 import uxoLaoLogo from "@assets/images_1755069792961.png";
 import norwegianPeoplesAidLogo from "@assets/f5ce5da6-dab5-40b7-b8a7-213182e3d55b_1755069860515.png";
 import unLogo from "@assets/1653286163583_1755069792956.jfif";
+import internationalArbitrationImage from "@assets/International-Arbitration_1755071475378.webp";
 
 // --- Components ---
 function Container({ children, className = "" }: { children: React.ReactNode; className?: string }) {
@@ -190,7 +191,14 @@ function About() {
           {/* Left Side - Image and Blue Background */}
           <div className="relative bg-[#00227c] flex items-center justify-center order-2 lg:order-1">
             {/* Background Geometric Elements */}
-            <div className="absolute inset-0 bg-gradient-to-br from-[#00227c] via-[#001a5c] to-[#00227c]"></div>
+            <div className="absolute inset-0 bg-[#00227c]">
+              <img 
+                src={internationalArbitrationImage} 
+                alt="Global Business Network" 
+                className="w-full h-full object-cover opacity-80"
+              />
+              <div className="absolute inset-0 bg-[#00227c]/60"></div>
+            </div>
             <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-bl from-white/5 to-transparent rounded-full blur-3xl"></div>
             <div className="absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-tr from-white/5 to-transparent rounded-full blur-2xl"></div>
             
