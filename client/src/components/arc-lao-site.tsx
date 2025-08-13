@@ -335,7 +335,7 @@ function Nav() {
               <div className="pt-4 mt-4 border-t border-slate-200">
                 <a 
                   href="tel:+8562076198200" 
-                  className="flex items-center justify-center gap-2 w-full px-4 py-3 bg-gradient-to-r from-indigo-600 to-cyan-600 text-white font-semibold rounded-xl shadow-lg shadow-indigo-500/25 transition-transform hover:scale-105"
+                  className="flex items-center justify-center gap-2 w-full px-4 py-3 bg-gradient-to-r from-red-600 to-blue-600 text-white font-semibold rounded-xl shadow-lg shadow-red-500/25 transition-transform hover:scale-105"
                   onClick={() => setOpen(false)}
                 >
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1293,106 +1293,159 @@ function Footer() {
     <footer className="bg-slate-900 text-white relative overflow-hidden">
       {/* Background decorations */}
       <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"></div>
-      <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-blue-600/10 to-transparent rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-indigo-600/10 to-transparent rounded-full blur-3xl"></div>
+      <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-red-600/10 to-transparent rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-blue-600/10 to-transparent rounded-full blur-3xl"></div>
       
       <Container className="relative">
         {/* Main footer content */}
-        <div className="py-16 lg:py-20">
+        <div className="py-16">
           <div className="grid gap-8 lg:gap-12 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
             {/* Company info */}
-            <div className="lg:col-span-2 space-y-6">
+            <div className="space-y-6">
               <div>
                 <img 
                   src={arcLaoLogo} 
                   alt="ARC LAO" 
-                  className="h-10 w-auto mb-4"
+                  className="h-12 w-auto mb-4"
                 />
-                <div className="hidden">
-                  <h3 className="text-xl sm:text-2xl font-bold mb-4">
-                    <span className="bg-gradient-to-r from-red-400 to-blue-400 bg-clip-text text-transparent">ARC LAO</span>
-                  </h3>
-                </div>
-                <p className="text-slate-300 leading-relaxed max-w-md">
-                  Leading technological innovation across Southeast Asia with expertise in infrastructure, defense, IT, energy, automotive, and sustainable development solutions.
+                <p className="text-slate-400 text-sm leading-relaxed">
+                  Leading Technology Solutions Provider
+                </p>
+                <p className="text-slate-400 text-sm leading-relaxed mt-4">
+                  ARC Lao Sole Company Ltd is committed to delivering innovative technology solutions across multiple sectors, empowering sustainable progress for our clients and communities.
                 </p>
               </div>
               
-              {/* Contact info */}
-              <div className="space-y-3">
-                <div className="flex items-center gap-3">
-                  <div className="w-5 h-5 text-blue-400">
+              {/* Social media icons */}
+              <div className="flex items-center gap-4">
+                <a href="#" className="w-8 h-8 bg-slate-800 hover:bg-slate-700 rounded-lg flex items-center justify-center transition-colors">
+                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/>
+                  </svg>
+                </a>
+                <a href="#" className="w-8 h-8 bg-slate-800 hover:bg-slate-700 rounded-lg flex items-center justify-center transition-colors">
+                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                  </svg>
+                </a>
+                <a href="#" className="w-8 h-8 bg-slate-800 hover:bg-slate-700 rounded-lg flex items-center justify-center transition-colors">
+                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.347-.09.375-.293 1.199-.334 1.363-.053.225-.174.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.758-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24.009c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641.001.012.001z.017 0z"/>
+                  </svg>
+                </a>
+                <a href="#" className="w-8 h-8 bg-slate-800 hover:bg-slate-700 rounded-lg flex items-center justify-center transition-colors">
+                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            
+            {/* Quick Links */}
+            <div className="space-y-6">
+              <h4 className="text-lg font-semibold text-white">Quick Links</h4>
+              <nav className="space-y-3">
+                <a href="#about" className="block text-slate-400 hover:text-white transition-colors text-sm">About Us</a>
+                <a href="#services" className="block text-slate-400 hover:text-white transition-colors text-sm">Our Sectors</a>
+                <a href="#projects" className="block text-slate-400 hover:text-white transition-colors text-sm">Projects</a>
+                <a href="#contact" className="block text-slate-400 hover:text-white transition-colors text-sm">Contact</a>
+              </nav>
+            </div>
+            
+            {/* Our Sectors */}
+            <div className="space-y-6">
+              <h4 className="text-lg font-semibold text-white">Our Sectors</h4>
+              <nav className="space-y-3">
+                <span className="block text-slate-400 text-sm">EV Infrastructure</span>
+                <span className="block text-slate-400 text-sm">Defence</span>
+                <span className="block text-slate-400 text-sm">Information Technology</span>
+                <span className="block text-slate-400 text-sm">Energy</span>
+                <span className="block text-slate-400 text-sm">Automotive</span>
+                <span className="block text-slate-400 text-sm">Infrastructure</span>
+              </nav>
+            </div>
+            
+            {/* Contact Information */}
+            <div className="space-y-6">
+              <h4 className="text-lg font-semibold text-white">Contact Information</h4>
+              <div className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <div className="w-5 h-5 text-slate-400 mt-0.5">
                     <svg viewBox="0 0 24 24" fill="currentColor">
                       <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
                       <circle cx="12" cy="9" r="2.5"/>
                     </svg>
                   </div>
-                  <span className="text-slate-300 text-sm">{siteData.contact.address}</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <div className="w-5 h-5 text-blue-400">
-                    <svg viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
-                    </svg>
+                  <div className="text-slate-400 text-sm">
+                    <div>BAN PHONETHAN, SAYSETHA</div>
+                    <div>VIENTIANE, LAO PDR</div>
                   </div>
-                  <a href={`tel:${siteData.contact.phone}`} className="text-slate-300 hover:text-white transition-colors text-sm">
-                    {siteData.contact.phone}
-                  </a>
                 </div>
                 <div className="flex items-center gap-3">
-                  <div className="w-5 h-5 text-blue-400">
+                  <div className="w-5 h-5 text-slate-400">
                     <svg viewBox="0 0 24 24" fill="currentColor">
                       <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
                     </svg>
                   </div>
-                  <a href={`mailto:${siteData.contact.email}`} className="text-slate-300 hover:text-white transition-colors text-sm">
-                    {siteData.contact.email}
+                  <a href="mailto:info@arclao.com" className="text-slate-400 hover:text-white transition-colors text-sm">
+                    info@arclao.com
                   </a>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-5 h-5 text-slate-400">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                    </svg>
+                  </div>
+                  <a href="tel:+8562076198200" className="text-slate-400 hover:text-white transition-colors text-sm">
+                    +856 20 7619 8200
+                  </a>
+                </div>
+                <div className="flex items-center gap-3">
+                  <div className="w-5 h-5 text-slate-400">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-13c-1.65 0-3 1.35-3 3s1.35 3 3 3 3-1.35 3-3-1.35-3-3-3z"/>
+                    </svg>
+                  </div>
+                  <div className="text-slate-400 text-sm">Mon - Fri: 8:00 AM - 6:00 PM</div>
                 </div>
               </div>
             </div>
-            
-            {/* Quick links */}
-            <div className="space-y-6">
-              <h4 className="text-lg font-semibold text-white">Company</h4>
-              <nav className="space-y-3">
-                <a href="#about" className="block text-slate-300 hover:text-white transition-colors text-sm">About Us</a>
-                <a href="#services" className="block text-slate-300 hover:text-white transition-colors text-sm">Our Services</a>
-                <a href="#projects" className="block text-slate-300 hover:text-white transition-colors text-sm">Projects</a>
-                <a href="#history" className="block text-slate-300 hover:text-white transition-colors text-sm">Our History</a>
-                <a href="#contact" className="block text-slate-300 hover:text-white transition-colors text-sm">Contact</a>
-              </nav>
-            </div>
-            
-            {/* Sectors */}
-            <div className="space-y-6">
-              <h4 className="text-lg font-semibold text-white">Expertise</h4>
-              <nav className="space-y-3">
-                <span className="block text-slate-300 text-sm">EV Infrastructure</span>
-                <span className="block text-slate-300 text-sm">Defense Systems</span>
-                <span className="block text-slate-300 text-sm">Information Technology</span>
-                <span className="block text-slate-300 text-sm">Energy Solutions</span>
-                <span className="block text-slate-300 text-sm">Automotive</span>
-                <span className="block text-slate-300 text-sm">Infrastructure</span>
-              </nav>
-            </div>
           </div>
           
-          
+          {/* Statistics section */}
+          <div className="mt-16 pt-8 border-t border-slate-700">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+              <div className="text-center">
+                <div className="text-3xl font-bold text-blue-400 mb-2">10+</div>
+                <div className="text-slate-400 text-sm">Years Experience</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-red-500 mb-2">30+</div>
+                <div className="text-slate-400 text-sm">Projects Completed</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-blue-500 mb-2">100+</div>
+                <div className="text-slate-400 text-sm">Team Members</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-blue-400 mb-2">3+</div>
+                <div className="text-slate-400 text-sm">Countries Served</div>
+              </div>
+            </div>
+          </div>
         </div>
         
         {/* Bottom bar */}
         <div className="py-6 border-t border-slate-700">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
             <div className="text-sm text-slate-400">
-              {siteData.footer.legal}
+              © 2025 ARC Lao Sole Company Ltd. All rights reserved.
             </div>
             <nav className="flex items-center gap-6 text-sm">
-              {siteData.footer.links.map((l) => (
-                <a key={l.label} href={l.href} className="text-slate-400 hover:text-white transition-colors">
-                  {l.label}
-                </a>
-              ))}
+              <a href="#" className="text-slate-400 hover:text-white transition-colors">Privacy Policy</a>
+              <a href="#" className="text-slate-400 hover:text-white transition-colors">Terms of Service</a>
+              <a href="#" className="text-slate-400 hover:text-white transition-colors">Cookie Policy</a>
             </nav>
           </div>
         </div>
