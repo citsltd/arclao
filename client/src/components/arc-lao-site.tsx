@@ -576,7 +576,7 @@ function SolutionsDomains() {
               
               {/* Service Description */}
               <p className="text-gray-600 text-sm leading-relaxed">
-                {service.description}
+                {service.body}
               </p>
               
               {/* Decorative Element */}
