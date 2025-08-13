@@ -2,7 +2,21 @@
 
 ## Overview
 
-This is a corporate website for ARC Lao Sole Company Ltd, a technological innovation and infrastructure development company operating in Southeast Asia. The application showcases the company's expertise across multiple sectors including EV infrastructure, defense, information technology, energy, automotive, and infrastructure development. Built as a modern full-stack web application with a focus on professional presentation and user experience.
+This is a corporate website for ARC Lao Sole Company Ltd, a technological innovation and infrastructure development company operating in Southeast Asia. The application showcases the company's expertise across multiple sectors including demining equipment, information technology, agriculture machinery, motorbikes, and project consultancy. Built as a modern full-stack web application with a focus on professional presentation and user experience.
+
+## Recent Updates (January 2025)
+
+- **Content Overhaul**: Updated all website content based on official ARC Lao company profile PDF
+- **Services Modernization**: Restructured services section to reflect actual company offerings:
+  - Demining Equipment (Country distributor for German equipment)
+  - Information Technology (DevOps, Cloud services, AI & Machine learning)
+  - Agriculture Machinery (BCS Two Wheel Tractors, Mahindra Tractors)
+  - Motorbikes (TVS Motors partnership)
+  - Project Consultancy (Technical, Management, Financial consulting)
+- **Client Showcase**: Added modern clients section featuring 6 key partners including VALLON, Jarvis Consulting, TVS Motor Company, BCS Agriculture, Mahindra & Mahindra, and Mining Companies
+- **Experience Update**: Updated company experience from 10+ to 16+ years throughout the website
+- **Contact Information**: Updated phone number and address to match official company profile
+- **Brand Consistency**: Maintained #00227c primary color theme across all new components
 
 ## User Preferences
 
