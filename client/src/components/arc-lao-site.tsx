@@ -14,6 +14,7 @@ import worldBankLogo from "@assets/The_World_Bank_logo.svg_1755069792959.png";
 import adbLogo from "@assets/Asian_Development_Bank_logo.svg_1755069792960.png";
 import uxoLaoLogo from "@assets/images_1755069792961.png";
 import norwegianPeoplesAidLogo from "@assets/f5ce5da6-dab5-40b7-b8a7-213182e3d55b_1755069860515.png";
+import unLogo from "@assets/1653286163583_1755069792956.jfif";
 
 // --- Components ---
 function Container({ children, className = "" }: { children: React.ReactNode; className?: string }) {
@@ -541,7 +542,7 @@ function Clients() {
           <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 mb-8">
             <div className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center">
               <div className="flex items-center justify-center h-16">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/UN_emblem_blue.svg/1200px-UN_emblem_blue.svg.png" alt="UNDP" className="max-h-full max-w-full object-contain" />
+                <img src={unLogo} alt="United Nations" className="max-h-full max-w-full object-contain" />
               </div>
               <div className="flex items-center justify-center h-16">
                 <img src={uxoLaoLogo} alt="UXO LAO" className="max-h-full max-w-full object-contain" />
