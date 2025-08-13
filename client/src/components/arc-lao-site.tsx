@@ -1012,124 +1012,59 @@ function Contact() {
           <div className="relative">
             <div className="absolute -inset-4 bg-gradient-to-r from-indigo-500/5 to-[#00227c]/5 rounded-3xl blur-xl"></div>
             <div className="relative bg-white/80 backdrop-blur-sm rounded-3xl p-8 border border-white/60 shadow-2xl">
-              <div className="text-center mb-8">
-                <h3 className="text-3xl font-bold text-slate-900 mb-3">Send us a Message</h3>
-                <div className="w-16 h-1 bg-gradient-to-r from-indigo-500 to-[#00227c] mx-auto rounded-full"></div>
-                <p className="text-slate-600 mt-4">We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+              <div className="text-center mb-6">
+                <h3 className="text-2xl font-bold text-slate-900 mb-2">Contact Us</h3>
               </div>
               
-              <form className="space-y-6">
-                <div className="grid gap-6 sm:grid-cols-2">
-                  <div className="group">
-                    <label htmlFor="firstName" className="block text-sm font-semibold text-slate-700 mb-3 group-focus-within:text-[#00227c] transition-colors">
-                      First Name *
-                    </label>
-                    <div className="relative">
-                      <input
-                        type="text"
-                        id="firstName"
-                        name="firstName"
-                        className="w-full px-6 py-4 bg-white/90 border-2 border-slate-200 rounded-2xl text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-4 focus:ring-[#00227c]/20 focus:border-[#00227c] transition-all duration-300 hover:border-slate-300"
-                        placeholder="Enter your first name"
-                        required
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-r from-[#00227c]/5 to-indigo-500/5 rounded-2xl opacity-0 group-focus-within:opacity-100 transition-opacity pointer-events-none"></div>
-                    </div>
-                  </div>
-                  <div className="group">
-                    <label htmlFor="lastName" className="block text-sm font-semibold text-slate-700 mb-3 group-focus-within:text-[#00227c] transition-colors">
-                      Last Name *
-                    </label>
-                    <div className="relative">
-                      <input
-                        type="text"
-                        id="lastName"
-                        name="lastName"
-                        className="w-full px-6 py-4 bg-white/90 border-2 border-slate-200 rounded-2xl text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-4 focus:ring-[#00227c]/20 focus:border-[#00227c] transition-all duration-300 hover:border-slate-300"
-                        placeholder="Enter your last name"
-                        required
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-r from-[#00227c]/5 to-indigo-500/5 rounded-2xl opacity-0 group-focus-within:opacity-100 transition-opacity pointer-events-none"></div>
-                    </div>
-                  </div>
+              <form className="space-y-4">
+                <div className="group">
+                  <label htmlFor="name" className="block text-sm font-medium text-slate-700 mb-2">
+                    Name *
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    className="w-full px-4 py-3 bg-white border border-slate-300 rounded-lg text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#00227c]/20 focus:border-[#00227c] transition-all duration-300"
+                    placeholder="Your full name"
+                    required
+                  />
                 </div>
                 
                 <div className="group">
-                  <label htmlFor="email" className="block text-sm font-semibold text-slate-700 mb-3 group-focus-within:text-[#00227c] transition-colors">
+                  <label htmlFor="email" className="block text-sm font-medium text-slate-700 mb-2">
                     Email Address *
                   </label>
-                  <div className="relative">
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      className="w-full px-6 py-4 bg-white/90 border-2 border-slate-200 rounded-2xl text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-4 focus:ring-[#00227c]/20 focus:border-[#00227c] transition-all duration-300 hover:border-slate-300"
-                      placeholder="your.email@example.com"
-                      required
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-r from-[#00227c]/5 to-indigo-500/5 rounded-2xl opacity-0 group-focus-within:opacity-100 transition-opacity pointer-events-none"></div>
-                    <div className="absolute right-4 top-1/2 transform -translate-y-1/2">
-                      <svg className="w-5 h-5 text-slate-400 group-focus-within:text-[#00227c] transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207" />
-                      </svg>
-                    </div>
-                  </div>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    className="w-full px-4 py-3 bg-white border border-slate-300 rounded-lg text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#00227c]/20 focus:border-[#00227c] transition-all duration-300"
+                    placeholder="your.email@example.com"
+                    required
+                  />
                 </div>
                 
                 <div className="group">
-                  <label htmlFor="subject" className="block text-sm font-semibold text-slate-700 mb-3 group-focus-within:text-[#00227c] transition-colors">
-                    Subject *
+                  <label htmlFor="phone" className="block text-sm font-medium text-slate-700 mb-2">
+                    Phone Number *
                   </label>
-                  <div className="relative">
-                    <input
-                      type="text"
-                      id="subject"
-                      name="subject"
-                      className="w-full px-6 py-4 bg-white/90 border-2 border-slate-200 rounded-2xl text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-4 focus:ring-[#00227c]/20 focus:border-[#00227c] transition-all duration-300 hover:border-slate-300"
-                      placeholder="What's this about?"
-                      required
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-r from-[#00227c]/5 to-indigo-500/5 rounded-2xl opacity-0 group-focus-within:opacity-100 transition-opacity pointer-events-none"></div>
-                  </div>
+                  <input
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    className="w-full px-4 py-3 bg-white border border-slate-300 rounded-lg text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#00227c]/20 focus:border-[#00227c] transition-all duration-300"
+                    placeholder="+856 20 xxxx xxxx"
+                    required
+                  />
                 </div>
                 
-                <div className="group">
-                  <label htmlFor="message" className="block text-sm font-semibold text-slate-700 mb-3 group-focus-within:text-[#00227c] transition-colors">
-                    Message *
-                  </label>
-                  <div className="relative">
-                    <textarea
-                      id="message"
-                      name="message"
-                      rows={5}
-                      className="w-full px-6 py-4 bg-white/90 border-2 border-slate-200 rounded-2xl text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-4 focus:ring-[#00227c]/20 focus:border-[#00227c] transition-all duration-300 hover:border-slate-300 resize-none"
-                      placeholder="Tell us about your project, requirements, or any questions you have..."
-                      required
-                    ></textarea>
-                    <div className="absolute inset-0 bg-gradient-to-r from-[#00227c]/5 to-indigo-500/5 rounded-2xl opacity-0 group-focus-within:opacity-100 transition-opacity pointer-events-none"></div>
-                  </div>
-                </div>
-                
-                <div className="relative">
-                  <button
-                    type="submit"
-                    className="group relative w-full bg-gradient-to-r from-[#00227c] to-indigo-600 text-white font-bold py-5 px-8 rounded-2xl overflow-hidden transition-all duration-300 transform hover:scale-[1.02] hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-[#00227c]/30"
-                  >
-                    <span className="relative z-10 flex items-center justify-center gap-3">
-                      <svg className="w-6 h-6 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-                      </svg>
-                      Send Message
-                    </span>
-                    <div className="absolute inset-0 bg-gradient-to-r from-indigo-600 to-[#00227c] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  </button>
-                </div>
-                
-                <div className="text-center">
-                  <p className="text-sm text-slate-500">
-                    * Required fields. We'll get back to you within 24 hours.
-                  </p>
-                </div>
+                <button
+                  type="submit"
+                  className="w-full bg-[#00227c] text-white font-semibold py-3 px-6 rounded-lg hover:bg-[#001a63] transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-[#00227c]/20"
+                >
+                  Submit
+                </button>
               </form>
             </div>
           </div>
