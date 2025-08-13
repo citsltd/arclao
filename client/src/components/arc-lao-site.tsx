@@ -194,22 +194,7 @@ function About() {
             <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-bl from-white/5 to-transparent rounded-full blur-3xl"></div>
             <div className="absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-tr from-white/5 to-transparent rounded-full blur-2xl"></div>
             
-            {/* Image Container */}
-            <div className="relative z-10 w-full max-w-md mx-auto p-8 lg:p-12">
-              <div className="relative">
-                {/* Blue Frame */}
-                <div className="absolute -inset-4 bg-gradient-to-br from-[#003399] to-[#001155] rounded-2xl transform rotate-3"></div>
-                
-                {/* Main Image */}
-                <div className="relative bg-slate-900 rounded-2xl overflow-hidden shadow-2xl">
-                  <img 
-                    src={Future_of_Technology} 
-                    alt="ARC LAO Global Operations" 
-                    className="w-full h-64 lg:h-80 object-cover"
-                  />
-                </div>
-              </div>
-            </div>
+
           </div>
           
           {/* Right Side - Content */}
