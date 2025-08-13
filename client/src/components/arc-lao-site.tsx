@@ -893,20 +893,20 @@ function Clients() {
 
 function Contact() {
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-slate-900 text-white relative overflow-hidden" id="contact">
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"></div>
-      <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-[#00227c]/20 to-transparent rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-[#00227c]/20 to-transparent rounded-full blur-3xl"></div>
+    <section className="py-16 sm:py-20 lg:py-24 bg-white relative overflow-hidden" id="contact">
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-50/30 via-white to-indigo-50/20"></div>
+      <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-[#00227c]/5 to-transparent rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-indigo-500/5 to-transparent rounded-full blur-3xl"></div>
       
       <Container className="relative px-4">
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#00227c]/20 text-[#00227c] rounded-full text-sm font-semibold uppercase tracking-wide mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#00227c]/10 text-[#00227c] rounded-full text-sm font-semibold uppercase tracking-wide mb-6">
             Contact Us
           </div>
-          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">
+          <h2 className="text-4xl sm:text-5xl font-bold text-slate-900 mb-4">
             Get In <span className="text-[#00227c]">Touch</span>
           </h2>
-          <p className="text-lg text-slate-300 max-w-2xl mx-auto">
+          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
             Ready to start your next project? Contact us today and let's discuss how we can help you achieve your goals.
           </p>
         </div>
@@ -915,7 +915,7 @@ function Contact() {
           {/* Contact Information */}
           <div className="space-y-8">
             <div>
-              <h3 className="text-2xl font-bold text-white mb-6">Contact Information</h3>
+              <h3 className="text-2xl font-bold text-slate-900 mb-6">Contact Information</h3>
               <div className="space-y-6">
                 {/* Address */}
                 <div className="flex items-start gap-4">
@@ -926,8 +926,8 @@ function Contact() {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="text-lg font-semibold text-white mb-2">Office Address</h4>
-                    <p className="text-slate-300 leading-relaxed">
+                    <h4 className="text-lg font-semibold text-slate-900 mb-2">Office Address</h4>
+                    <p className="text-slate-600 leading-relaxed">
                       Ban Phonexay District<br />
                       Sysetha, Vientiane, Lao PDR
                     </p>
@@ -942,8 +942,8 @@ function Contact() {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="text-lg font-semibold text-white mb-2">Email Address</h4>
-                    <a href="mailto:info@arclao.com" className="text-slate-300 hover:text-[#00227c] transition-colors">
+                    <h4 className="text-lg font-semibold text-slate-900 mb-2">Email Address</h4>
+                    <a href="mailto:info@arclao.com" className="text-slate-600 hover:text-[#00227c] transition-colors">
                       info@arclao.com
                     </a>
                   </div>
@@ -957,8 +957,8 @@ function Contact() {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="text-lg font-semibold text-white mb-2">Phone Number</h4>
-                    <a href="tel:+8562052629292" className="text-slate-300 hover:text-[#00227c] transition-colors">
+                    <h4 className="text-lg font-semibold text-slate-900 mb-2">Phone Number</h4>
+                    <a href="tel:+8562052629292" className="text-slate-600 hover:text-[#00227c] transition-colors">
                       +856-20-5262 9292
                     </a>
                   </div>
@@ -972,8 +972,8 @@ function Contact() {
                     </svg>
                   </div>
                   <div>
-                    <h4 className="text-lg font-semibold text-white mb-2">Business Hours</h4>
-                    <p className="text-slate-300 leading-relaxed">
+                    <h4 className="text-lg font-semibold text-slate-900 mb-2">Business Hours</h4>
+                    <p className="text-slate-600 leading-relaxed">
                       Monday - Friday: 8:00 AM - 5:00 PM<br />
                       Saturday: 8:00 AM - 12:00 PM<br />
                       Sunday: Closed
@@ -985,71 +985,71 @@ function Contact() {
           </div>
           
           {/* Contact Form */}
-          <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/10">
-            <h3 className="text-2xl font-bold text-white mb-6">Send us a Message</h3>
+          <div className="bg-slate-50 rounded-3xl p-8 border border-slate-200 shadow-lg">
+            <h3 className="text-2xl font-bold text-slate-900 mb-6">Send us a Message</h3>
             <form className="space-y-6">
               <div className="grid gap-6 sm:grid-cols-2">
                 <div>
-                  <label htmlFor="firstName" className="block text-sm font-medium text-slate-300 mb-2">
+                  <label htmlFor="firstName" className="block text-sm font-medium text-slate-700 mb-2">
                     First Name
                   </label>
                   <input
                     type="text"
                     id="firstName"
                     name="firstName"
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#00227c] focus:border-transparent"
+                    className="w-full px-4 py-3 bg-white border border-slate-300 rounded-xl text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#00227c] focus:border-transparent"
                     placeholder="John"
                   />
                 </div>
                 <div>
-                  <label htmlFor="lastName" className="block text-sm font-medium text-slate-300 mb-2">
+                  <label htmlFor="lastName" className="block text-sm font-medium text-slate-700 mb-2">
                     Last Name
                   </label>
                   <input
                     type="text"
                     id="lastName"
                     name="lastName"
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#00227c] focus:border-transparent"
+                    className="w-full px-4 py-3 bg-white border border-slate-300 rounded-xl text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#00227c] focus:border-transparent"
                     placeholder="Doe"
                   />
                 </div>
               </div>
               
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-slate-300 mb-2">
+                <label htmlFor="email" className="block text-sm font-medium text-slate-700 mb-2">
                   Email Address
                 </label>
                 <input
                   type="email"
                   id="email"
                   name="email"
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#00227c] focus:border-transparent"
+                  className="w-full px-4 py-3 bg-white border border-slate-300 rounded-xl text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#00227c] focus:border-transparent"
                   placeholder="john@example.com"
                 />
               </div>
               
               <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-slate-300 mb-2">
+                <label htmlFor="subject" className="block text-sm font-medium text-slate-700 mb-2">
                   Subject
                 </label>
                 <input
                   type="text"
                   id="subject"
                   name="subject"
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#00227c] focus:border-transparent"
+                  className="w-full px-4 py-3 bg-white border border-slate-300 rounded-xl text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#00227c] focus:border-transparent"
                   placeholder="How can we help you?"
                 />
               </div>
               
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-slate-300 mb-2">
+                <label htmlFor="message" className="block text-sm font-medium text-slate-700 mb-2">
                   Message
                 </label>
                 <textarea
                   id="message"
                   name="message"
                   rows={4}
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#00227c] focus:border-transparent resize-none"
+                  className="w-full px-4 py-3 bg-white border border-slate-300 rounded-xl text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#00227c] focus:border-transparent resize-none"
                   placeholder="Tell us about your project or inquiry..."
                 ></textarea>
               </div>
@@ -1066,9 +1066,9 @@ function Contact() {
         
         {/* Call to Action */}
         <div className="mt-16 text-center">
-          <div className="bg-[#00227c]/20 border border-[#00227c]/30 rounded-3xl p-8">
-            <h3 className="text-2xl font-bold text-white mb-4">Ready to Get Started?</h3>
-            <p className="text-slate-300 mb-6 max-w-2xl mx-auto">
+          <div className="bg-[#00227c]/10 border border-[#00227c]/20 rounded-3xl p-8">
+            <h3 className="text-2xl font-bold text-slate-900 mb-4">Ready to Get Started?</h3>
+            <p className="text-slate-600 mb-6 max-w-2xl mx-auto">
               Join the growing number of organizations that trust ARC Lao for their technology and infrastructure needs.
             </p>
             <a 
