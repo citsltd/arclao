@@ -23,6 +23,12 @@ import norwegianPeoplesAidLogo from "@assets/f5ce5da6-dab5-40b7-b8a7-213182e3d55
 import unLogo from "@assets/1653286163583_1755069792956.jfif";
 import internationalArbitrationImage from "@assets/International-Arbitration_1755071475378.webp";
 
+// Partner logos
+import bcsGroupLogo from "@assets/BCS Two Wheel Tractors_1755074225201.png";
+import mahindraLogo from "@assets/Mahindra & Mahindra_1755074225217.png";
+import tvsMotorLogo from "@assets/TVS Motor Company_1755074225219.png";
+import vallonLogo from "@assets/Vallon_1755074225223.png";
+
 // --- Components ---
 function Container({ children, className = "" }: { children: React.ReactNode; className?: string }) {
   return <div className={`mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 ${className}`}>{children}</div>;
@@ -687,7 +693,8 @@ function Partners() {
       category: "Demining Equipment",
       gradient: "from-red-500 to-orange-600",
       bgGradient: "from-red-50 to-orange-50",
-      established: "1965"
+      established: "1965",
+      logo: vallonLogo
     },
     {
       name: "Jarvis Consulting",
@@ -697,7 +704,8 @@ function Partners() {
       category: "Information Technology",
       gradient: "from-blue-500 to-indigo-600",
       bgGradient: "from-blue-50 to-indigo-50",
-      established: "2020"
+      established: "2020",
+      logo: null // No logo provided for this partner
     },
     {
       name: "TVS Motor Company",
@@ -707,7 +715,8 @@ function Partners() {
       category: "Motorbikes",
       gradient: "from-purple-500 to-violet-600",
       bgGradient: "from-purple-50 to-violet-50",
-      established: "1978"
+      established: "1978",
+      logo: tvsMotorLogo
     },
     {
       name: "BCS Two Wheel Tractors",
@@ -717,7 +726,8 @@ function Partners() {
       category: "Agriculture Machinery",
       gradient: "from-green-500 to-emerald-600",
       bgGradient: "from-green-50 to-emerald-50",
-      established: "1943"
+      established: "1943",
+      logo: bcsGroupLogo
     },
     {
       name: "Mahindra & Mahindra",
@@ -727,7 +737,8 @@ function Partners() {
       category: "Agriculture Machinery",
       gradient: "from-amber-500 to-yellow-600",
       bgGradient: "from-amber-50 to-yellow-50",
-      established: "1945"
+      established: "1945",
+      logo: mahindraLogo
     }
   ];
 
@@ -765,14 +776,22 @@ function Partners() {
                   </div>
                 </div>
                 
-                {/* Company Logo Placeholder */}
+                {/* Company Logo */}
                 <div className="mb-6">
-                  <div className="w-16 h-16 rounded-xl bg-slate-100 border border-slate-200 mx-auto flex items-center justify-center shadow-sm">
-                    <div className="w-12 h-12 bg-white rounded-lg border border-slate-100 flex items-center justify-center">
-                      <span className="text-slate-400 text-lg font-bold">
-                        {partner.name.charAt(0)}
-                      </span>
-                    </div>
+                  <div className="w-20 h-20 rounded-xl bg-white border border-slate-200 mx-auto flex items-center justify-center shadow-sm p-2 group-hover:shadow-md transition-shadow duration-300">
+                    {partner.logo ? (
+                      <img 
+                        src={partner.logo} 
+                        alt={`${partner.name} logo`} 
+                        className="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300"
+                      />
+                    ) : (
+                      <div className="w-12 h-12 bg-slate-50 rounded-lg border border-slate-100 flex items-center justify-center">
+                        <span className="text-slate-400 text-lg font-bold">
+                          {partner.name.charAt(0)}
+                        </span>
+                      </div>
+                    )}
                   </div>
                 </div>
                 
