@@ -15,6 +15,7 @@ import infrastructureImg from "../assets/infrastructure.jpg";
 
 import Technological_Innovation from "@assets/Technological Innovation.jpg";
 import Future_of_Technology from "@assets/Future of Technology_1754915928797.jpg";
+import HeroImage from "@assets/image_1755067102162.png";
 import principlesIcon from "@assets/principles_1754916579666.png";
 import perseveranceIcon from "@assets/perservence_1754916579664.png";
 import permanenceIcon from "@assets/permanence_1754916579663.png";
@@ -398,123 +399,145 @@ function Nav() {
 
 function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center text-white overflow-hidden">
-      {/* Background image */}
-      <div className="absolute inset-0">
-        <img 
-          src={Technological_Innovation} 
-          alt="Technological Innovation Background" 
-          className="w-full h-full object-cover"
-        />
-        {/* Dark overlay for text readability */}
-        <div className="absolute inset-0 bg-slate-900/70"></div>
-        {/* Gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/60 via-indigo-900/40 to-slate-900/60"></div>
-      </div>
-      {/* Animated background elements */}
-      <div className="absolute inset-0 bg-gradient-to-br from-indigo-600/20 via-cyan-500/10 to-transparent"></div>
-      <div className="absolute top-1/4 -right-20 w-96 h-96 bg-gradient-to-bl from-cyan-400/20 to-transparent rounded-full blur-3xl animate-pulse"></div>
-      <div className="absolute bottom-1/4 -left-20 w-96 h-96 bg-gradient-to-tr from-indigo-400/20 to-transparent rounded-full blur-3xl animate-pulse delay-1000"></div>
-      {/* Grid pattern overlay */}
-      <div className="absolute inset-0 bg-grid-white/[0.05] [mask-image:linear-gradient(0deg,transparent,black,transparent)]"></div>
-      <Container className="relative z-10 py-16 sm:py-20 lg:py-32 px-4">
-        <div className="max-w-4xl mx-auto text-center pt-[25px] pb-[25px]">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 text-xs sm:text-sm font-medium mb-6 sm:mb-8">
-            <span className="w-2 h-2 bg-[#00227c] rounded-full animate-pulse"></span>
-            <span className="text-white uppercase tracking-wider text-xs">
-              {siteData.hero.kicker}
-            </span>
-          </div>
-          
-          {/* Main headline */}
-          <div className="space-y-4 sm:space-y-6 mb-6 sm:mb-8">
-            <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight px-2 pl-[0px] pr-[0px]">
-              Me To We With <span className="text-[#00227c]">ARC Lao</span> combined efforts On <span className="text-[#00227c]">Technological Innovation</span>
-            </h1>
+    <section className="relative min-h-screen flex items-center overflow-hidden">
+      <div className="grid lg:grid-cols-2 w-full min-h-screen">
+        {/* Left side - Business silhouettes with world map background */}
+        <div className="bg-[#00227c] relative overflow-hidden flex items-center justify-center p-8 lg:p-16">
+          {/* World map and connection pattern background */}
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-800 via-blue-900 to-[#00227c]"></div>
+          <div className="absolute inset-0">
+            {/* Grid pattern overlay */}
+            <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-30"></div>
             
-            <p className="text-base sm:text-lg lg:text-xl text-slate-200 max-w-2xl mx-auto leading-relaxed px-4">
-              {siteData.hero.subhead}
-            </p>
+            {/* Connection lines */}
+            <div className="absolute inset-0">
+              <div className="absolute top-1/3 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/40 to-transparent"></div>
+              <div className="absolute top-1/2 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/60 to-transparent"></div>
+              <div className="absolute top-2/3 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/40 to-transparent"></div>
+              <div className="absolute left-1/3 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-white/40 to-transparent"></div>
+              <div className="absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-white/60 to-transparent"></div>
+              <div className="absolute left-2/3 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-white/40 to-transparent"></div>
+              
+              {/* Connection nodes */}
+              <div className="absolute top-1/3 left-1/3 w-2 h-2 bg-white rounded-full animate-pulse"></div>
+              <div className="absolute top-1/2 left-1/2 w-3 h-3 bg-white rounded-full animate-pulse delay-300"></div>
+              <div className="absolute top-2/3 left-2/3 w-2 h-2 bg-white rounded-full animate-pulse delay-500"></div>
+              <div className="absolute top-1/4 right-1/4 w-2 h-2 bg-white rounded-full animate-pulse delay-700"></div>
+            </div>
           </div>
           
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-8 sm:mb-12 px-4">
-            {siteData.hero.ctas.map((c, index) => (
-              <a
-                key={c.label}
-                href={c.href}
-                className={`group inline-flex items-center justify-center gap-2 px-6 py-3 sm:py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 text-sm sm:text-base ${
-                  c.variant === "ghost"
-                    ? "border-2 border-white/30 text-white hover:border-white/60 hover:bg-white/10 backdrop-blur-sm"
-                    : "bg-[#00227c] text-white shadow-lg hover:shadow-[#00227c]/25 hover:bg-[#001a63]"
-                }`}
-              >
-                <span>{c.label}</span>
-                {index === 0 ? (
-                  <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                ) : (
-                  <svg className="w-4 h-4 transform group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m0 0l4-4m-4 4l4 4" />
-                  </svg>
-                )}
-              </a>
-            ))}
-          </div>
-          
-          {/* Trust indicators and stats */}
-          <div className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 max-w-4xl mx-auto px-4">
-            <div className="flex items-center justify-center gap-2 col-span-1 xs:col-span-2 lg:col-span-1">
-              <div className="flex -space-x-1">
-                <div className="w-5 sm:w-6 h-5 sm:h-6 rounded-full border-2 border-white/20 overflow-hidden">
-                  <img 
-                    src={oldManPortrait} 
-                    alt="Satisfied client" 
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="w-5 sm:w-6 h-5 sm:h-6 rounded-full border-2 border-white/20 overflow-hidden">
-                  <img 
-                    src={womanPortrait} 
-                    alt="Satisfied client" 
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="w-5 sm:w-6 h-5 sm:h-6 rounded-full border-2 border-white/20 overflow-hidden">
-                  <img 
-                    src={manPortrait} 
-                    alt="Satisfied client" 
-                    className="w-full h-full object-cover"
-                  />
+          {/* Business silhouettes in foreground */}
+          <div className="relative z-10 w-full max-w-md">
+            <div className="aspect-[4/3] relative">
+              {/* Central handshake silhouette */}
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="relative w-32 h-24">
+                  {/* Two business people shaking hands - simplified silhouettes */}
+                  <div className="absolute left-2 bottom-0 w-6 h-16 bg-black/80 rounded-t-full"></div>
+                  <div className="absolute left-6 bottom-8 w-4 h-4 bg-black/80 rounded-full"></div>
+                  <div className="absolute left-8 bottom-10 w-3 h-6 bg-black/80"></div>
+                  <div className="absolute right-8 bottom-10 w-3 h-6 bg-black/80"></div>
+                  <div className="absolute right-6 bottom-8 w-4 h-4 bg-black/80 rounded-full"></div>
+                  <div className="absolute right-2 bottom-0 w-6 h-16 bg-black/80 rounded-t-full"></div>
+                  {/* Handshake connection */}
+                  <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-8 h-3 bg-black/80 rounded-full"></div>
                 </div>
               </div>
-              <div className="text-xs sm:text-sm text-slate-200 text-center lg:text-left">
-                <span className="font-semibold text-white">1,800+</span> satisfied clients
-              </div>
-            </div>
-            <div className="flex items-center justify-center text-xs sm:text-sm text-slate-200">
-              <span className="font-semibold text-white">10+</span> years experience
-            </div>
-            <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl px-3 sm:px-4 py-2 text-center">
-              <div className="text-base sm:text-lg font-bold text-white">$110M+</div>
-              <div className="text-xs text-slate-200">Total Investment</div>
-            </div>
-            <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl px-3 sm:px-4 py-2 text-center">
-              <div className="text-base sm:text-lg font-bold text-white">30+</div>
-              <div className="text-xs text-slate-200">Projects</div>
+              
+              {/* Additional business silhouettes around the central handshake */}
+              <div className="absolute top-4 left-8 w-4 h-12 bg-black/60 rounded-t-full"></div>
+              <div className="absolute top-6 left-16 w-3 h-10 bg-black/60 rounded-t-full"></div>
+              <div className="absolute top-4 right-8 w-4 h-12 bg-black/60 rounded-t-full"></div>
+              <div className="absolute top-6 right-16 w-3 h-10 bg-black/60 rounded-t-full"></div>
+              <div className="absolute bottom-4 left-12 w-3 h-8 bg-black/60 rounded-t-full"></div>
+              <div className="absolute bottom-4 right-12 w-3 h-8 bg-black/60 rounded-t-full"></div>
+              
+              {/* Subtle glow effect */}
+              <div className="absolute inset-0 bg-gradient-to-t from-white/5 to-transparent rounded-lg"></div>
             </div>
           </div>
         </div>
         
-        {/* Scroll indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-          <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-white/60 rounded-full mt-2 animate-pulse"></div>
+        {/* Right side - Content */}
+        <div className="bg-white flex items-center p-8 lg:p-16 text-slate-900">
+          <div className="w-full">
+            {/* Our Profile badge */}
+            <div className="inline-flex items-center px-4 py-2 bg-orange-500 text-white rounded-full text-sm font-medium mb-6 uppercase tracking-wider">
+              OUR PROFILE
+            </div>
+            
+            {/* Main headline */}
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#00227c] mb-8 leading-tight">
+              Welcome To<br />
+              ARC LAO
+            </h1>
+            
+            {/* Description content */}
+            <div className="space-y-6 text-gray-600 leading-relaxed mb-8">
+              <p className="text-base sm:text-lg">
+                We are an international trading company with over 16 years of dedicated operation in Laos. Throughout our extensive history, we have established a strong presence across diverse business sectors, including demining equipment, information technology, automotive, hospitality, energy, and farming equipment. Our commitment to quality and excellence has enabled us to build lasting relationships with clients and partners worldwide.
+              </p>
+              
+              <p className="text-base sm:text-lg">
+                Driven by innovation and a customer-centric approach, we strive to deliver reliable solutions that meet the evolving needs of our clients in various industries.
+              </p>
+            </div>
+            
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 mb-8">
+              {siteData.hero.ctas.map((c, index) => (
+                <a
+                  key={c.label}
+                  href={c.href}
+                  className={`group inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 text-sm sm:text-base ${
+                    c.variant === "ghost"
+                      ? "border-2 border-[#00227c] text-[#00227c] hover:bg-[#00227c] hover:text-white"
+                      : "bg-[#00227c] text-white shadow-lg hover:shadow-[#00227c]/25 hover:bg-[#001a63]"
+                  }`}
+                >
+                  <span>{c.label}</span>
+                  {index === 0 ? (
+                    <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  ) : (
+                    <svg className="w-4 h-4 transform group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m0 0l4-4m-4 4l4 4" />
+                    </svg>
+                  )}
+                </a>
+              ))}
+            </div>
+            
+            {/* Trust indicators */}
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+              <div className="text-center">
+                <div className="text-2xl font-bold text-[#00227c] mb-1">16+</div>
+                <div className="text-xs text-gray-500">Years Experience</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-[#00227c] mb-1">1,800+</div>
+                <div className="text-xs text-gray-500">Satisfied Clients</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-[#00227c] mb-1">$110M+</div>
+                <div className="text-xs text-gray-500">Total Investment</div>
+              </div>
+              <div className="text-center">
+                <div className="text-2xl font-bold text-[#00227c] mb-1">30+</div>
+                <div className="text-xs text-gray-500">Projects</div>
+              </div>
+            </div>
           </div>
         </div>
-      </Container>
+      </div>
+      
+      {/* Scroll indicator */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <div className="w-6 h-10 border-2 border-[#00227c]/30 rounded-full flex justify-center">
+          <div className="w-1 h-3 bg-[#00227c]/60 rounded-full mt-2 animate-pulse"></div>
+        </div>
+      </div>
     </section>
   );
 }
