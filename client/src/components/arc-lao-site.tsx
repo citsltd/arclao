@@ -147,7 +147,7 @@ function Hero() {
         <div className="max-w-4xl mx-auto text-center pt-[25px] pb-[25px]">
           <div className="space-y-4 sm:space-y-6 mb-8 sm:mb-12">
             <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-tight px-2">
-              Leading Innovation in <span className="text-[#00227c]">Technology Solutions</span>
+              Leading Innovation in <span className="text-[#ef0001]">Technology Solutions</span>
             </h1>
           </div>
           
