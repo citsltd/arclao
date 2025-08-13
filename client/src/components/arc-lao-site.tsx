@@ -400,145 +400,186 @@ function Nav() {
 
 function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
-      <div className="grid lg:grid-cols-2 w-full min-h-screen">
-        {/* Left side - Business silhouettes with world map background */}
-        <div className="bg-[#00227c] relative overflow-hidden flex items-center justify-center p-8 lg:p-16">
-          {/* World map and connection pattern background */}
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-800 via-blue-900 to-[#00227c]"></div>
-          <div className="absolute inset-0">
-            {/* Grid pattern overlay */}
-            <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-30"></div>
-            
-            {/* Connection lines */}
-            <div className="absolute inset-0">
-              <div className="absolute top-1/3 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/40 to-transparent"></div>
-              <div className="absolute top-1/2 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/60 to-transparent"></div>
-              <div className="absolute top-2/3 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/40 to-transparent"></div>
-              <div className="absolute left-1/3 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-white/40 to-transparent"></div>
-              <div className="absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-white/60 to-transparent"></div>
-              <div className="absolute left-2/3 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-white/40 to-transparent"></div>
-              
-              {/* Connection nodes */}
-              <div className="absolute top-1/3 left-1/3 w-2 h-2 bg-white rounded-full animate-pulse"></div>
-              <div className="absolute top-1/2 left-1/2 w-3 h-3 bg-white rounded-full animate-pulse delay-300"></div>
-              <div className="absolute top-2/3 left-2/3 w-2 h-2 bg-white rounded-full animate-pulse delay-500"></div>
-              <div className="absolute top-1/4 right-1/4 w-2 h-2 bg-white rounded-full animate-pulse delay-700"></div>
-            </div>
-          </div>
-          
-          {/* Business silhouettes in foreground */}
-          <div className="relative z-10 w-full max-w-md">
-            <div className="aspect-[4/3] relative">
-              {/* Central handshake silhouette */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="relative w-32 h-24">
-                  {/* Two business people shaking hands - simplified silhouettes */}
-                  <div className="absolute left-2 bottom-0 w-6 h-16 bg-black/80 rounded-t-full"></div>
-                  <div className="absolute left-6 bottom-8 w-4 h-4 bg-black/80 rounded-full"></div>
-                  <div className="absolute left-8 bottom-10 w-3 h-6 bg-black/80"></div>
-                  <div className="absolute right-8 bottom-10 w-3 h-6 bg-black/80"></div>
-                  <div className="absolute right-6 bottom-8 w-4 h-4 bg-black/80 rounded-full"></div>
-                  <div className="absolute right-2 bottom-0 w-6 h-16 bg-black/80 rounded-t-full"></div>
-                  {/* Handshake connection */}
-                  <div className="absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-8 h-3 bg-black/80 rounded-full"></div>
-                </div>
-              </div>
-              
-              {/* Additional business silhouettes around the central handshake */}
-              <div className="absolute top-4 left-8 w-4 h-12 bg-black/60 rounded-t-full"></div>
-              <div className="absolute top-6 left-16 w-3 h-10 bg-black/60 rounded-t-full"></div>
-              <div className="absolute top-4 right-8 w-4 h-12 bg-black/60 rounded-t-full"></div>
-              <div className="absolute top-6 right-16 w-3 h-10 bg-black/60 rounded-t-full"></div>
-              <div className="absolute bottom-4 left-12 w-3 h-8 bg-black/60 rounded-t-full"></div>
-              <div className="absolute bottom-4 right-12 w-3 h-8 bg-black/60 rounded-t-full"></div>
-              
-              {/* Subtle glow effect */}
-              <div className="absolute inset-0 bg-gradient-to-t from-white/5 to-transparent rounded-lg"></div>
-            </div>
-          </div>
-        </div>
+    <section className="relative min-h-screen flex items-center overflow-hidden bg-gradient-to-br from-slate-50 via-white to-blue-50">
+      {/* Animated background elements */}
+      <div className="absolute inset-0">
+        {/* Geometric shapes */}
+        <div className="absolute top-20 right-20 w-64 h-64 bg-[#00227c]/5 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 left-20 w-96 h-96 bg-orange-500/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
         
-        {/* Right side - Content */}
-        <div className="bg-white flex items-center p-8 lg:p-16 text-slate-900">
-          <div className="w-full">
-            {/* Our Profile badge */}
-            <div className="inline-flex items-center px-4 py-2 bg-orange-500 text-white rounded-full text-sm font-medium mb-6 uppercase tracking-wider">
-              OUR PROFILE
+        {/* Grid pattern */}
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(0,34,124,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(0,34,124,0.02)_1px,transparent_1px)] bg-[size:40px_40px]"></div>
+        
+        {/* Floating tech elements */}
+        <div className="absolute top-1/4 left-1/4 w-3 h-3 bg-[#00227c] rounded-full animate-ping opacity-20"></div>
+        <div className="absolute top-3/4 right-1/3 w-2 h-2 bg-orange-500 rounded-full animate-ping opacity-30 delay-500"></div>
+        <div className="absolute top-1/2 right-1/4 w-4 h-4 bg-[#00227c] rounded-full animate-ping opacity-15 delay-1000"></div>
+      </div>
+
+      <Container className="relative z-10 py-16 sm:py-20 lg:py-32">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
+          {/* Left side - Content */}
+          <div className="space-y-8">
+            {/* Badge */}
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#00227c] to-blue-600 text-white rounded-full text-sm font-medium shadow-lg">
+              <span className="w-2 h-2 bg-white rounded-full animate-pulse"></span>
+              <span className="uppercase tracking-wider">Technology Innovation Leader</span>
             </div>
             
             {/* Main headline */}
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-[#00227c] mb-8 leading-tight">
-              Welcome To<br />
-              ARC LAO
-            </h1>
-            
-            {/* Description content */}
-            <div className="space-y-6 text-gray-600 leading-relaxed mb-8">
-              <p className="text-base sm:text-lg">
-                We are an international trading company with over 16 years of dedicated operation in Laos. Throughout our extensive history, we have established a strong presence across diverse business sectors, including demining equipment, information technology, automotive, hospitality, energy, and farming equipment. Our commitment to quality and excellence has enabled us to build lasting relationships with clients and partners worldwide.
-              </p>
+            <div className="space-y-6">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight">
+                <span className="bg-gradient-to-r from-[#00227c] via-blue-600 to-[#00227c] bg-clip-text text-transparent">
+                  Pioneering
+                </span>
+                <br />
+                <span className="text-slate-900">Southeast Asia's</span>
+                <br />
+                <span className="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">
+                  Tech Future
+                </span>
+              </h1>
               
-              <p className="text-base sm:text-lg">
-                Driven by innovation and a customer-centric approach, we strive to deliver reliable solutions that meet the evolving needs of our clients in various industries.
+              <p className="text-lg sm:text-xl text-slate-600 max-w-2xl leading-relaxed">
+                ARC Lao combines 16+ years of excellence with cutting-edge innovation across demining, IT, automotive, and infrastructure sectors. We're not just building solutions – we're shaping tomorrow's technology landscape.
               </p>
             </div>
             
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 mb-8">
-              {siteData.hero.ctas.map((c, index) => (
-                <a
-                  key={c.label}
-                  href={c.href}
-                  className={`group inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 text-sm sm:text-base ${
-                    c.variant === "ghost"
-                      ? "border-2 border-[#00227c] text-[#00227c] hover:bg-[#00227c] hover:text-white"
-                      : "bg-[#00227c] text-white shadow-lg hover:shadow-[#00227c]/25 hover:bg-[#001a63]"
-                  }`}
-                >
-                  <span>{c.label}</span>
-                  {index === 0 ? (
-                    <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                    </svg>
-                  ) : (
-                    <svg className="w-4 h-4 transform group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m0 0l4-4m-4 4l4 4" />
-                    </svg>
-                  )}
-                </a>
-              ))}
+            <div className="flex flex-col sm:flex-row gap-4">
+              <a
+                href="#solutions"
+                className="group inline-flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-[#00227c] to-blue-600 text-white rounded-2xl font-semibold text-lg shadow-2xl hover:shadow-[#00227c]/25 transition-all duration-300 transform hover:scale-105 hover:-translate-y-1"
+              >
+                <span>Explore Solutions</span>
+                <svg className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </a>
+              
+              <a
+                href="#contact"
+                className="group inline-flex items-center justify-center gap-3 px-8 py-4 border-2 border-[#00227c] text-[#00227c] rounded-2xl font-semibold text-lg hover:bg-[#00227c] hover:text-white transition-all duration-300 transform hover:scale-105"
+              >
+                <span>Get Started</span>
+                <svg className="w-5 h-5 transform group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                </svg>
+              </a>
             </div>
             
-            {/* Trust indicators */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-[#00227c] mb-1">16+</div>
-                <div className="text-xs text-gray-500">Years Experience</div>
+            {/* Trust indicators with modern design */}
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 pt-8">
+              <div className="text-center p-4 bg-white/60 backdrop-blur-sm rounded-2xl border border-white/20 shadow-lg">
+                <div className="text-3xl font-bold bg-gradient-to-r from-[#00227c] to-blue-600 bg-clip-text text-transparent mb-2">16+</div>
+                <div className="text-sm text-slate-600 font-medium">Years Excellence</div>
               </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-[#00227c] mb-1">1,800+</div>
-                <div className="text-xs text-gray-500">Satisfied Clients</div>
+              <div className="text-center p-4 bg-white/60 backdrop-blur-sm rounded-2xl border border-white/20 shadow-lg">
+                <div className="text-3xl font-bold bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent mb-2">1.8K+</div>
+                <div className="text-sm text-slate-600 font-medium">Global Clients</div>
               </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-[#00227c] mb-1">$110M+</div>
-                <div className="text-xs text-gray-500">Total Investment</div>
+              <div className="text-center p-4 bg-white/60 backdrop-blur-sm rounded-2xl border border-white/20 shadow-lg">
+                <div className="text-3xl font-bold bg-gradient-to-r from-[#00227c] to-blue-600 bg-clip-text text-transparent mb-2">$110M+</div>
+                <div className="text-sm text-slate-600 font-medium">Investment</div>
               </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-[#00227c] mb-1">30+</div>
-                <div className="text-xs text-gray-500">Projects</div>
+              <div className="text-center p-4 bg-white/60 backdrop-blur-sm rounded-2xl border border-white/20 shadow-lg">
+                <div className="text-3xl font-bold bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent mb-2">30+</div>
+                <div className="text-sm text-slate-600 font-medium">Active Projects</div>
+              </div>
+            </div>
+          </div>
+          
+          {/* Right side - Modern tech visualization */}
+          <div className="relative lg:pl-8">
+            {/* Main tech hub visualization */}
+            <div className="relative w-full max-w-lg mx-auto">
+              {/* Central tech core */}
+              <div className="relative z-10 bg-gradient-to-br from-[#00227c] via-blue-600 to-[#00227c] rounded-3xl p-8 shadow-2xl">
+                <div className="text-center text-white space-y-4">
+                  <div className="w-16 h-16 mx-auto bg-white/20 rounded-2xl flex items-center justify-center backdrop-blur-sm">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-bold">Innovation Hub</h3>
+                  <p className="text-blue-100 text-sm">Connecting Southeast Asia's Future</p>
+                </div>
+              </div>
+              
+              {/* Floating tech cards */}
+              <div className="absolute -top-6 -right-6 bg-white rounded-2xl p-4 shadow-xl border border-orange-100 transform rotate-6 hover:rotate-0 transition-transform duration-500">
+                <div className="w-12 h-12 bg-orange-500 rounded-xl flex items-center justify-center">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                </div>
+                <div className="mt-2 text-xs font-semibold text-slate-700">AI & ML</div>
+              </div>
+              
+              <div className="absolute -bottom-4 -left-6 bg-white rounded-2xl p-4 shadow-xl border border-blue-100 transform -rotate-6 hover:rotate-0 transition-transform duration-500">
+                <div className="w-12 h-12 bg-[#00227c] rounded-xl flex items-center justify-center">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m0 0l4-4m-4 4l4 4m10-4a8 8 0 11-16 0 8 8 0 0116 0z" />
+                  </svg>
+                </div>
+                <div className="mt-2 text-xs font-semibold text-slate-700">Infrastructure</div>
+              </div>
+              
+              <div className="absolute top-1/2 -right-8 bg-white rounded-2xl p-4 shadow-xl border border-green-100 transform translate-y-1/2 hover:scale-110 transition-transform duration-500">
+                <div className="w-12 h-12 bg-green-500 rounded-xl flex items-center justify-center">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
+                </div>
+                <div className="mt-2 text-xs font-semibold text-slate-700">Defense</div>
+              </div>
+              
+              {/* Connection lines */}
+              <div className="absolute inset-0 pointer-events-none">
+                <svg className="w-full h-full opacity-20">
+                  <defs>
+                    <linearGradient id="line-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stopColor="#00227c" />
+                      <stop offset="100%" stopColor="#f97316" />
+                    </linearGradient>
+                  </defs>
+                  <path
+                    d="M50,50 Q80,20 120,40 Q150,60 180,30"
+                    stroke="url(#line-gradient)"
+                    strokeWidth="2"
+                    fill="none"
+                    className="animate-pulse"
+                  />
+                  <path
+                    d="M50,50 Q20,80 60,120 Q100,140 140,120"
+                    stroke="url(#line-gradient)"
+                    strokeWidth="2"
+                    fill="none"
+                    className="animate-pulse"
+                    style={{ animationDelay: '1s' }}
+                  />
+                </svg>
+              </div>
+              
+              {/* Pulsing rings */}
+              <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                <div className="w-96 h-96 border border-[#00227c]/10 rounded-full animate-ping"></div>
+                <div className="absolute w-80 h-80 border border-orange-500/10 rounded-full animate-ping" style={{ animationDelay: '1s' }}></div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-[#00227c]/30 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-[#00227c]/60 rounded-full mt-2 animate-pulse"></div>
+        
+        {/* Modern scroll indicator */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
+          <div className="flex flex-col items-center gap-2 text-slate-400 animate-bounce">
+            <span className="text-xs font-medium uppercase tracking-wider">Discover More</span>
+            <div className="w-6 h-10 border-2 border-slate-300 rounded-full flex justify-center">
+              <div className="w-1 h-3 bg-slate-400 rounded-full mt-2 animate-pulse"></div>
+            </div>
+          </div>
         </div>
-      </div>
+      </Container>
     </section>
   );
 }
