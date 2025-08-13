@@ -492,66 +492,138 @@ function DetailedServices() {
       title: "Demining Equipments",
       subtitle: "Country Distributor for De-Mining Equipments from Germany",
       description: "We are a national distributor for all types of demining equipment used in humanitarian efforts.",
-      icon: "🛡️"
+      image: DefenseImage,
+      gradient: "from-red-500 to-orange-600",
+      bgGradient: "from-red-50 to-orange-50"
     },
     {
       title: "Information Technology", 
       subtitle: "Expertise in Development Ops, Cloud services, AI & Machine learning",
       description: "Innovating the landscape with data & tech oriented humanistic solutions!",
-      icon: "💻"
+      image: ITImage,
+      gradient: "from-blue-500 to-indigo-600",
+      bgGradient: "from-blue-50 to-indigo-50"
     },
     {
       title: "Agriculture Machinery - BCS Two Wheel Tractors",
       subtitle: "BCS Two Wheel Tractors",
       description: "BCS is an Italian-based business group with over 40 years of expertise in two-wheel tractors. They offer a wide range of reversible and multifunctional two-wheel tractors suitable for professional soil preparation, greens maintenance, and snow removal.",
-      icon: "🚜"
+      image: AgricultureImage,
+      gradient: "from-green-500 to-emerald-600",
+      bgGradient: "from-green-50 to-emerald-50"
     },
     {
       title: "Agriculture Machinery - Mahindra Tractors", 
       subtitle: "Mahindra Tractors",
       description: "Mahindra Tractors, part of Mahindra & Mahindra, is an Indian agricultural machinery manufacturer. It became the world's top-selling tractor brand in 2010, mainly serving India, with growing markets in North America and Australia.",
-      icon: "🚜"
+      image: AgricultureImage,
+      gradient: "from-amber-500 to-yellow-600",
+      bgGradient: "from-amber-50 to-yellow-50"
     },
     {
       title: "Motorbikes - TVS Motors",
       subtitle: "TVS Motors",
       description: "TVS Motor Company, headquartered in Chennai, India, is a major multinational motorcycle manufacturer, ranking third in India by revenue, with annual sales of three million units.",
-      icon: "🏍️"
+      image: InfrastructureImage,
+      gradient: "from-purple-500 to-violet-600",
+      bgGradient: "from-purple-50 to-violet-50"
     },
     {
       title: "Project Consultancy",
       subtitle: "Comprehensive Business Solutions",
       description: "We provide project consultancy focuses on aligning projects with overall business goals and long-term strategies which involves Technical Consulting, Management Consulting, Financial Consulting, Environmental and Sustainability Consulting & Risk Management",
-      icon: "📋"
+      image: Future_of_Technology,
+      gradient: "from-teal-500 to-cyan-600",
+      bgGradient: "from-teal-50 to-cyan-50"
     }
   ];
 
   return (
     <section className="py-16 sm:py-20 lg:py-24 bg-white relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-50/30 via-white to-indigo-50/20"></div>
+      <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-[#00227c]/3 to-transparent rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-indigo-500/3 to-transparent rounded-full blur-3xl"></div>
+      
       <Container className="relative px-4">
         <div className="text-center mb-16">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#00227c]/10 text-[#00227c] rounded-full text-sm font-semibold uppercase tracking-wide mb-6">
+            Detailed Services
+          </div>
           <h2 className="text-4xl sm:text-5xl font-bold text-slate-900 mb-4">
             Our <span className="text-[#00227c]">Services</span>
           </h2>
-          <p className="text-lg text-slate-600">Comprehensive solutions across multiple industries</p>
+          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+            Comprehensive solutions across multiple industries with proven expertise and reliable partnerships
+          </p>
         </div>
         
-        <div className="grid gap-8 lg:gap-12">
+        <div className="space-y-20">
           {services.map((service, index) => (
-            <div key={service.title} className={`grid gap-8 lg:gap-12 lg:grid-cols-2 items-center ${index % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}>
-              <div className={index % 2 === 1 ? 'order-2 lg:order-1' : 'order-2 lg:order-2'}>
-                <div className="text-4xl mb-4">{service.icon}</div>
-                <h3 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-2">{service.title}</h3>
-                <h4 className="text-lg font-semibold text-[#00227c] mb-4">{service.subtitle}</h4>
-                <p className="text-slate-600 leading-relaxed">{service.description}</p>
-              </div>
-              <div className={index % 2 === 1 ? 'order-1 lg:order-2' : 'order-1 lg:order-1'}>
-                <div className="aspect-[4/3] rounded-2xl overflow-hidden bg-slate-100 shadow-lg">
-                  <img 
-                    src={Future_of_Technology} 
-                    alt={service.title} 
-                    className="w-full h-full object-cover"
-                  />
+            <div key={service.title} className="group">
+              <div className={`grid gap-12 lg:gap-16 lg:grid-cols-2 items-center ${index % 2 === 1 ? '' : ''}`}>
+                <div className={index % 2 === 1 ? 'order-2 lg:order-1' : 'order-2 lg:order-2'}>
+                  <div className="space-y-6">
+                    {/* Service Number & Category */}
+                    <div className="flex items-center gap-4">
+                      <div className={`w-12 h-12 rounded-2xl bg-gradient-to-br ${service.gradient} p-0.5 shadow-lg`}>
+                        <div className="w-full h-full bg-white rounded-[14px] flex items-center justify-center">
+                          <span className={`text-lg font-bold bg-gradient-to-br ${service.gradient} bg-clip-text text-transparent`}>
+                            {(index + 1).toString().padStart(2, '0')}
+                          </span>
+                        </div>
+                      </div>
+                      <div className={`px-3 py-1 bg-gradient-to-r ${service.bgGradient} border border-slate-200/50 rounded-full`}>
+                        <span className={`text-xs font-semibold bg-gradient-to-r ${service.gradient} bg-clip-text text-transparent uppercase tracking-wide`}>
+                          {service.title.split(' ')[0]} Service
+                        </span>
+                      </div>
+                    </div>
+                    
+                    {/* Content */}
+                    <div className="space-y-4">
+                      <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 leading-tight">
+                        {service.title}
+                      </h3>
+                      <h4 className={`text-lg font-semibold bg-gradient-to-r ${service.gradient} bg-clip-text text-transparent`}>
+                        {service.subtitle}
+                      </h4>
+                      <p className="text-slate-600 leading-relaxed text-lg">
+                        {service.description}
+                      </p>
+                    </div>
+                    
+                    {/* Call to Action */}
+                    <div className="pt-4">
+                      <button className={`group/btn inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r ${service.gradient} text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105`}>
+                        <span>Learn More</span>
+                        <svg className="w-4 h-4 transition-transform group-hover/btn:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        </svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className={index % 2 === 1 ? 'order-1 lg:order-2' : 'order-1 lg:order-1'}>
+                  <div className="relative group/image">
+                    <div className="aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl ring-1 ring-slate-200/50">
+                      <img 
+                        src={service.image} 
+                        alt={service.title} 
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover/image:scale-105"
+                      />
+                      <div className={`absolute inset-0 bg-gradient-to-t ${service.gradient} opacity-10 transition-opacity duration-300 group-hover/image:opacity-20`}></div>
+                    </div>
+                    
+                    {/* Floating Elements */}
+                    <div className="absolute -top-4 -right-4 w-8 h-8 bg-white rounded-full shadow-lg flex items-center justify-center opacity-0 group-hover/image:opacity-100 transition-all duration-300 transform translate-y-2 group-hover/image:translate-y-0">
+                      <div className={`w-4 h-4 bg-gradient-to-br ${service.gradient} rounded-full`}></div>
+                    </div>
+                    
+                    <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-white rounded-full shadow-lg flex items-center justify-center opacity-0 group-hover/image:opacity-100 transition-all duration-500 delay-100 transform translate-y-2 group-hover/image:translate-y-0">
+                      <div className={`w-3 h-3 bg-gradient-to-br ${service.gradient} rounded-full`}></div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
