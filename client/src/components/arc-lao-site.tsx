@@ -561,23 +561,7 @@ function Clients() {
           
           
           
-          {/* Mining Companies Section */}
-          <div className="bg-[#00227c] p-8 rounded-2xl shadow-sm">
-            <div className="text-center mb-6">
-              <h3 className="text-2xl font-bold text-white mb-2">MINING COMPANIES</h3>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
-              <div className="flex items-center justify-center h-16 bg-white rounded-lg p-4">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/SDS_Mining_logo.svg/1200px-SDS_Mining_logo.svg.png" alt="SDS Mining" className="max-h-full max-w-full object-contain" />
-              </div>
-              <div className="flex items-center justify-center h-16 bg-white rounded-lg p-4">
-                <img src={seponLogo} alt="Chifeng Gold - Sepon" className="max-h-full max-w-full object-contain" />
-              </div>
-              <div className="flex items-center justify-center h-16 bg-white rounded-lg p-4">
-                <img src={panAustLogo} alt="PanAust" className="max-h-full max-w-full object-contain" />
-              </div>
-            </div>
-          </div>
+          
         </div>
       </Container>
     </section>
