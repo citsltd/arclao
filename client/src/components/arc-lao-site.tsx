@@ -36,6 +36,8 @@ import BCSTwoWheelTractorsImage from "@assets/Agriculture Machinery - BCS Two Wh
 import DeminingEquipmentsImage from "@assets/Demining Equipments_1755075726842.jpg";
 import ProjectConsultancyImage from "@assets/Project Consultancy_1755075726843.jpg";
 
+import UNDP_logo_svg from "@assets/UNDP_logo.svg.png";
+
 // --- Components ---
 function Container({ children, className = "" }: { children: React.ReactNode; className?: string }) {
   return <div className={`mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 ${className}`}>{children}</div>;
@@ -854,7 +856,6 @@ function Clients() {
       <div className="absolute inset-0 bg-gradient-to-br from-slate-50/30 via-white to-indigo-50/20"></div>
       <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-[#00227c]/3 to-transparent rounded-full blur-3xl"></div>
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-indigo-500/3 to-transparent rounded-full blur-3xl"></div>
-      
       <Container className="relative px-4">
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#00227c]/10 text-[#00227c] rounded-full text-sm font-semibold uppercase tracking-wide mb-6">
@@ -907,7 +908,7 @@ function Clients() {
               <img src={panAustLogo} alt="PanAust" className="h-10 md:h-12 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300" />
             </div>
             <div className="flex items-center justify-center opacity-70 hover:opacity-100 transition-opacity duration-300">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/SDS_Mining_logo.svg/1200px-SDS_Mining_logo.svg.png" alt="SDS Mining" className="h-10 md:h-12 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300" />
+              <img src={UNDP_logo_svg} alt="SDS Mining" className="h-10 md:h-12 w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300" />
             </div>
           </div>
         </div>
