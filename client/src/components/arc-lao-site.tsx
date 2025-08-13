@@ -526,20 +526,8 @@ function Partners() {
 }
 
 function Clients() {
-  const clients = [
-    { name: "PanAust", logo: panAustLogo, category: "Mining" },
-    { name: "Sepon Gold", logo: seponLogo, category: "Mining" },
-    { name: "Save the Children", logo: saveTheChildrenLogo, category: "Humanitarian" },
-    { name: "Mines Advisory Group", logo: magLogo, category: "Demining" },
-    { name: "Tetra Tech", logo: tetraTechLogo, category: "Engineering" },
-    { name: "The World Bank", logo: worldBankLogo, category: "Development" },
-    { name: "Asian Development Bank", logo: adbLogo, category: "Development" },
-    { name: "UXO LAO", logo: uxoLaoLogo, category: "Demining" },
-    { name: "Norwegian People's Aid", logo: norwegianPeoplesAidLogo, category: "Humanitarian" }
-  ];
-
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-slate-50 relative overflow-hidden">
+    <section className="py-16 sm:py-20 lg:py-24 bg-white relative overflow-hidden">
       <Container className="relative px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl sm:text-5xl font-bold text-slate-900 mb-4">
@@ -548,33 +536,58 @@ function Clients() {
           <p className="text-lg text-slate-600">Trusted by leading organizations worldwide</p>
         </div>
         
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 lg:gap-8">
-            {clients.map((client) => (
-              <div 
-                key={client.name} 
-                className="group bg-white rounded-2xl p-6 lg:p-8 shadow-sm hover:shadow-lg transition-all duration-300 transform hover:scale-105 border border-slate-100"
-              >
-                <div className="aspect-square flex items-center justify-center mb-4">
-                  <img 
-                    src={client.logo} 
-                    alt={`${client.name} logo`}
-                    className="max-w-full max-h-full object-contain filter group-hover:brightness-110 transition-all duration-300"
-                  />
-                </div>
-                <div className="text-center">
-                  <span className="inline-block px-2 py-1 bg-[#00227c]/10 text-[#00227c] text-xs font-medium rounded-full">
-                    {client.category}
-                  </span>
-                </div>
+        <div className="max-w-6xl mx-auto">
+          {/* Top Row - Development Organizations */}
+          <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 mb-8">
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-8 items-center">
+              <div className="flex items-center justify-center h-16">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/UN_emblem_blue.svg/1200px-UN_emblem_blue.svg.png" alt="UNDP" className="max-h-full max-w-full object-contain" />
               </div>
-            ))}
+              <div className="flex items-center justify-center h-16">
+                <img src={uxoLaoLogo} alt="UXO LAO" className="max-h-full max-w-full object-contain" />
+              </div>
+              <div className="flex items-center justify-center h-16">
+                <img src={adbLogo} alt="Asian Development Bank" className="max-h-full max-w-full object-contain" />
+              </div>
+              <div className="flex items-center justify-center h-16">
+                <img src={worldBankLogo} alt="The World Bank" className="max-h-full max-w-full object-contain" />
+              </div>
+              <div className="flex items-center justify-center h-16">
+                <img src={tetraTechLogo} alt="Tetra Tech" className="max-h-full max-w-full object-contain" />
+              </div>
+            </div>
           </div>
           
-          <div className="mt-16 text-center">
-            <div className="inline-flex items-center gap-2 px-6 py-3 bg-white rounded-full border border-slate-200 shadow-sm">
-              <div className="w-2 h-2 bg-[#00227c] rounded-full animate-pulse"></div>
-              <span className="text-slate-600 font-medium">Serving 9+ prestigious organizations across multiple sectors</span>
+          {/* Bottom Row - Humanitarian & NGOs */}
+          <div className="bg-[#00227c] p-8 rounded-2xl shadow-sm mb-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+              <div className="flex items-center justify-center h-16 bg-white rounded-lg p-4">
+                <img src={magLogo} alt="Mines Advisory Group" className="max-h-full max-w-full object-contain" />
+              </div>
+              <div className="flex items-center justify-center h-16 bg-white rounded-lg p-4">
+                <img src={norwegianPeoplesAidLogo} alt="Norwegian People's Aid" className="max-h-full max-w-full object-contain" />
+              </div>
+              <div className="flex items-center justify-center h-16 bg-white rounded-lg p-4">
+                <img src={saveTheChildrenLogo} alt="Save the Children" className="max-h-full max-w-full object-contain" />
+              </div>
+            </div>
+          </div>
+          
+          {/* Mining Companies Section */}
+          <div className="bg-[#00227c] p-8 rounded-2xl shadow-sm">
+            <div className="text-center mb-6">
+              <h3 className="text-2xl font-bold text-white mb-2">MINING COMPANIES</h3>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
+              <div className="flex items-center justify-center h-16 bg-white rounded-lg p-4">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/SDS_Mining_logo.svg/1200px-SDS_Mining_logo.svg.png" alt="SDS Mining" className="max-h-full max-w-full object-contain" />
+              </div>
+              <div className="flex items-center justify-center h-16 bg-white rounded-lg p-4">
+                <img src={seponLogo} alt="Chifeng Gold - Sepon" className="max-h-full max-w-full object-contain" />
+              </div>
+              <div className="flex items-center justify-center h-16 bg-white rounded-lg p-4">
+                <img src={panAustLogo} alt="PanAust" className="max-h-full max-w-full object-contain" />
+              </div>
             </div>
           </div>
         </div>
