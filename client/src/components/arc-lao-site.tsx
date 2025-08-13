@@ -874,41 +874,41 @@ function Clients() {
           {/* Main Client Logos */}
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 md:gap-12 lg:gap-16 items-center justify-items-center mb-12">
             <div className="flex items-center justify-center opacity-90 hover:opacity-100 transition-opacity duration-300">
-              <img src={unLogo} alt="United Nations" className="h-12 md:h-16 w-auto object-contain transition-all duration-300" />
+              <img src={unLogo} alt="United Nations" className="h-16 md:h-20 lg:h-24 w-auto object-contain transition-all duration-300" />
             </div>
             <div className="flex items-center justify-center opacity-90 hover:opacity-100 transition-opacity duration-300">
-              <img src={uxoLaoLogo} alt="UXO LAO" className="h-12 md:h-16 w-auto object-contain transition-all duration-300" />
+              <img src={uxoLaoLogo} alt="UXO LAO" className="h-16 md:h-20 lg:h-24 w-auto object-contain transition-all duration-300" />
             </div>
             <div className="flex items-center justify-center opacity-90 hover:opacity-100 transition-opacity duration-300">
-              <img src={adbLogo} alt="Asian Development Bank" className="h-12 md:h-16 w-auto object-contain transition-all duration-300" />
+              <img src={adbLogo} alt="Asian Development Bank" className="h-16 md:h-20 lg:h-24 w-auto object-contain transition-all duration-300" />
             </div>
             <div className="flex items-center justify-center opacity-90 hover:opacity-100 transition-opacity duration-300">
-              <img src={worldBankLogo} alt="The World Bank" className="h-12 md:h-16 w-auto object-contain transition-all duration-300" />
+              <img src={worldBankLogo} alt="The World Bank" className="h-16 md:h-20 lg:h-24 w-auto object-contain transition-all duration-300" />
             </div>
             <div className="flex items-center justify-center opacity-90 hover:opacity-100 transition-opacity duration-300">
-              <img src={tetraTechLogo} alt="Tetra Tech" className="h-12 md:h-16 w-auto object-contain transition-all duration-300" />
+              <img src={tetraTechLogo} alt="Tetra Tech" className="h-16 md:h-20 lg:h-24 w-auto object-contain transition-all duration-300" />
             </div>
           </div>
           
           {/* Additional Client Logos */}
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 md:gap-8 lg:gap-12 items-center justify-items-center">
             <div className="flex items-center justify-center opacity-90 hover:opacity-100 transition-opacity duration-300">
-              <img src={magLogo} alt="Mines Advisory Group" className="h-10 md:h-12 w-auto object-contain transition-all duration-300" />
+              <img src={magLogo} alt="Mines Advisory Group" className="h-14 md:h-16 lg:h-20 w-auto object-contain transition-all duration-300" />
             </div>
             <div className="flex items-center justify-center opacity-90 hover:opacity-100 transition-opacity duration-300">
-              <img src={norwegianPeoplesAidLogo} alt="Norwegian People's Aid" className="h-10 md:h-12 w-auto object-contain transition-all duration-300" />
+              <img src={norwegianPeoplesAidLogo} alt="Norwegian People's Aid" className="h-14 md:h-16 lg:h-20 w-auto object-contain transition-all duration-300" />
             </div>
             <div className="flex items-center justify-center opacity-90 hover:opacity-100 transition-opacity duration-300">
-              <img src={saveTheChildrenLogo} alt="Save the Children" className="h-10 md:h-12 w-auto object-contain transition-all duration-300" />
+              <img src={saveTheChildrenLogo} alt="Save the Children" className="h-14 md:h-16 lg:h-20 w-auto object-contain transition-all duration-300" />
             </div>
             <div className="flex items-center justify-center opacity-90 hover:opacity-100 transition-opacity duration-300">
-              <img src={seponLogo} alt="Chifeng Gold - Sepon" className="h-10 md:h-12 w-auto object-contain transition-all duration-300" />
+              <img src={seponLogo} alt="Chifeng Gold - Sepon" className="h-14 md:h-16 lg:h-20 w-auto object-contain transition-all duration-300" />
             </div>
             <div className="flex items-center justify-center opacity-90 hover:opacity-100 transition-opacity duration-300">
-              <img src={panAustLogo} alt="PanAust" className="h-10 md:h-12 w-auto object-contain transition-all duration-300" />
+              <img src={panAustLogo} alt="PanAust" className="h-14 md:h-16 lg:h-20 w-auto object-contain transition-all duration-300" />
             </div>
             <div className="flex items-center justify-center opacity-90 hover:opacity-100 transition-opacity duration-300">
-              <img src={UNDP_logo_svg} alt="UNDP" className="h-10 md:h-12 w-auto object-contain transition-all duration-300" />
+              <img src={UNDP_logo_svg} alt="UNDP" className="h-14 md:h-16 lg:h-20 w-auto object-contain transition-all duration-300" />
             </div>
           </div>
         </div>
