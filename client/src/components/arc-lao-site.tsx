@@ -1141,8 +1141,8 @@ function Contact() {
 
 function Footer() {
   return (
-    <footer className="bg-slate-900 text-white relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"></div>
+    <footer className="text-white relative overflow-hidden" style={{ backgroundColor: "#001a63" }}>
+      <div className="absolute inset-0 bg-gradient-to-br from-[#001a63] via-[#001a63] to-[#001a63]"></div>
       <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-[#00227c]/10 to-transparent rounded-full blur-3xl"></div>
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-[#00227c]/10 to-transparent rounded-full blur-3xl"></div>
       <Container className="relative">
