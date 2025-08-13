@@ -368,99 +368,40 @@ function Hero() {
         <div className="absolute inset-0 bg-gradient-to-br from-slate-900/60 via-indigo-900/40 to-slate-900/60"></div>
       </div>
       {/* Animated background elements */}
-      <div className="absolute inset-0 bg-gradient-to-br from-indigo-600/20 via-cyan-500/10 to-transparent"></div>
-      <div className="absolute top-1/4 -right-20 w-96 h-96 bg-gradient-to-bl from-cyan-400/20 to-transparent rounded-full blur-3xl animate-pulse"></div>
-      <div className="absolute bottom-1/4 -left-20 w-96 h-96 bg-gradient-to-tr from-indigo-400/20 to-transparent rounded-full blur-3xl animate-pulse delay-1000"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-[#00227c]/20 via-[#00227c]/10 to-transparent"></div>
+      <div className="absolute top-1/4 -right-20 w-96 h-96 bg-gradient-to-bl from-[#00227c]/20 to-transparent rounded-full blur-3xl animate-pulse"></div>
+      <div className="absolute bottom-1/4 -left-20 w-96 h-96 bg-gradient-to-tr from-[#00227c]/20 to-transparent rounded-full blur-3xl animate-pulse delay-1000"></div>
       {/* Grid pattern overlay */}
       <div className="absolute inset-0 bg-grid-white/[0.05] [mask-image:linear-gradient(0deg,transparent,black,transparent)]"></div>
       <Container className="relative z-10 py-16 sm:py-20 lg:py-32 px-4">
         <div className="max-w-4xl mx-auto text-center pt-[25px] pb-[25px]">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 text-xs sm:text-sm font-medium mb-6 sm:mb-8">
-            <span className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></span>
-            <span className="text-cyan-300 uppercase tracking-wider text-xs">
-              {siteData.hero.kicker}
-            </span>
-          </div>
-          
           {/* Main headline */}
-          <div className="space-y-4 sm:space-y-6 mb-6 sm:mb-8">
-            <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight px-2 pl-[0px] pr-[0px]">
-              Me To We With <span className="text-[#00227c]">ARC Lao</span> combined efforts On <span className="text-[#00227c]">Technological Innovation</span>
+          <div className="space-y-4 sm:space-y-6 mb-8 sm:mb-12">
+            <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-tight px-2">
+              Leading Innovation in <span className="text-[#00227c]">Technology Solutions</span>
             </h1>
-            
-            <p className="text-base sm:text-lg lg:text-xl text-slate-200 max-w-2xl mx-auto leading-relaxed px-4">
-              {siteData.hero.subhead}
-            </p>
           </div>
           
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-8 sm:mb-12 px-4">
-            {siteData.hero.ctas.map((c, index) => (
-              <a
-                key={c.label}
-                href={c.href}
-                className={`group inline-flex items-center justify-center gap-2 px-6 py-3 sm:py-3 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 text-sm sm:text-base ${
-                  c.variant === "ghost"
-                    ? "border-2 border-white/30 text-white hover:border-white/60 hover:bg-white/10 backdrop-blur-sm"
-                    : "bg-[#00227c] text-white shadow-lg hover:shadow-[#00227c]/25 hover:bg-[#001a63]"
-                }`}
-              >
-                <span>{c.label}</span>
-                {index === 0 ? (
-                  <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                ) : (
-                  <svg className="w-4 h-4 transform group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m0 0l4-4m-4 4l4 4" />
-                  </svg>
-                )}
-              </a>
-            ))}
-          </div>
-          
-          {/* Trust indicators and stats */}
-          <div className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 max-w-4xl mx-auto px-4">
-            <div className="flex items-center justify-center gap-2 col-span-1 xs:col-span-2 lg:col-span-1">
-              <div className="flex -space-x-1">
-                <div className="w-5 sm:w-6 h-5 sm:h-6 rounded-full border-2 border-white/20 overflow-hidden">
-                  <img 
-                    src={oldManPortrait} 
-                    alt="Satisfied client" 
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="w-5 sm:w-6 h-5 sm:h-6 rounded-full border-2 border-white/20 overflow-hidden">
-                  <img 
-                    src={womanPortrait} 
-                    alt="Satisfied client" 
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="w-5 sm:w-6 h-5 sm:h-6 rounded-full border-2 border-white/20 overflow-hidden">
-                  <img 
-                    src={manPortrait} 
-                    alt="Satisfied client" 
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-              </div>
-              <div className="text-xs sm:text-sm text-slate-200 text-center lg:text-left">
-                <span className="font-semibold text-white">1,800+</span> satisfied clients
-              </div>
-            </div>
-            <div className="flex items-center justify-center text-xs sm:text-sm text-slate-200">
-              <span className="font-semibold text-white">10+</span> years experience
-            </div>
-            <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl px-3 sm:px-4 py-2 text-center">
-              <div className="text-base sm:text-lg font-bold text-white">$110M+</div>
-              <div className="text-xs text-slate-200">Total Investment</div>
-            </div>
-            <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-xl px-3 sm:px-4 py-2 text-center">
-              <div className="text-base sm:text-lg font-bold text-white">30+</div>
-              <div className="text-xs text-slate-200">Projects</div>
-            </div>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center px-4">
+            <a
+              href="#contact"
+              className="group inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#00227c] text-white font-semibold rounded-xl shadow-lg hover:shadow-[#00227c]/25 hover:bg-[#001a63] transition-all duration-300 transform hover:scale-105 text-base sm:text-lg"
+            >
+              <span>Get Started</span>
+              <svg className="w-5 h-5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </a>
+            <a
+              href="#services"
+              className="group inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-white/30 text-white hover:border-white/60 hover:bg-white/10 backdrop-blur-sm font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 text-base sm:text-lg"
+            >
+              <span>Our Services</span>
+              <svg className="w-5 h-5 transform group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </a>
           </div>
         </div>
         
