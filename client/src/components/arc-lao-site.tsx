@@ -34,24 +34,23 @@ const brand = {
   lightBg: "bg-white",
 };
 
-// --- Site content (swap placeholders with real text/images) ---
+// --- Site content (based on official company profile PDF) ---
 const siteData = {
   hero: {
-    kicker: "Me To We With ARC Lao combined efforts On",
-    headline: "Technological Innovation",
+    kicker: "Dedicated to Delivering Excellence",
+    headline: "Welcome To ARC LAO",
     subhead:
-      "Awareness & Education, Conscious Use Of Natural Resources, Agriculture - Leading technological innovation and infrastructure development across Southeast Asia.",
+      "We are an international trading company with over 16 years of dedicated operation in Laos. Throughout our extensive history, we have established a strong presence across diverse business sectors, including demining equipment, information technology, automotive, hospitality, energy, and farming equipment.",
     ctas: [
       { label: "Get in touch", href: "#contact" },
-      { label: "Our projects", href: "#projects", variant: "ghost" },
+      { label: "Our services", href: "#services", variant: "ghost" },
     ],
-    image:
-      "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&h=900", // Technology infrastructure
+    image: Future_of_Technology,
   },
   nav: [
     { label: "About Us", href: "#about" },
     { label: "Products & Services", href: "#services" },
-    { label: "Sectors", href: "#sectors" },
+    { label: "Our Clients", href: "#clients" },
     { label: "Projects", href: "#projects" },
     { label: "History", href: "#history" },
     { label: "Contact Us", href: "#contact" },
@@ -84,45 +83,45 @@ const siteData = {
   ],
   services: [
     {
-      title: "EV Infrastructure",
+      title: "Demining Equipment",
       body:
-        "Lithium Ion Battery, Charging Stations, EV Testing Equipments.",
-      image: evInfrastructureImg,
-    },
-    {
-      title: "Defence",
-      body:
-        "Demining Equipments, Metal Detectors, Body Armor, EOD/IED Equipments.",
+        "Country distributor for De-Mining equipment from Germany. We are a national distributor for all types of demining equipment used in humanitarian efforts.",
       image: defenseImg,
     },
     {
       title: "Information Technology",
       body:
-        "Internet Of Thing, Energy Software, Software Development & Testing.",
+        "Expertise in Development Ops, Cloud services, AI & Machine learning.",
       image: informationTechnologyImg,
     },
     {
-      title: "Energy",
+      title: "Agriculture Machinery - BCS Two Wheel Tractors",
       body:
-        "Hydrogen Fuel Cell, Energy From Waste, Solar Energy.",
-      image: "https://images.unsplash.com/photo-1466611653911-95081537e5b7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
-    },
-    {
-      title: "Automotive",
-      body:
-        "Electric & Non-electric Motorbikes, Agricultural & Construction Machines.",
+        "BCS is an Italian-based business group with over 40 years of expertise in two-wheel tractors. They offer a wide range of reversible and multifunctional two-wheel tractors suitable for professional soil preparation, greens maintenance, and snow removal.",
       image: automotiveImg,
     },
     {
-      title: "Infrastructure",
+      title: "Agriculture Machinery - Mahindra Tractors",
       body:
-        "Feasibility & Consultancy, Roads & Bridges, Buildings & Factories.",
+        "Mahindra Tractors, part of Mahindra & Mahindra, is an Indian agricultural machinery manufacturer. It became the world's top-selling tractor brand in 2010, mainly serving India, with growing markets in North America and Australia.",
+      image: automotiveImg,
+    },
+    {
+      title: "Motorbikes - TVS Motors",
+      body:
+        "TVS Motor Company, headquartered in Chennai, India, is a major multinational motorcycle manufacturer, ranking third in India by revenue, with annual sales of three million units.",
+      image: automotiveImg,
+    },
+    {
+      title: "Project Consultancy",
+      body:
+        "We provide project consultancy focuses on aligning projects with overall business goals and long-term strategies which involves Technical Consulting, Management Consulting, Financial Consulting, Environmental and Sustainability Consulting & Risk Management.",
       image: infrastructureImg,
     },
   ],
   sectors: ["EV Infrastructure", "Defence", "Information Technology", "Energy", "Automotive", "Infrastructure"],
   stats: [
-    { label: "Years Of Experience", value: "10+" },
+    { label: "Years Of Experience", value: "16+" },
     { label: "Annual Turn Over", value: "$5M" },
     { label: "Repeat Business", value: "85%" },
     { label: "Employees Strength", value: "100+" },
@@ -189,10 +188,55 @@ const siteData = {
     "Tailored Solutions for client requirements.",
     "Utmost focus on quality deliverables.",
   ],
+  clients: [
+    {
+      name: "VALLON",
+      description: "Searching with Excellence - Pioneering Spirit since 1965",
+      logo: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=100",
+      website: "www.vallon.de",
+      category: "Demining Equipment"
+    },
+    {
+      name: "Jarvis Consulting",
+      description: "Innovating the landscape with data & tech oriented humanistic solutions",
+      logo: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=100",
+      website: "www.jarvis.consulting",
+      category: "IT Services"
+    },
+    {
+      name: "TVS Motor Company",
+      description: "Transforming quality of life through mobility solutions",
+      logo: "https://images.unsplash.com/photo-1558618047-3c8c76ca7d13?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=100",
+      website: "www.tvsmotor.com",
+      category: "Automotive"
+    },
+    {
+      name: "BCS Agriculture",
+      description: "Complete range of reversible and multifunctional two-wheel tractors",
+      logo: "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=100",
+      website: "www.bcsagri.com/en",
+      category: "Agriculture"
+    },
+    {
+      name: "Mahindra & Mahindra",
+      description: "Agriculture Machines & Equipment - Wide range of tractor models",
+      logo: "https://images.unsplash.com/photo-1527847263472-aa5338d178b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=100",
+      website: "www.mahindratractor.com",
+      category: "Agriculture"
+    },
+    {
+      name: "Mining Companies",
+      description: "Various mining operations and infrastructure development projects",
+      logo: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&h=100",
+      website: "#",
+      category: "Mining"
+    }
+  ],
   contact: {
-    address: "BAN PHONETHAN, SAYSETHA, VIENTIANE, LAO PDR",
-    phone: "+856 20 7619 8200",
+    address: "Ban Phonexay District Sysetha, Vientiane, Lao PDR",
+    phone: "+856-20-5262 9292",
     email: "info@arclao.com",
+    website: "www.arclao.com",
     mapEmbed:
       "https://www.openstreetmap.org/export/embed.html?bbox=102.6%2C17.9%2C103.1%2C18.2&layer=mapnik&marker=17.966%2C102.6",
   },
@@ -282,14 +326,14 @@ function Nav() {
           
           {/* CTA Button */}
           <a 
-            href="tel:+8562076198200" 
+            href="tel:+85620526292929" 
             className="group relative inline-flex items-center gap-2 px-6 py-3 bg-[#00227c] text-white font-semibold rounded-2xl shadow-lg shadow-[#00227c]/25 hover:shadow-xl hover:shadow-[#00227c]/30 transition-all duration-300 transform hover:scale-105 overflow-hidden"
           >
             <div className="absolute inset-0 rounded-2xl bg-[#001a63] opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
             <svg className="w-4 h-4 transition-transform group-hover:scale-110 relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
             </svg>
-            <span className="hidden sm:inline relative z-10">+856 20 7619 8200</span>
+            <span className="hidden sm:inline relative z-10">+856-20-5262 9292</span>
             <span className="sm:hidden relative z-10">Call</span>
           </a>
         </nav>
@@ -587,11 +631,11 @@ function Overview() {
             
             <div className="space-y-6">
               <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
-                ARC LAO is a leader in next-generation technology and related services. We enable clients in many countries to navigate their success through <strong className="text-slate-900">INNOVATION</strong>. With over 10+ years of experience in managing various projects and workings of global enterprises, we expertly steer our clients through their progressive journey.
+                ARC LAO is committed to delivering excellence across all our endeavors. Our mission is to be a globally recognized leader, inspiring trust and setting the standard for quality and innovation. With over 16+ years of experience, we have established strong relationships with clients and partners worldwide.
               </p>
               
               <p className="text-base sm:text-lg text-slate-600 leading-relaxed">
-                We do it by enabling our clients with a highly experienced team coupled with latest technologies. We also empower the business with agile digital at scale to deliver unprecedented levels of performance and customer delight. Our always-on learning agenda drives their continuous improvement through building and transferring skills, expertise, and ideas from our innovation ecosystem.
+                We prioritize our clients' needs with a customer-centric approach, ensuring tailored services that drive success. Our proven track record of excellence spans over 16 years, consistently delivering innovative solutions and exceeding client expectations with reliability and transparency.
               </p>
             </div>
             
@@ -972,6 +1016,105 @@ function Success() {
               <div className="text-sm font-semibold text-slate-900">Ready to experience our approach?</div>
               <div className="text-xs text-slate-600">Join 1,800+ satisfied clients across SEA</div>
             </div>
+          </div>
+        </div>
+      </Container>
+    </section>
+  );
+}
+
+function Clients() {
+  return (
+    <section className="py-16 sm:py-20 lg:py-32 bg-gradient-to-br from-white via-slate-50 to-blue-50 relative overflow-hidden" id="clients">
+      {/* Background decorations */}
+      <div className="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))]" />
+      <div className="absolute top-0 right-0 w-72 h-72 bg-gradient-to-bl from-blue-100/30 to-transparent rounded-full blur-3xl" />
+      <div className="absolute bottom-0 left-0 w-72 h-72 bg-gradient-to-tr from-indigo-100/30 to-transparent rounded-full blur-3xl" />
+      
+      <Container className="relative px-4">
+        <div className="text-center mb-12 sm:mb-16">
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 bg-white rounded-full border border-[#00227c] text-xs sm:text-sm font-medium text-[#00227c] mb-4 sm:mb-6">
+            <span className="w-2 h-2 bg-[#00227c] rounded-full animate-pulse"></span>
+            Our Clients
+          </div>
+          
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-6 sm:mb-8 px-2">
+            Trusted <span className="text-[#00227c]">Partners</span>
+          </h2>
+          <p className="text-base sm:text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed px-4">
+            We proudly serve leading global companies across multiple industries, delivering exceptional solutions that drive success and innovation.
+          </p>
+        </div>
+        
+        <div className="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+          {siteData.clients.map((client, index) => (
+            <article key={client.name} className="group relative rounded-2xl sm:rounded-3xl overflow-hidden bg-white shadow-sm ring-1 ring-[#00227c]/20 hover:shadow-xl hover:shadow-[#00227c]/10 transition-all duration-500 hover:-translate-y-2">
+              {/* Decorative top accent */}
+              <div className="absolute top-0 left-0 right-0 h-1 bg-[#00227c]"></div>
+              
+              <div className="p-6 sm:p-8">
+                {/* Logo placeholder area */}
+                <div className="aspect-[3/1] rounded-xl bg-gradient-to-br from-slate-50 to-slate-100 mb-6 flex items-center justify-center relative overflow-hidden">
+                  <img 
+                    src={client.logo} 
+                    alt={`${client.name} logo`} 
+                    className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-300"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-br from-[#00227c]/5 to-transparent"></div>
+                </div>
+                
+                {/* Category badge */}
+                <div className="inline-flex items-center gap-2 px-3 py-1 bg-[#00227c]/10 text-[#00227c] rounded-full text-xs font-medium mb-4">
+                  <span className="w-1.5 h-1.5 bg-[#00227c] rounded-full"></span>
+                  {client.category}
+                </div>
+                
+                {/* Company name */}
+                <h3 className="font-bold text-slate-900 text-lg sm:text-xl mb-3 leading-tight group-hover:text-[#00227c] transition-colors duration-300">
+                  {client.name}
+                </h3>
+                
+                {/* Description */}
+                <p className="text-sm sm:text-base text-slate-600 leading-relaxed mb-4">
+                  {client.description}
+                </p>
+                
+                {/* Website link */}
+                <div className="flex items-center gap-2 text-xs text-slate-500">
+                  <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                  <span>{client.website}</span>
+                </div>
+              </div>
+              
+              {/* Hover effect overlay */}
+              <div className="absolute inset-0 rounded-2xl sm:rounded-3xl bg-gradient-to-br from-[#00227c]/5 to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              
+              {/* Floating decorative elements */}
+              <div className="absolute -top-2 -right-2 w-4 h-4 bg-gradient-to-br from-[#00227c] to-blue-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute -bottom-2 -left-2 w-3 h-3 bg-gradient-to-br from-blue-400 to-[#00227c] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100"></div>
+            </article>
+          ))}
+        </div>
+        
+        {/* Bottom CTA section */}
+        <div className="mt-12 sm:mt-16 text-center">
+          <div className="bg-white rounded-2xl p-8 shadow-sm ring-1 ring-slate-200 max-w-2xl mx-auto">
+            <h3 className="text-xl font-bold text-slate-900 mb-3">Ready to Join Our Success Stories?</h3>
+            <p className="text-slate-600 mb-6">
+              Partner with ARC Lao and experience the quality and excellence that our clients trust worldwide.
+            </p>
+            <a 
+              href="#contact" 
+              className="inline-flex items-center gap-2 px-6 py-3 bg-[#00227c] text-white font-semibold rounded-xl hover:bg-[#001a63] transition-colors duration-300"
+            >
+              Get In Touch
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </a>
           </div>
         </div>
       </Container>
@@ -1384,8 +1527,8 @@ function Footer() {
                       <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
                     </svg>
                   </div>
-                  <a href="tel:+8562076198200" className="text-slate-400 hover:text-white transition-colors text-sm">
-                    +856 20 7619 8200
+                  <a href="tel:+85620526292929" className="text-slate-400 hover:text-white transition-colors text-sm">
+                    +856-20-5262 9292
                   </a>
                 </div>
                 <div className="flex items-center gap-3">
@@ -1404,7 +1547,7 @@ function Footer() {
           <div className="mt-16 pt-8 border-t border-slate-700">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               <div className="text-center">
-                <div className="text-3xl font-bold text-[#00227c] mb-2">10+</div>
+                <div className="text-3xl font-bold text-[#00227c] mb-2">16+</div>
                 <div className="text-slate-400 text-sm">Years Experience</div>
               </div>
               <div className="text-center">
@@ -1452,6 +1595,7 @@ export default function CorporateSite() {
       <Stats />
       <History />
       <Success />
+      <Clients />
       <Projects />
       <Contact />
       <Footer />
