@@ -289,25 +289,25 @@ function Solutions() {
     {
       title: "Demining Equipments",
       description: "Metal detectors and a range of other equipment for demining",
-      image: DefenseImage,
+      image: DeminingEquipmentsImage,
       gradient: "from-red-500/10 to-orange-500/10"
     },
     {
       title: "Agriculture Machinery",
       description: "Country distributor for BCS-Italy and Mahindra & Mahindra, specializing in agricultural machinery.",
-      image: AgricultureImage,
+      image: MahindraTractorsImage,
       gradient: "from-green-500/10 to-emerald-500/10"
     },
     {
       title: "Information Technology",
       description: "Expertise in DevOps, cloud services, AI, and machine learning.",
-      image: ITImage,
+      image: ProjectConsultancyImage,
       gradient: "from-blue-500/10 to-indigo-500/10"
     },
     {
       title: "Automotive",
       description: "Country distributor for TVS Motors",
-      image: InfrastructureImage,
+      image: MotorbikesImage,
       gradient: "from-purple-500/10 to-violet-500/10"
     }
   ];
