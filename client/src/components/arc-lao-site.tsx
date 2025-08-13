@@ -815,27 +815,7 @@ function Partners() {
           ))}
         </div>
         
-        {/* Partnership Stats */}
-        <div className="mt-16 pt-16 border-t border-slate-200/50">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div className="space-y-2">
-              <div className="text-3xl font-bold text-[#00227c]">5+</div>
-              <div className="text-sm text-slate-600 font-medium">Global Partners</div>
-            </div>
-            <div className="space-y-2">
-              <div className="text-3xl font-bold text-emerald-600">4</div>
-              <div className="text-sm text-slate-600 font-medium">Industry Sectors</div>
-            </div>
-            <div className="space-y-2">
-              <div className="text-3xl font-bold text-violet-600">25+</div>
-              <div className="text-sm text-slate-600 font-medium">Countries Reached</div>
-            </div>
-            <div className="space-y-2">
-              <div className="text-3xl font-bold text-amber-600">50+</div>
-              <div className="text-sm text-slate-600 font-medium">Years Combined Experience</div>
-            </div>
-          </div>
-        </div>
+        
       </Container>
     </section>
   );
