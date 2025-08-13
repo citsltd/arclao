@@ -168,7 +168,7 @@ function Hero() {
           <div className="space-y-4 sm:space-y-6 mb-8 sm:mb-12">
             <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight px-2">
               <span className="block text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-2 text-white/90">Your Trusted Partner for</span>
-              <span className="block mb-2 text-[#00227c]">Global Innovation</span>
+              <span className="block mb-2 text-white">Global Innovation</span>
               <span className="block text-base xs:text-lg sm:text-xl md:text-2xl lg:text-3xl font-medium text-white/80 mt-4">
                 Connecting Southeast Asia to the World
               </span>
