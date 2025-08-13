@@ -207,7 +207,6 @@ function About() {
                     alt="ARC LAO Global Operations" 
                     className="w-full h-64 lg:h-80 object-cover"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent"></div>
                 </div>
               </div>
             </div>
