@@ -371,53 +371,113 @@ function WhyChoose() {
     {
       title: "Customer-Centric Approach",
       description: "We prioritize our clients' needs, ensuring tailored services that drive success.",
-      icon: "👥"
+      gradient: "from-blue-500 to-indigo-600"
     },
     {
       title: "Proven Track Record of Excellence",
       description: "Over 16 years of delivering innovative solutions and exceeding client expectations.",
-      icon: "🏆"
+      gradient: "from-emerald-500 to-teal-600"
     },
     {
       title: "Reliable and Consistent",
       description: "Consistently delivering on promises with a focus on transparency and integrity.",
-      icon: "✅"
+      gradient: "from-violet-500 to-purple-600"
     }
   ];
 
   return (
     <section className="py-16 sm:py-20 lg:py-24 bg-white relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-50/50 via-white to-indigo-50/30"></div>
+      <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-[#00227c]/5 to-transparent rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-indigo-500/5 to-transparent rounded-full blur-3xl"></div>
+      
       <Container className="relative px-4">
         <div className="grid gap-12 lg:gap-16 lg:grid-cols-2 items-center">
           <div className="order-2 lg:order-1">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#00227c]/10 text-[#00227c] rounded-full text-sm font-semibold uppercase tracking-wide mb-6">
+              Why Choose Us
+            </div>
+            
             <h2 className="text-4xl sm:text-5xl font-bold text-slate-900 mb-8">
               Why Choose <span className="text-[#00227c]">ARC Lao</span>
             </h2>
             
-            <p className="text-lg text-slate-600 leading-relaxed mb-8">
+            <p className="text-lg text-slate-600 leading-relaxed mb-10">
               At ARC Lao, we are dedicated to providing quality products and services with a customer-centric approach.
             </p>
             
             <div className="space-y-6">
-              {reasons.map((reason) => (
-                <div key={reason.title} className="flex gap-4">
-                  <div className="text-2xl">{reason.icon}</div>
-                  <div>
-                    <h3 className="text-xl font-bold text-slate-900 mb-2">{reason.title}</h3>
-                    <p className="text-slate-600 leading-relaxed">{reason.description}</p>
+              {reasons.map((reason, index) => (
+                <div key={reason.title} className="group relative">
+                  <div className="flex gap-6 items-start">
+                    {/* Modern Icon Container */}
+                    <div className="relative flex-shrink-0">
+                      <div className={`w-12 h-12 rounded-2xl bg-gradient-to-br ${reason.gradient} p-0.5 shadow-lg`}>
+                        <div className="w-full h-full bg-white rounded-[14px] flex items-center justify-center">
+                          <div className={`w-6 h-6 bg-gradient-to-br ${reason.gradient} rounded-lg flex items-center justify-center`}>
+                            <span className="text-white text-xs font-bold">{index + 1}</span>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      {/* Connecting Line */}
+                      {index < reasons.length - 1 && (
+                        <div className="absolute top-12 left-1/2 w-px h-6 bg-gradient-to-b from-slate-200 to-transparent transform -translate-x-1/2"></div>
+                      )}
+                    </div>
+                    
+                    <div className="flex-1">
+                      <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-[#00227c] transition-colors duration-300">
+                        {reason.title}
+                      </h3>
+                      <p className="text-slate-600 leading-relaxed">
+                        {reason.description}
+                      </p>
+                    </div>
                   </div>
                 </div>
               ))}
             </div>
+            
+            {/* Call to Action */}
+            <div className="mt-8 pt-6">
+              <a 
+                href="#contact"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-[#00227c] text-white font-semibold rounded-xl shadow-lg hover:shadow-[#00227c]/25 hover:bg-[#001a63] transition-all duration-300 transform hover:scale-105"
+              >
+                <span>Get Started Today</span>
+                <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </a>
+            </div>
           </div>
           
           <div className="order-1 lg:order-2 relative">
-            <div className="aspect-[4/3] rounded-3xl overflow-hidden ring-1 ring-slate-200/50 shadow-2xl shadow-slate-900/10 bg-white">
-              <img 
-                src={Future_of_Technology} 
-                alt="Why choose ARC LAO" 
-                className="w-full h-full object-cover"
-              />
+            <div className="relative">
+              <div className="aspect-[4/3] rounded-3xl overflow-hidden ring-1 ring-slate-200/50 shadow-2xl shadow-slate-900/10 bg-white">
+                <img 
+                  src={Future_of_Technology} 
+                  alt="Why choose ARC LAO" 
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#00227c]/20 via-transparent to-transparent"></div>
+              </div>
+              
+              {/* Floating Stats */}
+              <div className="absolute -bottom-6 -right-6 bg-white rounded-2xl p-6 shadow-xl border border-slate-100">
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-[#00227c] mb-1">16+</div>
+                  <div className="text-sm text-slate-600 font-medium">Years of Excellence</div>
+                </div>
+              </div>
+              
+              <div className="absolute -top-6 -left-6 bg-white rounded-2xl p-6 shadow-xl border border-slate-100">
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-emerald-600 mb-1">50+</div>
+                  <div className="text-sm text-slate-600 font-medium">Projects Delivered</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
