@@ -377,8 +377,8 @@ function Hero() {
         <div className="max-w-4xl mx-auto text-center pt-[25px] pb-[25px]">
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 text-xs sm:text-sm font-medium mb-6 sm:mb-8">
-            <span className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></span>
-            <span className="text-cyan-300 uppercase tracking-wider text-xs">
+            <span className="w-2 h-2 bg-[#00227c] rounded-full animate-pulse"></span>
+            <span className="text-white uppercase tracking-wider text-xs">
               {siteData.hero.kicker}
             </span>
           </div>
@@ -487,8 +487,8 @@ function About() {
       
       <Container className="relative px-4">
         <div className="text-center mb-12 sm:mb-16">
-          <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 bg-white rounded-full border border-slate-200 text-xs sm:text-sm font-medium text-slate-600 mb-4 sm:mb-6">
-            <span className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></span>
+          <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 bg-white rounded-full border border-[#00227c] text-xs sm:text-sm font-medium text-[#00227c] mb-4 sm:mb-6">
+            <span className="w-2 h-2 bg-[#00227c] rounded-full animate-pulse"></span>
             About Our Company
           </div>
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-6 sm:mb-8 px-2">
@@ -505,7 +505,7 @@ function About() {
           {siteData.valueProps.map((v, index) => (
             <div 
               key={v.title} 
-              className="group relative p-6 sm:p-8 rounded-3xl bg-white shadow-sm ring-1 ring-slate-200 hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-500 hover:-translate-y-2"
+              className="group relative p-6 sm:p-8 rounded-3xl bg-white shadow-sm ring-1 ring-[#00227c]/20 hover:shadow-xl hover:shadow-[#00227c]/10 transition-all duration-500 hover:-translate-y-2"
             >
               {/* Decorative element */}
               <div className="absolute top-0 left-6 sm:left-8 w-12 sm:w-16 h-1 bg-[#00227c] rounded-full"></div>
@@ -524,18 +524,18 @@ function About() {
               
               {/* Content */}
               <div className="space-y-3 sm:space-y-4">
-                <div className="w-8 h-0.5 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full mx-auto"></div>
+                <div className="w-8 h-0.5 bg-[#00227c] rounded-full mx-auto"></div>
                 <p className="text-sm text-slate-600 leading-relaxed text-center">
                   {v.body}
                 </p>
               </div>
               
               {/* Hover effect overlay */}
-              <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-blue-500/5 to-indigo-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 rounded-3xl bg-[#00227c]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               
               {/* Floating dots decoration */}
-              <div className="absolute -top-2 -right-2 w-4 h-4 bg-gradient-to-br from-blue-400 to-indigo-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              <div className="absolute -bottom-2 -left-2 w-3 h-3 bg-gradient-to-br from-indigo-400 to-blue-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100"></div>
+              <div className="absolute -top-2 -right-2 w-4 h-4 bg-[#00227c] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute -bottom-2 -left-2 w-3 h-3 bg-[#00227c] rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100"></div>
             </div>
           ))}
         </div>
@@ -544,7 +544,7 @@ function About() {
         <div className="mt-12 sm:mt-16 text-center px-4">
           <div className="inline-flex flex-col sm:flex-row items-center gap-4 sm:gap-6 px-6 sm:px-8 py-6 bg-white rounded-3xl shadow-lg ring-1 ring-slate-200 max-w-2xl mx-auto">
             <div className="flex items-center gap-3">
-              <div className="w-10 sm:w-12 h-10 sm:h-12 rounded-xl bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center p-2">
+              <div className="w-10 sm:w-12 h-10 sm:h-12 rounded-xl bg-[#00227c] flex items-center justify-center p-2">
                 <img 
                   src={innovationIcon} 
                   alt="Innovation" 
@@ -558,7 +558,7 @@ function About() {
             </div>
             <div className="w-full sm:w-px h-px sm:h-12 bg-slate-200"></div>
             <div className="flex items-center gap-3">
-              <div className="w-10 sm:w-12 h-10 sm:h-12 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center p-2">
+              <div className="w-10 sm:w-12 h-10 sm:h-12 rounded-xl bg-[#00227c] flex items-center justify-center p-2">
                 <img 
                   src={sustainableProgressIcon} 
                   alt="Sustainable Progress" 
@@ -589,13 +589,13 @@ function Overview() {
         <div className="grid gap-12 lg:gap-16 lg:grid-cols-2 items-center">
           <div className="order-2 lg:order-1">
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full border border-slate-200 text-sm font-medium text-slate-600 mb-6">
-              <span className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></span>
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full border border-[#00227c] text-sm font-medium text-[#00227c] mb-6">
+              <span className="w-2 h-2 bg-[#00227c] rounded-full animate-pulse"></span>
               Company Overview
             </div>
             
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-8">
-              Leading the Future of <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Technology</span>
+              Leading the Future of <span className="text-[#00227c]">Technology</span>
             </h2>
             
             <div className="space-y-6">
@@ -631,7 +631,7 @@ function Overview() {
               {/* Floating stats card */}
               <div className="absolute -bottom-6 -left-6 bg-white rounded-2xl p-6 shadow-xl ring-1 ring-slate-200 backdrop-blur-sm">
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center text-white font-bold">
+                  <div className="w-12 h-12 rounded-xl bg-[#00227c] flex items-center justify-center text-white font-bold">
                     ✓
                   </div>
                   <div>
@@ -642,7 +642,7 @@ function Overview() {
               </div>
               
               {/* Floating innovation badge */}
-              <div className="absolute -top-6 -right-6 bg-gradient-to-r from-indigo-600 to-cyan-600 rounded-2xl p-4 shadow-xl text-white">
+              <div className="absolute -top-6 -right-6 bg-[#00227c] rounded-2xl p-4 shadow-xl text-white">
                 <div className="flex items-center gap-2">
                   <span className="text-2xl">🚀</span>
                   <div>
@@ -670,13 +670,13 @@ function Services() {
       <Container className="relative px-4">
         <div className="text-center mb-12 sm:mb-16">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 bg-white rounded-full border border-slate-200 text-xs sm:text-sm font-medium text-slate-600 mb-4 sm:mb-6">
-            <span className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></span>
+          <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 bg-white rounded-full border border-[#00227c] text-xs sm:text-sm font-medium text-[#00227c] mb-4 sm:mb-6">
+            <span className="w-2 h-2 bg-[#00227c] rounded-full animate-pulse"></span>
             Our Expertise
           </div>
           
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-6 sm:mb-8 px-2">
-            Sectors Of <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Expertise</span>
+            Sectors Of <span className="text-[#00227c]">Expertise</span>
           </h2>
           <p className="text-base sm:text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed px-4">
             Leading technological innovation across multiple industry sectors with comprehensive solutions and expertise.
@@ -685,9 +685,9 @@ function Services() {
         
         <div className="grid gap-6 sm:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
           {siteData.services.map((s, index) => (
-            <article key={s.title} className="group relative h-full rounded-2xl sm:rounded-3xl overflow-hidden bg-white shadow-sm ring-1 ring-slate-200 hover:shadow-xl hover:shadow-blue-500/10 transition-all duration-500 hover:-translate-y-2">
+            <article key={s.title} className="group relative h-full rounded-2xl sm:rounded-3xl overflow-hidden bg-white shadow-sm ring-1 ring-[#00227c]/20 hover:shadow-xl hover:shadow-[#00227c]/10 transition-all duration-500 hover:-translate-y-2">
               {/* Decorative top accent */}
-              <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 to-indigo-500"></div>
+              <div className="absolute top-0 left-0 right-0 h-1 bg-[#00227c]"></div>
               
               <div className="aspect-[16/10] overflow-hidden relative">
                 <img src={s.image} alt={s.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
@@ -707,7 +707,7 @@ function Services() {
               
               <div className="p-6 sm:p-8">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-8 h-1 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full"></div>
+                  <div className="w-8 h-1 bg-[#00227c] rounded-full"></div>
                   <div className="text-xs text-slate-500 font-medium uppercase tracking-wider">Expertise</div>
                 </div>
                 
@@ -748,7 +748,7 @@ function Stats() {
       <Container className="px-4">
         <div className="grid gap-4 sm:gap-6 grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 bg-[#00000000]">
           {siteData.stats.map((s) => (
-            <div key={s.label} className="p-4 sm:p-6 rounded-xl sm:rounded-2xl ring-1 ring-white/15 text-center text-[#ffffff] bg-[#4b49e6]">
+            <div key={s.label} className="p-4 sm:p-6 rounded-xl sm:rounded-2xl ring-1 ring-white/15 text-center text-[#ffffff] bg-[#00227c]">
               <div className="text-xl sm:text-2xl lg:text-3xl font-semibold">{s.value}</div>
               <div className="mt-1 text-xs sm:text-sm text-white/80">{s.label}</div>
             </div>
@@ -772,7 +772,7 @@ function History() {
       <Container className="relative px-4">
         <div className="text-center mb-12 sm:mb-16">
           <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-2 bg-white rounded-full border border-slate-200 text-xs sm:text-sm font-medium text-slate-600 mb-4 sm:mb-6">
-            <span className="w-2 h-2 bg-indigo-500 rounded-full animate-pulse"></span>
+            <span className="w-2 h-2 bg-[#00227c] rounded-full animate-pulse"></span>
             Our Journey
           </div>
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-slate-900 mb-6 sm:mb-8 px-2">
