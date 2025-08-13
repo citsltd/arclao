@@ -245,7 +245,7 @@ function About() {
                 
                 <div>
                   <h3 className="text-2xl lg:text-3xl font-bold mb-2 text-[#000000]">Welcome To</h3>
-                  <h2 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-slate-900 leading-tight">
+                  <h2 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight text-[#00227c]">
                     ARC LAO
                   </h2>
                 </div>
