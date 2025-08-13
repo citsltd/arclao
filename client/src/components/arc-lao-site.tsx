@@ -1229,7 +1229,7 @@ function Footer() {
                 <div className="text-slate-400 text-sm">Years Experience</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-[#00227c] mb-2">50+</div>
+                <div className="text-3xl font-bold mb-2 text-[#ffffff]">50+</div>
                 <div className="text-slate-400 text-sm">Projects Completed</div>
               </div>
               <div className="text-center">
