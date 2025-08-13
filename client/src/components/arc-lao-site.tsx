@@ -891,6 +891,202 @@ function Clients() {
   );
 }
 
+function Contact() {
+  return (
+    <section className="py-16 sm:py-20 lg:py-24 bg-slate-900 text-white relative overflow-hidden" id="contact">
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"></div>
+      <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-[#00227c]/20 to-transparent rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-[#00227c]/20 to-transparent rounded-full blur-3xl"></div>
+      
+      <Container className="relative px-4">
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#00227c]/20 text-[#00227c] rounded-full text-sm font-semibold uppercase tracking-wide mb-6">
+            Contact Us
+          </div>
+          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">
+            Get In <span className="text-[#00227c]">Touch</span>
+          </h2>
+          <p className="text-lg text-slate-300 max-w-2xl mx-auto">
+            Ready to start your next project? Contact us today and let's discuss how we can help you achieve your goals.
+          </p>
+        </div>
+        
+        <div className="grid gap-12 lg:gap-16 lg:grid-cols-2 items-start">
+          {/* Contact Information */}
+          <div className="space-y-8">
+            <div>
+              <h3 className="text-2xl font-bold text-white mb-6">Contact Information</h3>
+              <div className="space-y-6">
+                {/* Address */}
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-[#00227c] rounded-xl flex items-center justify-center flex-shrink-0">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-semibold text-white mb-2">Office Address</h4>
+                    <p className="text-slate-300 leading-relaxed">
+                      Ban Phonexay District<br />
+                      Sysetha, Vientiane, Lao PDR
+                    </p>
+                  </div>
+                </div>
+                
+                {/* Email */}
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-[#00227c] rounded-xl flex items-center justify-center flex-shrink-0">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-semibold text-white mb-2">Email Address</h4>
+                    <a href="mailto:info@arclao.com" className="text-slate-300 hover:text-[#00227c] transition-colors">
+                      info@arclao.com
+                    </a>
+                  </div>
+                </div>
+                
+                {/* Phone */}
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-[#00227c] rounded-xl flex items-center justify-center flex-shrink-0">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-semibold text-white mb-2">Phone Number</h4>
+                    <a href="tel:+8562052629292" className="text-slate-300 hover:text-[#00227c] transition-colors">
+                      +856-20-5262 9292
+                    </a>
+                  </div>
+                </div>
+                
+                {/* Business Hours */}
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-[#00227c] rounded-xl flex items-center justify-center flex-shrink-0">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-semibold text-white mb-2">Business Hours</h4>
+                    <p className="text-slate-300 leading-relaxed">
+                      Monday - Friday: 8:00 AM - 5:00 PM<br />
+                      Saturday: 8:00 AM - 12:00 PM<br />
+                      Sunday: Closed
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          {/* Contact Form */}
+          <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/10">
+            <h3 className="text-2xl font-bold text-white mb-6">Send us a Message</h3>
+            <form className="space-y-6">
+              <div className="grid gap-6 sm:grid-cols-2">
+                <div>
+                  <label htmlFor="firstName" className="block text-sm font-medium text-slate-300 mb-2">
+                    First Name
+                  </label>
+                  <input
+                    type="text"
+                    id="firstName"
+                    name="firstName"
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#00227c] focus:border-transparent"
+                    placeholder="John"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="lastName" className="block text-sm font-medium text-slate-300 mb-2">
+                    Last Name
+                  </label>
+                  <input
+                    type="text"
+                    id="lastName"
+                    name="lastName"
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#00227c] focus:border-transparent"
+                    placeholder="Doe"
+                  />
+                </div>
+              </div>
+              
+              <div>
+                <label htmlFor="email" className="block text-sm font-medium text-slate-300 mb-2">
+                  Email Address
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#00227c] focus:border-transparent"
+                  placeholder="john@example.com"
+                />
+              </div>
+              
+              <div>
+                <label htmlFor="subject" className="block text-sm font-medium text-slate-300 mb-2">
+                  Subject
+                </label>
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#00227c] focus:border-transparent"
+                  placeholder="How can we help you?"
+                />
+              </div>
+              
+              <div>
+                <label htmlFor="message" className="block text-sm font-medium text-slate-300 mb-2">
+                  Message
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows={4}
+                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#00227c] focus:border-transparent resize-none"
+                  placeholder="Tell us about your project or inquiry..."
+                ></textarea>
+              </div>
+              
+              <button
+                type="submit"
+                className="w-full bg-[#00227c] text-white font-semibold py-4 px-6 rounded-xl hover:bg-[#001a63] transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+              >
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+        
+        {/* Call to Action */}
+        <div className="mt-16 text-center">
+          <div className="bg-[#00227c]/20 border border-[#00227c]/30 rounded-3xl p-8">
+            <h3 className="text-2xl font-bold text-white mb-4">Ready to Get Started?</h3>
+            <p className="text-slate-300 mb-6 max-w-2xl mx-auto">
+              Join the growing number of organizations that trust ARC Lao for their technology and infrastructure needs.
+            </p>
+            <a 
+              href="tel:+8562052629292"
+              className="inline-flex items-center gap-2 bg-[#00227c] text-white font-semibold px-8 py-4 rounded-xl hover:bg-[#001a63] transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+              Call Now: +856-20-5262 9292
+            </a>
+          </div>
+        </div>
+      </Container>
+    </section>
+  );
+}
+
 function Footer() {
   return (
     <footer className="bg-slate-900 text-white relative overflow-hidden">
@@ -1026,6 +1222,7 @@ export default function CorporateSite() {
       <VisionMission />
       <Partners />
       <Clients />
+      <Contact />
       <Footer />
     </main>
   );
