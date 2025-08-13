@@ -4,6 +4,17 @@ import Technological_Innovation from "@assets/Technological Innovation.jpg";
 import Future_of_Technology from "@assets/Future of Technology_1754915928797.jpg";
 import arcLaoLogo from "@assets/arclaoslogo_1754990674040.png";
 
+// Client logos
+import panAustLogo from "@assets/logoHeader_1755069792950.webp";
+import seponLogo from "@assets/sepon-transparent-background_1755069792955.png";
+import saveTheChildrenLogo from "@assets/Logo_SavetheChildren_1755069792956.png";
+import magLogo from "@assets/Mines_Advisory_Group_logo_1755069792957.jpg";
+import tetraTechLogo from "@assets/images (1)_1755069792958.png";
+import worldBankLogo from "@assets/The_World_Bank_logo.svg_1755069792959.png";
+import adbLogo from "@assets/Asian_Development_Bank_logo.svg_1755069792960.png";
+import uxoLaoLogo from "@assets/images_1755069792961.png";
+import norwegianPeoplesAidLogo from "@assets/f5ce5da6-dab5-40b7-b8a7-213182e3d55b_1755069860515.png";
+
 // --- Components ---
 function Container({ children, className = "" }: { children: React.ReactNode; className?: string }) {
   return <div className={`mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 ${className}`}>{children}</div>;
@@ -515,6 +526,18 @@ function Partners() {
 }
 
 function Clients() {
+  const clients = [
+    { name: "PanAust", logo: panAustLogo, category: "Mining" },
+    { name: "Sepon Gold", logo: seponLogo, category: "Mining" },
+    { name: "Save the Children", logo: saveTheChildrenLogo, category: "Humanitarian" },
+    { name: "Mines Advisory Group", logo: magLogo, category: "Demining" },
+    { name: "Tetra Tech", logo: tetraTechLogo, category: "Engineering" },
+    { name: "The World Bank", logo: worldBankLogo, category: "Development" },
+    { name: "Asian Development Bank", logo: adbLogo, category: "Development" },
+    { name: "UXO LAO", logo: uxoLaoLogo, category: "Demining" },
+    { name: "Norwegian People's Aid", logo: norwegianPeoplesAidLogo, category: "Humanitarian" }
+  ];
+
   return (
     <section className="py-16 sm:py-20 lg:py-24 bg-slate-50 relative overflow-hidden">
       <Container className="relative px-4">
@@ -522,16 +545,37 @@ function Clients() {
           <h2 className="text-4xl sm:text-5xl font-bold text-slate-900 mb-4">
             Our <span className="text-[#00227c]">Clients</span>
           </h2>
-          <p className="text-lg text-slate-600">Serving diverse industries with excellence</p>
+          <p className="text-lg text-slate-600">Trusted by leading organizations worldwide</p>
         </div>
         
-        <div className="max-w-4xl mx-auto">
-          <div className="bg-white rounded-3xl p-12 shadow-lg text-center">
-            <div className="w-24 h-24 bg-[#00227c] rounded-full flex items-center justify-center text-white text-4xl font-bold mx-auto mb-6">⛏️</div>
-            <h3 className="text-3xl font-bold text-slate-900 mb-4">MINING COMPANIES</h3>
-            <p className="text-lg text-slate-600 leading-relaxed">
-              We proudly serve mining companies across the region, providing specialized equipment and technical solutions that meet the demanding requirements of the mining industry.
-            </p>
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6 lg:gap-8">
+            {clients.map((client) => (
+              <div 
+                key={client.name} 
+                className="group bg-white rounded-2xl p-6 lg:p-8 shadow-sm hover:shadow-lg transition-all duration-300 transform hover:scale-105 border border-slate-100"
+              >
+                <div className="aspect-square flex items-center justify-center mb-4">
+                  <img 
+                    src={client.logo} 
+                    alt={`${client.name} logo`}
+                    className="max-w-full max-h-full object-contain filter group-hover:brightness-110 transition-all duration-300"
+                  />
+                </div>
+                <div className="text-center">
+                  <span className="inline-block px-2 py-1 bg-[#00227c]/10 text-[#00227c] text-xs font-medium rounded-full">
+                    {client.category}
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
+          
+          <div className="mt-16 text-center">
+            <div className="inline-flex items-center gap-2 px-6 py-3 bg-white rounded-full border border-slate-200 shadow-sm">
+              <div className="w-2 h-2 bg-[#00227c] rounded-full animate-pulse"></div>
+              <span className="text-slate-600 font-medium">Serving 9+ prestigious organizations across multiple sectors</span>
+            </div>
           </div>
         </div>
       </Container>
