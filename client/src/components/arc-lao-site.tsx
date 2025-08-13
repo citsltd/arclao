@@ -1145,7 +1145,6 @@ function Footer() {
       <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"></div>
       <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-[#00227c]/10 to-transparent rounded-full blur-3xl"></div>
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-[#00227c]/10 to-transparent rounded-full blur-3xl"></div>
-      
       <Container className="relative">
         <div className="py-16">
           <div className="grid gap-8 lg:gap-12 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
@@ -1226,7 +1225,7 @@ function Footer() {
           <div className="mt-16 pt-8 border-t border-slate-700">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               <div className="text-center">
-                <div className="text-3xl font-bold text-[#00227c] mb-2">16+</div>
+                <div className="text-3xl font-bold mb-2 text-[#fafbff]">16+</div>
                 <div className="text-slate-400 text-sm">Years Experience</div>
               </div>
               <div className="text-center">
