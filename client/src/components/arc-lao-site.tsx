@@ -756,8 +756,8 @@ function Partners() {
               <div className="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-slate-100/50 h-full flex flex-col">
                 {/* Header with Category and Year */}
                 <div className="flex items-center justify-between mb-6">
-                  <div className={`px-3 py-1 bg-gradient-to-r ${partner.bgGradient} border border-slate-200/50 rounded-full`}>
-                    <span className={`text-xs font-semibold bg-gradient-to-r ${partner.gradient} bg-clip-text text-transparent uppercase tracking-wide`}>
+                  <div className="px-3 py-1 bg-slate-100 border border-slate-200 rounded-full">
+                    <span className="text-xs font-semibold text-slate-600 uppercase tracking-wide">
                       {partner.category}
                     </span>
                   </div>
@@ -766,15 +766,13 @@ function Partners() {
                   </div>
                 </div>
                 
-                {/* Partner Icon */}
+                {/* Company Logo Placeholder */}
                 <div className="mb-6">
-                  <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${partner.gradient} p-0.5 shadow-lg mx-auto`}>
-                    <div className="w-full h-full bg-white rounded-[14px] flex items-center justify-center">
-                      <div className={`w-8 h-8 bg-gradient-to-br ${partner.gradient} rounded-lg flex items-center justify-center`}>
-                        <span className="text-white text-sm font-bold">
-                          {partner.name.charAt(0)}
-                        </span>
-                      </div>
+                  <div className="w-16 h-16 rounded-xl bg-slate-100 border border-slate-200 mx-auto flex items-center justify-center shadow-sm">
+                    <div className="w-12 h-12 bg-white rounded-lg border border-slate-100 flex items-center justify-center">
+                      <span className="text-slate-400 text-lg font-bold">
+                        {partner.name.charAt(0)}
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -784,7 +782,7 @@ function Partners() {
                   <h3 className="text-xl font-bold text-slate-900 group-hover:text-[#00227c] transition-colors duration-300">
                     {partner.name}
                   </h3>
-                  <h4 className={`text-sm font-semibold bg-gradient-to-r ${partner.gradient} bg-clip-text text-transparent`}>
+                  <h4 className="text-sm font-semibold text-[#00227c]">
                     {partner.tagline}
                   </h4>
                   <p className="text-slate-600 leading-relaxed text-sm">
@@ -798,7 +796,7 @@ function Partners() {
                     href={`https://${partner.website}`} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className={`group/link inline-flex items-center gap-2 text-sm font-medium bg-gradient-to-r ${partner.gradient} bg-clip-text text-transparent hover:gap-3 transition-all duration-300`}
+                    className="group/link inline-flex items-center gap-2 text-sm font-medium text-[#00227c] hover:text-[#001a63] hover:gap-3 transition-all duration-300"
                   >
                     <span>Visit Website</span>
                     <svg className="w-4 h-4 transition-transform group-hover/link:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -807,10 +805,7 @@ function Partners() {
                   </a>
                 </div>
                 
-                {/* Floating Elements */}
-                <div className="absolute -top-2 -right-2 w-4 h-4 bg-white rounded-full shadow-lg flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
-                  <div className={`w-2 h-2 bg-gradient-to-br ${partner.gradient} rounded-full`}></div>
-                </div>
+
               </div>
               
               {/* Partner Number */}
