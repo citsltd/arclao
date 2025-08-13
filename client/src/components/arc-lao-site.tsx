@@ -45,10 +45,12 @@ function Nav() {
   const [open, setOpen] = useState(false);
   
   const navItems = [
-    { label: "About", href: "#about" },
+    { label: "About Us", href: "#about" },
+    { label: "Our Solutions", href: "#solutions" },
     { label: "Our Services", href: "#services" },
-    { label: "Why Choose Us", href: "#why-choose" },
-    { label: "Contact", href: "#contact" },
+    { label: "Our Partners", href: "#partners" },
+    { label: "Our Clients", href: "#clients" },
+    { label: "Contact Us", href: "#contact" },
   ];
 
   return (
@@ -189,10 +191,10 @@ function Hero() {
               </svg>
             </a>
             <a
-              href="#services"
+              href="#solutions"
               className="group inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-white/30 text-white hover:border-white/60 hover:bg-white/10 backdrop-blur-sm font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 text-base sm:text-lg"
             >
-              <span>Our Services</span>
+              <span>Our Solutions</span>
               <svg className="w-5 h-5 transform group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
@@ -312,7 +314,7 @@ function Solutions() {
   ];
 
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-slate-50 relative overflow-hidden" id="services">
+    <section className="py-16 sm:py-20 lg:py-24 bg-slate-50 relative overflow-hidden" id="solutions">
       <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-white to-slate-50"></div>
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-br from-[#00227c]/5 to-transparent rounded-full blur-3xl"></div>
       <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-gradient-to-tl from-indigo-500/5 to-transparent rounded-full blur-3xl"></div>
@@ -551,7 +553,7 @@ function DetailedServices() {
   ];
 
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-white relative overflow-hidden">
+    <section className="py-16 sm:py-20 lg:py-24 bg-white relative overflow-hidden" id="services">
       <div className="absolute inset-0 bg-gradient-to-br from-slate-50/30 via-white to-indigo-50/20"></div>
       <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-[#00227c]/3 to-transparent rounded-full blur-3xl"></div>
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-indigo-500/3 to-transparent rounded-full blur-3xl"></div>
@@ -749,7 +751,7 @@ function Partners() {
   ];
 
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-slate-50 relative overflow-hidden">
+    <section className="py-16 sm:py-20 lg:py-24 bg-slate-50 relative overflow-hidden" id="partners">
       <div className="absolute inset-0 bg-gradient-to-br from-slate-50 via-white to-indigo-50/30"></div>
       <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-bl from-[#00227c]/5 to-transparent rounded-full blur-3xl"></div>
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-indigo-500/5 to-transparent rounded-full blur-3xl"></div>
@@ -848,7 +850,7 @@ function Partners() {
 
 function Clients() {
   return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-white relative overflow-hidden">
+    <section className="py-16 sm:py-20 lg:py-24 bg-white relative overflow-hidden" id="clients">
       <div className="absolute inset-0 bg-gradient-to-br from-slate-50/30 via-white to-indigo-50/20"></div>
       <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-[#00227c]/3 to-transparent rounded-full blur-3xl"></div>
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-indigo-500/3 to-transparent rounded-full blur-3xl"></div>
