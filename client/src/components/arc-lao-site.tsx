@@ -537,42 +537,48 @@ function Clients() {
           <p className="text-lg text-slate-600">Trusted by leading organizations worldwide</p>
         </div>
         
-        <div className="max-w-7xl mx-auto">
-          {/* All Client Logos Grid */}
-          <div className="bg-white p-10 lg:p-12 rounded-2xl shadow-sm border border-slate-100">
-            <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-11 gap-8 lg:gap-10 items-center justify-items-center">
-              <div className="flex items-center justify-center w-20 h-20 lg:w-24 lg:h-24 p-2">
-                <img src={unLogo} alt="United Nations" className="max-h-full max-w-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300" />
+        <div className="max-w-full mx-auto overflow-x-auto">
+          {/* Top Row - Main Logos */}
+          <div className="bg-white py-8 px-4 rounded-2xl shadow-sm border border-slate-100 mb-8">
+            <div className="flex items-center justify-center gap-8 lg:gap-12 xl:gap-16 min-w-max px-4">
+              <div className="flex items-center justify-center h-16 w-20 flex-shrink-0">
+                <img src={unLogo} alt="United Nations" className="max-h-full max-w-full object-contain" />
               </div>
-              <div className="flex items-center justify-center w-20 h-20 lg:w-24 lg:h-24 p-2">
-                <img src={uxoLaoLogo} alt="UXO LAO" className="max-h-full max-w-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300" />
+              <div className="flex items-center justify-center h-16 w-20 flex-shrink-0">
+                <img src={uxoLaoLogo} alt="UXO LAO" className="max-h-full max-w-full object-contain" />
               </div>
-              <div className="flex items-center justify-center w-20 h-20 lg:w-24 lg:h-24 p-2">
-                <img src={adbLogo} alt="Asian Development Bank" className="max-h-full max-w-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300" />
+              <div className="flex items-center justify-center h-16 w-20 flex-shrink-0">
+                <img src={adbLogo} alt="Asian Development Bank" className="max-h-full max-w-full object-contain" />
               </div>
-              <div className="flex items-center justify-center w-20 h-20 lg:w-24 lg:h-24 p-2">
-                <img src={worldBankLogo} alt="The World Bank" className="max-h-full max-w-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300" />
+              <div className="flex items-center justify-center h-16 w-28 flex-shrink-0">
+                <img src={worldBankLogo} alt="The World Bank" className="max-h-full max-w-full object-contain" />
               </div>
-              <div className="flex items-center justify-center w-20 h-20 lg:w-24 lg:h-24 p-2">
-                <img src={tetraTechLogo} alt="Tetra Tech" className="max-h-full max-w-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300" />
+              <div className="flex items-center justify-center h-16 w-24 flex-shrink-0">
+                <img src={tetraTechLogo} alt="Tetra Tech" className="max-h-full max-w-full object-contain" />
               </div>
-              <div className="flex items-center justify-center w-20 h-20 lg:w-24 lg:h-24 p-2">
-                <img src={magLogo} alt="Mines Advisory Group" className="max-h-full max-w-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300" />
+            </div>
+          </div>
+          
+          {/* Bottom Row - Additional Logos */}
+          <div className="bg-[#00227c] py-8 px-4 rounded-2xl shadow-sm">
+            <div className="flex items-center justify-center gap-8 lg:gap-12 xl:gap-16 min-w-max px-4">
+              <div className="flex items-center justify-center h-16 w-20 bg-white rounded-lg p-2 flex-shrink-0">
+                <img src={magLogo} alt="Mines Advisory Group" className="max-h-full max-w-full object-contain" />
               </div>
-              <div className="flex items-center justify-center w-20 h-20 lg:w-24 lg:h-24 p-2">
-                <img src={norwegianPeoplesAidLogo} alt="Norwegian People's Aid" className="max-h-full max-w-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300" />
+              <div className="flex items-center justify-center h-16 w-20 bg-white rounded-lg p-2 flex-shrink-0">
+                <img src={norwegianPeoplesAidLogo} alt="Norwegian People's Aid" className="max-h-full max-w-full object-contain" />
               </div>
-              <div className="flex items-center justify-center w-20 h-20 lg:w-24 lg:h-24 p-2">
-                <img src={saveTheChildrenLogo} alt="Save the Children" className="max-h-full max-w-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300" />
+              <div className="flex items-center justify-center h-16 w-20 bg-white rounded-lg p-2 flex-shrink-0">
+                <img src={saveTheChildrenLogo} alt="Save the Children" className="max-h-full max-w-full object-contain" />
               </div>
-              <div className="flex items-center justify-center w-20 h-20 lg:w-24 lg:h-24 p-2">
-                <img src={seponLogo} alt="Chifeng Gold - Sepon" className="max-h-full max-w-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300" />
+              <div className="flex items-center justify-center h-16 w-20 bg-white rounded-lg p-2 flex-shrink-0">
+                <img src={seponLogo} alt="Chifeng Gold - Sepon" className="max-h-full max-w-full object-contain" />
               </div>
-              <div className="flex items-center justify-center w-20 h-20 lg:w-24 lg:h-24 p-2">
-                <img src={panAustLogo} alt="PanAust" className="max-h-full max-w-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300" />
+              <div className="flex items-center justify-center h-16 w-20 bg-white rounded-lg p-2 flex-shrink-0">
+                <img src={panAustLogo} alt="PanAust" className="max-h-full max-w-full object-contain" />
               </div>
-              <div className="flex items-center justify-center w-20 h-20 lg:w-24 lg:h-24 p-2">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/SDS_Mining_logo.svg/1200px-SDS_Mining_logo.svg.png" alt="SDS Mining" className="max-h-full max-w-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300" />
+              <div className="flex items-center justify-center h-16 w-20 bg-white rounded-lg p-2 flex-shrink-0">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/SDS_Mining_logo.svg/1200px-SDS_Mining_logo.svg.png" alt="SDS Mining" className="max-h-full max-w-full object-contain" />
               </div>
             </div>
           </div>
