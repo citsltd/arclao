@@ -756,7 +756,7 @@ function Partners() {
                 {/* Header with Category and Year */}
                 <div className="flex items-center justify-between mb-6">
                   <div className="px-3 py-1 border border-slate-200 rounded-full bg-[#00227c]">
-                    <span className="text-xs font-semibold text-slate-600 uppercase tracking-wide">
+                    <span className="text-xs font-semibold uppercase tracking-wide text-[#ffffff]">
                       {partner.category}
                     </span>
                   </div>
