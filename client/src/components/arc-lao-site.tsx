@@ -1007,10 +1007,10 @@ export default function CorporateSite() {
       <Hero />
       <About />
       <Solutions />
-      <WhyChoose />
       <DetailedServices />
       <Partners />
       <Clients />
+      <WhyChoose />
       <Footer />
     </main>
   );
