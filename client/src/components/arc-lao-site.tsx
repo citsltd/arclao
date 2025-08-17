@@ -47,7 +47,6 @@ function Nav() {
   const [open, setOpen] = useState(false);
   
   const navItems = [
-    { label: "About Us", href: "#about" },
     { label: "Our Solutions", href: "#solutions" },
     { label: "Our Services", href: "#services" },
     { label: "Our Partners", href: "#partners" },
