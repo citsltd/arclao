@@ -215,7 +215,7 @@ function Hero() {
 
 function About() {
   return (
-    <section className="py-0 bg-white relative overflow-hidden" id="about">
+    <section className="pt-16 sm:pt-20 lg:pt-24 pb-0 bg-white relative overflow-hidden" id="about">
       <Container className="relative px-0 max-w-full">
         <div className="grid lg:grid-cols-2 min-h-[600px] lg:min-h-[700px]">
           {/* Left Side - Image and Blue Background */}
