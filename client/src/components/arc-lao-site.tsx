@@ -205,71 +205,7 @@ function Hero() {
   );
 }
 
-function About() {
-  return (
-    <section className="py-0 bg-white relative overflow-hidden" id="about">
-      <Container className="relative px-0 max-w-full">
-        <div className="grid lg:grid-cols-2 min-h-[600px] lg:min-h-[700px]">
-          {/* Left Side - Image and Blue Background */}
-          <div className="relative bg-[#00227c] flex items-center justify-center order-2 lg:order-1">
-            {/* Background Geometric Elements */}
-            <div className="absolute inset-0 bg-[#00227c]"></div>
-            <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-bl from-white/5 to-transparent rounded-full blur-3xl"></div>
-            <div className="absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-tr from-white/5 to-transparent rounded-full blur-2xl"></div>
-            
 
-          </div>
-          
-          {/* Right Side - Content */}
-          <div className="bg-slate-50 flex items-center order-1 lg:order-2">
-            <div className="w-full p-8 lg:p-16 xl:p-20">
-              {/* Header */}
-              <div className="space-y-6 mb-10">
-                <div className="inline-flex items-center gap-2 px-4 py-2 bg-orange-100 text-orange-600 rounded-full text-sm font-semibold uppercase tracking-wide">
-                  OUR PROFILE
-                </div>
-                
-                <div>
-                  <h3 className="text-2xl lg:text-3xl font-bold mb-2 text-[#000000]">Welcome To</h3>
-                  <h2 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight text-[#00227c]">
-                    ARC LAO
-                  </h2>
-                </div>
-              </div>
-              
-              {/* Content */}
-              <div className="space-y-6 text-slate-700">
-                <p className="text-lg leading-relaxed">
-                  We are an international trading company with over <span className="font-semibold text-[#00227c]">16 years</span> of dedicated operation in Laos. Throughout our extensive history, we have established a strong presence across diverse business sectors, including demining equipment, information technology, automotive, hospitality, energy, and farming equipment. Our commitment to quality and excellence has enabled us to build lasting relationships with clients and partners worldwide.
-                </p>
-                
-                <p className="text-lg leading-relaxed">
-                  Driven by innovation and a customer-centric approach, we strive to deliver reliable solutions that meet the evolving needs of our clients in various industries.
-                </p>
-              </div>
-              
-              {/* Stats Grid */}
-              <div className="mt-10 grid grid-cols-3 gap-6">
-                <div className="text-center p-4 bg-white rounded-xl shadow-sm">
-                  <div className="text-2xl lg:text-3xl font-bold text-[#00227c] mb-1">16+</div>
-                  <div className="text-sm text-slate-600 font-medium">Years Experience</div>
-                </div>
-                <div className="text-center p-4 bg-white rounded-xl shadow-sm">
-                  <div className="text-2xl lg:text-3xl font-bold text-[#00227c] mb-1">50+</div>
-                  <div className="text-sm text-slate-600 font-medium">Projects</div>
-                </div>
-                <div className="text-center p-4 bg-white rounded-xl shadow-sm">
-                  <div className="text-2xl lg:text-3xl font-bold text-[#00227c] mb-1">5+</div>
-                  <div className="text-sm text-slate-600 font-medium">Industries</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </Container>
-    </section>
-  );
-}
 
 function Solutions() {
   const solutions = [
@@ -990,7 +926,6 @@ export default function CorporateSite() {
     <main className="min-h-screen text-slate-900">
       <Nav />
       <Hero />
-      <About />
       <Solutions />
       <WhyChoose />
       <DetailedServices />
