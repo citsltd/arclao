@@ -649,48 +649,7 @@ function DetailedServices() {
   );
 }
 
-function VisionMission() {
-  return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-slate-50 relative overflow-hidden">
-      <Container className="relative px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl sm:text-5xl font-bold text-slate-900 mb-4">
-            Our Company <span className="text-[#00227c]">Vision & Mission</span>
-          </h2>
-          <p className="text-xl text-slate-600 max-w-4xl mx-auto leading-relaxed">
-            To be a globally recognized leader committed to delivering excellence in all our endeavors, inspiring trust and setting the standard for quality and innovation.
-          </p>
-        </div>
-        
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4 max-w-6xl mx-auto">
-          <div className="bg-white rounded-2xl p-8 shadow-lg text-center">
-            <div className="w-16 h-16 bg-[#00227c] rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">1</div>
-            <h3 className="text-lg font-bold text-slate-900 mb-2">Become a leader</h3>
-            <p className="text-slate-600">recognized for excellence</p>
-          </div>
-          
-          <div className="bg-white rounded-2xl p-8 shadow-lg text-center">
-            <div className="w-16 h-16 bg-[#00227c] rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">2</div>
-            <h3 className="text-lg font-bold text-slate-900 mb-2">Inspire trust among</h3>
-            <p className="text-slate-600">customers, partners, and stakeholders</p>
-          </div>
-          
-          <div className="bg-white rounded-2xl p-8 shadow-lg text-center">
-            <div className="w-16 h-16 bg-[#00227c] rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">3</div>
-            <h3 className="text-lg font-bold text-slate-900 mb-2">Deliver outstanding</h3>
-            <p className="text-slate-600">products and services that meet the highest standards</p>
-          </div>
-          
-          <div className="bg-white rounded-2xl p-8 shadow-lg text-center">
-            <div className="w-16 h-16 bg-[#00227c] rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">4</div>
-            <h3 className="text-lg font-bold text-slate-900 mb-2">Prioritize customer</h3>
-            <p className="text-slate-600">satisfaction in every interaction</p>
-          </div>
-        </div>
-      </Container>
-    </section>
-  );
-}
+
 
 function Partners() {
   const partners = [
@@ -1050,7 +1009,6 @@ export default function CorporateSite() {
       <Solutions />
       <WhyChoose />
       <DetailedServices />
-      <VisionMission />
       <Partners />
       <Clients />
       <Footer />
