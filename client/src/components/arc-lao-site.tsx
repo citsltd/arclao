@@ -152,16 +152,8 @@ function Nav() {
 
 function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center text-white overflow-hidden">
-      <div className="absolute inset-0">
-        <img 
-          src={Technological_Innovation} 
-          alt="Technological Innovation Background" 
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-slate-900/70"></div>
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/60 via-indigo-900/40 to-slate-900/60"></div>
-      </div>
+    <section className="relative min-h-screen flex items-center text-white overflow-hidden bg-gradient-to-br from-slate-900 via-[#00227c] to-slate-900">
+      <div className="absolute inset-0 bg-gradient-to-br from-slate-900/60 via-[#00227c]/80 to-slate-900/60"></div>
       <div className="absolute inset-0 bg-gradient-to-br from-[#00227c]/20 via-[#00227c]/10 to-transparent"></div>
       <div className="absolute top-1/4 -right-20 w-96 h-96 bg-gradient-to-bl from-[#00227c]/20 to-transparent rounded-full blur-3xl animate-pulse"></div>
       <div className="absolute bottom-1/4 -left-20 w-96 h-96 bg-gradient-to-tr from-[#00227c]/20 to-transparent rounded-full blur-3xl animate-pulse delay-1000"></div>
