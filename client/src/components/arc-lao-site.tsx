@@ -52,6 +52,7 @@ function Nav() {
     { label: "Our Services", href: "#services" },
     { label: "Our Partners", href: "#partners" },
     { label: "Our Clients", href: "#clients" },
+    { label: "Our Key Milestones", href: "#milestones" },
   ];
 
   return (
