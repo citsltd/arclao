@@ -38,9 +38,6 @@ import ProjectConsultancyImage from "@assets/Project Consultancy_1755075726843.j
 
 import UNDP_logo_svg from "@assets/UNDP_logo.svg.png";
 
-// Team image
-import handshake_image from "@assets/handshake_1754916357209.png";
-
 // --- Components ---
 function Container({ children, className = "" }: { children: React.ReactNode; className?: string }) {
   return <div className={`mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 ${className}`}>{children}</div>;
@@ -56,7 +53,6 @@ function Nav() {
     { label: "Our Partners", href: "#partners" },
     { label: "Our Clients", href: "#clients" },
     { label: "Our Key Milestones", href: "#milestones" },
-    { label: "Our Team", href: "#team" },
   ];
 
   return (
@@ -565,99 +561,6 @@ function KeyMilestones() {
                     <h3 className="text-xl font-bold text-white group-hover:text-amber-400 transition-colors duration-300">
                       {milestone.label}
                     </h3>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </Container>
-    </section>
-  );
-}
-
-function OurTeam() {
-  const teamAttributes = [
-    {
-      title: "Multidisciplinary team",
-      description: "Diverse expertise across multiple sectors and technologies"
-    },
-    {
-      title: "Unique expertise",
-      description: "Specialized knowledge in niche markets and innovative solutions"
-    },
-    {
-      title: "Customer-centric attitude",
-      description: "Focused on delivering value and exceeding client expectations"
-    },
-    {
-      title: "Deep industry expertise with a passion for innovative solutions",
-      description: "Years of experience combined with forward-thinking approaches"
-    }
-  ];
-
-  return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-[#00227c] relative overflow-hidden" id="team">
-      <div className="absolute inset-0 bg-gradient-to-br from-[#00227c] via-[#001a63] to-[#00227c]"></div>
-      <div className="absolute top-0 right-1/4 w-96 h-96 bg-gradient-to-bl from-white/5 to-transparent rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-gradient-to-tr from-white/5 to-transparent rounded-full blur-3xl"></div>
-      
-      <Container className="relative px-4">
-        <div className="grid gap-12 lg:gap-16 lg:grid-cols-2 items-center">
-          {/* Left Side - Team Image */}
-          <div className="order-2 lg:order-1">
-            <div className="relative">
-              <div className="aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl ring-1 ring-white/20">
-                <img 
-                  src={handshake_image} 
-                  alt="Our Team - Collaboration and Partnership" 
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#00227c]/30 via-transparent to-transparent"></div>
-                
-                {/* Team Overlay Badge */}
-                <div className="absolute bottom-6 left-6 right-6">
-                  <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-4 shadow-xl">
-                    <h3 className="text-xl font-bold text-[#00227c] text-center">Our Team</h3>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          {/* Right Side - Content */}
-          <div className="order-1 lg:order-2 text-white">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 text-white rounded-full text-sm font-semibold uppercase tracking-wide mb-6 backdrop-blur-sm">
-              Our People
-            </div>
-            
-            <h2 className="text-4xl sm:text-5xl font-bold mb-8">
-              Our <span className="text-amber-400">Team</span>
-            </h2>
-            
-            <p className="text-lg text-white/90 leading-relaxed mb-10">
-              Our team combines deep industry expertise with a passion for innovative solutions. United by a shared commitment to quality, collaboration, and impact, we work across disciplines to deliver measurable results for our clients and partners.
-            </p>
-            
-            {/* Team Attributes Grid */}
-            <div className="grid gap-6 md:grid-cols-2">
-              {teamAttributes.map((attribute, index) => (
-                <div key={index} className="flex items-start gap-4 group">
-                  {/* Check Icon */}
-                  <div className="flex-shrink-0 w-8 h-8 bg-gradient-to-br from-amber-400 to-orange-500 rounded-full flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 transform group-hover:scale-105">
-                    <svg className="w-4 h-4 text-[#00227c]" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                    </svg>
-                  </div>
-                  
-                  {/* Content */}
-                  <div className="flex-1">
-                    <h3 className="text-lg font-bold text-white mb-1 group-hover:text-amber-400 transition-colors duration-300">
-                      {attribute.title}
-                    </h3>
-                    <p className="text-sm text-white/80 leading-relaxed">
-                      {attribute.description}
-                    </p>
                   </div>
                 </div>
               ))}
@@ -1180,7 +1083,6 @@ export default function CorporateSite() {
       <Clients />
       <WhyChoose />
       <KeyMilestones />
-      <OurTeam />
       <Footer />
     </main>
   );
