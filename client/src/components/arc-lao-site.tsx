@@ -364,15 +364,7 @@ function Solutions() {
                   {solution.description}
                 </p>
                 
-                {/* Learn More Link */}
-                <div className="mt-4 pt-4 border-t border-slate-100">
-                  <span className="inline-flex items-center gap-2 text-[#00227c] font-medium text-sm group-hover:gap-3 transition-all duration-300">
-                    Learn More
-                    <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                    </svg>
-                  </span>
-                </div>
+
               </div>
             </div>
           ))}
@@ -678,15 +670,7 @@ function DetailedServices() {
                       </p>
                     </div>
                     
-                    {/* Call to Action */}
-                    <div className="pt-4">
-                      <button className={`group/btn inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r ${service.gradient} text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105`}>
-                        <span>Learn More</span>
-                        <svg className="w-4 h-4 transition-transform group-hover/btn:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                        </svg>
-                      </button>
-                    </div>
+
                   </div>
                 </div>
                 
