@@ -454,18 +454,7 @@ function WhyChoose() {
               ))}
             </div>
             
-            {/* Call to Action */}
-            <div className="mt-8 pt-6">
-              <a 
-                href="#contact"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-[#00227c] text-white font-semibold rounded-xl shadow-lg hover:shadow-[#00227c]/25 hover:bg-[#001a63] transition-all duration-300 transform hover:scale-105"
-              >
-                <span>Get Started Today</span>
-                <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </a>
-            </div>
+
           </div>
           
           <div className="order-1 lg:order-2 relative">
@@ -493,6 +482,87 @@ function WhyChoose() {
                   <div className="text-sm text-slate-600 font-medium">Projects Delivered</div>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </Container>
+    </section>
+  );
+}
+
+function KeyMilestones() {
+  const milestones = [
+    {
+      number: "50+",
+      label: "Active Work Force",
+      gradient: "from-amber-400 to-orange-500"
+    },
+    {
+      number: "20+",
+      sublabel: "Million",
+      label: "Net Worth",
+      gradient: "from-amber-400 to-orange-500"
+    },
+    {
+      number: "20+",
+      label: "Years of work experience",
+      gradient: "from-amber-400 to-orange-500"
+    },
+    {
+      number: "08",
+      label: "Global Partnerships",
+      gradient: "from-amber-400 to-orange-500"
+    }
+  ];
+
+  return (
+    <section className="py-16 sm:py-20 lg:py-24 bg-[#00227c] relative overflow-hidden" id="milestones">
+      <div className="absolute inset-0 bg-gradient-to-br from-[#00227c] via-[#001a63] to-[#00227c]"></div>
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-br from-white/5 to-transparent rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-gradient-to-tl from-white/5 to-transparent rounded-full blur-3xl"></div>
+      
+      <Container className="relative px-4">
+        <div className="grid gap-12 lg:gap-16 lg:grid-cols-2 items-center">
+          {/* Left Side - Content */}
+          <div className="order-2 lg:order-1 text-white">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 text-white rounded-full text-sm font-semibold uppercase tracking-wide mb-6 backdrop-blur-sm">
+              Our Achievements
+            </div>
+            
+            <h2 className="text-4xl sm:text-5xl font-bold mb-8">
+              Key <span className="text-amber-400">Milestones</span>
+            </h2>
+            
+            <p className="text-lg text-white/90 leading-relaxed">
+              Over the span of more than two decades, ARC Lao has attained substantial achievements in the core business domains in which it operates.
+            </p>
+          </div>
+          
+          {/* Right Side - Milestones */}
+          <div className="order-1 lg:order-2">
+            <div className="space-y-6">
+              {milestones.map((milestone, index) => (
+                <div key={index} className="flex items-center gap-6 group">
+                  {/* Number Box */}
+                  <div className="flex-shrink-0 w-32 h-24 bg-gradient-to-br from-amber-400 to-orange-500 rounded-2xl flex flex-col items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 transform group-hover:scale-105">
+                    <div className="text-3xl font-bold text-[#00227c]">
+                      {milestone.number}
+                    </div>
+                    {milestone.sublabel && (
+                      <div className="text-sm font-semibold text-[#00227c] -mt-1">
+                        {milestone.sublabel}
+                      </div>
+                    )}
+                  </div>
+                  
+                  {/* Label */}
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold text-white group-hover:text-amber-400 transition-colors duration-300">
+                      {milestone.label}
+                    </h3>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -1011,6 +1081,7 @@ export default function CorporateSite() {
       <Partners />
       <Clients />
       <WhyChoose />
+      <KeyMilestones />
       <Footer />
     </main>
   );
