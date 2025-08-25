@@ -188,18 +188,6 @@ function Hero() {
       alt: "ARC Lao Partnership",
       title: "Building Strong Business Partnerships",
       subtitle: "Committed to quality and excellence with lasting relationships worldwide"
-    },
-    {
-      src: DeminingEquipmentsImage,
-      alt: "Demining Equipment",
-      title: "Specialized Demining Solutions",
-      subtitle: "National distributor for all types of demining equipment used in humanitarian efforts"
-    },
-    {
-      src: MahindraTractorsImage,
-      alt: "Agriculture Machinery",
-      title: "Advanced Agricultural Solutions",
-      subtitle: "Country distributor for BCS-Italy and Mahindra & Mahindra agricultural machinery"
     }
   ];
 
