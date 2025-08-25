@@ -83,14 +83,14 @@ function Nav() {
           </div>
           
           <a 
-            href="tel:+8562076198200" 
+            href="tel:+85620526299292" 
             className="group relative inline-flex items-center gap-2 px-6 py-3 bg-[#00227c] text-white font-semibold rounded-2xl shadow-lg shadow-[#00227c]/25 hover:shadow-xl hover:shadow-[#00227c]/30 transition-all duration-300 transform hover:scale-105 overflow-hidden"
           >
             <div className="absolute inset-0 rounded-2xl bg-[#001a63] opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
             <svg className="w-4 h-4 transition-transform group-hover:scale-110 relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
             </svg>
-            <span className="hidden sm:inline relative z-10">+856 20 7619 8200</span>
+            <span className="hidden sm:inline relative z-10">+856 20 5262 9292</span>
             <span className="sm:hidden relative z-10">Call</span>
           </a>
         </nav>
@@ -133,14 +133,14 @@ function Nav() {
               ))}
               <div className="pt-4 mt-4 border-t border-slate-200">
                 <a 
-                  href="tel:+8562076198200" 
+                  href="tel:+85620526299292" 
                   className="flex items-center justify-center gap-2 w-full px-4 py-3 bg-[#00227c] text-white font-semibold rounded-xl shadow-lg shadow-[#00227c]/25 transition-transform hover:scale-105 hover:bg-[#001a63]"
                   onClick={() => setOpen(false)}
                 >
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
-                  +856 20 7619 8200
+                  +856 20 5262 9292
                 </a>
               </div>
             </div>
@@ -153,7 +153,7 @@ function Nav() {
 
 function Hero() {
   const getWhatsAppUrl = () => {
-    const phoneNumber = "85620562814"; // Remove spaces and + for WhatsApp API
+    const phoneNumber = "85620526299292"; // Remove spaces and + for WhatsApp API
     const message = "Hello! I'm interested in ARC Lao's services.";
     const encodedMessage = encodeURIComponent(message);
     
@@ -1000,8 +1000,8 @@ function Footer() {
                       <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
                     </svg>
                   </div>
-                  <a href="tel:+8562052629292" className="text-slate-400 hover:text-white transition-colors text-sm">
-                    +856-20-5262 9292
+                  <a href="tel:+85620526299292" className="text-slate-400 hover:text-white transition-colors text-sm">
+                    +856 20 5262 9292
                   </a>
                 </div>
               </div>

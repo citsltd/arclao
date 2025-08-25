@@ -49,8 +49,8 @@ export default function Navigation() {
             <button onClick={() => scrollToSection('contact')} className="text-arc-gray hover:text-arc-dark transition-colors text-sm">
               CONTACT US
             </button>
-            <a href="tel:+8562076198200" className="bg-arc-blue text-white px-5 py-2.5 rounded text-sm hover:opacity-90 transition-opacity">
-              +856 20 7619 8200
+            <a href="tel:+85620526299292" className="bg-arc-blue text-white px-5 py-2.5 rounded text-sm hover:opacity-90 transition-opacity">
+              +856 20 5262 9292
             </a>
           </div>
 
