@@ -314,6 +314,12 @@ function Solutions() {
       description: "Country distributor for TVS Motors",
       image: MotorbikesImage,
       gradient: "from-purple-500/10 to-violet-500/10"
+    },
+    {
+      title: "Project Consultancy",
+      description: "Comprehensive business solutions including technical, management, financial, and environmental consulting",
+      image: ProjectConsultancyImage,
+      gradient: "from-teal-500/10 to-cyan-500/10"
     }
   ];
 
