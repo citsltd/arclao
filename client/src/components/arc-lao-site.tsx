@@ -637,12 +637,8 @@ function DetailedServices() {
               <div className={`grid gap-12 lg:gap-16 lg:grid-cols-2 items-center ${index % 2 === 1 ? '' : ''}`}>
                 <div className={index % 2 === 1 ? 'order-2 lg:order-1' : 'order-2 lg:order-2'}>
                   <div className="space-y-6">
-                    {/* Service Number & Category */}
-                    <div className="flex items-center gap-4">
-                      <div className={`w-12 h-12 rounded-2xl bg-gradient-to-br ${service.gradient} p-0.5 shadow-lg`}>
-                        <div className="w-full h-full bg-white rounded-[14px] flex items-center justify-center">
-                        </div>
-                      </div>
+                    {/* Service Category */}
+                    <div className="flex items-center">
                       <div className={`px-3 py-1 bg-gradient-to-r ${service.bgGradient} border border-slate-200/50 rounded-full`}>
                         <span className={`text-xs font-semibold bg-gradient-to-r ${service.gradient} bg-clip-text text-transparent uppercase tracking-wide`}>
                           {service.title.split(' ')[0]} Service
