@@ -244,9 +244,8 @@ function About() {
               <img 
                 src={arcLaoAboutImage} 
                 alt="ARC Lao Business Partnership" 
-                className="w-full h-full object-cover opacity-80"
+                className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-[#00227c]/60"></div>
             </div>
             <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-bl from-white/5 to-transparent rounded-full blur-3xl"></div>
             <div className="absolute bottom-0 left-0 w-48 h-48 bg-gradient-to-tr from-white/5 to-transparent rounded-full blur-2xl"></div>
