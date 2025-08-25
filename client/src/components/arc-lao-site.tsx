@@ -1018,26 +1018,6 @@ function Footer() {
             </div>
           </div>
           
-          <div className="mt-16 pt-8 border-t border-slate-700">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-              <div className="text-center">
-                <div className="text-3xl font-bold mb-2 text-[#fafbff]">16+</div>
-                <div className="text-slate-400 text-sm">Years Experience</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold mb-2 text-[#ffffff]">50+</div>
-                <div className="text-slate-400 text-sm">Projects Completed</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold mb-2 text-[#ffffff]">100+</div>
-                <div className="text-slate-400 text-sm">Team Members</div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl font-bold mb-2 text-[#ffffff]">5+</div>
-                <div className="text-slate-400 text-sm">Countries Served</div>
-              </div>
-            </div>
-          </div>
         </div>
         
         <div className="py-6 border-t border-slate-700">
