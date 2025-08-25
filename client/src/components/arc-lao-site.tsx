@@ -57,91 +57,106 @@ function Nav() {
   ];
 
   return (
-    <header className="fixed top-0 w-full z-50 backdrop-blur-xl bg-white/80 supports-[backdrop-filter]:bg-white/80 border-b border-white/20 shadow-lg shadow-slate-900/5">
-      <div className="absolute inset-0 bg-gradient-to-r from-indigo-50/50 via-white/50 to-cyan-50/50"></div>
+    <header className="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-sm border-b border-slate-200/60 shadow-md">
       
-      <Container className="relative flex items-center justify-between h-18 py-4">
-        <a href="#" className="group flex items-center gap-3 transition-transform duration-300 hover:scale-105">
+      <Container className="relative flex items-center justify-between py-4">
+        {/* Logo */}
+        <a href="#" className="flex items-center gap-3 group">
           <img 
             src={arcLaoLogo} 
             alt="ARC LAO" 
-            className="h-12 w-auto transition-transform duration-300 group-hover:scale-105"
+            className="h-10 w-auto transition-all duration-300 group-hover:brightness-110"
           />
         </a>
 
-        <nav className="hidden lg:flex items-center gap-8">
-          <div className="flex items-center gap-1 bg-slate-50/80 rounded-2xl p-1 shadow-inner">
-            {navItems.map((n) => (
+        {/* Desktop Navigation */}
+        <nav className="hidden lg:flex items-center">
+          <div className="flex items-center space-x-1">
+            {navItems.map((item, index) => (
               <a 
-                key={n.label} 
-                href={n.href} 
-                className="relative px-4 py-2 text-sm font-medium text-slate-700 hover:text-slate-900 rounded-xl transition-all duration-300 hover:bg-white hover:shadow-sm group"
+                key={item.label} 
+                href={item.href} 
+                className="relative px-5 py-3 text-[15px] font-medium text-slate-700 hover:text-[#00227c] transition-all duration-300 group"
               >
-                <span className="relative z-10">{n.label}</span>
-                <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-indigo-500/10 to-cyan-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <span className="relative z-10">{item.label}</span>
+                
+                {/* Hover underline effect */}
+                <div className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-[#00227c] transition-all duration-300 group-hover:w-3/4 group-hover:left-1/8"></div>
+                
+                {/* Hover background effect */}
+                <div className="absolute inset-0 rounded-lg bg-slate-50/0 group-hover:bg-slate-50/70 transition-all duration-300"></div>
+                
+                {/* Right separator */}
+                {index < navItems.length - 1 && (
+                  <div className="absolute right-0 top-1/2 transform -translate-y-1/2 w-px h-4 bg-slate-300/60"></div>
+                )}
               </a>
             ))}
           </div>
           
-          <a 
-            href="tel:+85620526299292" 
-            className="group relative inline-flex items-center gap-2 px-6 py-3 bg-[#00227c] text-white font-semibold rounded-2xl shadow-lg shadow-[#00227c]/25 hover:shadow-xl hover:shadow-[#00227c]/30 transition-all duration-300 transform hover:scale-105 overflow-hidden"
-          >
-            <div className="absolute inset-0 rounded-2xl bg-[#001a63] opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
-            <svg className="w-4 h-4 transition-transform group-hover:scale-110 relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-            </svg>
-            <span className="hidden sm:inline relative z-10">+856 20 5262 9292</span>
-            <span className="sm:hidden relative z-10">Call</span>
-          </a>
+          {/* Call Button */}
+          <div className="ml-8 pl-8 border-l border-slate-300/60">
+            <a 
+              href="tel:+85620526299292" 
+              className="group inline-flex items-center gap-2.5 px-5 py-2.5 bg-[#00227c] text-white font-medium rounded-lg hover:bg-[#001a63] transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-[#00227c]/20"
+            >
+              <svg className="w-4 h-4 transition-transform group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+              <span className="hidden sm:inline">+856 20 5262 9292</span>
+              <span className="sm:hidden">Call Us</span>
+            </a>
+          </div>
         </nav>
 
+        {/* Mobile Menu Button */}
         <button
           onClick={() => setOpen((v) => !v)}
-          className="lg:hidden inline-flex items-center justify-center w-10 h-10 rounded-2xl bg-slate-100/80 hover:bg-slate-200/80 border border-slate-200/50 transition-all duration-300 shadow-sm hover:shadow-md"
+          className="lg:hidden flex items-center justify-center w-9 h-9 rounded-md text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition-all duration-200"
           aria-label="Toggle menu"
         >
           <svg 
             viewBox="0 0 24 24" 
-            className={`w-5 h-5 transition-transform duration-300 ${open ? 'rotate-90' : 'rotate-0'}`} 
+            className={`w-6 h-6 transition-transform duration-300 ${open ? 'rotate-180' : 'rotate-0'}`} 
             fill="none" 
             stroke="currentColor" 
             strokeWidth="2"
           >
             {open ? (
-              <path d="M6 18L18 6M6 6l12 12" />
+              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
             ) : (
-              <path d="M4 6h16M4 12h16M4 18h16" />
+              <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
             )}
           </svg>
         </button>
       </Container>
 
+      {/* Mobile Navigation */}
       {open && (
-        <div className="lg:hidden border-t border-white/20 bg-white/95 backdrop-blur-xl shadow-xl">
-          <Container className="py-6">
-            <div className="grid gap-4">
-              {navItems.map((n) => (
+        <div className="lg:hidden border-t border-slate-200 bg-white/98 backdrop-blur-sm shadow-lg">
+          <Container className="py-4">
+            <div className="space-y-1">
+              {navItems.map((item) => (
                 <a 
-                  key={n.label} 
-                  href={n.href} 
-                  className="flex items-center gap-3 px-4 py-3 text-slate-700 hover:text-slate-900 hover:bg-slate-50 rounded-xl transition-all duration-300 group"
+                  key={item.label} 
+                  href={item.href} 
+                  className="flex items-center px-4 py-3 text-[15px] font-medium text-slate-700 hover:text-[#00227c] hover:bg-slate-50 rounded-lg transition-all duration-200"
                   onClick={() => setOpen(false)}
                 >
-                  <div className="w-2 h-2 rounded-full bg-gradient-to-r from-indigo-500 to-cyan-500 opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                  <span className="font-medium">{n.label}</span>
+                  <span>{item.label}</span>
                 </a>
               ))}
+              
               <div className="pt-4 mt-4 border-t border-slate-200">
                 <a 
                   href="tel:+85620526299292" 
-                  className="flex items-center justify-center gap-2 w-full px-4 py-3 bg-[#00227c] text-white font-semibold rounded-xl shadow-lg shadow-[#00227c]/25 transition-transform hover:scale-105 hover:bg-[#001a63]"
+                  className="flex items-center justify-center gap-2.5 w-full px-4 py-3 bg-[#00227c] text-white font-medium rounded-lg hover:bg-[#001a63] transition-all duration-200 shadow-lg"
                   onClick={() => setOpen(false)}
                 >
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
-                  +856 20 5262 9292
+                  <span>+856 20 5262 9292</span>
                 </a>
               </div>
             </div>
