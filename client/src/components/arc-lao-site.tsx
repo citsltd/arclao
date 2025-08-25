@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import Technological_Innovation from "@assets/Technological Innovation.jpg";
 import Future_of_Technology from "@assets/Future of Technology_1754915928797.jpg";
@@ -153,12 +153,46 @@ function Nav() {
 }
 
 function Hero() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const sliderImages = [
+    {
+      src: Technological_Innovation,
+      alt: "Technological Innovation",
+      title: "Your Trusted Partner for Global Innovation",
+      subtitle: "With 16+ years of excellence across demining, agriculture, technology, and automotive sectors"
+    },
+    {
+      src: Future_of_Technology,
+      alt: "Future of Technology",
+      title: "Leading the Future of Technology",
+      subtitle: "Delivering innovative solutions that drive sustainable progress in Laos and beyond"
+    },
+    {
+      src: arcLaoAboutImage,
+      alt: "ARC Lao Partnership",
+      title: "Building Strong Business Partnerships",
+      subtitle: "Committed to quality and excellence with lasting relationships worldwide"
+    },
+    {
+      src: DeminingEquipmentsImage,
+      alt: "Demining Equipment",
+      title: "Specialized Demining Solutions",
+      subtitle: "National distributor for all types of demining equipment used in humanitarian efforts"
+    },
+    {
+      src: MahindraTractorsImage,
+      alt: "Agriculture Machinery",
+      title: "Advanced Agricultural Solutions",
+      subtitle: "Country distributor for BCS-Italy and Mahindra & Mahindra agricultural machinery"
+    }
+  ];
+
   const getWhatsAppUrl = () => {
-    const phoneNumber = "85620526299292"; // Remove spaces and + for WhatsApp API
+    const phoneNumber = "85620526299292";
     const message = "Hello! I'm interested in ARC Lao's services.";
     const encodedMessage = encodeURIComponent(message);
     
-    // Check if user is on mobile device
     const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
     
     if (isMobile) {
@@ -168,33 +202,83 @@ function Hero() {
     }
   };
 
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % sliderImages.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + sliderImages.length) % sliderImages.length);
+  };
+
+  const goToSlide = (index: number) => {
+    setCurrentSlide(index);
+  };
+
+  // Auto-slide functionality
+  useEffect(() => {
+    const interval = setInterval(() => {
+      nextSlide();
+    }, 5000); // Change slide every 5 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section className="relative min-h-screen flex items-center text-white overflow-hidden">
+      {/* Image Slider */}
       <div className="absolute inset-0">
-        <img 
-          src={Technological_Innovation} 
-          alt="Technological Innovation Background" 
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-slate-900/70"></div>
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/60 via-indigo-900/40 to-slate-900/60"></div>
+        {sliderImages.map((image, index) => (
+          <div
+            key={index}
+            className={`absolute inset-0 transition-opacity duration-1000 ${
+              index === currentSlide ? 'opacity-100' : 'opacity-0'
+            }`}
+          >
+            <img 
+              src={image.src} 
+              alt={image.alt} 
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-slate-900/50"></div>
+          </div>
+        ))}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#00227c]/30 via-[#00227c]/20 to-transparent"></div>
       </div>
-      <div className="absolute inset-0 bg-gradient-to-br from-[#00227c]/20 via-[#00227c]/10 to-transparent"></div>
-      <div className="absolute top-1/4 -right-20 w-96 h-96 bg-gradient-to-bl from-[#00227c]/20 to-transparent rounded-full blur-3xl animate-pulse"></div>
-      <div className="absolute bottom-1/4 -left-20 w-96 h-96 bg-gradient-to-tr from-[#00227c]/20 to-transparent rounded-full blur-3xl animate-pulse delay-1000"></div>
-      <div className="absolute inset-0 bg-grid-white/[0.05] [mask-image:linear-gradient(0deg,transparent,black,transparent)]"></div>
+
+      {/* Navigation Arrows */}
+      <button
+        onClick={prevSlide}
+        className="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 w-12 h-12 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full flex items-center justify-center hover:bg-white/20 transition-all duration-300 group"
+      >
+        <svg className="w-6 h-6 text-white group-hover:text-white/90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+        </svg>
+      </button>
+
+      <button
+        onClick={nextSlide}
+        className="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 w-12 h-12 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full flex items-center justify-center hover:bg-white/20 transition-all duration-300 group"
+      >
+        <svg className="w-6 h-6 text-white group-hover:text-white/90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
+
+      {/* Content */}
       <Container className="relative z-10 py-16 sm:py-20 lg:py-32 px-4">
         <div className="max-w-4xl mx-auto text-center pt-[50px] pb-[25px]">
           <div className="space-y-4 sm:space-y-6 mb-8 sm:mb-12">
             <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight px-2">
-              <span className="block text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-2 text-white/90">Your Trusted Partner for</span>
-              <span className="block mb-2 text-white drop-shadow-lg">Global Innovation</span>
-              
+              <span className="block text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-2 text-white/90">
+                {sliderImages[currentSlide].title.split(' ').slice(0, 4).join(' ')}
+              </span>
+              <span className="block mb-2 text-white drop-shadow-lg">
+                {sliderImages[currentSlide].title.split(' ').slice(4).join(' ')}
+              </span>
             </h1>
             
             <p className="text-sm sm:text-base lg:text-lg text-white/75 max-w-3xl mx-auto mt-6 leading-relaxed px-4">
-              With 16+ years of excellence across demining, agriculture, technology, and automotive sectors, 
-              we deliver innovative solutions that drive sustainable progress in Laos and beyond.
+              {sliderImages[currentSlide].subtitle}
             </p>
           </div>
           
@@ -220,6 +304,21 @@ function Hero() {
               </svg>
             </a>
           </div>
+        </div>
+
+        {/* Slide Indicators */}
+        <div className="absolute bottom-16 left-1/2 transform -translate-x-1/2 flex space-x-3">
+          {sliderImages.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => goToSlide(index)}
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                index === currentSlide
+                  ? 'bg-white shadow-lg'
+                  : 'bg-white/40 hover:bg-white/60'
+              }`}
+            />
+          ))}
         </div>
         
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
