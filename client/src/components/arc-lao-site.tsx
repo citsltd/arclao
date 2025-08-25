@@ -22,7 +22,7 @@ import uxoLaoLogo from "@assets/images_1755069792961.png";
 import norwegianPeoplesAidLogo from "@assets/f5ce5da6-dab5-40b7-b8a7-213182e3d55b_1755069860515.png";
 import unLogo from "@assets/1653286163583_1755069792956.jfif";
 import internationalArbitrationImage from "@assets/International-Arbitration_1755071475378.webp";
-import arcLaoAboutImage from "@assets/arclao image_1756104843023.jpg";
+import arcLaoAboutImage from "@assets/arclao image (1)_1756105129208.jpg";
 
 // Partner logos
 import bcsGroupLogo from "@assets/BCS Two Wheel Tractors_1755074225201.png";
@@ -237,10 +237,10 @@ function About() {
     <section className="pt-16 sm:pt-20 lg:pt-24 pb-0 bg-white relative overflow-hidden" id="about">
       <Container className="relative px-0 max-w-full">
         <div className="grid lg:grid-cols-2 min-h-[600px] lg:min-h-[700px]">
-          {/* Left Side - Image and Blue Background */}
-          <div className="relative bg-[#00227c] flex items-center justify-center order-2 lg:order-1">
-            {/* Background Geometric Elements */}
-            <div className="absolute inset-0 bg-[#00227c]">
+          {/* Left Side - Image */}
+          <div className="relative flex items-center justify-center order-2 lg:order-1">
+            {/* Image Container */}
+            <div className="absolute inset-0">
               <img 
                 src={arcLaoAboutImage} 
                 alt="ARC Lao Business Partnership" 
