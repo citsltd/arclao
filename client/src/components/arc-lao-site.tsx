@@ -349,12 +349,6 @@ function Solutions() {
                 <div className={`absolute inset-0 bg-gradient-to-t ${solution.gradient} opacity-60`}></div>
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
                 
-                {/* Number Badge */}
-                <div className="absolute top-4 left-4">
-                  <div className="w-8 h-8 bg-white/90 backdrop-blur-sm rounded-full flex items-center justify-center">
-                    <span className="text-sm font-bold text-[#00227c]">{index + 1}</span>
-                  </div>
-                </div>
               </div>
               
               {/* Content */}
@@ -647,9 +641,6 @@ function DetailedServices() {
                     <div className="flex items-center gap-4">
                       <div className={`w-12 h-12 rounded-2xl bg-gradient-to-br ${service.gradient} p-0.5 shadow-lg`}>
                         <div className="w-full h-full bg-white rounded-[14px] flex items-center justify-center">
-                          <span className={`text-lg font-bold bg-gradient-to-br ${service.gradient} bg-clip-text text-transparent`}>
-                            {(index + 1).toString().padStart(2, '0')}
-                          </span>
                         </div>
                       </div>
                       <div className={`px-3 py-1 bg-gradient-to-r ${service.bgGradient} border border-slate-200/50 rounded-full`}>
@@ -852,9 +843,6 @@ function Partners() {
               </div>
               
               {/* Partner Number */}
-              <div className="absolute -top-3 -left-3 w-8 h-8 bg-[#00227c] rounded-full flex items-center justify-center shadow-lg">
-                <span className="text-white text-xs font-bold">{(index + 1).toString().padStart(2, '0')}</span>
-              </div>
             </div>
           ))}
         </div>
