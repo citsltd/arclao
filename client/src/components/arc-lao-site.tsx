@@ -281,21 +281,6 @@ function About() {
                 </p>
               </div>
               
-              {/* Stats Grid */}
-              <div className="mt-10 grid grid-cols-3 gap-6">
-                <div className="text-center p-4 bg-white rounded-xl shadow-sm">
-                  <div className="text-2xl lg:text-3xl font-bold text-[#00227c] mb-1">16+</div>
-                  <div className="text-sm text-slate-600 font-medium">Years Experience</div>
-                </div>
-                <div className="text-center p-4 bg-white rounded-xl shadow-sm">
-                  <div className="text-2xl lg:text-3xl font-bold text-[#00227c] mb-1">50+</div>
-                  <div className="text-sm text-slate-600 font-medium">Projects</div>
-                </div>
-                <div className="text-center p-4 bg-white rounded-xl shadow-sm">
-                  <div className="text-2xl lg:text-3xl font-bold text-[#00227c] mb-1">5+</div>
-                  <div className="text-sm text-slate-600 font-medium">Industries</div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
