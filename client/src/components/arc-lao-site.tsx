@@ -368,11 +368,11 @@ function About() {
               
               {/* Content */}
               <div className="space-y-6 text-slate-700">
-                <p className="text-lg leading-relaxed">
+                <p className="text-lg leading-relaxed text-justify">
                   We are an international trading company with over <span className="font-semibold text-[#00227c]">16 years</span> of dedicated operation in Laos. Throughout our extensive history, we have established a strong presence across diverse business sectors, including demining equipment, information technology, automotive, hospitality, energy, and farming equipment. Our commitment to quality and excellence has enabled us to build lasting relationships with clients and partners worldwide.
                 </p>
                 
-                <p className="text-lg leading-relaxed">
+                <p className="text-lg leading-relaxed text-justify">
                   Driven by innovation and a customer-centric approach, we strive to deliver reliable solutions that meet the evolving needs of our clients in various industries.
                 </p>
               </div>
@@ -1041,7 +1041,7 @@ function Footer() {
                 <p className="text-slate-400 text-sm leading-relaxed">
                   Leading Technology Solutions Provider
                 </p>
-                <p className="text-slate-400 text-sm leading-relaxed mt-4">
+                <p className="text-slate-400 text-sm leading-relaxed mt-4 text-justify">
                   ARC Lao Sole Company Ltd is committed to delivering innovative technology solutions across multiple sectors, empowering sustainable progress for our clients and communities.
                 </p>
               </div>
