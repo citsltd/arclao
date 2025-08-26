@@ -50,10 +50,10 @@ function Nav() {
   const navItems = [
     { label: "About Us", href: "#about" },
     { label: "Our Solutions", href: "#solutions" },
-    { label: "OUR SERVICES", href: "#services" },
-    { label: "OUR PARTNERS", href: "#partners" },
-    { label: "OUR CLIENTS", href: "#clients" },
-    { label: "OUR KEY MILESTONES", href: "#milestones" },
+    { label: "Our Services", href: "#services" },
+    { label: "Our Partners", href: "#partners" },
+    { label: "Our Clients", href: "#clients" },
+    { label: "Our Key Milestones", href: "#milestones" },
   ];
 
   return (
