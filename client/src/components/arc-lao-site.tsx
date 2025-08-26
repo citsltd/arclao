@@ -428,10 +428,10 @@ function Solutions() {
       <Container className="relative px-4">
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#00227c]/10 text-[#00227c] rounded-full text-sm font-semibold uppercase tracking-wide mb-6">
-            Our Solutions
+            OUR SOLUTIONS
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
-            We Provide The <span className="text-[#00227c]">Best Solution</span>
+            WE PROVIDE THE <span className="text-[#00227c]">BEST SOLUTION</span>
           </h2>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
             Comprehensive expertise across multiple domains to drive innovation and excellence
@@ -723,10 +723,10 @@ function DetailedServices() {
       <Container className="relative px-4">
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#00227c]/10 text-[#00227c] rounded-full text-sm font-semibold uppercase tracking-wide mb-6">
-            Detailed Services
+            DETAILED SERVICES
           </div>
           <h2 className="text-4xl sm:text-5xl font-bold text-slate-900 mb-4">
-            Our <span className="text-[#00227c]">Services</span>
+            OUR <span className="text-[#00227c]">SERVICES</span>
           </h2>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
             Comprehensive solutions across multiple industries with proven expertise and reliable partnerships
@@ -864,10 +864,10 @@ function Partners() {
       <Container className="relative px-4">
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#00227c]/10 text-[#00227c] rounded-full text-sm font-semibold uppercase tracking-wide mb-6">
-            Strategic Partnerships
+            STRATEGIC PARTNERSHIPS
           </div>
           <h2 className="text-4xl sm:text-5xl font-bold text-slate-900 mb-4">
-            Our <span className="text-[#00227c]">Partners</span>
+            OUR <span className="text-[#00227c]">PARTNERS</span>
           </h2>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
             Building strong relationships with global industry leaders to deliver exceptional solutions and services
