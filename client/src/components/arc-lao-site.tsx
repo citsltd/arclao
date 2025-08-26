@@ -26,9 +26,14 @@ import arcLaoAboutImage from "@assets/arclao image (1)_1756105129208.jpg";
 
 // Partner logos
 import bcsGroupLogo from "@assets/BCS Two Wheel Tractors_1755074225201.png";
+import mahindraLogo from "@assets/Mahindra & Mahindra_1755074225217.png";
+import tvsMotorLogo from "@assets/TVS Motor Company_1755074225219.png";
 import vallonLogo from "@assets/Vallon_1755074225223.png";
 
 // New Service Images
+import MotorbikesImage from "@assets/Motorbikes - TVS Motors_1755075726828.jpg";
+import MahindraTractorsImage from "@assets/Agriculture Machinery - Mahindra Tractors_1755075726835.jpg";
+import BCSTwoWheelTractorsImage from "@assets/Agriculture Machinery - BCS Two Wheel Tractors_1755075726841.jpg";
 import DeminingEquipmentsImage from "@assets/Demining Equipments_1755075726842.jpg";
 import ProjectConsultancyImage from "@assets/Project Consultancy_1755075726843.jpg";
 
@@ -364,10 +369,22 @@ function Solutions() {
       gradient: "from-red-500/10 to-orange-500/10"
     },
     {
+      title: "Agriculture Machinery",
+      description: "Country distributor for BCS-Italy and Mahindra & Mahindra, specializing in agricultural machinery.",
+      image: MahindraTractorsImage,
+      gradient: "from-green-500/10 to-emerald-500/10"
+    },
+    {
       title: "Information Technology",
       description: "Expertise in DevOps, cloud services, AI, and machine learning.",
       image: ProjectConsultancyImage,
       gradient: "from-blue-500/10 to-indigo-500/10"
+    },
+    {
+      title: "Automotive",
+      description: "Country distributor for TVS Motors",
+      image: MotorbikesImage,
+      gradient: "from-purple-500/10 to-violet-500/10"
     },
     {
       title: "Project Consultancy",
@@ -639,6 +656,30 @@ function DetailedServices() {
       bgGradient: "from-blue-50 to-indigo-50"
     },
     {
+      title: "Agriculture Machinery - BCS Two Wheel Tractors",
+      subtitle: "BCS Two Wheel Tractors",
+      description: "BCS is an Italian-based business group with over 40 years of expertise in two-wheel tractors. They offer a wide range of reversible and multifunctional two-wheel tractors suitable for professional soil preparation, greens maintenance, and snow removal.",
+      image: BCSTwoWheelTractorsImage,
+      gradient: "from-green-500 to-emerald-600",
+      bgGradient: "from-green-50 to-emerald-50"
+    },
+    {
+      title: "Agriculture Machinery - Mahindra Tractors", 
+      subtitle: "Mahindra Tractors",
+      description: "Mahindra Tractors, part of Mahindra & Mahindra, is an Indian agricultural machinery manufacturer. It became the world's top-selling tractor brand in 2010, mainly serving India, with growing markets in North America and Australia.",
+      image: MahindraTractorsImage,
+      gradient: "from-amber-500 to-yellow-600",
+      bgGradient: "from-amber-50 to-yellow-50"
+    },
+    {
+      title: "Motorbikes - TVS Motors",
+      subtitle: "TVS Motors",
+      description: "TVS Motor Company, headquartered in Chennai, India, is a major multinational motorcycle manufacturer, ranking third in India by revenue, with annual sales of three million units.",
+      image: MotorbikesImage,
+      gradient: "from-purple-500 to-violet-600",
+      bgGradient: "from-purple-50 to-violet-50"
+    },
+    {
       title: "Project Consultancy",
       subtitle: "Comprehensive Business Solutions",
       description: "We provide project consultancy focuses on aligning projects with overall business goals and long-term strategies which involves Technical Consulting, Management Consulting, Financial Consulting, Environmental and Sustainability Consulting & Risk Management",
@@ -755,6 +796,39 @@ function Partners() {
       established: "2020",
       logo: null // No logo provided for this partner
     },
+    {
+      name: "TVS Motor Company",
+      tagline: "Transforming quality of life through mobility solutions",
+      description: "TVS Motor Company - One of the largest 2-wheeler companies in the world.",
+      website: "www.tvsmotor.com",
+      category: "Motorbikes",
+      gradient: "from-purple-500 to-violet-600",
+      bgGradient: "from-purple-50 to-violet-50",
+      established: "1978",
+      logo: tvsMotorLogo
+    },
+    {
+      name: "BCS Two Wheel Tractors",
+      tagline: "Agriculture Machinery Excellence",
+      description: "A complete range of reversible and multifunctional two-wheel tractors for professionally preparing the soil, greens maintenance and snow removal.",
+      website: "www.bcsagri.com/en",
+      category: "Agriculture Machinery",
+      gradient: "from-green-500 to-emerald-600",
+      bgGradient: "from-green-50 to-emerald-50",
+      established: "1943",
+      logo: bcsGroupLogo
+    },
+    {
+      name: "Mahindra & Mahindra",
+      tagline: "Agriculture Machines & Equipments", 
+      description: "Mahindra Tractors offers a wide range of tractor models in India, with power options ranging from 15 HP to 74 HP. All Mahindra Tractors are designed to perform various agricultural tasks, catering to the diverse needs of farmers and landowners",
+      website: "www.mahindratractor.com",
+      category: "Agriculture Machinery",
+      gradient: "from-amber-500 to-yellow-600",
+      bgGradient: "from-amber-50 to-yellow-50",
+      established: "1945",
+      logo: mahindraLogo
+    }
   ];
 
   return (
