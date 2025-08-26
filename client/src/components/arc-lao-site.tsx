@@ -54,7 +54,7 @@ function Nav() {
     { label: "Our Partners", href: "#partners" },
     { label: "Our Clients", href: "#clients" },
     { label: "Our Key Milestones", href: "#milestones" },
-    { label: "Contact", href: "#contact" },
+    { label: "Contact", href: "/contact" },
   ];
 
   return (
@@ -1089,198 +1089,6 @@ function Footer() {
   );
 }
 
-function Contact() {
-  return (
-    <section className="py-16 sm:py-20 lg:py-24 bg-white relative overflow-hidden" id="contact">
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-50/30 via-white to-indigo-50/20"></div>
-      <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-[#00227c]/3 to-transparent rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-indigo-500/3 to-transparent rounded-full blur-3xl"></div>
-      
-      <Container className="relative px-4">
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#00227c]/10 text-[#00227c] rounded-full text-sm font-semibold uppercase tracking-wide mb-6">
-            GET IN TOUCH
-          </div>
-          <h2 className="text-4xl sm:text-5xl font-bold text-slate-900 mb-4">
-            CONTACT <span className="text-[#00227c]">US</span>
-          </h2>
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto text-justify">
-            Ready to discuss your next project? Get in touch with our team of experts and discover how we can help drive your business forward.
-          </p>
-        </div>
-
-        <div className="grid gap-12 lg:gap-16 lg:grid-cols-2 items-start">
-          {/* Contact Information */}
-          <div className="space-y-8">
-            <div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-6">Contact Information</h3>
-              <div className="space-y-6">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-[#00227c] rounded-lg flex items-center justify-center flex-shrink-0">
-                    <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
-                      <circle cx="12" cy="9" r="2.5"/>
-                    </svg>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-slate-900 mb-2">Office Address</h4>
-                    <p className="text-slate-600 text-justify">
-                      Ban Phonexay District<br/>
-                      Sysetha, Vientiane, Lao PDR
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-[#00227c] rounded-lg flex items-center justify-center flex-shrink-0">
-                    <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                    </svg>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-slate-900 mb-2">Email Address</h4>
-                    <a href="mailto:info@arclao.com" className="text-[#00227c] hover:underline">
-                      info@arclao.com
-                    </a>
-                  </div>
-                </div>
-
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-[#00227c] rounded-lg flex items-center justify-center flex-shrink-0">
-                    <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
-                    </svg>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold text-slate-900 mb-2">Phone Number</h4>
-                    <a href="tel:+85620526299292" className="text-[#00227c] hover:underline">
-                      +856 20 5262 9292
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="bg-slate-50 rounded-2xl p-6">
-              <h4 className="font-semibold text-slate-900 mb-3">Business Hours</h4>
-              <div className="space-y-2 text-sm text-slate-600">
-                <div className="flex justify-between">
-                  <span>Monday - Friday:</span>
-                  <span>8:00 AM - 6:00 PM</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Saturday:</span>
-                  <span>9:00 AM - 4:00 PM</span>
-                </div>
-                <div className="flex justify-between">
-                  <span>Sunday:</span>
-                  <span>Closed</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Contact Form */}
-          <div className="bg-white rounded-2xl p-8 shadow-lg border border-slate-100">
-            <h3 className="text-2xl font-bold text-slate-900 mb-6">Send us a Message</h3>
-            <form className="space-y-6">
-              <div className="grid gap-6 md:grid-cols-2">
-                <div>
-                  <label htmlFor="firstName" className="block text-sm font-semibold text-slate-900 mb-2">
-                    First Name <span className="text-red-500">*</span>
-                  </label>
-                  <input
-                    type="text"
-                    id="firstName"
-                    name="firstName"
-                    required
-                    className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-[#00227c] focus:border-transparent outline-none transition-all duration-200"
-                    placeholder="Enter your first name"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="lastName" className="block text-sm font-semibold text-slate-900 mb-2">
-                    Last Name <span className="text-red-500">*</span>
-                  </label>
-                  <input
-                    type="text"
-                    id="lastName"
-                    name="lastName"
-                    required
-                    className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-[#00227c] focus:border-transparent outline-none transition-all duration-200"
-                    placeholder="Enter your last name"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label htmlFor="email" className="block text-sm font-semibold text-slate-900 mb-2">
-                  Email Address <span className="text-red-500">*</span>
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  required
-                  className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-[#00227c] focus:border-transparent outline-none transition-all duration-200"
-                  placeholder="Enter your email address"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="phone" className="block text-sm font-semibold text-slate-900 mb-2">
-                  Phone Number
-                </label>
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-[#00227c] focus:border-transparent outline-none transition-all duration-200"
-                  placeholder="Enter your phone number"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="subject" className="block text-sm font-semibold text-slate-900 mb-2">
-                  Subject <span className="text-red-500">*</span>
-                </label>
-                <input
-                  type="text"
-                  id="subject"
-                  name="subject"
-                  required
-                  className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-[#00227c] focus:border-transparent outline-none transition-all duration-200"
-                  placeholder="Enter subject"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="message" className="block text-sm font-semibold text-slate-900 mb-2">
-                  Message <span className="text-red-500">*</span>
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows={5}
-                  required
-                  className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-[#00227c] focus:border-transparent outline-none transition-all duration-200 resize-none"
-                  placeholder="Enter your message..."
-                ></textarea>
-              </div>
-
-              <button
-                type="submit"
-                className="w-full bg-[#00227c] text-white font-semibold py-3 px-6 rounded-lg hover:bg-[#001a63] transition-all duration-300 shadow-lg hover:shadow-xl"
-              >
-                Send Message
-              </button>
-            </form>
-          </div>
-        </div>
-      </Container>
-    </section>
-  );
-}
 
 export default function CorporateSite() {
   return (
@@ -1294,7 +1102,6 @@ export default function CorporateSite() {
       <Clients />
       <WhyChoose />
       <KeyMilestones />
-      <Contact />
       <Footer />
     </main>
   );
