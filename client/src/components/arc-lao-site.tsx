@@ -50,10 +50,10 @@ function Nav() {
   const navItems = [
     { label: "About Us", href: "#about" },
     { label: "Our Solutions", href: "#solutions" },
-    { label: "Our Services", href: "#services" },
-    { label: "Our Partners", href: "#partners" },
-    { label: "Our Clients", href: "#clients" },
-    { label: "Our Key Milestones", href: "#milestones" },
+    { label: "OUR SERVICES", href: "#services" },
+    { label: "OUR PARTNERS", href: "#partners" },
+    { label: "OUR CLIENTS", href: "#clients" },
+    { label: "OUR KEY MILESTONES", href: "#milestones" },
   ];
 
   return (
@@ -359,7 +359,7 @@ function About() {
                 </div>
                 
                 <div>
-                  <h3 className="text-2xl lg:text-3xl font-bold mb-2 text-[#000000]">Welcome To</h3>
+                  <h3 className="text-2xl lg:text-3xl font-bold mb-2 text-[#000000]">WELCOME TO</h3>
                   <h2 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight text-[#00227c]">
                     ARC LAO
                   </h2>
@@ -501,11 +501,11 @@ function WhyChoose() {
         <div className="grid gap-12 lg:gap-16 lg:grid-cols-2 items-center">
           <div className="order-2 lg:order-1">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#00227c]/10 text-[#00227c] rounded-full text-sm font-semibold uppercase tracking-wide mb-6">
-              Why Choose Us
+              WHY CHOOSE US
             </div>
             
             <h2 className="text-4xl sm:text-5xl font-bold text-slate-900 mb-8">
-              Why Choose <span className="text-[#00227c]">ARC Lao</span>
+              WHY CHOOSE <span className="text-[#00227c]">ARC LAO</span>
             </h2>
             
             <p className="text-lg text-slate-600 leading-relaxed mb-10">
@@ -621,7 +621,7 @@ function KeyMilestones() {
             </div>
             
             <h2 className="text-4xl sm:text-5xl font-bold mb-8">
-              Key <span className="text-amber-400">Milestones</span>
+              KEY <span className="text-amber-400">MILESTONES</span>
             </h2>
             
             <p className="text-lg text-white/90 leading-relaxed">
@@ -960,10 +960,10 @@ function Clients() {
       <Container className="relative px-4">
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#00227c]/10 text-[#00227c] rounded-full text-sm font-semibold uppercase tracking-wide mb-6">
-            Our Clients
+            OUR CLIENTS
           </div>
           <h2 className="text-4xl sm:text-5xl font-bold text-slate-900 mb-4">
-            Our <span className="text-[#00227c]">Clients</span>
+            OUR <span className="text-[#00227c]">CLIENTS</span>
           </h2>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
             Trusted by leading organizations worldwide to deliver exceptional results across multiple sectors
