@@ -26,7 +26,7 @@ export default function AboutSection() {
     <section id="about" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-20">
-          <h2 className="text-4xl font-bold text-arc-dark mb-6">About Company</h2>
+          <h2 className="text-4xl font-bold text-arc-dark mb-6">ABOUT COMPANY</h2>
           <p className="text-lg text-arc-gray max-w-4xl mx-auto leading-relaxed text-justify">
             ARC Lao Sole Company Ltd, a company which is founded upon strong pillars of Principals, Perseverance, Permanence and Partnership. ARC Lao strive to work for excellence. ARC Lao believes that combining people, technology and process is the way forward. ARC Lao empower sustainable progress for our clients and partners, the wider community and ourselves. It is our unique approach as business technologists that makes this possible.
           </p>

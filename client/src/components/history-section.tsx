@@ -53,7 +53,7 @@ export default function HistorySection() {
     <section className="py-24 bg-arc-light-gray">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-arc-dark mb-6">Brief History</h2>
+          <h2 className="text-4xl font-bold text-arc-dark mb-6">BRIEF HISTORY</h2>
         </div>
 
         <div className="relative">

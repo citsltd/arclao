@@ -46,7 +46,7 @@ export default function SuccessSection() {
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-arc-dark mb-6">How We Create SUCCESS?</h2>
+          <h2 className="text-4xl font-bold text-arc-dark mb-6">HOW WE CREATE SUCCESS?</h2>
           <p className="text-lg text-arc-gray max-w-3xl mx-auto text-justify">
             To help achieving sustainable and inclusive solutions through innovation.
           </p>

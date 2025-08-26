@@ -60,7 +60,7 @@ export default function ProjectExecutionSection() {
     <section id="projects" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-arc-dark mb-6">Project Execution</h2>
+          <h2 className="text-4xl font-bold text-arc-dark mb-6">PROJECT EXECUTION</h2>
           <div className="max-w-4xl mx-auto">
             <p className="text-lg text-arc-gray leading-relaxed text-justify">
               ARC Lao has consistently adhered to the "Prestige, Quality, Innovation, and Pragmatism" business philosophy, serving multiple sectors in the Southeast Asia region. The company has successfully completed over 30 turnkey projects, financed by public, private sectors, and development partners, resulting in a total investment exceeding $110 million.
