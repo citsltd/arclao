@@ -17,10 +17,10 @@ export default function StatisticsSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
           <div>
             <h2 className="text-3xl font-bold text-arc-dark mb-6">OVERVIEW</h2>
-            <p className="text-lg text-arc-gray leading-relaxed mb-8">
+            <p className="text-lg text-arc-gray leading-relaxed mb-8 text-justify">
               ARC LAO is a leader in next-generation technology and related services. We enable clients in many countries to navigate their success through INNOVATION. With over 10+ years of experience in managing various projects and workings of global enterprises, we expertly steer our clients through their progressive journey.
             </p>
-            <p className="text-lg text-arc-gray leading-relaxed">
+            <p className="text-lg text-arc-gray leading-relaxed text-justify">
               We do it by enabling our clients with a highly experienced team coupled with latest technologies. We also empower the business with agile digital at scale to deliver unprecedented levels of performance and customer delight. Our always-on learning agenda drives their continuous improvement through building and transferring skills, expertise, and ideas from our innovation ecosystem.
             </p>
           </div>

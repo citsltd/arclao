@@ -27,7 +27,7 @@ export default function AboutSection() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-20">
           <h2 className="text-4xl font-bold text-arc-dark mb-6">About Company</h2>
-          <p className="text-lg text-arc-gray max-w-4xl mx-auto leading-relaxed">
+          <p className="text-lg text-arc-gray max-w-4xl mx-auto leading-relaxed text-justify">
             ARC Lao Sole Company Ltd, a company which is founded upon strong pillars of Principals, Perseverance, Permanence and Partnership. ARC Lao strive to work for excellence. ARC Lao believes that combining people, technology and process is the way forward. ARC Lao empower sustainable progress for our clients and partners, the wider community and ourselves. It is our unique approach as business technologists that makes this possible.
           </p>
         </div>
@@ -39,7 +39,7 @@ export default function AboutSection() {
                 <i className={`${pillar.icon} text-white text-lg`}></i>
               </div>
               <h3 className="text-lg font-bold text-arc-dark mb-4">{pillar.title}</h3>
-              <p className="text-arc-gray text-sm leading-relaxed">{pillar.description}</p>
+              <p className="text-arc-gray text-sm leading-relaxed text-justify">{pillar.description}</p>
             </div>
           ))}
         </div>

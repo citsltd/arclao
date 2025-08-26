@@ -46,7 +46,7 @@ export default function ExpertiseSection() {
                 <i className={`${sector.icon} text-white text-lg`}></i>
               </div>
               <h3 className="text-xl font-bold text-arc-dark mb-4">{sector.title}</h3>
-              <p className="text-arc-gray text-sm leading-relaxed mb-6">{sector.description}</p>
+              <p className="text-arc-gray text-sm leading-relaxed mb-6 text-justify">{sector.description}</p>
               <button className="text-arc-blue font-medium text-sm flex items-center hover:opacity-80 transition-opacity">
                 Learn More <i className="fas fa-arrow-right ml-2"></i>
               </button>

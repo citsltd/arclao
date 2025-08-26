@@ -47,7 +47,7 @@ export default function SuccessSection() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-arc-dark mb-6">How We Create SUCCESS?</h2>
-          <p className="text-lg text-arc-gray max-w-3xl mx-auto">
+          <p className="text-lg text-arc-gray max-w-3xl mx-auto text-justify">
             To help achieving sustainable and inclusive solutions through innovation.
           </p>
         </div>
@@ -58,7 +58,7 @@ export default function SuccessSection() {
               <div className={`w-12 h-12 ${factor.color} rounded-lg flex items-center justify-center mb-4`}>
                 <i className={`${factor.icon} text-white text-lg`}></i>
               </div>
-              <p className="text-arc-gray text-sm leading-relaxed">{factor.text}</p>
+              <p className="text-arc-gray text-sm leading-relaxed text-justify">{factor.text}</p>
             </div>
           ))}
         </div>

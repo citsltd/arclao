@@ -62,7 +62,7 @@ export default function ProjectExecutionSection() {
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-arc-dark mb-6">Project Execution</h2>
           <div className="max-w-4xl mx-auto">
-            <p className="text-lg text-arc-gray leading-relaxed">
+            <p className="text-lg text-arc-gray leading-relaxed text-justify">
               ARC Lao has consistently adhered to the "Prestige, Quality, Innovation, and Pragmatism" business philosophy, serving multiple sectors in the Southeast Asia region. The company has successfully completed over 30 turnkey projects, financed by public, private sectors, and development partners, resulting in a total investment exceeding $110 million.
             </p>
           </div>
@@ -95,7 +95,7 @@ export default function ProjectExecutionSection() {
               <h3 className="text-lg font-bold text-arc-dark mb-4">{phase.title}</h3>
               <div className="space-y-2">
                 {phase.items.map((item, itemIndex) => (
-                  <div key={itemIndex} className="text-arc-gray text-sm">
+                  <div key={itemIndex} className="text-arc-gray text-sm text-justify">
                     {item}
                   </div>
                 ))}
