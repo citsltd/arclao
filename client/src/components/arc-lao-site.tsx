@@ -52,7 +52,7 @@ function Nav() {
     { label: "Our Partners", href: "#partners" },
     { label: "Our Clients", href: "#clients" },
     { label: "Our Key Milestones", href: "#milestones" },
-    { label: "Contact", href: "/contact" },
+    { label: "Contact Us", href: "/contact" },
   ];
 
   return (
@@ -987,6 +987,7 @@ function Footer() {
               <nav className="space-y-3">
                 <a href="#about" className="block text-slate-400 hover:text-white transition-colors text-sm">About Us</a>
                 <a href="#services" className="block text-slate-400 hover:text-white transition-colors text-sm">Our Sectors</a>
+                <a href="/contact" className="block text-slate-400 hover:text-white transition-colors text-sm">Contact Us</a>
               </nav>
             </div>
             
