@@ -30,7 +30,6 @@ import vallonLogo from "@assets/Vallon_1755074225223.png";
 
 // New Service Images
 import LuyuanImage from "@assets/Two wheel tractor_1756265490994.png";
-import MahindraTractorsImage from "@assets/Agriculture Machinery - Mahindra Tractors_1755075726835.jpg";
 import BCSTwoWheelTractorsImage from "@assets/Agriculture Machinery - BCS Two Wheel Tractors_1755075726841.jpg";
 import DeminingEquipmentsImage from "@assets/Demining Equipments_1755075726842.jpg";
 import ProjectConsultancyImage from "@assets/Project Consultancy_1755075726843.jpg";
@@ -290,8 +289,8 @@ function Solutions() {
     },
     {
       title: "Agriculture Machinery",
-      description: "Country distributor for BCS-Italy and Mahindra & Mahindra, specializing in agricultural machinery.",
-      image: MahindraTractorsImage,
+      description: "Country distributor for BCS-Italy, specializing in agricultural machinery and two-wheel tractors.",
+      image: BCSTwoWheelTractorsImage,
       gradient: "from-green-500/10 to-emerald-500/10"
     },
     {
