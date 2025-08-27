@@ -308,7 +308,7 @@ function Solutions() {
     {
       title: "Information Technology",
       description: "Expertise in DevOps, cloud services, AI, and machine learning.",
-      image: ProjectConsultancyImage,
+      image: ITImage,
       gradient: "from-blue-500/10 to-indigo-500/10"
     },
     {
