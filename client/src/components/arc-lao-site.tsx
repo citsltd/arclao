@@ -39,6 +39,7 @@ import Slider1 from "@assets/slider 1_1756275284847.jpeg";
 import Slider2 from "@assets/slider 2_1756275284846.jpeg";
 import Slider3 from "@assets/slider3_1756275284844.jpeg";
 import Slider4 from "@assets/slider 4_1756275284842.jpeg";
+import Slider5 from "@assets/Untitled design (22)_1756281547683.jpg";
 
 import UNDP_logo_svg from "@assets/UNDP_logo.svg.png";
 
@@ -152,7 +153,8 @@ function Hero() {
     { src: Slider1, alt: "Slider 1" },
     { src: Slider2, alt: "Slider 2" },
     { src: Slider3, alt: "Slider 3" },
-    { src: Slider4, alt: "Slider 4" }
+    { src: Slider4, alt: "Slider 4" },
+    { src: Slider5, alt: "Agriculture & Vegetables" }
   ];
 
   const nextSlide = () => {
@@ -275,7 +277,7 @@ function About() {
               {/* Content */}
               <div className="space-y-6 text-slate-700">
                 <p className="text-lg leading-relaxed text-justify">
-                  We are an international trading company with over <span className="font-semibold text-[#00227c]">16 years</span> of dedicated operation in Laos. Throughout our extensive history, we have established a strong presence across diverse business sectors, including demining equipment, information technology, automotive, hospitality, energy, and farming equipment. Our commitment to quality and excellence has enabled us to build lasting relationships with clients and partners worldwide.
+                  We are an international trading company with over <span className="font-semibold text-[#00227c]">20+ years</span> of dedicated operation in Laos. Throughout our extensive history, we have established a strong presence across diverse business sectors, including demining equipment, information technology, automotive, hospitality, energy, and farming equipment. Our commitment to quality and excellence has enabled us to build lasting relationships with clients and partners worldwide.
                 </p>
                 
                 <p className="text-lg leading-relaxed text-justify">
@@ -387,7 +389,7 @@ function WhyChoose() {
     },
     {
       title: "Proven Track Record of Excellence",
-      description: "Over 16 years of delivering innovative solutions and exceeding client expectations.",
+      description: "Over 20+ years of delivering innovative solutions and exceeding client expectations.",
       gradient: "from-emerald-500 to-teal-600"
     },
     {
