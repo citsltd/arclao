@@ -662,6 +662,14 @@ function DetailedServices() {
       bgGradient: "from-green-50 to-emerald-50"
     },
     {
+      title: "Luyuan Electric Motorcycles",
+      subtitle: "Luyuan Motorbikes",
+      description: "Luyuan stands among the top manufacturers of electric motorcycles, specializing in professional electric motorcycles, electric bicycles, scooters, and mopeds. We strive to provide you with convenience and comfort.",
+      image: LuyuanImage,
+      gradient: "from-green-500 to-emerald-600",
+      bgGradient: "from-green-50 to-emerald-50"
+    },
+    {
       title: "Project Consultancy",
       subtitle: "Comprehensive Business Solutions",
       description: "We provide project consultancy focuses on aligning projects with overall business goals and long-term strategies which involves Technical Consulting, Management Consulting, Financial Consulting, Environmental and Sustainability Consulting & Risk Management",
