@@ -470,7 +470,7 @@ function WhyChoose() {
               {/* Floating Stats */}
               <div className="absolute -bottom-6 -right-6 bg-white rounded-2xl p-6 shadow-xl border border-slate-100">
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-[#00227c] mb-1">16+</div>
+                  <div className="text-2xl font-bold text-[#00227c] mb-1">20+</div>
                   <div className="text-sm text-slate-600 font-medium">Years of Excellence</div>
                 </div>
               </div>
