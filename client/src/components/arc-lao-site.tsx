@@ -178,9 +178,9 @@ function Hero() {
 
 
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center overflow-hidden pt-20">
       {/* Image Slider */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 -z-10">
         {sliderImages.map((image, index) => (
           <div
             key={index}
