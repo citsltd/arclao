@@ -141,28 +141,12 @@ function Nav() {
 }
 
 function Hero() {
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  const sliderImages = [
-    {
-      src: Technological_Innovation,
-      alt: "Technological Innovation",
-      title: "Your Trusted Partner for Global Innovation",
-      subtitle: "With 16+ years of excellence across demining, agriculture, technology, and automotive sectors"
-    },
-    {
-      src: Future_of_Technology,
-      alt: "Future of Technology",
-      title: "Leading the Future of Technology",
-      subtitle: "Delivering innovative solutions that drive sustainable progress in Laos and beyond"
-    },
-    {
-      src: arcLaoAboutImage,
-      alt: "ARC Lao Partnership",
-      title: "Building Strong Business Partnerships",
-      subtitle: "Committed to quality and excellence with lasting relationships worldwide"
-    }
-  ];
+  const heroContent = {
+    src: arcLaoAboutImage,
+    alt: "ARC Lao Partnership",
+    title: "Building Strong Business Partnerships",
+    subtitle: "Committed to quality and excellence with lasting relationships worldwide"
+  };
 
   const getWhatsAppUrl = () => {
     const phoneNumber = "85620526299292";
@@ -178,67 +162,19 @@ function Hero() {
     }
   };
 
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % sliderImages.length);
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + sliderImages.length) % sliderImages.length);
-  };
-
-  const goToSlide = (index: number) => {
-    setCurrentSlide(index);
-  };
-
-  // Auto-slide functionality
-  useEffect(() => {
-    const interval = setInterval(() => {
-      nextSlide();
-    }, 5000); // Change slide every 5 seconds
-
-    return () => clearInterval(interval);
-  }, []);
 
   return (
     <section className="relative min-h-screen flex items-center text-white overflow-hidden">
-      {/* Image Slider */}
+      {/* Hero Image */}
       <div className="absolute inset-0">
-        {sliderImages.map((image, index) => (
-          <div
-            key={index}
-            className={`absolute inset-0 transition-opacity duration-1000 ${
-              index === currentSlide ? 'opacity-100' : 'opacity-0'
-            }`}
-          >
-            <img 
-              src={image.src} 
-              alt={image.alt} 
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-slate-900/50"></div>
-          </div>
-        ))}
+        <img 
+          src={heroContent.src} 
+          alt={heroContent.alt} 
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-slate-900/50"></div>
         <div className="absolute inset-0 bg-gradient-to-br from-[#00227c]/30 via-[#00227c]/20 to-transparent"></div>
       </div>
-
-      {/* Navigation Arrows */}
-      <button
-        onClick={prevSlide}
-        className="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 w-12 h-12 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full flex items-center justify-center hover:bg-white/20 transition-all duration-300 group"
-      >
-        <svg className="w-6 h-6 text-white group-hover:text-white/90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-        </svg>
-      </button>
-
-      <button
-        onClick={nextSlide}
-        className="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 w-12 h-12 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full flex items-center justify-center hover:bg-white/20 transition-all duration-300 group"
-      >
-        <svg className="w-6 h-6 text-white group-hover:text-white/90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-        </svg>
-      </button>
 
       {/* Content */}
       <Container className="relative z-10 py-16 sm:py-20 lg:py-32 px-4">
@@ -246,15 +182,15 @@ function Hero() {
           <div className="space-y-4 sm:space-y-6 mb-8 sm:mb-12">
             <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight px-2">
               <span className="block text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-2 text-white/90">
-                {sliderImages[currentSlide].title.split(' ').slice(0, 4).join(' ')}
+                Building Strong Business
               </span>
               <span className="block mb-2 text-white drop-shadow-lg">
-                {sliderImages[currentSlide].title.split(' ').slice(4).join(' ')}
+                Partnerships
               </span>
             </h1>
             
             <p className="text-sm sm:text-base lg:text-lg text-white/75 max-w-3xl mx-auto mt-6 leading-relaxed px-4">
-              {sliderImages[currentSlide].subtitle}
+              {heroContent.subtitle}
             </p>
           </div>
           
@@ -282,20 +218,6 @@ function Hero() {
           </div>
         </div>
 
-        {/* Slide Indicators */}
-        <div className="absolute bottom-16 left-1/2 transform -translate-x-1/2 flex space-x-3">
-          {sliderImages.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => goToSlide(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === currentSlide
-                  ? 'bg-white shadow-lg'
-                  : 'bg-white/40 hover:bg-white/60'
-              }`}
-            />
-          ))}
-        </div>
       </Container>
     </section>
   );
