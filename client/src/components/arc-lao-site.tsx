@@ -149,13 +149,28 @@ function Nav() {
 function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0);
   
-  const sliderImages = [
+  const allSliderImages = [
     { src: Slider1, alt: "Slider 1" },
     { src: Slider2, alt: "Slider 2" },
     { src: Slider3, alt: "Slider 3" },
     { src: Slider4, alt: "Slider 4" },
     { src: Slider5, alt: "Agriculture & Vegetables" }
   ];
+
+  // Mobile gets images 2-5, desktop gets all images 1-5
+  const [isMobile, setIsMobile] = useState(false);
+  
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 640);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  const sliderImages = isMobile ? allSliderImages.slice(1) : allSliderImages;
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % sliderImages.length);
