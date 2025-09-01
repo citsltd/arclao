@@ -75,6 +75,18 @@
   body {
     @apply bg-background text-foreground font-inter;
     overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Ensure full width sliders on mobile */
+  @media (max-width: 640px) {
+    .slider-full-width {
+      width: 100vw !important;
+      max-width: none !important;
+      margin-left: calc(-50vw + 50%) !important;
+      margin-right: calc(-50vw + 50%) !important;
+    }
   }
   
   html {
