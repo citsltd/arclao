@@ -224,7 +224,7 @@ function Hero() {
 
 
   return (
-    <section className="slider-full-width relative min-h-[70vh] sm:min-h-screen flex items-center overflow-hidden w-screen max-w-none -mx-4 sm:mx-0 sm:w-full">
+    <section className="slider-full-width relative min-h-[70vh] sm:min-h-screen flex items-center overflow-hidden w-screen max-w-none -mx-4 sm:mx-0 sm:w-full mt-[72px]">
       {/* Image Slider */}
       <div 
         className="absolute inset-0 w-full h-full"
