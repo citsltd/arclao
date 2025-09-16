@@ -784,6 +784,17 @@ function Partners() {
       established: "1943",
       logo: bcsGroupLogo
     },
+    {
+      name: "Luyuan",
+      tagline: "Electric Vehicle Innovation",
+      description: "Leading manufacturer of electric motorcycles and scooters, providing eco-friendly transportation solutions with advanced technology and reliable performance.",
+      website: "www.luyuan.com",
+      category: "Electric Vehicles",
+      gradient: "from-emerald-500 to-cyan-600",
+      bgGradient: "from-emerald-50 to-cyan-50",
+      established: "1997",
+      logo: LuyuanImage
+    },
   ];
 
   return (
