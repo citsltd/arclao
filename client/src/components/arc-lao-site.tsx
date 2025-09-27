@@ -236,8 +236,8 @@ function Hero() {
 
 
   return (
-    <section className="relative min-h-[70vh] sm:min-h-screen flex items-center justify-center overflow-hidden w-full mt-[72px] bg-white">
-      <div className="relative w-full max-w-[1600px] h-full mx-auto aspect-[16/9] max-h-[900px]">
+    <section className={`relative min-h-[70vh] sm:min-h-screen flex items-center justify-center overflow-hidden w-full mt-[72px] bg-white ${isMobile ? 'mobile-full-width' : ''}`}>
+      <div className={`relative w-full h-full mx-auto ${!isMobile ? 'max-w-[1600px] aspect-[16/9] max-h-[900px]' : ''}`}>
         {/* Image Slider */}
         <div 
           className="absolute inset-0 w-full h-full"
