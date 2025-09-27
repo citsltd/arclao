@@ -86,23 +86,7 @@
       max-width: none !important;
       margin-left: calc(-50vw + 50%) !important;
       margin-right: calc(-50vw + 50%) !important;
-      justify-content: flex-start !important;
     }
-    
-    .slider-full-width > div {
-      width: 100% !important;
-      height: 100% !important;
-    }
-  }
-  
-  /* Optimize image rendering for sliders */
-  .slider-full-width img {
-    image-rendering: -webkit-optimize-contrast;
-    image-rendering: crisp-edges;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
   }
   
   html {

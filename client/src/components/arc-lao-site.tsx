@@ -155,7 +155,7 @@ function Nav() {
 function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0);
   
-  const sliderImages = [
+  const desktopSliderImages = [
     { src: Slider1, alt: "Vallon Demining Equipment - Searching with Excellence" },
     { src: Slider2, alt: "Vallon Detection Technology" },
     { src: Slider3, alt: "Luyuan Electric Motorcycle" },
@@ -169,20 +169,27 @@ function Hero() {
     { src: MobileSlider4, alt: "ARC Lao Key Milestones" }
   ];
 
+  // Mobile gets mobile-specific images, desktop gets desktop images
+  const [isMobile, setIsMobile] = useState(false);
+  
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 640);
+    };
+    
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  const sliderImages = isMobile ? mobileSliderImages : desktopSliderImages;
+
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % sliderImages.length);
   };
 
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + sliderImages.length) % sliderImages.length);
-  };
-
-  const nextSlideMobile = () => {
-    setCurrentSlide((prev) => (prev + 1) % mobileSliderImages.length);
-  };
-
-  const prevSlideMobile = () => {
-    setCurrentSlide((prev) => (prev - 1 + mobileSliderImages.length) % mobileSliderImages.length);
   };
 
   const goToSlide = (index: number) => {
@@ -229,15 +236,14 @@ function Hero() {
 
 
   return (
-    <section className="relative min-h-[70vh] sm:min-h-screen flex items-center overflow-hidden w-full mt-[72px] bg-white slider-full-width">
-      {/* Desktop Slider */}
-      <div className="hidden sm:block relative w-full h-full max-w-[1600px] aspect-[16/9] max-h-[900px] mx-auto">
-        <div 
-          className="absolute inset-0 w-full h-full"
-          onTouchStart={onTouchStart}
-          onTouchMove={onTouchMove}
-          onTouchEnd={onTouchEnd}
-        >
+    <section className="slider-full-width relative min-h-[70vh] sm:min-h-screen flex items-center overflow-hidden w-screen max-w-none -mx-4 sm:mx-0 sm:w-full mt-[72px]">
+      {/* Image Slider */}
+      <div 
+        className="absolute inset-0 w-full h-full"
+        onTouchStart={onTouchStart}
+        onTouchMove={onTouchMove}
+        onTouchEnd={onTouchEnd}
+      >
         {sliderImages.map((image, index) => (
           <div
             key={index}
@@ -248,47 +254,13 @@ function Hero() {
             <img 
               src={image.src} 
               alt={image.alt} 
-              className="w-full h-full object-cover lg:object-contain object-center block"
-              style={{ 
-                objectPosition: 'center center',
-                imageRendering: 'auto'
-              }}
-            />
-          </div>
-        ))}
-        </div>
-      </div>
-
-      {/* Mobile Slider */}
-      <div className="block sm:hidden relative w-full h-full">
-        <div 
-          className="absolute inset-0 w-full h-full"
-          onTouchStart={onTouchStart}
-          onTouchMove={onTouchMove}
-          onTouchEnd={onTouchEnd}
-        >
-        {mobileSliderImages.map((image, index) => (
-          <div
-            key={index}
-            className={`absolute inset-0 w-full h-full transition-opacity duration-1000 ${
-              index === currentSlide ? 'opacity-100' : 'opacity-0'
-            }`}
-          >
-            <img 
-              src={image.src} 
-              alt={image.alt} 
               className="w-full h-full object-cover object-center block"
-              style={{ 
-                objectPosition: 'center center',
-                imageRendering: 'auto'
-              }}
             />
           </div>
         ))}
-        </div>
       </div>
 
-        {/* Navigation Arrows - Hidden on very small screens, visible on sm+ */}
+      {/* Navigation Arrows - Hidden on very small screens, visible on sm+ */}
       <button
         onClick={prevSlide}
         className="hidden xs:flex absolute left-1 sm:left-4 top-1/2 transform -translate-y-1/2 z-20 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-black/40 backdrop-blur-sm border border-white/40 rounded-full items-center justify-center hover:bg-black/50 active:bg-black/60 transition-all duration-300 touch-manipulation"
@@ -309,29 +281,13 @@ function Hero() {
         </svg>
       </button>
 
-      {/* Desktop Slide Indicators */}
-      <div className="hidden sm:flex absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2 space-x-2 sm:space-x-3 z-20">
+      {/* Slide Indicators */}
+      <div className="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2 sm:space-x-3 z-20">
         {sliderImages.map((_, index) => (
           <button
             key={index}
             onClick={() => goToSlide(index)}
             className={`w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full transition-all duration-300 touch-manipulation ${
-              index === currentSlide
-                ? 'bg-white scale-125 shadow-lg' 
-                : 'bg-white/50 hover:bg-white/70 active:bg-white/80'
-            }`}
-            aria-label={`Go to slide ${index + 1}`}
-          />
-        ))}
-      </div>
-
-      {/* Mobile Slide Indicators */}
-      <div className="flex sm:hidden absolute bottom-4 left-1/2 transform -translate-x-1/2 space-x-2 z-20">
-        {mobileSliderImages.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => goToSlide(index)}
-            className={`w-2.5 h-2.5 rounded-full transition-all duration-300 touch-manipulation ${
               index === currentSlide
                 ? 'bg-white scale-125 shadow-lg' 
                 : 'bg-white/50 hover:bg-white/70 active:bg-white/80'
