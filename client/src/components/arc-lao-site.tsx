@@ -41,6 +41,12 @@ import Slider3 from "@assets/3_1758956494820.png";
 import Slider4 from "@assets/5_1758956494820.png";
 import Slider5 from "@assets/Untitled design (22)_1756281547683.jpg";
 
+// Mobile Slider Images
+import MobileSlider1 from "@assets/1_1758956696079.png";
+import MobileSlider2 from "@assets/2_1758956696080.png";
+import MobileSlider3 from "@assets/3_1758956696081.png";
+import MobileSlider4 from "@assets/4_1758956696082.png";
+
 import UNDP_logo_svg from "@assets/UNDP_logo.svg.png";
 
 // --- Components ---
@@ -149,15 +155,21 @@ function Nav() {
 function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0);
   
-  const allSliderImages = [
+  const desktopSliderImages = [
     { src: Slider1, alt: "Vallon Demining Equipment - Searching with Excellence" },
     { src: Slider2, alt: "Vallon Detection Technology" },
     { src: Slider3, alt: "Luyuan Electric Motorcycle" },
-    { src: Slider4, alt: "Luyuan S90 Electric Scooter - Reaching Perfection" },
-    { src: Slider5, alt: "Agriculture & Vegetables" }
+    { src: Slider4, alt: "Luyuan S90 Electric Scooter - Reaching Perfection" }
   ];
 
-  // Mobile gets images 2-5, desktop gets images 1-4 (excludes agriculture image)
+  const mobileSliderImages = [
+    { src: MobileSlider1, alt: "Luyuan Electric Scooter" },
+    { src: MobileSlider2, alt: "Vallon Detection Equipment" },
+    { src: MobileSlider3, alt: "Vallon Demining Operations" },
+    { src: MobileSlider4, alt: "ARC Lao Key Milestones" }
+  ];
+
+  // Mobile gets mobile-specific images, desktop gets desktop images
   const [isMobile, setIsMobile] = useState(false);
   
   useEffect(() => {
@@ -170,7 +182,7 @@ function Hero() {
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-  const sliderImages = isMobile ? allSliderImages.slice(1) : allSliderImages.slice(0, 4);
+  const sliderImages = isMobile ? mobileSliderImages : desktopSliderImages;
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % sliderImages.length);
