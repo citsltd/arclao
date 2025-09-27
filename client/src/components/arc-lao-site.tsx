@@ -35,10 +35,10 @@ import DeminingEquipmentsImage from "@assets/Demining Equipments_1755075726842.j
 import ProjectConsultancyImage from "@assets/Project Consultancy_1755075726843.jpg";
 
 // Slider Images
-import Slider1 from "@assets/slider 1_1756275284847.jpeg";
-import Slider2 from "@assets/slider 2_1756275284846.jpeg";
-import Slider3 from "@assets/slider3_1756275284844.jpeg";
-import Slider4 from "@assets/slider 4_1756275284842.jpeg";
+import Slider1 from "@assets/1_1758956494818.png";
+import Slider2 from "@assets/2_1758956494819.png";
+import Slider3 from "@assets/3_1758956494820.png";
+import Slider4 from "@assets/5_1758956494820.png";
 import Slider5 from "@assets/Untitled design (22)_1756281547683.jpg";
 
 import UNDP_logo_svg from "@assets/UNDP_logo.svg.png";
@@ -150,10 +150,10 @@ function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0);
   
   const allSliderImages = [
-    { src: Slider1, alt: "Slider 1" },
-    { src: Slider2, alt: "Slider 2" },
-    { src: Slider3, alt: "Slider 3" },
-    { src: Slider4, alt: "Slider 4" },
+    { src: Slider1, alt: "Vallon Demining Equipment - Searching with Excellence" },
+    { src: Slider2, alt: "Vallon Detection Technology" },
+    { src: Slider3, alt: "Luyuan Electric Motorcycle" },
+    { src: Slider4, alt: "Luyuan S90 Electric Scooter - Reaching Perfection" },
     { src: Slider5, alt: "Agriculture & Vegetables" }
   ];
 
