@@ -236,14 +236,15 @@ function Hero() {
 
 
   return (
-    <section className="slider-full-width relative min-h-[70vh] sm:min-h-screen flex items-center overflow-hidden w-screen max-w-none -mx-4 sm:mx-0 sm:w-full mt-[72px] bg-white">
-      {/* Image Slider */}
-      <div 
-        className="absolute inset-0 w-full h-full"
-        onTouchStart={onTouchStart}
-        onTouchMove={onTouchMove}
-        onTouchEnd={onTouchEnd}
-      >
+    <section className="relative min-h-[70vh] sm:min-h-screen flex items-center justify-center overflow-hidden w-full mt-[72px] bg-white">
+      <div className="relative w-full max-w-[1600px] h-full mx-auto aspect-[16/9] max-h-[900px]">
+        {/* Image Slider */}
+        <div 
+          className="absolute inset-0 w-full h-full"
+          onTouchStart={onTouchStart}
+          onTouchMove={onTouchMove}
+          onTouchEnd={onTouchEnd}
+        >
         {sliderImages.map((image, index) => (
           <div
             key={index}
@@ -254,17 +255,17 @@ function Hero() {
             <img 
               src={image.src} 
               alt={image.alt} 
-              className="w-full h-full object-contain sm:object-cover object-center block"
+              className="w-full h-full object-cover lg:object-contain object-center block"
               style={{ 
                 objectPosition: 'center center',
-                imageRendering: 'crisp-edges'
+                imageRendering: 'auto'
               }}
             />
           </div>
         ))}
-      </div>
+        </div>
 
-      {/* Navigation Arrows - Hidden on very small screens, visible on sm+ */}
+        {/* Navigation Arrows - Hidden on very small screens, visible on sm+ */}
       <button
         onClick={prevSlide}
         className="hidden xs:flex absolute left-1 sm:left-4 top-1/2 transform -translate-y-1/2 z-20 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-black/40 backdrop-blur-sm border border-white/40 rounded-full items-center justify-center hover:bg-black/50 active:bg-black/60 transition-all duration-300 touch-manipulation"
@@ -299,6 +300,7 @@ function Hero() {
             aria-label={`Go to slide ${index + 1}`}
           />
         ))}
+        </div>
       </div>
     </section>
   );
