@@ -157,7 +157,7 @@ function Hero() {
     { src: Slider5, alt: "Agriculture & Vegetables" }
   ];
 
-  // Mobile gets images 2-5, desktop gets all images 1-5
+  // Mobile gets images 2-5, desktop gets images 1-4 (excludes agriculture image)
   const [isMobile, setIsMobile] = useState(false);
   
   useEffect(() => {
@@ -170,7 +170,7 @@ function Hero() {
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-  const sliderImages = isMobile ? allSliderImages.slice(1) : allSliderImages;
+  const sliderImages = isMobile ? allSliderImages.slice(1) : allSliderImages.slice(0, 4);
 
   const nextSlide = () => {
     setCurrentSlide((prev) => (prev + 1) % sliderImages.length);
