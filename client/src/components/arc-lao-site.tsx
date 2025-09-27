@@ -236,7 +236,7 @@ function Hero() {
 
 
   return (
-    <section className="slider-full-width relative min-h-[70vh] sm:min-h-screen flex items-center overflow-hidden w-screen max-w-none -mx-4 sm:mx-0 sm:w-full mt-[72px]">
+    <section className="slider-full-width relative min-h-[70vh] sm:min-h-screen flex items-center overflow-hidden w-screen max-w-none -mx-4 sm:mx-0 sm:w-full mt-[72px] bg-white">
       {/* Image Slider */}
       <div 
         className="absolute inset-0 w-full h-full"
@@ -254,8 +254,11 @@ function Hero() {
             <img 
               src={image.src} 
               alt={image.alt} 
-              className="w-full h-full object-cover object-center block bg-white"
-              style={{ objectPosition: 'center center' }}
+              className="w-full h-full object-contain sm:object-cover object-center block"
+              style={{ 
+                objectPosition: 'center center',
+                imageRendering: 'crisp-edges'
+              }}
             />
           </div>
         ))}
