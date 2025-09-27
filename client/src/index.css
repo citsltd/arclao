@@ -81,7 +81,7 @@
   
   /* Ensure full width sliders on mobile */
   @media (max-width: 640px) {
-    .mobile-full-width {
+    .slider-full-width {
       width: 100vw !important;
       max-width: none !important;
       margin-left: calc(-50vw + 50%) !important;
@@ -89,7 +89,7 @@
       justify-content: flex-start !important;
     }
     
-    .mobile-full-width > div {
+    .slider-full-width > div {
       max-width: none !important;
       aspect-ratio: unset !important;
       max-height: none !important;

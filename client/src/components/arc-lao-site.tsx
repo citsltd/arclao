@@ -236,8 +236,8 @@ function Hero() {
 
 
   return (
-    <section className={`relative min-h-[70vh] sm:min-h-screen flex items-center overflow-hidden w-full mt-[72px] bg-white ${isMobile ? 'mobile-full-width' : 'justify-center'}`}>
-      <div className={`relative w-full h-full ${!isMobile ? 'max-w-[1600px] aspect-[16/9] max-h-[900px] mx-auto' : ''}`}>
+    <section className="relative min-h-[70vh] sm:min-h-screen flex items-center overflow-hidden w-full mt-[72px] bg-white slider-full-width">
+      <div className="relative w-full h-full sm:max-w-[1600px] sm:aspect-[16/9] sm:max-h-[900px] sm:mx-auto">
         {/* Image Slider */}
         <div 
           className="absolute inset-0 w-full h-full"
@@ -255,7 +255,7 @@ function Hero() {
             <img 
               src={image.src} 
               alt={image.alt} 
-              className={`w-full h-full object-center block ${isMobile ? 'object-cover' : 'object-cover lg:object-contain'}`}
+              className="w-full h-full object-cover sm:object-cover lg:object-contain object-center block"
               style={{ 
                 objectPosition: 'center center',
                 imageRendering: 'auto'
