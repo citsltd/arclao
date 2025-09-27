@@ -410,9 +410,9 @@ function Solutions() {
           </p>
         </div>
         
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="flex flex-wrap justify-center gap-8">
           {solutions.map((solution, index) => (
-            <div key={solution.title} className="group relative bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
+            <div key={solution.title} className="group relative bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 w-full sm:w-80 md:w-96 lg:w-80 xl:w-96">
               {/* Image Container */}
               <div className="relative h-48 overflow-hidden">
                 <img 
