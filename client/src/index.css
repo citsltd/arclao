@@ -89,6 +89,28 @@
     }
   }
   
+  /* Desktop slider optimizations for crisp image display */
+  @media (min-width: 641px) {
+    .slider-full-width img {
+      object-fit: contain !important;
+      max-height: 100vh;
+      image-rendering: -webkit-optimize-contrast;
+      image-rendering: crisp-edges;
+      image-rendering: pixelated;
+      backface-visibility: hidden;
+      transform: translateZ(0);
+    }
+    
+    /* For very large screens */
+    @media (min-width: 1920px) {
+      .slider-full-width img {
+        max-width: 100%;
+        height: auto;
+        object-fit: contain !important;
+      }
+    }
+  }
+  
   html {
     scroll-behavior: smooth;
   }
