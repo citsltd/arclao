@@ -34,12 +34,13 @@ import BCSTwoWheelTractorsImage from "@assets/Agriculture Machinery - BCS Two Wh
 import DeminingEquipmentsImage from "@assets/Demining Equipments_1755075726842.jpg";
 import ProjectConsultancyImage from "@assets/Project Consultancy_1755075726843.jpg";
 
-// Slider Images
-import Slider1 from "@assets/1_1758956494818.png";
-import Slider2 from "@assets/2_1758956494819.png";
-import Slider3 from "@assets/3_1758956494820.png";
-import Slider4 from "@assets/5_1758956494820.png";
-import Slider5 from "@assets/Untitled design (22)_1756281547683.jpg";
+// Desktop Slider Images
+import DesktopSlider1 from "@assets/first_1758960670439.png";
+import DesktopSlider2 from "@assets/second_1758960670441.png";
+import DesktopSlider3 from "@assets/third_1758960670443.png";
+import DesktopSlider4 from "@assets/fourth_1758960670440.png";
+import DesktopSlider5 from "@assets/fifth_1758960670438.png";
+import DesktopSlider6 from "@assets/sixth_1758960670442.png";
 
 // Mobile Slider Images
 import MobileSlider1 from "@assets/1_1758956696079.png";
@@ -156,10 +157,12 @@ function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0);
   
   const desktopSliderImages = [
-    { src: Slider1, alt: "Vallon Demining Equipment - Searching with Excellence" },
-    { src: Slider2, alt: "Vallon Detection Technology" },
-    { src: Slider3, alt: "Luyuan Electric Motorcycle" },
-    { src: Slider4, alt: "Luyuan S90 Electric Scooter - Reaching Perfection" }
+    { src: DesktopSlider1, alt: "BCS Two-Wheel Tractors Attachments" },
+    { src: DesktopSlider2, alt: "BCS 4 Season Solution" },
+    { src: DesktopSlider3, alt: "Luyuan Electric Motorcycle" },
+    { src: DesktopSlider4, alt: "Luyuan S90 Electric Scooter - Reaching Perfection" },
+    { src: DesktopSlider5, alt: "Vallon Detection Technology" },
+    { src: DesktopSlider6, alt: "Vallon Demining Operations - Searching with Excellence" }
   ];
 
   const mobileSliderImages = [
