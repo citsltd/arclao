@@ -86,12 +86,15 @@
       max-width: none !important;
       margin-left: calc(-50vw + 50%) !important;
       margin-right: calc(-50vw + 50%) !important;
+      justify-content: flex-start !important;
     }
     
     .mobile-full-width > div {
       max-width: none !important;
       aspect-ratio: unset !important;
       max-height: none !important;
+      width: 100% !important;
+      height: 100% !important;
     }
   }
   
