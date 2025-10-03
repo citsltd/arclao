@@ -35,10 +35,10 @@ import DeminingEquipmentsImage from "@assets/Demining Equipments_1755075726842.j
 import ProjectConsultancyImage from "@assets/Project Consultancy_1755075726843.jpg";
 
 // Desktop Slider Images
-import DesktopSlider2 from "@assets/second_1758960670441.png";
-import DesktopSlider3 from "@assets/third_1758960670443.png";
-import DesktopSlider4 from "@assets/fourth_1758960670440.png";
-import DesktopSlider5 from "@assets/fifth_1758960670438.png";
+import DesktopSlider2 from "@assets/2_1759464982527.jpg";
+import DesktopSlider3 from "@assets/3_1759464982528.jpg";
+import DesktopSlider4 from "@assets/4_1759464982529.jpg";
+import DesktopSlider5 from "@assets/5_1759464982530.jpg";
 import DesktopSlider6 from "@assets/sixth_1758960670442.png";
 import KeyMilestonesSlider from "@assets/Untitled design (47)_1759463818948.jpg";
 
