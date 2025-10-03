@@ -35,7 +35,6 @@ import DeminingEquipmentsImage from "@assets/Demining Equipments_1755075726842.j
 import ProjectConsultancyImage from "@assets/Project Consultancy_1755075726843.jpg";
 
 // Desktop Slider Images
-import DesktopSlider1 from "@assets/first_1758960670439.png";
 import DesktopSlider2 from "@assets/second_1758960670441.png";
 import DesktopSlider3 from "@assets/third_1758960670443.png";
 import DesktopSlider4 from "@assets/fourth_1758960670440.png";
@@ -157,7 +156,6 @@ function Hero() {
   const [currentSlide, setCurrentSlide] = useState(0);
   
   const desktopSliderImages = [
-    { src: DesktopSlider1, alt: "BCS Two-Wheel Tractors Attachments" },
     { src: DesktopSlider2, alt: "BCS 4 Season Solution" },
     { src: DesktopSlider3, alt: "Luyuan Electric Motorcycle" },
     { src: DesktopSlider4, alt: "Luyuan S90 Electric Scooter - Reaching Perfection" },
