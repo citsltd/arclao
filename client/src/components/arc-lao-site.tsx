@@ -40,6 +40,7 @@ import DesktopSlider3 from "@assets/third_1758960670443.png";
 import DesktopSlider4 from "@assets/fourth_1758960670440.png";
 import DesktopSlider5 from "@assets/fifth_1758960670438.png";
 import DesktopSlider6 from "@assets/sixth_1758960670442.png";
+import KeyMilestonesSlider from "@assets/Untitled design (47)_1759463818948.jpg";
 
 // Mobile Slider Images
 import MobileSlider1 from "@assets/1_1758956696079.png";
@@ -160,7 +161,8 @@ function Hero() {
     { src: DesktopSlider3, alt: "Luyuan Electric Motorcycle" },
     { src: DesktopSlider4, alt: "Luyuan S90 Electric Scooter - Reaching Perfection" },
     { src: DesktopSlider5, alt: "Vallon Detection Technology" },
-    { src: DesktopSlider6, alt: "Vallon Demining Operations - Searching with Excellence" }
+    { src: DesktopSlider6, alt: "Vallon Demining Operations - Searching with Excellence" },
+    { src: KeyMilestonesSlider, alt: "ARC Lao Key Milestones - Our Achievements" }
   ];
 
   const mobileSliderImages = [
